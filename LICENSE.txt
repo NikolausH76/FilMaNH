@@ -13,3 +13,22 @@ Hinweise und Lizenztexte stehen in der App unter „Einstellungen“ › „Übe
 „Fremde Bausteine“.
 
 FilMaNH ist ein unabhängiges Projekt und nicht mit Bambu Lab verbunden.
+
+--------------------------------------------------------------------------------
+English translation (the German version above prevails)
+
+FilMaNH
+Copyright © 2026 Nikolaus Hass. All rights reserved.
+
+The published app may be used free of charge. The source code is not public;
+distributing, modifying or selling the source code or parts of it is not
+permitted without written permission.
+
+The app is provided without warranty. To the extent permitted by law, no
+liability is accepted for damage to printers, material or data.
+
+FilMaNH contains third-party components under their own (open-source)
+licenses. Their notices and license texts are shown in the app under
+“Settings” › “About” › “Third-party components”.
+
+FilMaNH is an independent project and not affiliated with Bambu Lab.

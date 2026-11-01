@@ -1,5 +1,7 @@
 # FilMaNH – Handbuch
 
+*Deutsch · [English](../handbook/README.md)*
+
 FilMaNH verwaltet deine Filamentspulen und bucht den Verbrauch jedes Drucks automatisch ab. Das Programm läuft
 lokal auf deinem Rechner und liest die Bambu-Lab-Drucker im Netzwerk nur aus.
 
