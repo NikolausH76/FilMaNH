@@ -12,6 +12,10 @@ Installer für macOS (Apple Silicon und Intel) und Windows (64 Bit) unter
 **[Releases](https://github.com/NikolausH76/FilMaNH/releases/latest)**. Neue Versionen installiert die App danach
 selbst (Einstellungen › Über).
 
+## Handbuch
+
+**[Benutzerhandbuch mit Screenshots](handbuch/README.md)** – Installation, Einrichtung und alle Funktionen.
+
 ## Was FilMaNH kann
 
 - Spulen anlegen mit Katalog (über 7.000 Filamente), wiegen, Etiketten drucken
