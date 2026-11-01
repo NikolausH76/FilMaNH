@@ -175,8 +175,9 @@ search; gross or net. **CSV** exports the list.
 
 ![Print](images/15-druck.png)
 
-- **Photo:** the last frame of the timelapse – provided “Timelapse” was switched on when sending the print. Without
-  a timelapse you can add your own photo. **3D** and **Image** show the print file.
+- **Photo:** the last frame of the timelapse, if “Timelapse” was switched on when sending the print. Without a
+  timelapse, the last frame of the camera recording, if the printer records during the print (e.g. P2S). If there
+  is neither, you can add your own photo. **3D** and **Image** show the print file.
 - **Play timelapse** straight from the printer.
 - **Filament** per spool with amount and cost; **Costs** broken down into material, electricity and machine, net
   and gross.
@@ -286,7 +287,8 @@ subnet (“also in subnet”) or the IP address under Settings › Printers.
 **My computer was off during a print.** FilMaNH catches up on the print at the next start.
 
 **How do I get a photo of the finished part?** Switch on the timelapse in Bambu Studio when sending the print.
-Otherwise add your own photo in the print details.
+If the printer records with its camera, you get the photo even without a timelapse. Otherwise add your own photo in
+the print details.
 
 ---
 

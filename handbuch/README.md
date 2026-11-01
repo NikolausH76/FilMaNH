@@ -174,8 +174,9 @@ Suche, Brutto oder Netto. **CSV** exportiert die Liste.
 
 ![Druck](bilder/15-druck.png)
 
-- **Foto:** das letzte Bild des Zeitraffers – vorausgesetzt, beim Senden des Drucks war „Zeitraffer“ eingeschaltet.
-  Ohne Zeitraffer kannst du ein eigenes Foto hinzufügen. **3D** und **Bild** zeigen die Druckdatei.
+- **Foto:** das letzte Bild des Zeitraffers, wenn beim Senden des Drucks „Zeitraffer“ eingeschaltet war. Ohne
+  Zeitraffer das letzte Bild der Kameraaufzeichnung, falls der Drucker während des Drucks aufzeichnet (z.B. P2S).
+  Gibt es beides nicht, kannst du ein eigenes Foto hinzufügen. **3D** und **Bild** zeigen die Druckdatei.
 - **Zeitraffer** abspielen, direkt vom Drucker.
 - **Filament** je Spule mit Menge und Kosten; **Kosten** aufgeschlüsselt nach Material, Strom und Maschine, netto
   und brutto.
@@ -287,7 +288,8 @@ unter Einstellungen › Drucker das Netz („auch in Netz“) oder die IP-Adress
 **Der Rechner war während eines Drucks aus.** FilMaNH holt den Druck beim nächsten Start nach.
 
 **Wie bekomme ich ein Foto vom fertigen Teil?** Beim Senden des Drucks in Bambu Studio den Zeitraffer einschalten.
-Sonst ein eigenes Foto im Druck hinzufügen.
+Zeichnet der Drucker mit der Kamera auf, kommt das Foto auch ohne Zeitraffer. Sonst ein eigenes Foto im Druck
+hinzufügen.
 
 ---
 
