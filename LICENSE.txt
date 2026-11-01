@@ -1,0 +1,15 @@
+FilMaNH
+Copyright © 2026 Nikolaus Hass. Alle Rechte vorbehalten.
+
+Die veröffentlichte App darf kostenlos genutzt werden. Der Quellcode ist nicht
+öffentlich; Weitergabe, Veränderung oder Verkauf des Quellcodes oder von Teilen
+davon sind ohne schriftliche Erlaubnis nicht gestattet.
+
+Die App wird ohne Gewähr bereitgestellt. Für Schäden an Druckern, Material oder
+Daten wird keine Haftung übernommen, soweit gesetzlich zulässig.
+
+FilMaNH enthält Bausteine Dritter unter eigenen Lizenzen (Open Source). Deren
+Hinweise und Lizenztexte stehen in der App unter „Einstellungen“ › „Über“ ›
+„Fremde Bausteine“.
+
+FilMaNH ist ein unabhängiges Projekt und nicht mit Bambu Lab verbunden.
