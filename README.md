@@ -23,6 +23,17 @@ und installiert sie auf Klick.
 - Kosten je Druck, netto und brutto, mit Strom und Maschinenzeit
 - Druckverlauf mit Bild und 3D-Ansicht, „Reicht die Spule?“, Feuchte, Einkaufsliste, Auswertung
 
+## Demnächst
+
+In Arbeit – schon in der App angelegt, aber noch nicht an echten Druckern geprüft:
+
+- **H2D und H2C mit zwei Düsen:** AMS und externe Spulen je Düse (links, rechts)
+- **AMS HT** als eigene Einheit
+- **Spule leer gelaufen:** Läuft eine Spule im Druck leer, setzt ein Klick ihren Rest auf 0
+- **Trocknen im AMS 2 Pro und AMS HT:** Die eingelegten Spulen gelten danach als getrocknet – nicht, wenn die
+  Trocknung vor der Hälfte der Zeit abgebrochen wurde
+- **Bambu-Spulen mit RFID** bekommen den genauen Farbnamen aus Bambu Studio, auch mehrfarbige
+
 ## Fragen und Fehler
 
 Bitte als [Issue](https://github.com/NikolausH76/FilMaNH/issues) melden.
@@ -51,6 +62,17 @@ itself and installs them with one click.
 - Deducts what every print uses, automatically – even if the computer was off during the print
 - Cost per print, net and gross, including electricity and machine time
 - Print history with image and 3D view, “Will the spool last?”, moisture, shopping list, statistics
+
+### Coming soon
+
+In progress – already in the app, but not yet tested on real printers:
+
+- **H2D and H2C with two nozzles:** AMS units and external spools per nozzle (left, right)
+- **AMS HT** as a unit of its own
+- **Spool ran out:** if a spool runs out during a print, one click sets its remaining amount to 0
+- **Drying in the AMS 2 Pro and AMS HT:** the loaded spools count as dried afterwards – not if drying was stopped
+  before half the time
+- **Bambu spools with RFID** get the exact colour name from Bambu Studio, multi-colour spools included
 
 ### Questions and bugs
 
