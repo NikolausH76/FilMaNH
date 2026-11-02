@@ -139,7 +139,8 @@ rechnet das ein. Das geschieht erst ab drei Drucken und nur, wenn es nachweislic
 
 Beim Druckstart prüft FilMaNH:
 
-- **Falsches Material oder andere Farbe** als in der Druckdatei vorgesehen.
+- **Falsches Material oder andere Farbe** als in der Druckdatei vorgesehen. **Ignorieren** blendet den Hinweis für
+  diesen Druck überall aus.
 - **Spule reicht nicht:** mit Uhrzeit, wann sie leer wird, und ob eine Ersatzspule im AMS steckt.
 
 ![AMS](bilder/11-drucker-ams.png)
@@ -161,14 +162,20 @@ Ein Klick auf den Slot öffnet die Auswahl jederzeit wieder, z.B. nach einem Spu
 
 Vor dem Druck klären, ob das Filament reicht: In Bambu Studio die geslicte Platte als `.gcode.3mf` exportieren und
 auf das FilMaNH-Fenster ziehen oder über **Druckdatei prüfen** auswählen. FilMaNH zeigt je Filament, welche
-Spulen reichen, und schätzt die Kosten (Material, Strom, Maschine).
+Spulen reichen, und schätzt die Kosten (Material, Strom, Maschine). Reicht keine Spule allein, aber zwei gleiche
+zusammen, steht **reicht zusammen** mit beiden Nummern.
 
 ## 8. Verlauf
 
 ![Verlauf](bilder/14-verlauf.png)
 
-Jeder Druck mit Bild, Drucker, Uhrzeit, Dauer, Verbrauch und Kosten. Filter nach Zeitraum, Ergebnis und Drucker,
-Suche, Brutto oder Netto. **CSV** exportiert die Liste.
+Jeder Druck mit Bild, Drucker, Uhrzeit, Dauer, Verbrauch und Kosten; gibt es ein Foto vom fertigen Teil, steht es
+statt der Vorschau. Filter nach Zeitraum, Ergebnis und Drucker, Suche, Brutto oder Netto. **CSV** exportiert die
+Liste. Unten blättern, wahlweise **10**, **25** oder **50 je Seite**.
+
+**Löschen:** Drucke anhaken (das Kästchen über der Liste wählt alle der Seite), dann **Löschen** und **Wirklich
+löschen**. Eintrag, Druckdatei, Foto und Zeitraffer verschwinden; der Verbrauch bleibt auf den Spulen gebucht.
+Laufende Drucke lassen sich nicht löschen.
 
 ### Druck im Detail
 
@@ -177,12 +184,15 @@ Suche, Brutto oder Netto. **CSV** exportiert die Liste.
 - **Foto:** das letzte Bild des Zeitraffers, wenn beim Senden des Drucks „Zeitraffer“ eingeschaltet war. Ohne
   Zeitraffer das letzte Bild der Kameraaufzeichnung, falls der Drucker während des Drucks aufzeichnet (z.B. P2S).
   Gibt es beides nicht, kannst du ein eigenes Foto hinzufügen. **3D** und **Bild** zeigen die Druckdatei.
-- **Zeitraffer** abspielen, direkt vom Drucker.
+- **Zeitraffer** abspielen. Mit **Zeitraffer herunterladen** (Einstellungen › Erfassung) liegt er nach dem Druck auf
+  dem Rechner, sonst kommt er beim Abspielen vom Drucker. **Speichern …** sichert ihn; auf dem Mac wird ein AVI dabei
+  zu einer `.mov`, die QuickTime abspielt. War der Zeitraffer beim Drucken aus, steht das hier.
 - **Filament** je Spule mit Menge und Kosten; **Kosten** aufgeschlüsselt nach Material, Strom und Maschine, netto
   und brutto.
 - **In Bambu Studio öffnen** öffnet die aufbewahrte Druckdatei. Stammt das Modell von MakerWorld, führt ein Link
   dorthin.
-- Menü **…**: Foto ersetzen, Buchung zurücknehmen.
+- Menü **…**: Foto ersetzen, **Als Ausschuss markieren** (Teil unbrauchbar – zählt in der Auswertung als Fehldruck),
+  Buchung zurücknehmen.
 - Bei Abbrüchen steht die Meldung des Druckers dabei.
 
 ### Ende offen
@@ -207,8 +217,8 @@ Projektdatei (`.3mf`) anhängen; FilMaNH schlägt dafür die zuletzt in Bambu St
 
 ![Auswertung](bilder/19-auswertung.png)
 
-Drucke, Filament, Kosten und Ausschuss (Kosten abgebrochener Drucke), Kosten je Monat, je Material und je
-Drucker, Abbruchgründe und die teuersten Modelle. Filter nach Drucker und Zeitraum, Brutto oder Netto.
+Drucke, Filament, Kosten und Ausschuss (abgebrochene und als Ausschuss markierte Drucke), Kosten je Monat, je
+Material und je Drucker, Abbruchgründe und die teuersten Modelle. Filter nach Drucker und Zeitraum, Brutto oder Netto.
 
 ## 11. Einkauf
 
@@ -233,14 +243,24 @@ weitere Drucker suchen oder per IP-Adresse hinzufügen.
 ![Kosten](bilder/23-einst-kosten.png)
 
 **Erfassung:** Grenze für „fast leer“, Korrektur aus Wiegungen lernen, Bambu-Spulen mit RFID automatisch anlegen,
-Druckdateien aufbewahren (Datei und Bild, oder nur Bild) und wie viel Platz sie höchstens belegen.
+Druckdateien aufbewahren (Datei und Bild, oder nur Bild), Zeitraffer herunterladen und wie viel Platz Druckdateien
+und Zeitraffer höchstens belegen.
+
+![Erfassung](bilder/24-einst-erfassung.png)
+
+- **Zeitraffer herunterladen:** einmal nach dem Druck, sobald der Drucker ihn fertig geschrieben hat. Foto,
+  Abspielen und Speichern brauchen dann den Drucker nicht mehr.
+- **Druckdateien aus Bambu Studio übernehmen:** Druckst du aus Bambu Studio auf diesem Rechner, legt Bambu Studio
+  die Druckdatei kurz ab, und FilMaNH übernimmt sie. So wird auch gebucht, wenn der Drucker die Datei nicht
+  herausgibt. Einzurichten ist nichts.
 
 **Daten:** tägliche Sicherung (die letzten 14 Stände), Export und Import aller Daten, Druckverlauf als CSV,
 Datenordner. **Aus Spoolman übernehmen** liest Spulen aus einem Spoolman-Server oder einer Spoolman-Exportdatei.
 
 ![Daten](bilder/25-einst-daten.png)
 
-**Über FilMaNH:** Version, Filament-Katalog aktualisieren, Updates, Lizenzen.
+**Über FilMaNH:** Version, Filament-Katalog aktualisieren, Updates, **Diagnose › Kopieren** (für die Hilfe, ohne
+Seriennummern, Adressen und Codes), Lizenzen.
 
 ![Über FilMaNH](bilder/26-einst-ueber.png)
 
@@ -269,8 +289,10 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
 
 ## 15. Daten und Datenschutz
 
-- Alle Daten liegen auf deinem Rechner:
+- Alle Daten liegen auf deinem Rechner, auch Druckdateien, Fotos und Zeitraffer:
   macOS `~/Library/Application Support/de.nikolaushass.filmanh`, Windows `%APPDATA%\de.nikolaushass.filmanh`.
+- Mit **Druckdateien aus Bambu Studio übernehmen** liest FilMaNH die Druckdateien, die Bambu Studio beim Drucken
+  auf diesem Rechner ablegt – nichts sonst.
 - Kein Konto, keine Cloud. FilMaNH liest die Drucker nur aus und steuert sie nicht. Zugangscodes liegen im
   Schlüsselbund des Systems.
 - Ins Internet geht FilMaNH nur für die Update-Suche, die Katalog-Aktualisierung (auf Klick) und einen
@@ -279,7 +301,8 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
 ## 16. Häufige Fragen
 
 **Der Drucker wird nicht gefunden.** Drucker eingeschaltet und im selben Netzwerk? Liegt er in einem anderen Netz,
-unter Einstellungen › Drucker das Netz („auch in Netz“) oder die IP-Adresse eingeben.
+unter Einstellungen › Drucker das Netz („auch in Netz“) oder die IP-Adresse eingeben. Ist schon ein Drucker aus
+diesem Netz eingerichtet, sucht FilMaNH dort von selbst mit.
 
 **Muss ich am Drucker den LAN-Modus oder Entwicklermodus einschalten?** Nein.
 
@@ -287,7 +310,8 @@ unter Einstellungen › Drucker das Netz („auch in Netz“) oder die IP-Adress
 
 **Der Rechner war während eines Drucks aus.** FilMaNH holt den Druck beim nächsten Start nach.
 
-**Wie bekomme ich ein Foto vom fertigen Teil?** Beim Senden des Drucks in Bambu Studio den Zeitraffer einschalten.
+**Wie bekomme ich ein Foto vom fertigen Teil?** Beim Senden des Drucks in Bambu Studio den Zeitraffer einschalten –
+das gilt für jeden Druck einzeln (**Druckplatte drucken › Zeitraffer**).
 Zeichnet der Drucker mit der Kamera auf, kommt das Foto auch ohne Zeitraffer. Sonst ein eigenes Foto im Druck
 hinzufügen.
 

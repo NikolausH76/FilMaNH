@@ -140,7 +140,8 @@ that into account. This only happens after three prints and only if it is measur
 
 When a print starts, FilMaNH checks:
 
-- **Wrong material or different colour** than the print file expects.
+- **Wrong material or different colour** than the print file expects. **Ignore** hides the hint for this print
+  everywhere.
 - **Spool will run out:** with the time it will be empty and whether a spare spool is in the AMS.
 
 ![AMS](images/11-drucker-ams.png)
@@ -162,14 +163,20 @@ Clicking the slot opens the selection again at any time, e.g. after changing spo
 
 Find out before printing whether the filament is enough: in Bambu Studio export the sliced plate as `.gcode.3mf`
 and drop it onto the FilMaNH window or choose it via **Check print file**. FilMaNH shows for each filament which
-spools are enough and estimates the cost (material, electricity, machine).
+spools are enough and estimates the cost (material, electricity, machine). If no single spool is enough but two
+identical ones are, it shows **enough together** with both numbers.
 
 ## 8. History
 
 ![History](images/14-verlauf.png)
 
-Every print with image, printer, time, duration, consumption and cost. Filter by period, result and printer;
-search; gross or net. **CSV** exports the list.
+Every print with image, printer, time, duration, consumption and cost; if there is a photo of the finished part,
+it replaces the preview. Filter by period, result and printer; search; gross or net. **CSV** exports the list.
+Page through at the bottom, **10**, **25** or **50 per page**.
+
+**Delete:** tick prints (the box above the list selects all on the page), then **Delete** and **Really delete**. The
+entry, print file, photo and timelapse are removed; the usage stays booked on the spools. Running prints cannot be
+deleted.
 
 ### Print details
 
@@ -178,11 +185,14 @@ search; gross or net. **CSV** exports the list.
 - **Photo:** the last frame of the timelapse, if “Timelapse” was switched on when sending the print. Without a
   timelapse, the last frame of the camera recording, if the printer records during the print (e.g. P2S). If there
   is neither, you can add your own photo. **3D** and **Image** show the print file.
-- **Play timelapse** straight from the printer.
+- **Play timelapse.** With **Download timelapses** (Settings › Tracking) it is on your computer after the print;
+  otherwise it comes from the printer when you play it. **Save …** keeps a copy; on a Mac an AVI becomes a `.mov`
+  that QuickTime plays. If the timelapse was off during the print, this is shown here.
 - **Filament** per spool with amount and cost; **Costs** broken down into material, electricity and machine, net
   and gross.
 - **Open in Bambu Studio** opens the kept print file. If the model comes from MakerWorld, a link leads there.
-- **…** menu: Replace photo, Undo deduction.
+- **…** menu: Replace photo, **Mark as waste** (part unusable – counts as a failed print in the statistics), Undo
+  deduction.
 - For cancelled prints the printer’s message is shown.
 
 ### End unknown
@@ -207,7 +217,8 @@ project file (`.3mf`); FilMaNH suggests the files recently opened in Bambu Studi
 
 ![Statistics](images/19-auswertung.png)
 
-Prints, filament, costs and waste (cost of cancelled prints), costs per month, per material and per printer,
+Prints, filament, costs and waste (cancelled prints and prints marked as waste), costs per month, per material and
+per printer,
 reasons for cancellation and the most expensive models. Filter by printer and period, gross or net.
 
 ## 11. Shopping list
@@ -233,14 +244,24 @@ for more printers or add one by IP address.
 ![Costs](images/23-einst-kosten.png)
 
 **Tracking:** threshold for “almost empty”, learn correction from weighings, create Bambu spools with RFID
-automatically, keep print files (file and image, or image only) and the maximum space they may use.
+automatically, keep print files (file and image, or image only), download timelapses and the maximum space print
+files and timelapses may use.
+
+![Tracking](images/24-einst-erfassung.png)
+
+- **Download timelapses:** once after the print, as soon as the printer has finished writing it. Photo, playback
+  and saving then no longer need the printer.
+- **Take print files from Bambu Studio:** when you print from Bambu Studio on this computer, Bambu Studio briefly
+  stores the print file and FilMaNH takes it. This way usage is booked even if the printer does not provide the
+  file. Nothing to set up.
 
 **Data:** daily backup (the last 14), export and import of all data, print history as CSV, data folder.
 **Import from Spoolman** reads spools from a Spoolman server or a Spoolman export file.
 
 ![Data](images/25-einst-daten.png)
 
-**About FilMaNH:** version, update the filament catalog, updates, licenses.
+**About FilMaNH:** version, update the filament catalog, updates, **Diagnostics › Copy** (for support, without serial
+numbers, addresses and codes), licenses.
 
 ![About FilMaNH](images/26-einst-ueber.png)
 
@@ -268,8 +289,10 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
 
 ## 15. Data and privacy
 
-- All data stays on your computer:
+- All data stays on your computer, including print files, photos and timelapses:
   macOS `~/Library/Application Support/de.nikolaushass.filmanh`, Windows `%APPDATA%\de.nikolaushass.filmanh`.
+- With **Take print files from Bambu Studio**, FilMaNH reads the print files Bambu Studio stores while printing on
+  this computer – nothing else.
 - No account, no cloud. FilMaNH only reads from the printers and never controls them. Access codes are stored in
   the system keychain.
 - FilMaNH only goes online to check for updates, to update the catalog (when you click) and for a Spoolman import
@@ -278,7 +301,8 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
 ## 16. FAQ
 
 **The printer isn’t found.** Is it switched on and on the same network? If it is on a different subnet, enter the
-subnet (“also in subnet”) or the IP address under Settings › Printers.
+subnet (“also in subnet”) or the IP address under Settings › Printers. If a printer from that subnet is already set
+up, FilMaNH searches there automatically.
 
 **Do I have to switch on LAN-only mode or developer mode on the printer?** No.
 
@@ -286,7 +310,8 @@ subnet (“also in subnet”) or the IP address under Settings › Printers.
 
 **My computer was off during a print.** FilMaNH catches up on the print at the next start.
 
-**How do I get a photo of the finished part?** Switch on the timelapse in Bambu Studio when sending the print.
+**How do I get a photo of the finished part?** Switch on the timelapse in Bambu Studio when sending the print – it
+is set for each print (**Print plate › Timelapse**).
 If the printer records with its camera, you get the photo even without a timelapse. Otherwise add your own photo in
 the print details.
 
