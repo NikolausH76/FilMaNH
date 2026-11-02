@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Handbuch (Deutsch)
+    url: https://github.com/NikolausH76/FilMaNH/blob/main/handbuch/README.md
+    about: Viele Fragen beantworten das Handbuch und seine FAQ.
+  - name: User guide (English)
+    url: https://github.com/NikolausH76/FilMaNH/blob/main/handbook/README.md
+    about: Many questions are answered in the user guide and its FAQ.

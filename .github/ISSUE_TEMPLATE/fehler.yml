@@ -1,0 +1,43 @@
+name: Fehler melden / Report a bug
+description: Etwas funktioniert nicht wie erwartet. / Something doesn't work as expected.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Deutsch oder Englisch, beides ist willkommen. / German or English, both are welcome.
+  - type: input
+    id: version
+    attributes:
+      label: FilMaNH-Version / FilMaNH version
+      description: Einstellungen › Über FilMaNH / Settings › About FilMaNH
+      placeholder: "0.3.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: system
+    attributes:
+      label: System
+      options:
+        - macOS
+        - Windows 11
+        - Windows 10
+    validations:
+      required: true
+  - type: input
+    id: printer
+    attributes:
+      label: Drucker und Firmware / Printer and firmware
+      placeholder: "z.B. / e.g. A1 mini 01.08.01.00 mit AMS lite / with AMS lite"
+  - type: textarea
+    id: what
+    attributes:
+      label: Was ist passiert? / What happened?
+      description: Was hast du gemacht, was hast du erwartet, was kam stattdessen? / What did you do, what did you expect, what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnose / Diagnostics
+      description: Einstellungen › Über FilMaNH › Diagnose › Kopieren, dann hier einfügen – ohne Seriennummern, Adressen und Codes. / Settings › About FilMaNH › Diagnostics › Copy, then paste here – without serial numbers, addresses and codes.
+      render: text
