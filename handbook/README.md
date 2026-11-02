@@ -28,9 +28,8 @@ your computer and only reads from the Bambu Lab printers on your network.
 
 Download from [Releases](https://github.com/NikolausH76/FilMaNH/releases/latest).
 
-**macOS** (Apple Silicon and Intel): open `FilMaNH_…_universal.dmg` and drag FilMaNH into “Applications”. On first
-launch macOS warns you because the app is not registered with Apple: choose “Done”, then
-**System Settings › Privacy & Security › Open Anyway**.
+**macOS** (Apple Silicon and Intel): open `FilMaNH_…_universal.dmg` and drag FilMaNH into “Applications”. The app
+is notarized by Apple; on first launch just confirm that you want to open an app downloaded from the internet.
 
 **Windows 10/11** (64-bit): run `FilMaNH_…_x64-setup.exe`. If you see “Windows protected your PC”:
 **More info › Run anyway**. No administrator rights needed.

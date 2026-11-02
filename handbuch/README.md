@@ -29,8 +29,8 @@ lokal auf deinem Rechner und liest die Bambu-Lab-Drucker im Netzwerk nur aus.
 Download unter [Releases](https://github.com/NikolausH76/FilMaNH/releases/latest).
 
 **macOS** (Apple Silicon und Intel): `FilMaNH_…_universal.dmg` öffnen und FilMaNH in den Ordner „Programme“
-ziehen. Beim ersten Öffnen warnt macOS, weil die App nicht bei Apple registriert ist: „Fertig“ wählen, dann
-**Systemeinstellungen › Datenschutz & Sicherheit › Trotzdem öffnen**.
+ziehen. Die App ist von Apple geprüft (notarisiert); beim ersten Öffnen nur bestätigen, dass die aus dem Internet
+geladene App geöffnet werden soll.
 
 **Windows 10/11** (64 Bit): `FilMaNH_…_x64-setup.exe` starten. Bei „Der Computer wurde durch Windows geschützt“:
 **Weitere Informationen › Trotzdem ausführen**. Administratorrechte sind nicht nötig.
