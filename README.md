@@ -87,7 +87,7 @@ Please open an [issue](https://github.com/NikolausH76/FilMaNH/issues).
 
 ---
 
-© 2026 Nikolaus Hass. Kostenlos nutzbar, alle Rechte vorbehalten; der Quellcode ist nicht öffentlich.
+© 2026 N. Hass. Kostenlos nutzbar, alle Rechte vorbehalten; der Quellcode ist nicht öffentlich.
 *Free to use, all rights reserved; the source code is not public.* ([Lizenz / License](LICENSE.txt))
 
 FilMaNH ist ein unabhängiges Projekt und nicht mit Bambu Lab verbunden. Es nutzt das inoffizielle lokale Protokoll

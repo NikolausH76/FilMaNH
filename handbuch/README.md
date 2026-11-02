@@ -294,8 +294,8 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
 
 ## 15. Daten und Datenschutz
 
-- Alle Daten liegen auf deinem Rechner, auch Druckdateien, Fotos und Zeitraffer:
-  macOS `~/Library/Application Support/de.nikolaushass.filmanh`, Windows `%APPDATA%\de.nikolaushass.filmanh`.
+- Alle Daten liegen auf deinem Rechner, auch Druckdateien, Fotos und Zeitraffer, im Datenordner der App
+  (Einstellungen › Daten › **Datenordner** › **Öffnen**).
 - Mit **Druckdateien aus Bambu Studio übernehmen** liest FilMaNH die Druckdateien, die Bambu Studio beim Drucken
   auf diesem Rechner ablegt – nichts sonst.
 - Kein Konto, keine Cloud. FilMaNH liest die Drucker nur aus und steuert sie nicht. Zugangscodes liegen im
@@ -328,4 +328,4 @@ hinzufügen.
 
 ---
 
-© 2026 Nikolaus Hass. FilMaNH ist ein unabhängiges Projekt und nicht mit Bambu Lab verbunden.
+© 2026 N. Hass. FilMaNH ist ein unabhängiges Projekt und nicht mit Bambu Lab verbunden.

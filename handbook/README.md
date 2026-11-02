@@ -293,8 +293,8 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
 
 ## 15. Data and privacy
 
-- All data stays on your computer, including print files, photos and timelapses:
-  macOS `~/Library/Application Support/de.nikolaushass.filmanh`, Windows `%APPDATA%\de.nikolaushass.filmanh`.
+- All data stays on your computer, including print files, photos and timelapses, in the app’s data folder
+  (Settings › Data › **Data folder** › **Open**).
 - With **Take print files from Bambu Studio**, FilMaNH reads the print files Bambu Studio stores while printing on
   this computer – nothing else.
 - No account, no cloud. FilMaNH only reads from the printers and never controls them. Access codes are stored in
@@ -327,4 +327,4 @@ the print details.
 
 ---
 
-© 2026 Nikolaus Hass. FilMaNH is an independent project and not affiliated with Bambu Lab.
+© 2026 N. Hass. FilMaNH is an independent project and not affiliated with Bambu Lab.

@@ -1,5 +1,5 @@
 FilMaNH
-Copyright © 2026 Nikolaus Hass. Alle Rechte vorbehalten.
+Copyright © 2026 N. Hass. Alle Rechte vorbehalten.
 
 Die veröffentlichte App darf kostenlos genutzt werden. Der Quellcode ist nicht
 öffentlich; Weitergabe, Veränderung oder Verkauf des Quellcodes oder von Teilen
@@ -18,7 +18,7 @@ FilMaNH ist ein unabhängiges Projekt und nicht mit Bambu Lab verbunden.
 English translation (the German version above prevails)
 
 FilMaNH
-Copyright © 2026 Nikolaus Hass. All rights reserved.
+Copyright © 2026 N. Hass. All rights reserved.
 
 The published app may be used free of charge. The source code is not public;
 distributing, modifying or selling the source code or parts of it is not
