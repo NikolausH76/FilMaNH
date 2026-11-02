@@ -33,6 +33,9 @@ In Arbeit – schon in der App angelegt, aber noch nicht an echten Druckern gepr
 - **Trocknen im AMS 2 Pro und AMS HT:** Die eingelegten Spulen gelten danach als getrocknet – nicht, wenn die
   Trocknung vor der Hälfte der Zeit abgebrochen wurde
 - **Bambu-Spulen mit RFID** bekommen den genauen Farbnamen aus Bambu Studio, auch mehrfarbige
+- **Spulenwechsel im Druck:** Ersatzspule im AMS oder von Hand getauscht – der Verbrauch wird an dieser Schicht auf
+  beide Spulen aufgeteilt
+- **Druck ohne Druckdatei** (z.B. H2 ohne USB-Stick): Verbrauch je Spule eintragen, mit Vorschlag aus der RFID-Anzeige
 
 ## Fragen und Fehler
 
@@ -73,6 +76,10 @@ In progress – already in the app, but not yet tested on real printers:
 - **Drying in the AMS 2 Pro and AMS HT:** the loaded spools count as dried afterwards – not if drying was stopped
   before half the time
 - **Bambu spools with RFID** get the exact colour name from Bambu Studio, multi-colour spools included
+- **Spool change during a print:** AMS backup spool or swapped by hand – usage is split between both spools at that
+  layer
+- **Print without a print file** (e.g. H2 without a USB drive): enter the usage per spool, with a suggestion from the
+  RFID reading
 
 ### Questions and bugs
 

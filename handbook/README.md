@@ -308,6 +308,12 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
 subnet (“also in subnet”) or the IP address under Settings › Printers. If a printer from that subnet is already set
 up, FilMaNH searches there automatically.
 
+**A printer shows “connecting …” although it is switched on.** Printers accept only a few direct connections from the
+network at the same time. These include Bambu Studio or Orca Slicer (when they are connected directly to the
+printer), Home Assistant and similar programs – but not the Bambu Handy app, which goes through Bambu’s cloud.
+FilMaNH keeps trying by itself and catches up on the print once it is connected again; the print itself is not
+affected. If it stays that way, close another connected program or update the printer’s firmware.
+
 **Do I have to switch on LAN-only mode or developer mode on the printer?** No.
 
 **The stock is off.** Weigh the spool. Over time FilMaNH learns from your weighings and calculates more precisely.
