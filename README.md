@@ -7,7 +7,7 @@ ohne Cloud und ohne Einstellungen am Drucker zu ändern. Die App spricht Deutsch
 
 ## Download
 
-Installer für macOS (Apple Silicon und Intel) und Windows (64 Bit) unter
+Installer für macOS (Apple Silicon und Intel, von Apple geprüft) und Windows (64 Bit) unter
 **[Releases](https://github.com/NikolausH76/FilMaNH/releases/latest)**. Neue Versionen meldet die App danach selbst
 und installiert sie auf Klick.
 
@@ -50,7 +50,7 @@ no printer settings to change. The app speaks English and German.
 
 ### Download
 
-Installers for macOS (Apple Silicon and Intel) and Windows (64-bit) under
+Installers for macOS (Apple Silicon and Intel, notarized by Apple) and Windows (64-bit) under
 **[Releases](https://github.com/NikolausH76/FilMaNH/releases/latest)**. After that the app announces new versions
 itself and installs them with one click.
 

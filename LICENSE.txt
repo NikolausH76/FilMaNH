@@ -9,8 +9,8 @@ Die App wird ohne Gewähr bereitgestellt. Für Schäden an Druckern, Material od
 Daten wird keine Haftung übernommen, soweit gesetzlich zulässig.
 
 FilMaNH enthält Bausteine Dritter unter eigenen Lizenzen (Open Source). Deren
-Hinweise und Lizenztexte stehen in der App unter „Einstellungen“ › „Über“ ›
-„Fremde Bausteine“.
+Hinweise und Lizenztexte stehen in der App unter „Einstellungen“ ›
+„Über FilMaNH“ › „Fremde Bausteine“.
 
 FilMaNH ist ein unabhängiges Projekt und nicht mit Bambu Lab verbunden.
 
@@ -29,6 +29,6 @@ liability is accepted for damage to printers, material or data.
 
 FilMaNH contains third-party components under their own (open-source)
 licenses. Their notices and license texts are shown in the app under
-“Settings” › “About” › “Third-party components”.
+“Settings” › “About FilMaNH” › “Third-party components”.
 
 FilMaNH is an independent project and not affiliated with Bambu Lab.

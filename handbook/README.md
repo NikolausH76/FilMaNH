@@ -325,6 +325,11 @@ is set for each print (**Print plate › Timelapse**).
 If the printer records with its camera, you get the photo even without a timelapse. Otherwise add your own photo in
 the print details.
 
+**Something doesn’t work.** On GitHub, fill in the form **Fehler melden / Report a bug** under
+[Issues](https://github.com/NikolausH76/FilMaNH/issues/new/choose). The diagnostics help: in the app under Settings ›
+About FilMaNH › **Diagnostics** › **Copy**, then paste them into the form – without serial numbers, addresses and
+codes.
+
 ---
 
 © 2026 N. Hass. FilMaNH is an independent project and not affiliated with Bambu Lab.
