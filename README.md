@@ -18,7 +18,8 @@ und installiert sie auf Klick.
 ## Was FilMaNH kann
 
 - Spulen anlegen mit Katalog (über 7.000 Filamente), per EAN-Scan oder Shop-Link; wiegen, bewerten, Etiketten drucken
-- Drucker im Netz finden, AMS live, Bambu-Spulen mit RFID automatisch erkennen
+- Drucker im Netz finden, AMS live, Bambu-Spulen mit RFID automatisch erkennen – mit Farbnamen aus Bambu Studio
+- H2C und H2D mit zwei Düsen: AMS und externe Spulen je Düse (links, rechts)
 - Verbrauch jedes Drucks automatisch abbuchen – auch wenn der Rechner während des Drucks aus war
 - Kosten je Druck, netto und brutto, mit Strom und Maschinenzeit
 - Druckverlauf mit Bild und 3D-Ansicht, „Reicht die Spule?“, Feuchte, Einkaufsliste, Auswertung
@@ -27,12 +28,10 @@ und installiert sie auf Klick.
 
 In Arbeit – schon in der App angelegt, aber noch nicht an echten Druckern geprüft:
 
-- **H2D und H2C mit zwei Düsen:** AMS und externe Spulen je Düse (links, rechts)
 - **AMS HT** als eigene Einheit
 - **Spule leer gelaufen:** Läuft eine Spule im Druck leer, setzt ein Klick ihren Rest auf 0
 - **Trocknen im AMS 2 Pro und AMS HT:** Die eingelegten Spulen gelten danach als getrocknet – nicht, wenn die
   Trocknung vor der Hälfte der Zeit abgebrochen wurde
-- **Bambu-Spulen mit RFID** bekommen den genauen Farbnamen aus Bambu Studio, auch mehrfarbige
 - **Spulenwechsel im Druck:** Ersatzspule im AMS oder von Hand getauscht – der Verbrauch wird an dieser Schicht auf
   beide Spulen aufgeteilt
 - **Druck ohne Druckdatei** (z.B. H2 ohne USB-Stick): Verbrauch je Spule eintragen, mit Vorschlag aus der RFID-Anzeige
@@ -61,7 +60,9 @@ itself and installs them with one click.
 ### Features
 
 - Add spools from a catalog (more than 7,000 filaments), by EAN scan or shop link; weigh, rate, print labels
-- Find printers on the network, live AMS view, Bambu spools with RFID recognised automatically
+- Find printers on the network, live AMS view, Bambu spools with RFID recognised automatically – with colour names
+  from Bambu Studio
+- H2C and H2D with two nozzles: AMS units and external spools per nozzle (left, right)
 - Deducts what every print uses, automatically – even if the computer was off during the print
 - Cost per print, net and gross, including electricity and machine time
 - Print history with image and 3D view, “Will the spool last?”, moisture, shopping list, statistics
@@ -70,12 +71,10 @@ itself and installs them with one click.
 
 In progress – already in the app, but not yet tested on real printers:
 
-- **H2D and H2C with two nozzles:** AMS units and external spools per nozzle (left, right)
 - **AMS HT** as a unit of its own
 - **Spool ran out:** if a spool runs out during a print, one click sets its remaining amount to 0
 - **Drying in the AMS 2 Pro and AMS HT:** the loaded spools count as dried afterwards – not if drying was stopped
   before half the time
-- **Bambu spools with RFID** get the exact colour name from Bambu Studio, multi-colour spools included
 - **Spool change during a print:** AMS backup spool or swapped by hand – usage is split between both spools at that
   layer
 - **Print without a print file** (e.g. H2 without a USB drive): enter the usage per spool, with a suggestion from the
