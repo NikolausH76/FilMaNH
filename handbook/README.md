@@ -265,7 +265,8 @@ files and timelapses may use.
 ![Data](images/25-einst-daten.png)
 
 **About FilMaNH:** version, update the filament catalog, updates, **Diagnostics › Copy** (for support, without serial
-numbers, addresses and codes), licenses.
+numbers, addresses and codes), licenses. The installed version is also shown at the top of the sidebar; it turns
+red when an update is available.
 
 ![About FilMaNH](images/26-einst-ueber.png)
 

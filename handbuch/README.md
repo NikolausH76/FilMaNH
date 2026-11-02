@@ -265,7 +265,8 @@ Datenordner. **Aus Spoolman übernehmen** liest Spulen aus einem Spoolman-Server
 ![Daten](bilder/25-einst-daten.png)
 
 **Über FilMaNH:** Version, Filament-Katalog aktualisieren, Updates, **Diagnose › Kopieren** (für die Hilfe, ohne
-Seriennummern, Adressen und Codes), Lizenzen.
+Seriennummern, Adressen und Codes), Lizenzen. Die installierte Version steht auch oben in der Seitenleiste; ist
+ein Update da, wird sie rot.
 
 ![Über FilMaNH](bilder/26-einst-ueber.png)
 
