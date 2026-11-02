@@ -56,6 +56,9 @@ Danach fragt FilMaNH, was mit den Drucken passieren soll, die schon auf der Spei
 - **Frühere Drucke in den Verlauf übernehmen:** Sie erscheinen im Verlauf und unter Modelle, es wird aber nichts
   von Spulen abgebucht.
 
+Zum Schluss fragt FilMaNH nach dem **Strompreis** je kWh (für die Stromkosten der Drucke) und ob es **mit dem Rechner
+starten** soll – empfohlen, so verfolgt FilMaNH jeden Druck.
+
 Die Einrichtung lässt sich mit **Später einrichten** überspringen und unter Einstellungen › Drucker nachholen.
 
 ## 3. So arbeitet FilMaNH
@@ -231,14 +234,16 @@ Daten des letzten Kaufs an. **Liste kopieren** kopiert die Einkaufsliste.
 ## 12. Einstellungen
 
 **Allgemein:** Darstellung (hell, dunkel, wie das System), Sprache (Deutsch, English), Weiterlaufen beim Schließen,
-Start mit dem Rechner, Mitteilungen (Druck fertig, Spule reicht nicht, neue Spule erkannt).
+Start mit dem Rechner (empfohlen), Mitteilungen (Druck fertig, Spule reicht nicht, neue Spule erkannt).
 
-**Drucker:** verbundene Drucker, ihre Leistung in Watt und der Maschinenstundensatz für die Kostenrechnung;
-weitere Drucker suchen oder per IP-Adresse hinzufügen.
+**Drucker:** verbundene Drucker; weitere Drucker suchen oder per IP-Adresse hinzufügen.
 
 ![Drucker-Einstellungen](bilder/22-einst-drucker.png)
 
-**Kosten:** Währung, Mehrwertsteuer, Anzeige brutto oder netto, Strompreis je kWh.
+**Kosten:** Währung, Mehrwertsteuer, Anzeige brutto oder netto, Strompreis je kWh. Unter **Eigene Werte je Drucker**
+lassen sich die Leistung beim Drucken und ein Maschinenstundensatz eintragen. Ohne eigenen Wert rechnet FilMaNH mit
+Bambus gemessenem Durchschnitt für das Modell und das Material des Drucks (z.B. A1 mini mit PLA 80 W, P2S 200 W) –
+nicht mit der Höchstleistung, die der Drucker nur kurz beim Aufheizen braucht.
 
 ![Kosten](bilder/23-einst-kosten.png)
 

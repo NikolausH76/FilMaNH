@@ -54,6 +54,9 @@ Next, FilMaNH asks what to do with prints that are already on the SD card:
 - **Start from now:** older prints are left out.
 - **Add earlier prints to the history:** they show up in History and Models, but nothing is deducted from spools.
 
+Finally, FilMaNH asks for the **electricity price** per kWh (for the electricity cost of prints) and whether to
+**launch at login** – recommended, so FilMaNH follows every print.
+
 **Set up later** skips the setup; you can add printers any time under Settings › Printers.
 
 ## 3. How FilMaNH works
@@ -231,14 +234,16 @@ purchase. **Copy list** copies the shopping list.
 ## 12. Settings
 
 **General:** Appearance (light, dark, system), Language (Deutsch, English), Keep running when closed, Launch at
-login, Notifications (print finished, spool will run out, new spool detected).
+login (recommended), Notifications (print finished, spool will run out, new spool detected).
 
-**Printers:** connected printers, their power in watts and the machine hourly rate for cost calculation; search
-for more printers or add one by IP address.
+**Printers:** connected printers; search for more printers or add one by IP address.
 
 ![Printer settings](images/22-einst-drucker.png)
 
-**Costs:** currency, VAT, show prices gross or net, electricity price per kWh.
+**Costs:** currency, VAT, show prices gross or net, electricity price per kWh. Under **Your own values per printer**
+you can enter the power while printing and a machine hourly rate. Without your own value FilMaNH uses Bambu’s
+measured average for the model and the print’s material (e.g. A1 mini with PLA 80 W, P2S 200 W) – not the maximum
+power, which the printer only needs briefly while heating up.
 
 ![Costs](images/23-einst-kosten.png)
 
