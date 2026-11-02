@@ -17,7 +17,7 @@ und installiert sie auf Klick.
 
 ## Was FilMaNH kann
 
-- Spulen anlegen mit Katalog (über 7.000 Filamente), wiegen, Etiketten drucken
+- Spulen anlegen mit Katalog (über 7.000 Filamente), per EAN-Scan oder Shop-Link; wiegen, bewerten, Etiketten drucken
 - Drucker im Netz finden, AMS live, Bambu-Spulen mit RFID automatisch erkennen
 - Verbrauch jedes Drucks automatisch abbuchen – auch wenn der Rechner während des Drucks aus war
 - Kosten je Druck, netto und brutto, mit Strom und Maschinenzeit
@@ -60,7 +60,7 @@ itself and installs them with one click.
 
 ### Features
 
-- Add spools from a catalog (more than 7,000 filaments), weigh them, print labels
+- Add spools from a catalog (more than 7,000 filaments), by EAN scan or shop link; weigh, rate, print labels
 - Find printers on the network, live AMS view, Bambu spools with RFID recognised automatically
 - Deducts what every print uses, automatically – even if the computer was off during the print
 - Cost per print, net and gross, including electricity and machine time

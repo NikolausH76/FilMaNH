@@ -99,20 +99,33 @@ filaments; picking one fills in colour, net weight and empty spool weight. Optio
 location and **Quantity**: 3 creates three spools, each with its own number. If a filament is not in the catalog:
 **Without catalog** and enter it yourself.
 
+The search field also takes an **EAN** (barcode on the spool or box) and a **shop link**:
+
+- **EAN:** scan or type it and press Enter. The first time, pick the filament and FilMaNH remembers the EAN. Next
+  time the filament is already selected, with price and shop of the last spool.
+- **Shop link:** paste the link to the product page. FilMaNH reads name, price and shop from the page and suggests
+  matching filaments from the catalog; price (in your currency) and shop are filled in. This doesn’t work with every
+  shop – some don’t provide this data.
+
+![Shop link](images/04b-shop-link.png)
+
 Bambu spools with RFID don’t need to be created – just load them.
 
 ### Spool details
 
 ![Spool](images/06-spule.png)
 
-Remaining amount, location (slot or shelf), material, price, moisture and every deduction in the history. **More**
-shows batch, accuracy, learned correction, minimum stock and note. **Use up the rest** lists models you have
+Remaining amount, location (slot or shelf), material, price, moisture, **Rating** and every deduction in the
+history. **More** shows batch, accuracy, learned correction, minimum stock, EAN and note. **Use up the rest** lists models you have
 printed before that the remaining filament is still enough for.
 
 ![Spool menu](images/07-spule-mehr.png)
 
 In the **…** menu: Edit, Correct remaining, Change location, Another spool like this, Print label, Add photo and
 Archive. A **photo** of the spool shows its real colour in the centre of the ring.
+
+The **Rating** (1–5 stars) applies to the filament, i.e. to all spools of that kind; clicking the same star again
+clears it. Under **Edit** you can enter EANs by hand, several separated by commas (e.g. with spool and refill).
 
 ### Weigh
 
@@ -229,11 +242,11 @@ reasons for cancellation and the most expensive models. Filter by printer and pe
 
 Set a **Minimum stock** for a filament (here or under Spool › Edit). When the stock falls below it, the filament is
 listed under **Reorder** with shop and last price. **Purchased** creates the new spool with the data of the last
-purchase. **Copy list** copies the shopping list.
+purchase. **Copy list** copies the shopping list. Stars show your rating of the filament.
 
 ## 12. Settings
 
-**General:** Appearance (light, dark, system), Language (Deutsch, English), Keep running when closed, Launch at
+**General:** Appearance (light, dark, system), **Background image**, Language (Deutsch, English), Keep running when closed, Launch at
 login (recommended), Notifications (print finished, spool will run out, new spool detected).
 
 **Printers:** connected printers; search for more printers or add one by IP address.
@@ -291,6 +304,7 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
 - **⌘K** (Mac) or **Ctrl+K** (Windows): search spools, prints, models and commands.
 - Drop a `.gcode.3mf` onto the window: check print file.
 - A barcode scanner reading the QR code of a FilMaNH label opens that spool directly.
+- Scanning the EAN of a spool or its box opens **New spool** – for a known EAN with the filament already selected.
 
 ## 15. Data and privacy
 
@@ -300,8 +314,8 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
   this computer – nothing else.
 - No account, no cloud. FilMaNH only reads from the printers and never controls them. Access codes are stored in
   the system keychain.
-- FilMaNH only goes online to check for updates, to update the catalog (when you click) and for a Spoolman import
-  if you start one.
+- FilMaNH only goes online to check for updates, to update the catalog (when you click), for a Spoolman import if
+  you start one, and for a shop link when you paste one (then FilMaNH fetches exactly that page).
 
 ## 16. FAQ
 

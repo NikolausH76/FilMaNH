@@ -100,20 +100,34 @@ Filamente; die Auswahl füllt Farbe, Füllmenge und Leergewicht aus. Dazu option
 Lagerort und **Anzahl**: Bei 3 entstehen drei Spulen mit eigener Nummer. Steht ein Filament nicht im Katalog:
 **Ohne Katalog** und selbst eintragen.
 
+Das Suchfeld nimmt auch eine **EAN** (Strichcode auf Spule oder Karton) und einen **Shop-Link**:
+
+- **EAN:** scannen oder eintippen und Enter. Beim ersten Mal das Filament auswählen, FilMaNH merkt sich die EAN.
+  Beim nächsten Mal ist das Filament schon gewählt, mit Preis und Händler der letzten Spule.
+- **Shop-Link:** den Link zur Produktseite einfügen. FilMaNH liest Name, Preis und Shop von der Seite und schlägt
+  passende Filamente aus dem Katalog vor; Preis (in deiner Währung) und Shop werden übernommen. Das klappt nicht bei
+  jedem Shop – manche geben diese Daten nicht heraus.
+
+![Shop-Link](bilder/04b-shop-link.png)
+
 Bambu-Spulen mit RFID müssen nicht angelegt werden – einlegen genügt.
 
 ### Spule im Detail
 
 ![Spule](bilder/06-spule.png)
 
-Restbestand, Ort (Slot oder Lagerort), Material, Preis, Feuchte und jede Buchung im Verlauf. **Mehr** zeigt
-Charge, Genauigkeit, gelernte Korrektur, Mindestbestand und Notiz. **Reste aufbrauchen** listet Modelle, die du
+Restbestand, Ort (Slot oder Lagerort), Material, Preis, Feuchte, **Bewertung** und jede Buchung im Verlauf.
+**Mehr** zeigt Charge, Genauigkeit, gelernte Korrektur, Mindestbestand, EAN und Notiz. **Reste aufbrauchen** listet Modelle, die du
 schon gedruckt hast und für die der Rest noch reicht.
 
 ![Menü einer Spule](bilder/07-spule-mehr.png)
 
 Im Menü **…**: Bearbeiten, Rest korrigieren, Ort ändern, Weitere Spule wie diese, Etikett drucken, Foto hinzufügen
 und Archivieren. Ein **Foto** der Spule zeigt die echte Farbe in der Mitte des Rings.
+
+Die **Bewertung** (1–5 Sterne) gilt für das Filament, also für alle Spulen dieser Sorte; derselbe Stern noch einmal
+löscht sie. Unter **Bearbeiten** lassen sich EANs von Hand eintragen, mehrere durch Komma getrennt (z.B. mit Spule
+und Refill).
 
 ### Wiegen
 
@@ -229,11 +243,12 @@ Material und je Drucker, Abbruchgründe und die teuersten Modelle. Filter nach D
 
 Für ein Filament einen **Mindestbestand** festlegen (hier oder unter Spule › Bearbeiten). Fällt der Bestand
 darunter, steht es unter **Nachkaufen**, mit Händler und letztem Preis. **Gekauft** legt die neue Spule mit den
-Daten des letzten Kaufs an. **Liste kopieren** kopiert die Einkaufsliste.
+Daten des letzten Kaufs an. **Liste kopieren** kopiert die Einkaufsliste. Sterne zeigen deine Bewertung des
+Filaments.
 
 ## 12. Einstellungen
 
-**Allgemein:** Darstellung (hell, dunkel, wie das System), Sprache (Deutsch, English), Weiterlaufen beim Schließen,
+**Allgemein:** Darstellung (hell, dunkel, wie das System), **Hintergrundbild**, Sprache (Deutsch, English), Weiterlaufen beim Schließen,
 Start mit dem Rechner (empfohlen), Mitteilungen (Druck fertig, Spule reicht nicht, neue Spule erkannt).
 
 **Drucker:** verbundene Drucker; weitere Drucker suchen oder per IP-Adresse hinzufügen.
@@ -292,6 +307,8 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
 - **⌘K** (Mac) bzw. **Strg+K** (Windows): Suche nach Spulen, Drucken, Modellen und Befehlen.
 - Eine `.gcode.3mf` auf das Fenster ziehen: Druckdatei prüfen.
 - Ein Barcodescanner, der den QR-Code eines FilMaNH-Etiketts liest, öffnet direkt die Spule.
+- Scannt er die EAN einer Spule oder ihres Kartons, öffnet sich **Neue Spule** – bei einer bekannten EAN mit dem
+  Filament schon gewählt.
 
 ## 15. Daten und Datenschutz
 
@@ -301,8 +318,9 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
   auf diesem Rechner ablegt – nichts sonst.
 - Kein Konto, keine Cloud. FilMaNH liest die Drucker nur aus und steuert sie nicht. Zugangscodes liegen im
   Schlüsselbund des Systems.
-- Ins Internet geht FilMaNH nur für die Update-Suche, die Katalog-Aktualisierung (auf Klick) und einen
-  Spoolman-Import, wenn du einen startest.
+- Ins Internet geht FilMaNH nur für die Update-Suche, die Katalog-Aktualisierung (auf Klick), einen
+  Spoolman-Import, wenn du einen startest, und für einen Shop-Link, wenn du einen einfügst (dann ruft FilMaNH genau
+  diese Seite ab).
 
 ## 16. Häufige Fragen
 
