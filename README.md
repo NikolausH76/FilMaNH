@@ -169,10 +169,11 @@ Alle Daten bleiben auf deinem Rechner – kein Konto, keine Werbung, keine Analy
 Updates und den Filament-Katalog (beides auf GitHub), für einen eingefügten Shop-Link und für die Übernahme aus
 Spoolman. Mehr dazu: [Datenschutzerklärung](DATENSCHUTZ.md)
 
-## Demnächst
+## Eingebaut, aber noch nicht getestet
 
-<details>
-<summary>In Arbeit – schon in der App angelegt, aber noch nicht an echten Druckern geprüft</summary>
+Diese Funktionen sind schon im Programm, konnten aber noch nicht an einem echten Drucker ausprobiert werden – es fehlt
+die passende Hardware oder die Situation kam noch nicht vor. Wer sie nutzt: Eine kurze
+[Rückmeldung](https://github.com/NikolausH76/FilMaNH/issues) hilft.
 
 - **AMS HT** als eigene Einheit
 - **Spule leer gelaufen:** Läuft eine Spule im Druck leer, setzt ein Klick ihren Rest auf 0
@@ -181,8 +182,6 @@ Spoolman. Mehr dazu: [Datenschutzerklärung](DATENSCHUTZ.md)
 - **Spulenwechsel im Druck:** Ersatzspule im AMS oder von Hand getauscht – der Verbrauch wird an dieser Schicht auf
   beide Spulen aufgeteilt
 - **Druck ohne Druckdatei** (z.B. H2 ohne USB-Stick): Verbrauch je Spule eintragen, mit Vorschlag aus der RFID-Anzeige
-
-</details>
 
 ## Fragen und Fehler
 

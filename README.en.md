@@ -169,10 +169,11 @@ All data stays on your computer – no account, no ads, no analytics. FilMaNH on
 filament catalog (both on GitHub), for a shop link you paste and for importing from Spoolman. More:
 [privacy statement](DATENSCHUTZ.md)
 
-## Coming soon
+## Built in, but not yet tested
 
-<details>
-<summary>In progress – already in the app, but not yet tested on real printers</summary>
+These features are already in the program but haven't been tried on a real printer yet – the matching hardware is
+missing or the situation hasn't come up. If you use them, a short [report](https://github.com/NikolausH76/FilMaNH/issues)
+helps.
 
 - **AMS HT** as a unit of its own
 - **Spool ran out:** if a spool runs out during a print, one click sets its remaining amount to 0
@@ -182,8 +183,6 @@ filament catalog (both on GitHub), for a shop link you paste and for importing f
   layer
 - **Print without a print file** (e.g. H2 without a USB drive): enter the usage per spool, with a suggestion from the
   RFID reading
-
-</details>
 
 ## Questions and bugs
 
