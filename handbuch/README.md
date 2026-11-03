@@ -1,6 +1,6 @@
 # FilMaNH – Handbuch
 
-*Deutsch · [English](../handbook/README.md)*
+*Deutsch · [English](../handbook/README.md) · [iPhone-App](iphone.md)*
 
 FilMaNH verwaltet deine Filamentspulen und bucht den Verbrauch jedes Drucks automatisch ab. Das Programm läuft
 lokal auf deinem Rechner und liest die Bambu-Lab-Drucker im Netzwerk nur aus.
@@ -81,7 +81,8 @@ Die Einrichtung lässt sich mit **Später einrichten** überspringen und unter E
 
 - **Hinweise** oben zeigen, was Aufmerksamkeit braucht: falsches Material im Slot, Druck mit offenem Ende, Spule
   ohne Zuordnung, Feuchte, fast leere Spulen. Die passende Aktion steht jeweils daneben.
-- **Drucker** mit Status, laufendem Druck, Restzeit und den Slots samt Restmenge. Ein Klick öffnet den Drucker.
+- **Drucker** mit Status, laufendem Druck, Restzeit und den Slots samt Restmenge: je AMS die Slots 1–4 (bei mehreren
+  AMS mit Überschrift), abgesetzt die externe Spule. Ein Klick öffnet den Drucker.
 - **Zuletzt gedruckt** mit Kosten.
 
 ## 5. Spulen
@@ -89,7 +90,8 @@ Die Einrichtung lässt sich mit **Später einrichten** überspringen und unter E
 ![Spulen](bilder/05-spulen.png)
 
 Filter nach Zustand (Voll, Angebrochen, Fast leer, Leer, Archiv), Material, Hersteller und Lagerort; Suche,
-Kachel- oder Listenansicht. **Etiketten** druckt Etiketten für alle angezeigten Spulen.
+Kachel- oder Listenansicht. **Etiketten** druckt Etiketten für alle angezeigten Spulen. **Fehlende Etiketten** steht
+da, sobald neue Spulen noch kein Etikett haben (auch am iPhone angelegte), und druckt genau diese.
 
 ### Neue Spule
 
@@ -110,7 +112,8 @@ Das Suchfeld nimmt auch eine **EAN** (Strichcode auf Spule oder Karton) und eine
 
 ![Shop-Link](bilder/04b-shop-link.png)
 
-Bambu-Spulen mit RFID müssen nicht angelegt werden – einlegen genügt.
+Nach dem Anlegen bietet FilMaNH an, gleich das Etikett zu drucken. Bambu-Spulen mit RFID müssen nicht angelegt
+werden – einlegen genügt.
 
 ### Spule im Detail
 
@@ -140,7 +143,18 @@ Spule samt Rolle wiegen und das Gewicht eintragen. FilMaNH zieht das Leergewicht
 
 ![Etiketten](bilder/09-etiketten.png)
 
-Nummer, Farbe, Material und QR-Code – für Etikettendrucker (Brother, Dymo, Niimbot, Phomemo) oder A4-Bögen.
+Auf dem Etikett: Nummer, Farbe (davor das Material, wenn es nicht schon in der Bezeichnung steht), Hersteller und
+Bezeichnung, wann die Spule geöffnet wurde, und ein QR-Code mit der Nummer. Bei ungeöffneten Spulen steht
+„Geöffnet“ mit einem Strich zum Eintragen von Hand.
+
+- **Brother QL per USB** (Mac, z.B. QL-570): FilMaNH druckt direkt, ohne Treiber. Unter **Format** stehen alle
+  Rollen, die der Drucker kann; die eingelegte ist markiert. Passt das gewählte Format nicht zur eingelegten Rolle,
+  sagt FilMaNH das und druckt nicht; nach dem Wechsel **Erneut prüfen**. Das Etikett passt sich dem Format an, die
+  Vorschau zeigt genau das Druckbild.
+- **Systemdialog:** für andere Etikettendrucker (Brother über den Treiber, Dymo, Niimbot, Phomemo) und A4-Bögen,
+  mit Vorlagen für gängige Größen. Unter Windows geht jeder Etikettendruck über den Systemdialog.
+
+**Anzahl je Spule** druckt mehrere gleiche Etiketten. FilMaNH merkt sich, welche Spulen ein Etikett haben.
 
 ### Feuchte
 
@@ -164,7 +178,7 @@ Beim Druckstart prüft FilMaNH:
 ![AMS](bilder/11-drucker-ams.png)
 
 Weiter unten: das AMS mit Slots, Feuchte und Temperatur, der Feuchteverlauf der letzten 7 Tage und die externe
-Spule. Eine Spule aus **Spulen im Regal** auf einen Slot ziehen ordnet sie zu. Darunter stehen alle Drucke dieses
+Spule. H2D und H2C haben zwei externe Halter (links und rechts); ein leerer, nicht zugeordneter wird nicht gezeigt. Eine Spule aus **Spulen im Regal** auf einen Slot ziehen ordnet sie zu. Darunter stehen alle Drucke dieses
 Druckers. **Einrichtung** oben rechts führt zu den Druckereinstellungen.
 
 ### Spule zuordnen
@@ -210,7 +224,11 @@ Laufende Drucke lassen sich nicht löschen.
 - **In Bambu Studio öffnen** öffnet die aufbewahrte Druckdatei. Stammt das Modell von MakerWorld, führt ein Link
   dorthin.
 - Menü **…**: Foto ersetzen, **Als Ausschuss markieren** (Teil unbrauchbar – zählt in der Auswertung als Fehldruck),
-  Buchung zurücknehmen.
+  Buchung zurücknehmen und, solange nicht gebucht ist, **Druckdatei neu suchen**.
+- Jede Druckdatei prüft FilMaNH am Inhalt: Schichtzahl und die Filamente, die der Drucker tatsächlich nutzt. Eine
+  ältere Datei gleichen Namens wird so nicht verwendet.
+- **Nicht gebucht – Spule wählen.** erscheint, wenn der Drucker für ein Filament keinen Slot gemeldet hat. Die Spule
+  wählst du selbst; FilMaNH rät sie nicht.
 - Bei Abbrüchen steht die Meldung des Druckers dabei.
 
 ### Ende offen
@@ -284,6 +302,8 @@ private Netzwerke).
 ![iPhone](bilder/28-einst-iphone.png)
 
 ![iPhone koppeln](bilder/29-iphone-koppeln.png)
+
+Was die App kann, steht im [Handbuch für die iPhone-App](iphone.md).
 
 **Daten:** tägliche Sicherung (die letzten 14 Stände), Export und Import aller Daten, Druckverlauf als CSV,
 Datenordner. **Aus Spoolman übernehmen** liest Spulen aus einem Spoolman-Server oder einer Spoolman-Exportdatei.

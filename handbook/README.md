@@ -1,6 +1,6 @@
 # FilMaNH – User guide
 
-*[Deutsch](../handbuch/README.md) · English*
+*[Deutsch](../handbuch/README.md) · English · [iPhone app](iphone.md)*
 
 FilMaNH keeps track of your filament spools and deducts what every print uses, automatically. It runs locally on
 your computer and only reads from the Bambu Lab printers on your network.
@@ -79,8 +79,8 @@ Finally, FilMaNH asks for the **electricity price** per kWh (for the electricity
 
 - **Notices** at the top show what needs your attention: wrong material in a slot, a print whose end is unknown,
   an unassigned spool, moisture, almost empty spools. The matching action sits right next to each one.
-- **Printers** with status, current print, remaining time and the slots with their remaining amount. Click to open
-  the printer.
+- **Printers** with status, current print, remaining time and the slots with their remaining amount: slots 1–4 per
+  AMS (with a heading when there are several), the external spool set apart. Click to open the printer.
 - **Recently printed** with costs.
 
 ## 5. Spools
@@ -88,7 +88,8 @@ Finally, FilMaNH asks for the **electricity price** per kWh (for the electricity
 ![Spools](images/05-spulen.png)
 
 Filter by state (Full, Opened, Almost empty, Empty, Archive), material, brand and location; search; grid or list
-view. **Labels** prints labels for all spools shown.
+view. **Labels** prints labels for all spools shown. **Missing labels** appears as soon as new spools have no label
+yet (including spools created on the iPhone) and prints exactly those.
 
 ### New spool
 
@@ -109,7 +110,8 @@ The search field also takes an **EAN** (barcode on the spool or box) and a **sho
 
 ![Shop link](images/04b-shop-link.png)
 
-Bambu spools with RFID don’t need to be created – just load them.
+After creating, FilMaNH offers to print the label right away. Bambu spools with RFID don’t need to be created – just
+load them.
 
 ### Spool details
 
@@ -140,7 +142,18 @@ the rest.
 
 ![Labels](images/09-etiketten.png)
 
-Number, colour, material and QR code – for label printers (Brother, Dymo, Niimbot, Phomemo) or A4 sheets.
+On the label: number, colour (with the material in front unless the product name already contains it), brand and
+product, when the spool was opened, and a QR code with the number. Unopened spools get “Opened” with a line to fill
+in by hand.
+
+- **Brother QL via USB** (Mac, e.g. QL-570): FilMaNH prints directly, no driver needed. **Format** lists every roll
+  the printer supports; the loaded one is marked. If the chosen format does not match the loaded roll, FilMaNH says
+  so and does not print; after changing the roll, **Check again**. The label adapts to the format, and the preview
+  shows exactly what is printed.
+- **System dialog:** for other label printers (Brother via its driver, Dymo, Niimbot, Phomemo) and A4 sheets, with
+  templates for common sizes. On Windows, all label printing goes through the system dialog.
+
+**Copies per spool** prints several identical labels. FilMaNH remembers which spools have a label.
 
 ### Moisture
 
@@ -164,7 +177,7 @@ When a print starts, FilMaNH checks:
 ![AMS](images/11-drucker-ams.png)
 
 Further down: the AMS with its slots, humidity and temperature, the humidity of the last 7 days and the external
-spool. Drag a spool from **Spools on the shelf** onto a slot to assign it. Below are all prints of this printer.
+spool. H2D and H2C have two external holders (left and right); an empty one without an assigned spool is not shown. Drag a spool from **Spools on the shelf** onto a slot to assign it. Below are all prints of this printer.
 **Setup** at the top right opens the printer settings.
 
 ### Assign a spool
@@ -209,7 +222,11 @@ deleted.
   and gross.
 - **Open in Bambu Studio** opens the kept print file. If the model comes from MakerWorld, a link leads there.
 - **…** menu: Replace photo, **Mark as waste** (part unusable – counts as a failed print in the statistics), Undo
-  deduction.
+  deduction and, as long as nothing is deducted, **Find print file again**.
+- FilMaNH checks every print file against the print: layer count and the filaments the printer actually uses. An
+  older file with the same name is not used.
+- **Not deducted – choose a spool.** appears when the printer reported no slot for a filament. You choose the spool;
+  FilMaNH does not guess.
 - For cancelled prints the printer’s message is shown.
 
 ### End unknown
@@ -282,6 +299,8 @@ macOS or Windows asks whether FilMaNH may accept connections: **Allow** (on Wind
 ![iPhone](images/28-einst-iphone.png)
 
 ![Pair iPhone](images/29-iphone-koppeln.png)
+
+What the app can do is described in the [iPhone app handbook](iphone.md).
 
 **Data:** daily backup (the last 14), export and import of all data, print history as CSV, data folder.
 **Import from Spoolman** reads spools from a Spoolman server or a Spoolman export file.
