@@ -127,7 +127,8 @@ und Archivieren. Ein **Foto** der Spule zeigt die echte Farbe in der Mitte des R
 
 Die **Bewertung** (1–5 Sterne) gilt für das Filament, also für alle Spulen dieser Sorte; derselbe Stern noch einmal
 löscht sie. Unter **Bearbeiten** lassen sich EANs von Hand eintragen, mehrere durch Komma getrennt (z.B. mit Spule
-und Refill).
+und Refill). Dort lassen sich auch **Hersteller**, **Bezeichnung**, **Material** und **Farbe** ändern; das gilt für alle
+Spulen dieses Filaments.
 
 ### Wiegen
 
@@ -274,6 +275,16 @@ und Zeitraffer höchstens belegen.
   die Druckdatei kurz ab, und FilMaNH übernimmt sie. So wird auch gebucht, wenn der Drucker die Datei nicht
   herausgibt. Einzurichten ist nichts.
 
+**iPhone:** Verbindung zur FilMaNH-App auf dem iPhone (aus ab Werk; die App erscheint demnächst im App Store).
+**QR-Code zeigen** öffnet das Koppeln: In der App **Mit Rechner koppeln** antippen und den Code scannen. Die
+Verbindung bleibt im Heimnetz und ist verschlüsselt; gekoppelte iPhones lassen sich hier wieder **Entfernen**. Beim
+ersten Einschalten fragen macOS bzw. Windows, ob FilMaNH Verbindungen annehmen darf: **Erlauben** (unter Windows für
+private Netzwerke).
+
+![iPhone](bilder/28-einst-iphone.png)
+
+![iPhone koppeln](bilder/29-iphone-koppeln.png)
+
 **Daten:** tägliche Sicherung (die letzten 14 Stände), Export und Import aller Daten, Druckverlauf als CSV,
 Datenordner. **Aus Spoolman übernehmen** liest Spulen aus einem Spoolman-Server oder einer Spoolman-Exportdatei.
 
@@ -318,6 +329,8 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
   auf diesem Rechner ablegt – nichts sonst.
 - Kein Konto, keine Cloud. FilMaNH liest die Drucker nur aus und steuert sie nicht. Zugangscodes liegen im
   Schlüsselbund des Systems.
+- Ist die **Verbindung zum iPhone** eingeschaltet, nimmt FilMaNH im Heimnetz verschlüsselte Verbindungen von
+  gekoppelten iPhones an (Port 47474). Ins Internet geht dabei nichts.
 - Ins Internet geht FilMaNH nur für die Update-Suche, die Katalog-Aktualisierung (auf Klick), einen
   Spoolman-Import, wenn du einen startest, und für einen Shop-Link, wenn du einen einfügst (dann ruft FilMaNH genau
   diese Seite ab).

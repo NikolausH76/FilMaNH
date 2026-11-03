@@ -125,7 +125,9 @@ In the **…** menu: Edit, Correct remaining, Change location, Another spool lik
 Archive. A **photo** of the spool shows its real colour in the centre of the ring.
 
 The **Rating** (1–5 stars) applies to the filament, i.e. to all spools of that kind; clicking the same star again
-clears it. Under **Edit** you can enter EANs by hand, several separated by commas (e.g. with spool and refill).
+clears it. Under **Edit** you can enter EANs by hand, several separated by commas (e.g. with spool and refill). You
+can also change the **Brand**, **Product**, **Material** and **Color** there; this applies to all spools of this
+filament.
 
 ### Weigh
 
@@ -272,6 +274,15 @@ files and timelapses may use.
   stores the print file and FilMaNH takes it. This way usage is booked even if the printer does not provide the
   file. Nothing to set up.
 
+**iPhone:** connection to the FilMaNH app on the iPhone (off by default; the app is coming soon to the App Store).
+**Show QR code** starts pairing: tap **Pair with computer** in the app and scan the code. The connection stays on
+your home network and is encrypted; **Remove** disconnects a paired iPhone. When you turn it on for the first time,
+macOS or Windows asks whether FilMaNH may accept connections: **Allow** (on Windows for private networks).
+
+![iPhone](images/28-einst-iphone.png)
+
+![Pair iPhone](images/29-iphone-koppeln.png)
+
 **Data:** daily backup (the last 14), export and import of all data, print history as CSV, data folder.
 **Import from Spoolman** reads spools from a Spoolman server or a Spoolman export file.
 
@@ -314,6 +325,8 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
   this computer – nothing else.
 - No account, no cloud. FilMaNH only reads from the printers and never controls them. Access codes are stored in
   the system keychain.
+- With the **iPhone connection** turned on, FilMaNH accepts encrypted connections from paired iPhones on your home
+  network (port 47474). Nothing goes to the internet.
 - FilMaNH only goes online to check for updates, to update the catalog (when you click), for a Spoolman import if
   you start one, and for a shop link when you paste one (then FilMaNH fetches exactly that page).
 
