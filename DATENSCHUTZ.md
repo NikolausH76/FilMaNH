@@ -13,7 +13,8 @@ den Entwickler oder für Dritte. Es gibt kein Konto, keine Werbung, keine Analys
   (z.B. Darstellung) und eine Kopie des letzten Stands samt Spulenfotos, damit die App auch ohne Verbindung etwas zeigt. **Trennen**
   löscht Kopplung und Kopie.
 - **Kamera:** zum Scannen von QR-Codes und Strichcodes und für Fotos deiner Spulen. Fotos gehen nur an deinen
-  Rechner.
+  Rechner. Unter Android erkennt ML Kit von Google die Codes direkt auf dem Handy; die App sendet dabei nichts an
+  Google (ab Android-App 1.0.1).
 - **Lokales Netzwerk:** nur, um den gekoppelten Rechner zu erreichen.
 - **Handbuch** und **Fehler melden** öffnen GitHub im Browser; dort gilt die Datenschutzerklärung von GitHub.
 
@@ -45,7 +46,9 @@ or for third parties. There is no account, no advertising, no analytics and no t
 - Spools, prints and photos are stored on your computer. The phone keeps the pairing, your settings (e.g.
   appearance) and a copy of the last state including spool photos, so the app can show something without a connection. **Unpair** deletes
   the pairing and the copy.
-- **Camera:** to scan QR codes and barcodes and to take photos of your spools. Photos go only to your computer.
+- **Camera:** to scan QR codes and barcodes and to take photos of your spools. Photos go only to your computer. On
+  Android, Google's ML Kit reads the codes on the phone itself; the app sends nothing to Google (Android app 1.0.1 or
+  later).
 - **Local network:** only to reach the paired computer.
 - **Manual** and **Report a problem** open GitHub in the browser; GitHub's privacy statement applies there.
 

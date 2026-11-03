@@ -20,8 +20,8 @@ verschlüsselt.
 ## 1. Installieren
 
 - Android 9 oder neuer.
-- Auf dem Handy die Seite [Releases](https://github.com/NikolausH76/FilMaNH/releases/latest) öffnen und
-  `FilMaNH-Android_….apk` laden.
+- Auf dem Handy **[FilMaNH-Android.apk](https://github.com/NikolausH76/FilMaNH/releases/latest/download/FilMaNH-Android.apk)** laden – oder den QR-Code auf der
+  [Startseite](../README.md#download) mit dem Handy scannen.
 - Die Datei öffnen. Beim ersten Mal fragt Android, ob der Browser bzw. die Dateien-App Apps installieren darf:
   erlauben, dann **Installieren**.
 - Updates: die neue APK genauso installieren. Kopplung und Einstellungen bleiben erhalten.
