@@ -1,59 +1,178 @@
-# FilMaNH
+<p align="center">
+  <img src="handbuch/bilder/logo.png" width="104" alt="FilMaNH-Logo">
+</p>
 
-**Deutsch** · [English](#english)
+<h1 align="center">FilMaNH</h1>
 
-Filament- und Spulenverwaltung für Bambu-Lab-Drucker. Läuft lokal auf deinem Rechner (macOS und Windows),
-ohne Cloud und ohne Einstellungen am Drucker zu ändern. Dazu gibt es Apps für Android und iPhone. Alles auf Deutsch
-und Englisch.
+<p align="center">
+  <b>Filament- und Spulenverwaltung für Bambu-Lab-Drucker</b><br>
+  Was steckt im AMS, wie viel ist noch auf der Spule, was hat der Druck gekostet?<br>
+  Lokal auf deinem Rechner, ohne Cloud und ohne Einstellungen am Drucker.
+</p>
+
+<p align="center">
+  <a href="https://github.com/NikolausH76/FilMaNH/releases/latest"><img src="https://img.shields.io/github/v/release/NikolausH76/FilMaNH?label=Version&color=2A59D6" alt="Neueste Version"></a>
+</p>
+
+<p align="center"><b>Deutsch</b> · <a href="README.en.md">English</a></p>
+
+<p align="center">
+  <img src="handbuch/bilder/05-spulen.png" width="900" alt="FilMaNH: alle Spulen mit Restmenge">
+</p>
+
+<p align="center">
+  <a href="https://github.com/NikolausH76/FilMaNH/releases/latest"><img src="https://img.shields.io/badge/macOS-Download-2A59D6?style=for-the-badge" alt="Download für macOS"></a>
+  <a href="https://github.com/NikolausH76/FilMaNH/releases/latest"><img src="https://img.shields.io/badge/Windows-Download-2A59D6?style=for-the-badge" alt="Download für Windows"></a>
+  <a href="https://github.com/NikolausH76/FilMaNH/releases/latest/download/FilMaNH-Android.apk"><img src="https://img.shields.io/badge/Android-Download-2A59D6?style=for-the-badge" alt="Download für Android"></a>
+  <img src="https://img.shields.io/badge/iPhone-bald_im_App_Store-555?style=for-the-badge" alt="iPhone: bald im App Store">
+</p>
+
+## Worum es geht
+
+Mit mehreren Spulen und einem AMS verliert man schnell den Überblick: Was steckt wo? Wie viel ist noch drauf? Reicht
+das für den nächsten Druck? FilMaNH liest deine Drucker im Heimnetz mit und bucht nach jedem Druck den Verbrauch von
+der richtigen Spule ab – aus der Druckdatei, mit dem Spülen beim Farbwechsel. So stimmt der Bestand, ohne dass du nach
+jedem Druck etwas eintragen musst.
+
+## So funktioniert's
+
+1. **Spulen anlegen** – aus dem Katalog mit über 7.000 Filamenten, per EAN-Scan oder mit dem Link zur Produktseite.
+   Bambu-Spulen mit RFID erkennt FilMaNH beim Einlegen von selbst.
+2. **Etikett drucken und einlegen** – jede Spule bekommt eine Nummer und ein Etikett mit QR-Code. Steckt sie im AMS,
+   fragt FilMaNH einmal, welche Spule das ist.
+3. **Drucken** – am Ende jedes Drucks bucht FilMaNH den Verbrauch je Spule ab. War der Rechner aus, holt es das beim
+   nächsten Start nach.
+4. **Überblick behalten** – Restmengen, Kosten je Druck, Hinweise bei falschem Material oder zu lange offenem
+   Filament, und eine Einkaufsliste.
+
+> [!NOTE]
+> FilMaNH liest die Drucker nur aus. Es schickt ihnen keine Befehle und braucht weder LAN-Modus noch Entwicklermodus.
+
+## Funktionen
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+<img src="handbuch/bilder/01-uebersicht.png" alt="Übersicht">
+
+### Übersicht und Hinweise
+
+- Alle Drucker mit laufendem Druck, Restzeit und Slots samt Restmenge
+- Hinweise mit passender Aktion: falsches Material im Slot, Spule ohne Zuordnung, Filament zu lange offen, fast leere
+  Spulen
+- Zuletzt gedruckt, mit Kosten
+
+</td>
+<td width="50%" valign="top">
+
+<img src="handbuch/bilder/11-drucker-ams.png" alt="Drucker mit AMS">
+
+### Drucker und AMS
+
+- Drucker im Netz finden, Zugangscode aus Bambu Studio übernehmen
+- AMS live mit Feuchte, Temperatur und Feuchteverlauf der letzten 7 Tage
+- H2C und H2D mit zwei Düsen: AMS und externe Spulen je Düse
+- Beim Druckstart: falsches Material, andere Farbe, Spule reicht nicht
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+<img src="handbuch/bilder/06-spule.png" alt="Spule">
+
+### Spulen
+
+- Rest, Preis, Händler, Lagerort, Bewertung und Verlauf je Spule
+- Wiegen macht den Bestand genau – FilMaNH lernt daraus die Abweichung je Filament
+- Hinweis, wenn Filament zu lange offen liegt (PETG nach 30 Tagen, TPU nach 14, PA und PC nach 7)
+- Filter nach Zustand, Material, Hersteller und Lagerort
+
+</td>
+<td width="50%" valign="top">
+
+<img src="handbuch/bilder/15-druck.png" alt="Druck mit Kosten">
+
+### Drucke und Kosten
+
+- Verbrauch je Slot aus der Druckdatei, bei einem Abbruch nur bis zur erreichten Schicht
+- Kosten je Druck, netto und brutto: Material, Strom und Maschinenzeit
+- Verlauf mit Bild, 3D-Ansicht und Zeitraffer
+- Modelle: alle Drucke eines Modells mit Kosten und Erfolgsquote
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+<img src="handbuch/bilder/09-etiketten.png" alt="Etiketten">
+
+### Etiketten
+
+- Nummer, Farbe, Hersteller, Öffnungsdatum und QR-Code
+- Brother QL per USB direkt, ohne Treiber (Mac); andere Etikettendrucker und A4-Bögen über den Druckdialog
+- **Fehlende Etiketten** druckt genau die neuen Spulen
+
+</td>
+<td width="50%" valign="top">
+
+<img src="handbuch/bilder/19-auswertung.png" alt="Auswertung">
+
+### Auswertung und Einkauf
+
+- Kosten je Monat, Material und Drucker, Ausschuss und Abbruchgründe
+- **Druckdatei prüfen:** Reicht das Filament, was kostet der Druck?
+- Mindestbestand je Filament: Einkaufsliste mit Händler und letztem Preis
+
+</td>
+</tr>
+</table>
+
+## Am Handy
+
+<p align="center">
+  <img src="handbuch/bilder/android-drucker.png" width="220" alt="Handy: Drucker mit AMS">
+  <img src="handbuch/bilder/android-spule.png" width="220" alt="Handy: Spule">
+  <img src="handbuch/bilder/android-bearbeiten.png" width="220" alt="Handy: Spule bearbeiten">
+</p>
+
+Spulen scannen, in Slots legen, wiegen, fotografieren und bearbeiten – zusammen mit FilMaNH auf deinem Rechner, im
+Heimnetz und verschlüsselt. Die App für **Android** gibt es unten zum Download, die für das **iPhone** erscheint
+demnächst im App Store. Anleitungen: [Android](handbuch/android.md) · [iPhone](handbuch/iphone.md)
 
 ## Download
 
 | System | Download |
 |---|---|
 | **macOS** · Apple Silicon und Intel, von Apple geprüft | [Releases](https://github.com/NikolausH76/FilMaNH/releases/latest) → `FilMaNH_…_universal.dmg` |
-| **Windows** · 64 Bit | [Releases](https://github.com/NikolausH76/FilMaNH/releases/latest) → `FilMaNH_…_x64-setup.exe` |
+| **Windows** · 10 und 11, 64 Bit | [Releases](https://github.com/NikolausH76/FilMaNH/releases/latest) → `FilMaNH_…_x64-setup.exe` |
 | **Android** · ab Android 9 | **[FilMaNH-Android.apk](https://github.com/NikolausH76/FilMaNH/releases/latest/download/FilMaNH-Android.apk)** · [Installieren](handbuch/android.md#1-installieren) |
 | **iPhone** | demnächst im App Store |
 
 <img src="handbuch/bilder/android-download.png" width="140" alt="QR-Code: Android-App laden"><br>
 <sub>Android-App: mit dem Handy scannen</sub>
 
-Neue Versionen meldet das Programm auf dem Rechner selbst und installiert sie auf Klick. Die Apps für Android und
-iPhone arbeiten mit FilMaNH auf dem Rechner zusammen.
+Neue Versionen meldet das Programm auf dem Rechner selbst und installiert sie auf Klick.
+
+**Voraussetzungen:** Bambu-Lab-Drucker im selben Netzwerk wie der Rechner (geprüft mit A1 mini, P2S und H2C). Den
+Zugangscode übernimmt FilMaNH aus Bambu Studio, sonst steht er am Drucker unter **Einstellungen › WLAN**.
 
 ## Handbuch
 
 **[Benutzerhandbuch mit Screenshots](handbuch/README.md)** – Installation, Einrichtung und alle Funktionen.
+Für die Handys: [Android](handbuch/android.md) · [iPhone](handbuch/iphone.md)
 
-## Was FilMaNH kann
+## Datenschutz
 
-- Spulen anlegen mit Katalog (über 7.000 Filamente), per EAN-Scan oder Shop-Link; wiegen, bewerten, Etiketten drucken
-- Drucker im Netz finden, AMS live, Bambu-Spulen mit RFID automatisch erkennen – mit Farbnamen aus Bambu Studio
-- H2C und H2D mit zwei Düsen: AMS und externe Spulen je Düse (links, rechts)
-- Verbrauch jedes Drucks automatisch abbuchen – auch wenn der Rechner während des Drucks aus war
-- Kosten je Druck, netto und brutto, mit Strom und Maschinenzeit
-- Druckverlauf mit Bild und 3D-Ansicht, „Reicht die Spule?“, Feuchte, Einkaufsliste, Auswertung
-
-## Apps für Android und iPhone
-
-Spulen scannen, in Slots legen, wiegen, fotografieren und bearbeiten – am Handy, zusammen mit FilMaNH auf deinem
-Rechner, im Heimnetz und ohne Cloud. Laden unter [Download](#download). Anleitungen: [Android](handbuch/android.md) ·
-[iPhone](handbuch/iphone.md)
-
-<p>
-  <img src="handbuch/bilder/android-drucker.png" width="220" alt="Android: Drucker mit AMS">
-  <img src="handbuch/bilder/android-spule.png" width="220" alt="Android: Spule">
-  <img src="handbuch/bilder/android-bearbeiten.png" width="220" alt="Android: Spule bearbeiten">
-</p>
-<p>
-  <img src="handbuch/bilder/iphone-drucker.png" width="220" alt="iPhone: Drucker mit AMS">
-  <img src="handbuch/bilder/iphone-spule.png" width="220" alt="iPhone: Spule">
-  <img src="handbuch/bilder/iphone-bearbeiten.png" width="220" alt="iPhone: Spule bearbeiten">
-</p>
+Alle Daten bleiben auf deinem Rechner – kein Konto, keine Werbung, keine Analyse. Ins Internet geht FilMaNH nur für
+Updates und den Filament-Katalog (beides auf GitHub), für einen eingefügten Shop-Link und für die Übernahme aus
+Spoolman. Mehr dazu: [Datenschutzerklärung](DATENSCHUTZ.md)
 
 ## Demnächst
 
-In Arbeit – schon in der App angelegt, aber noch nicht an echten Druckern geprüft:
+<details>
+<summary>In Arbeit – schon in der App angelegt, aber noch nicht an echten Druckern geprüft</summary>
 
 - **AMS HT** als eigene Einheit
 - **Spule leer gelaufen:** Läuft eine Spule im Druck leer, setzt ein Klick ihren Rest auf 0
@@ -63,79 +182,11 @@ In Arbeit – schon in der App angelegt, aber noch nicht an echten Druckern gepr
   beide Spulen aufgeteilt
 - **Druck ohne Druckdatei** (z.B. H2 ohne USB-Stick): Verbrauch je Spule eintragen, mit Vorschlag aus der RFID-Anzeige
 
+</details>
+
 ## Fragen und Fehler
 
 Bitte als [Issue](https://github.com/NikolausH76/FilMaNH/issues) melden.
-
----
-
-## English
-
-Filament and spool manager for Bambu Lab printers. Runs locally on your computer (macOS and Windows), no cloud,
-no printer settings to change. Apps for Android and iPhone come with it. Everything in English and German.
-
-### Download
-
-| System | Download |
-|---|---|
-| **macOS** · Apple Silicon and Intel, notarized by Apple | [Releases](https://github.com/NikolausH76/FilMaNH/releases/latest) → `FilMaNH_…_universal.dmg` |
-| **Windows** · 64-bit | [Releases](https://github.com/NikolausH76/FilMaNH/releases/latest) → `FilMaNH_…_x64-setup.exe` |
-| **Android** · Android 9 or later | **[FilMaNH-Android.apk](https://github.com/NikolausH76/FilMaNH/releases/latest/download/FilMaNH-Android.apk)** · [How to install](handbook/android.md#1-installing) |
-| **iPhone** | coming soon to the App Store |
-
-<img src="handbook/images/android-download.png" width="140" alt="QR code: download the Android app"><br>
-<sub>Android app: scan with your phone</sub>
-
-The program on your computer announces new versions itself and installs them with one click. The Android and iPhone
-apps work together with FilMaNH on your computer.
-
-### User guide
-
-**[User guide with screenshots](handbook/README.md)** – installation, setup and every feature.
-
-### Features
-
-- Add spools from a catalog (more than 7,000 filaments), by EAN scan or shop link; weigh, rate, print labels
-- Find printers on the network, live AMS view, Bambu spools with RFID recognised automatically – with colour names
-  from Bambu Studio
-- H2C and H2D with two nozzles: AMS units and external spools per nozzle (left, right)
-- Deducts what every print uses, automatically – even if the computer was off during the print
-- Cost per print, net and gross, including electricity and machine time
-- Print history with image and 3D view, “Will the spool last?”, moisture, shopping list, statistics
-
-### Apps for Android and iPhone
-
-Scan spools, put them in slots, weigh, photograph and edit them – on your phone, together with FilMaNH on your
-computer, on your home network and without a cloud. Get them under [Download](#download-1). Guides:
-[Android](handbook/android.md) · [iPhone](handbook/iphone.md)
-
-<p>
-  <img src="handbook/images/android-drucker.png" width="220" alt="Android: printers with AMS">
-  <img src="handbook/images/android-spule.png" width="220" alt="Android: spool">
-  <img src="handbook/images/android-bearbeiten.png" width="220" alt="Android: edit spool">
-</p>
-<p>
-  <img src="handbook/images/iphone-drucker.png" width="220" alt="iPhone: printers with AMS">
-  <img src="handbook/images/iphone-spule.png" width="220" alt="iPhone: spool">
-  <img src="handbook/images/iphone-bearbeiten.png" width="220" alt="iPhone: edit spool">
-</p>
-
-### Coming soon
-
-In progress – already in the app, but not yet tested on real printers:
-
-- **AMS HT** as a unit of its own
-- **Spool ran out:** if a spool runs out during a print, one click sets its remaining amount to 0
-- **Drying in the AMS 2 Pro and AMS HT:** the loaded spools count as dried afterwards – not if drying was stopped
-  before half the time
-- **Spool change during a print:** AMS backup spool or swapped by hand – usage is split between both spools at that
-  layer
-- **Print without a print file** (e.g. H2 without a USB drive): enter the usage per spool, with a suggestion from the
-  RFID reading
-
-### Questions and bugs
-
-Please open an [issue](https://github.com/NikolausH76/FilMaNH/issues).
 
 ---
 

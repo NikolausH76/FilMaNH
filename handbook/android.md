@@ -20,7 +20,7 @@ edit them. The data stays on the computer. The phone only connects to it on your
 
 - Android 9 or later.
 - On the phone, download **[FilMaNH-Android.apk](https://github.com/NikolausH76/FilMaNH/releases/latest/download/FilMaNH-Android.apk)** – or scan the QR code on the
-  [main page](../README.md#download-1) with your phone.
+  [main page](../README.en.md#download) with your phone.
 - Open the file. The first time, Android asks whether the browser or the Files app may install apps: allow it, then
   **Install**.
 - Updates: install the new APK the same way. Pairing and settings are kept.
