@@ -26,13 +26,20 @@ und installiert sie auf Klick.
 
 ## Für iPhone und Android
 
-Die App für das iPhone erscheint demnächst im App Store: Spulen scannen, in Slots legen, wiegen, fotografieren und
-bearbeiten – zusammen mit FilMaNH auf deinem Rechner, im Heimnetz und ohne Cloud. Eine App für Android ist in Planung.
+Spulen scannen, in Slots legen, wiegen, fotografieren und bearbeiten – zusammen mit FilMaNH auf deinem Rechner, im
+Heimnetz und ohne Cloud. Die App für **Android** gibt es bei den [Releases](https://github.com/NikolausH76/FilMaNH/releases/latest)
+zum Installieren (`FilMaNH-Android_….apk`), die App für das **iPhone** erscheint demnächst im App Store.
+Handbücher: [Android](handbuch/android.md) · [iPhone](handbuch/iphone.md)
 
 <p>
   <img src="handbuch/bilder/iphone-drucker.png" width="220" alt="Drucker mit AMS">
   <img src="handbuch/bilder/iphone-spule.png" width="220" alt="Spule">
   <img src="handbuch/bilder/iphone-bearbeiten.png" width="220" alt="Spule bearbeiten">
+</p>
+<p>
+  <img src="handbuch/bilder/android-drucker.png" width="220" alt="Android: Drucker mit AMS">
+  <img src="handbuch/bilder/android-spule.png" width="220" alt="Android: Spule">
+  <img src="handbuch/bilder/android-bearbeiten.png" width="220" alt="Android: Spule bearbeiten">
 </p>
 
 ## Demnächst
@@ -80,13 +87,20 @@ itself and installs them with one click.
 
 ### iPhone and Android
 
-The iPhone app is coming soon to the App Store: scan spools, put them in slots, weigh, photograph and edit them –
-together with FilMaNH on your computer, on your home network and without a cloud. An Android app is planned.
+Scan spools, put them in slots, weigh, photograph and edit them – together with FilMaNH on your computer, on your home
+network and without a cloud. The **Android** app is available from the [releases](https://github.com/NikolausH76/FilMaNH/releases/latest)
+as a file to install (`FilMaNH-Android_….apk`); the **iPhone** app is coming soon to the App Store.
+Handbooks: [Android](handbook/android.md) · [iPhone](handbook/iphone.md)
 
 <p>
   <img src="handbook/images/iphone-drucker.png" width="220" alt="Printers with AMS">
   <img src="handbook/images/iphone-spule.png" width="220" alt="Spool">
   <img src="handbook/images/iphone-bearbeiten.png" width="220" alt="Edit spool">
+</p>
+<p>
+  <img src="handbook/images/android-drucker.png" width="220" alt="Android: printers with AMS">
+  <img src="handbook/images/android-spule.png" width="220" alt="Android: spool">
+  <img src="handbook/images/android-bearbeiten.png" width="220" alt="Android: edit spool">
 </p>
 
 ### Coming soon

@@ -2,14 +2,14 @@
 
 *Stand: 3. November 2026 · English below*
 
-FilMaNH besteht aus einem Programm für Mac und Windows und einer App für das iPhone. Beide erheben keine Daten für
+FilMaNH besteht aus einem Programm für Mac und Windows und Apps für iPhone und Android. Sie erheben keine Daten für
 den Entwickler oder für Dritte. Es gibt kein Konto, keine Werbung, keine Analyse und kein Tracking.
 
-## iPhone-App
+## Apps für iPhone und Android
 
 - Die App verbindet sich ausschließlich mit FilMaNH auf deinem eigenen Rechner in deinem Heimnetz. Die Verbindung
   ist verschlüsselt und wird einmalig per QR-Code gekoppelt.
-- Spulen, Drucke und Fotos liegen auf deinem Rechner. Das iPhone speichert die Kopplung, deine Einstellungen
+- Spulen, Drucke und Fotos liegen auf deinem Rechner. Das Handy speichert die Kopplung, deine Einstellungen
   (z.B. Darstellung) und eine Kopie des letzten Stands samt Spulenfotos, damit die App auch ohne Verbindung etwas zeigt. **Trennen**
   löscht Kopplung und Kopie.
 - **Kamera:** zum Scannen von QR-Codes und Strichcodes und für Fotos deiner Spulen. Fotos gehen nur an deinen
@@ -35,14 +35,14 @@ Fragen zum Datenschutz über [Fehler melden](https://github.com/NikolausH76/FilM
 
 *As of 3 November 2026*
 
-FilMaNH consists of a program for Mac and Windows and an app for iPhone. Neither collects any data for the developer
+FilMaNH consists of a program for Mac and Windows and apps for iPhone and Android. None of them collects any data for the developer
 or for third parties. There is no account, no advertising, no analytics and no tracking.
 
-## iPhone app
+## Apps for iPhone and Android
 
 - The app connects only to FilMaNH on your own computer on your home network. The connection is encrypted and paired
   once by QR code.
-- Spools, prints and photos are stored on your computer. The iPhone keeps the pairing, your settings (e.g.
+- Spools, prints and photos are stored on your computer. The phone keeps the pairing, your settings (e.g.
   appearance) and a copy of the last state including spool photos, so the app can show something without a connection. **Unpair** deletes
   the pairing and the copy.
 - **Camera:** to scan QR codes and barcodes and to take photos of your spools. Photos go only to your computer.

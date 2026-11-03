@@ -1,6 +1,6 @@
 # FilMaNH – User guide
 
-*[Deutsch](../handbuch/README.md) · English · [iPhone app](iphone.md)*
+*[Deutsch](../handbuch/README.md) · English · [iPhone app](iphone.md) · [Android app](android.md)*
 
 FilMaNH keeps track of your filament spools and deducts what every print uses, automatically. It runs locally on
 your computer and only reads from the Bambu Lab printers on your network.
@@ -300,7 +300,8 @@ macOS or Windows asks whether FilMaNH may accept connections: **Allow** (on Wind
 
 ![Pair iPhone](images/29-iphone-koppeln.png)
 
-What the app can do is described in the [iPhone app handbook](iphone.md).
+This section applies to iPhone and Android. What the apps can do is described in the handbooks for [iPhone](iphone.md)
+and [Android](android.md).
 
 **Data:** daily backup (the last 14), export and import of all data, print history as CSV, data folder.
 **Import from Spoolman** reads spools from a Spoolman server or a Spoolman export file.
@@ -349,7 +350,7 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
 - FilMaNH only goes online to check for updates, to update the catalog (when you click), for a Spoolman import if
   you start one, and for a shop link when you paste one (then FilMaNH fetches exactly that page).
 
-The full privacy statement for the program and the iPhone app: [DATENSCHUTZ.md](../DATENSCHUTZ.md) (German and English).
+The full privacy statement for the program and the apps: [DATENSCHUTZ.md](../DATENSCHUTZ.md) (German and English).
 
 ## 16. FAQ
 

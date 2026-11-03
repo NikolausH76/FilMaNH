@@ -1,6 +1,6 @@
 # FilMaNH – Handbuch
 
-*Deutsch · [English](../handbook/README.md) · [iPhone-App](iphone.md)*
+*Deutsch · [English](../handbook/README.md) · [iPhone-App](iphone.md) · [Android-App](android.md)*
 
 FilMaNH verwaltet deine Filamentspulen und bucht den Verbrauch jedes Drucks automatisch ab. Das Programm läuft
 lokal auf deinem Rechner und liest die Bambu-Lab-Drucker im Netzwerk nur aus.
@@ -303,7 +303,8 @@ private Netzwerke).
 
 ![iPhone koppeln](bilder/29-iphone-koppeln.png)
 
-Was die App kann, steht im [Handbuch für die iPhone-App](iphone.md).
+Der Bereich gilt für iPhone und Android. Was die Apps können, steht in den Handbüchern für [iPhone](iphone.md) und
+[Android](android.md).
 
 **Daten:** tägliche Sicherung (die letzten 14 Stände), Export und Import aller Daten, Druckverlauf als CSV,
 Datenordner. **Aus Spoolman übernehmen** liest Spulen aus einem Spoolman-Server oder einer Spoolman-Exportdatei.
@@ -355,7 +356,7 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
   Spoolman-Import, wenn du einen startest, und für einen Shop-Link, wenn du einen einfügst (dann ruft FilMaNH genau
   diese Seite ab).
 
-Die vollständige Datenschutzerklärung für Programm und iPhone-App: [DATENSCHUTZ.md](../DATENSCHUTZ.md).
+Die vollständige Datenschutzerklärung für Programm und Apps: [DATENSCHUTZ.md](../DATENSCHUTZ.md).
 
 ## 16. Häufige Fragen
 
