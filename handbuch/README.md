@@ -35,7 +35,9 @@ geladene App geöffnet werden soll.
 **Windows 10/11** (64 Bit): `FilMaNH_…_x64-setup.exe` starten. Bei „Der Computer wurde durch Windows geschützt“:
 **Weitere Informationen › Trotzdem ausführen**. Administratorrechte sind nicht nötig.
 
-Rechner und Drucker müssen im selben Netzwerk erreichbar sein. Am Drucker muss nichts umgestellt werden.
+Rechner und Drucker müssen im selben Netzwerk erreichbar sein. Am Drucker muss nichts umgestellt werden. FilMaNH
+verbindet sich mit den Ports 8883 (Zustand) und 990 (Druckdateien) des Druckers – liegt eine Firewall dazwischen,
+müssen beide offen sein.
 
 ## 2. Ersteinrichtung
 
@@ -306,8 +308,10 @@ private Netzwerke).
 Der Bereich gilt für iPhone und Android. Was die Apps können, steht in den Handbüchern für [iPhone](iphone.md) und
 [Android](android.md).
 
-**Daten:** tägliche Sicherung (die letzten 14 Stände), Export und Import aller Daten, Druckverlauf als CSV,
-Datenordner. **Aus Spoolman übernehmen** liest Spulen aus einem Spoolman-Server oder einer Spoolman-Exportdatei.
+**Daten:** tägliche Sicherung (die letzten 14 Stände), Export und Import aller Daten, Druckverlauf als CSV, Datenordner. Sicherung und Export enthalten die Datenbank: Spulen, Buchungen,
+Drucke und Einstellungen – nicht Fotos, Druckdateien, 3D-Ansichten, Zeitraffer und Quelldateien. Die liegen im
+Datenordner (`drucke`, `modelle`); wer umzieht, kopiert ihn mit. **Aus Spoolman übernehmen** liest Spulen aus einem
+Spoolman-Server oder einer Spoolman-Exportdatei.
 
 ![Daten](bilder/25-einst-daten.png)
 

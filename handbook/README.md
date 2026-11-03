@@ -34,7 +34,9 @@ is notarized by Apple; on first launch just confirm that you want to open an app
 **Windows 10/11** (64-bit): run `FilMaNH_…_x64-setup.exe`. If you see “Windows protected your PC”:
 **More info › Run anyway**. No administrator rights needed.
 
-Your computer and printers need to be on the same network. Nothing has to be changed on the printer.
+Your computer and printers need to be on the same network. Nothing has to be changed on the printer. FilMaNH
+connects to the printer's ports 8883 (status) and 990 (print files) – if there is a firewall in between, both must
+be open.
 
 ## 2. First setup
 
@@ -303,8 +305,10 @@ macOS or Windows asks whether FilMaNH may accept connections: **Allow** (on Wind
 This section applies to iPhone and Android. What the apps can do is described in the handbooks for [iPhone](iphone.md)
 and [Android](android.md).
 
-**Data:** daily backup (the last 14), export and import of all data, print history as CSV, data folder.
-**Import from Spoolman** reads spools from a Spoolman server or a Spoolman export file.
+**Data:** daily backup (the last 14), export and import of all data, print history as CSV, data folder. Backup and export contain the database: spools, bookings, prints and settings – not
+photos, print files, 3D views, timelapses and source files. Those are in the data folder (`drucke`, `modelle`); copy
+it along when moving to another computer. **Import from Spoolman** reads spools from a Spoolman server or a Spoolman
+export file.
 
 ![Data](images/25-einst-daten.png)
 

@@ -25,6 +25,8 @@ den Entwickler oder für Dritte. Es gibt kein Konto, keine Werbung, keine Analys
   - zur Suche nach Updates und für den Filament-Katalog (beides auf GitHub),
   - wenn du einen Shop-Link einfügst: zur Seite dieses Shops,
   - wenn du Spulen aus einem Spoolman-Server übernimmst: zu diesem Server.
+- Der Installer für Windows lädt bei Bedarf Microsoft WebView2 nach (die Anzeige-Komponente von Windows), wenn sie auf
+  dem Rechner fehlt.
 
 ## Kontakt
 
@@ -59,6 +61,7 @@ or for third parties. There is no account, no advertising, no analytics and no t
   - to check for updates and for the filament catalog (both on GitHub),
   - when you paste a shop link: to that shop's page,
   - when you import spools from a Spoolman server: to that server.
+- The Windows installer downloads Microsoft WebView2 (the Windows display component) if it is missing on the computer.
 
 ## Contact
 
