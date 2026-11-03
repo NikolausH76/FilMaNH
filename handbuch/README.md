@@ -355,6 +355,8 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
   Spoolman-Import, wenn du einen startest, und für einen Shop-Link, wenn du einen einfügst (dann ruft FilMaNH genau
   diese Seite ab).
 
+Die vollständige Datenschutzerklärung für Programm und iPhone-App: [DATENSCHUTZ.md](../DATENSCHUTZ.md).
+
 ## 16. Häufige Fragen
 
 **Der Drucker wird nicht gefunden.** Drucker eingeschaltet und im selben Netzwerk? Liegt er in einem anderen Netz,

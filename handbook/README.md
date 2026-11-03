@@ -349,6 +349,8 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
 - FilMaNH only goes online to check for updates, to update the catalog (when you click), for a Spoolman import if
   you start one, and for a shop link when you paste one (then FilMaNH fetches exactly that page).
 
+The full privacy statement for the program and the iPhone app: [DATENSCHUTZ.md](../DATENSCHUTZ.md) (German and English).
+
 ## 16. FAQ
 
 **The printer isn’t found.** Is it switched on and on the same network? If it is on a different subnet, enter the
