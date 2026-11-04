@@ -104,6 +104,12 @@ Filamente; die Auswahl füllt Farbe, Füllmenge und Leergewicht aus. Dazu option
 Lagerort und **Anzahl**: Bei 3 entstehen drei Spulen mit eigener Nummer. Steht ein Filament nicht im Katalog:
 **Ohne Katalog** und selbst eintragen.
 
+![Farbe wählen](bilder/04c-farbe.png)
+
+Die **Farbe** kommt dann aus über 80 Filamentfarben, sortiert nach **Standard**, **Matt**, **Seide**, **Galaxy**,
+**Transparent** und **Mehrfarbig** – oder du stellst sie selbst ein. **+** fügt weitere Farben hinzu (bis zu acht),
+für Verlaufs- und mehrfarbiges Filament.
+
 Das Suchfeld nimmt auch eine **EAN** (Strichcode auf Spule oder Karton) und einen **Shop-Link**:
 
 - **EAN:** scannen oder eintippen und Enter. Beim ersten Mal das Filament auswählen, FilMaNH merkt sich die EAN.
@@ -127,13 +133,17 @@ schon gedruckt hast und für die der Rest noch reicht.
 
 ![Menü einer Spule](bilder/07-spule-mehr.png)
 
-Im Menü **…**: Bearbeiten, Rest korrigieren, Ort ändern, Weitere Spule wie diese, Etikett drucken, Foto hinzufügen
-und Archivieren. Ein **Foto** der Spule zeigt die echte Farbe in der Mitte des Rings.
+Im Menü **…**: Bearbeiten, Rest korrigieren, Ort ändern, Weitere Spule wie diese, Etikett drucken, Foto hinzufügen,
+Archivieren und Löschen. Ein **Foto** der Spule zeigt die echte Farbe in der Mitte des Rings; ohne Foto steht dort
+die Struktur des Filaments in seiner Farbe – glänzend bei Seide, mit Glitzer bei Galaxy.
+
+**Löschen** entfernt eine Spule endgültig, etwa eine versehentlich angelegte. Das geht nur, solange kein Druck mit ihr
+gebucht ist; sonst **Archivieren** – das behält Verlauf und Kosten.
 
 Die **Bewertung** (1–5 Sterne) gilt für das Filament, also für alle Spulen dieser Sorte; derselbe Stern noch einmal
 löscht sie. Unter **Bearbeiten** lassen sich EANs von Hand eintragen, mehrere durch Komma getrennt (z.B. mit Spule
-und Refill). Dort lassen sich auch **Hersteller**, **Bezeichnung**, **Material** und **Farbe** ändern; das gilt für alle
-Spulen dieses Filaments.
+und Refill). Dort lassen sich auch **Hersteller**, **Bezeichnung**, **Material** und **Farbe** ändern (mit derselben Farbauswahl
+wie beim Anlegen); das gilt für alle Spulen dieses Filaments.
 
 ### Wiegen
 

@@ -72,6 +72,7 @@ bookings. The stars rate the filament; tapping the same star again clears the ra
 - **Another spool like this** – new spool of the same filament.
 - **Scan EAN** – remember the spool's barcode.
 - **Archive** – put an empty spool away.
+- **Delete …** – remove a spool created by mistake; only works without deducted prints (FilMaNH 0.7 or later).
 
 ### Weigh
 
@@ -85,15 +86,19 @@ amount right away.
 <img src="images/iphone-bearbeiten.png" width="240" alt="Edit">
 
 **Edit** at the top right. Brand, product, material, colour name and colour apply to the filament, i.e. to all spools
-of this kind. Also remaining, empty spool, storage location, minimum stock, price (gross or net), VAT, shop, purchase
+of this kind. The colour comes from the colour library (Standard, Matte, Silk, Galaxy, Transparent, Multicolor) or
+is set by hand; **+** adds colours for gradient and multicolour filament. Also remaining, empty spool, storage location, minimum stock, price (gross or net), VAT, shop, purchase
 date, **Opened on**, batch and note.
 
 ## 5. New spool
 
-<img src="images/iphone-neue-spule.png" width="240" alt="New spool">
+<p>
+  <img src="images/iphone-neue-spule.png" width="240" alt="New spool">
+  <img src="images/iphone-farbe.png" width="240" alt="Colour">
+</p>
 
 **+** in the spool list. The search covers the computer's catalog (brand, product, colour). **Custom filament** to
-enter it yourself, below it the **Existing filaments**. Then fill, purchase, location and count, then **Create**.
+enter it yourself (colour as when editing), below it the **Existing filaments**. Then fill, purchase, location and count, then **Create**.
 
 The computer prints the label: its spool list shows **Missing labels** with all new spools (FilMaNH 0.6 or later).
 

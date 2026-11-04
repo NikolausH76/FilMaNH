@@ -102,6 +102,12 @@ filaments; picking one fills in colour, net weight and empty spool weight. Optio
 location and **Quantity**: 3 creates three spools, each with its own number. If a filament is not in the catalog:
 **Without catalog** and enter it yourself.
 
+![Choose a colour](images/04c-farbe.png)
+
+The **Color** then comes from more than 80 filament colours, sorted by **Standard**, **Matte**, **Silk**, **Galaxy**,
+**Transparent** and **Multicolor** – or you set it yourself. **+** adds more colours (up to eight) for gradient and
+multicolour filament.
+
 The search field also takes an **EAN** (barcode on the spool or box) and a **shop link**:
 
 - **EAN:** scan or type it and press Enter. The first time, pick the filament and FilMaNH remembers the EAN. Next
@@ -125,13 +131,17 @@ printed before that the remaining filament is still enough for.
 
 ![Spool menu](images/07-spule-mehr.png)
 
-In the **…** menu: Edit, Correct remaining, Change location, Another spool like this, Print label, Add photo and
-Archive. A **photo** of the spool shows its real colour in the centre of the ring.
+In the **…** menu: Edit, Correct remaining, Change location, Another spool like this, Print label, Add photo,
+Archive and Delete. A **photo** of the spool shows its real colour in the centre of the ring; without a photo, the
+centre shows the filament’s texture in its colour – glossy for silk, sparkling for galaxy.
+
+**Delete** removes a spool for good, e.g. one created by mistake. This only works as long as no print has been
+deducted from it; otherwise **Archive** – that keeps history and costs.
 
 The **Rating** (1–5 stars) applies to the filament, i.e. to all spools of that kind; clicking the same star again
 clears it. Under **Edit** you can enter EANs by hand, several separated by commas (e.g. with spool and refill). You
-can also change the **Brand**, **Product**, **Material** and **Color** there; this applies to all spools of this
-filament.
+can also change the **Brand**, **Product**, **Material** and **Color** there (with the same colour choice as when
+creating); this applies to all spools of this filament.
 
 ### Weigh
 

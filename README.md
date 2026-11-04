@@ -88,6 +88,7 @@ jedem Druck etwas eintragen musst.
 - Wiegen macht den Bestand genau – FilMaNH lernt daraus die Abweichung je Filament
 - Hinweis, wenn Filament zu lange offen liegt (PETG nach 30 Tagen, TPU nach 14, PA und PC nach 7)
 - Filter nach Zustand, Material, Hersteller und Lagerort
+- Über 80 Filamentfarben zur Wahl, auch mehrfarbig und mit Verlauf
 
 </td>
 <td width="50%" valign="top">

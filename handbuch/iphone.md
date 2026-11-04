@@ -72,6 +72,7 @@ Die Sterne bewerten das Filament; derselbe Stern noch einmal löscht die Bewertu
 - **Weitere Spule wie diese** – neue Spule desselben Filaments.
 - **EAN scannen** – Strichcode der Spule merken.
 - **Archivieren** – leere Spule ablegen.
+- **Löschen …** – versehentlich angelegte Spule entfernen; geht nur ohne gebuchte Drucke (ab FilMaNH 0.7).
 
 ### Wiegen
 
@@ -84,15 +85,19 @@ Spule samt Rolle wiegen und das Gewicht eintippen. FilMaNH zieht das Leergewicht
 <img src="bilder/iphone-bearbeiten.png" width="240" alt="Bearbeiten">
 
 **Bearbeiten** oben rechts. Hersteller, Bezeichnung, Material, Farbname und Farbe gelten für das Filament, also für
-alle Spulen dieser Sorte. Dazu Rest, leere Spule, Lagerort, Mindestbestand, Preis (brutto oder netto), MwSt.,
+alle Spulen dieser Sorte. Die Farbe kommt aus der Farbbibliothek (Standard, Matt, Seide, Galaxy, Transparent,
+Mehrfarbig) oder wird selbst eingestellt; **+** fügt Farben für Verlaufs- und mehrfarbiges Filament hinzu. Dazu Rest, leere Spule, Lagerort, Mindestbestand, Preis (brutto oder netto), MwSt.,
 Händler, Kaufdatum, **Geöffnet am**, Charge und Notiz.
 
 ## 5. Neue Spule
 
-<img src="bilder/iphone-neue-spule.png" width="240" alt="Neue Spule">
+<p>
+  <img src="bilder/iphone-neue-spule.png" width="240" alt="Neue Spule">
+  <img src="bilder/iphone-farbe.png" width="240" alt="Farbe">
+</p>
 
 **+** in der Spulenliste. Die Suche geht über den Katalog des Rechners (Hersteller, Bezeichnung, Farbe). **Eigenes
-Filament** zum selbst Eintragen, darunter die **Vorhandenen Filamente**. Danach Füllung, Kauf, Lagerort und Anzahl,
+Filament** zum selbst Eintragen (Farbe wie beim Bearbeiten), darunter die **Vorhandenen Filamente**. Danach Füllung, Kauf, Lagerort und Anzahl,
 dann **Anlegen**.
 
 Das Etikett druckt der Rechner: Dort steht in der Spulenliste **Fehlende Etiketten** mit allen neuen Spulen (ab

@@ -88,6 +88,7 @@ anything after each print.
 - Weighing makes the stock exact – FilMaNH learns the deviation per filament from it
 - Notice when filament has been open too long (PETG after 30 days, TPU after 14, PA and PC after 7)
 - Filter by state, material, brand and location
+- More than 80 filament colours to choose from, also multicolour and gradient
 
 </td>
 <td width="50%" valign="top">
