@@ -24,7 +24,10 @@ verschlüsselt.
   [Startseite](../README.md#download) mit dem Handy scannen.
 - Die Datei öffnen. Beim ersten Mal fragt Android, ob der Browser bzw. die Dateien-App Apps installieren darf:
   erlauben, dann **Installieren**.
-- Updates: die neue APK genauso installieren. Kopplung und Einstellungen bleiben erhalten.
+- Updates: die neue APK genauso installieren. Kopplung und Einstellungen bleiben erhalten. Ab App-Version 1.1.3
+  zeigt die App unter der Kopfzeile **Neue App-Version … – zum Herunterladen tippen**, sobald FilMaNH am Rechner zu
+  einer neueren App gehört (auch in den Einstellungen: **App-Version … herunterladen**). Antippen lädt die APK im
+  Browser. Die App selbst geht dafür nicht ins Internet – sie erfährt es vom Rechner.
 
 Voraussetzungen am Rechner: FilMaNH ab Version 0.5 läuft (das Fenster darf geschlossen sein), und
 **Einstellungen › iPhone** ist eingeschaltet (ab Werk aus). Der Bereich heißt am Rechner „iPhone“, gilt aber auch für

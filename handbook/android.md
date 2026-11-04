@@ -23,7 +23,10 @@ edit them. The data stays on the computer. The phone only connects to it on your
   [main page](../README.en.md#download) with your phone.
 - Open the file. The first time, Android asks whether the browser or the Files app may install apps: allow it, then
   **Install**.
-- Updates: install the new APK the same way. Pairing and settings are kept.
+- Updates: install the new APK the same way. Pairing and settings are kept. From app version 1.1.3 on, the app shows
+  **New app version … – tap to download** below the top bar as soon as FilMaNH on the computer belongs to a newer app
+  (also in the settings: **Download app version …**). Tapping it downloads the APK in the browser. The app itself does
+  not go online for this – it learns it from the computer.
 
 On the computer: FilMaNH 0.5 or later is running (the window may be closed), and **Settings › iPhone** is switched on
 (off by default). The section is called “iPhone” on the computer but applies to Android too. Phone and computer are on
