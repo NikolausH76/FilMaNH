@@ -131,6 +131,9 @@ Zahnrad oben rechts.
 **„Rechner nicht erreichbar“?** FilMaNH muss am Rechner laufen, **Einstellungen › iPhone** muss an sein, und das
 iPhone muss im selben WLAN sein. In den iOS-Einstellungen unter FilMaNH muss **Lokales Netzwerk** erlaubt sein.
 
+Läuft FilMaNH auf einem **Windows-PC**, blockiert oft die Windows-Firewall: am Rechner unter **Einstellungen › iPhone**
+bei **Windows-Firewall** auf **Freigeben** klicken und die Rückfrage von Windows bestätigen.
+
 **Geht das auch unterwegs?** Nein. Die App spricht nur im Heimnetz mit dem Rechner; ins Internet geht dabei nichts.
 
 **Mehrere iPhones?** Ja, jedes wird einzeln gekoppelt.

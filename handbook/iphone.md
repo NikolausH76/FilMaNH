@@ -129,6 +129,9 @@ Gear at the top right.
 **"Computer not reachable"?** FilMaNH must be running on the computer, **Settings › iPhone** must be on, and the iPhone
 must be on the same Wi-Fi. In the iOS settings under FilMaNH, **Local Network** must be allowed.
 
+If FilMaNH runs on a **Windows PC**, the Windows Firewall often blocks it: on the computer, under **Settings › iPhone**,
+click **Allow** next to **Windows Firewall** and confirm the Windows prompt.
+
 **Does it work away from home?** No. The app only talks to the computer on your home network; nothing goes to the
 internet.
 

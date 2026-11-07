@@ -384,6 +384,14 @@ sind), Home Assistant und ähnliche Programme – die Bambu-Handy-App nicht, sie
 versucht es selbst weiter und holt den Druck nach, sobald es wieder verbunden ist; der Druck wird dadurch nicht
 gestört. Bleibt es dabei, ein anderes verbundenes Programm schließen oder die Firmware des Druckers aktualisieren.
 
+**„macOS verweigert FilMaNH den Zugriff aufs lokale Netzwerk“.** Systemeinstellungen › Datenschutz & Sicherheit ›
+**Lokales Netzwerk**: FilMaNH einschalten (der Knopf **Systemeinstellungen öffnen** in der Übersicht führt hin), dann
+FilMaNH neu starten. Ist es schon an, einmal aus- und wieder einschalten.
+
+**Der Drucker hat eine neue IP-Adresse bekommen.** Ist ein Drucker einige Minuten nicht erreichbar, sucht FilMaNH ihn
+selbst im Netz und verbindet sich unter der neuen Adresse. Klappt das nicht, den Drucker unter Einstellungen › Drucker
+noch einmal hinzufügen – Name, Zuordnungen und Verlauf bleiben erhalten.
+
 **Muss ich am Drucker den LAN-Modus oder Entwicklermodus einschalten?** Nein.
 
 **Der Bestand stimmt nicht.** Spule wiegen. Mit der Zeit lernt FilMaNH aus den Wiegungen und rechnet genauer.
