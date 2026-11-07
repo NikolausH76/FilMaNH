@@ -13,7 +13,8 @@ verschlüsselt.
 5. [Neue Spule](#5-neue-spule)
 6. [Scannen](#6-scannen)
 7. [Einstellungen](#7-einstellungen)
-8. [Häufige Fragen](#8-häufige-fragen)
+8. [Widget](#8-widget)
+9. [Häufige Fragen](#9-häufige-fragen)
 
 ---
 
@@ -134,12 +135,23 @@ Der Bereich **Scannen** erkennt:
 Zahnrad oben rechts.
 
 - **Darstellung:** System, Hell oder Dunkel. **Hintergrundbild** ein oder aus.
-- **Sprache:** Deutsch oder Englisch; ein Tipp öffnet die Spracheinstellung von Android für FilMaNH.
+- **Sprache:** Deutsch, English, Español, Français, Italiano, Nederlands, Polski – wie das Handy, sonst Englisch; ein Tipp öffnet die Spracheinstellung von Android
+  für FilMaNH.
 - **Rechner:** Name, Status und Adresse. **Neu koppeln** ersetzt die Kopplung, **Trennen** hebt sie auf. Am Rechner
   unter **Einstellungen › iPhone** lässt sich das Handy ebenfalls **Entfernen**.
 - **Handbuch** und **Fehler melden**.
 
-## 8. Häufige Fragen
+## 8. Widget
+
+Das Widget **Drucke** (ab App-Version 1.3) zeigt auf dem Startbildschirm bis zu drei laufende Drucke: Name,
+Drucker, Fortschritt, das voraussichtliche Ende („fertig um 17:54“) und einen Punkt in der Farbe der Spule, aus der
+gerade gedruckt wird. Hinzufügen: lange auf eine freie Stelle des Startbildschirms tippen › **Widgets** › **FilMaNH**
+› **Drucke**. Ein Tipp aufs Widget öffnet die App.
+
+Das Widget holt den Stand selbst vom Rechner, nur im Heimnetz. Android aktualisiert es etwa alle 30 Minuten, die App
+sofort, wenn sie neue Daten hat. Ohne Verbindung steht der letzte Stand mit Uhrzeit da.
+
+## 9. Häufige Fragen
 
 **„Rechner nicht erreichbar“?** FilMaNH muss am Rechner laufen, **Einstellungen › iPhone** muss an sein, und das
 Handy muss im selben WLAN sein.

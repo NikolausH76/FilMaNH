@@ -12,7 +12,8 @@ edit them. The data stays on the computer. The phone only connects to it on your
 5. [New spool](#5-new-spool)
 6. [Scan](#6-scan)
 7. [Settings](#7-settings)
-8. [FAQ](#8-faq)
+8. [Widget](#8-widget)
+9. [FAQ](#9-faq)
 
 ---
 
@@ -132,12 +133,23 @@ The **Scan** section recognises:
 Gear at the top right.
 
 - **Appearance:** System, Light or Dark. **Background image** on or off.
-- **Language:** English or German; a tap opens Android's language setting for FilMaNH.
+- **Language:** Deutsch, English, Español, Français, Italiano, Nederlands, Polski – as the phone, otherwise English; a tap opens Android's language setting for
+  FilMaNH.
 - **Computer:** name, status and address. **Pair again** replaces the pairing, **Unpair** removes it. On the
   computer, the phone can also be removed under **Settings › iPhone** (**Remove**).
 - **Manual** and **Report a problem**.
 
-## 8. FAQ
+## 8. Widget
+
+The **Prints** widget (app version 1.3 and later) shows up to three running prints on the home screen: name,
+printer, progress, the expected end (“done at 5:54 PM”) and a dot in the colour of the spool currently printing. To
+add it: long-press an empty spot on the home screen › **Widgets** › **FilMaNH** › **Prints**. Tapping the widget
+opens the app.
+
+The widget fetches the status from the computer itself, only on your home network. Android updates it about every
+30 minutes, the app right away when it has new data. Without a connection it shows the last status with its time.
+
+## 9. FAQ
 
 **"Computer not reachable"?** FilMaNH must be running on the computer, **Settings › iPhone** must be on, and the phone
 must be on the same Wi-Fi.

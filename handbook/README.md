@@ -13,14 +13,15 @@ your computer and only reads from the Bambu Lab printers on your network.
 6. [Printers](#6-printers)
 7. [Check print file](#7-check-print-file)
 8. [History](#8-history)
-9. [Models](#9-models)
-10. [Statistics](#10-statistics)
-11. [Shopping list](#11-shopping-list)
-12. [Settings](#12-settings)
-13. [Running in the background](#13-running-in-the-background)
-14. [Keyboard and scanner](#14-keyboard-and-scanner)
-15. [Data and privacy](#15-data-and-privacy)
-16. [FAQ](#16-faq)
+9. [Projects](#9-projects)
+10. [Models](#10-models)
+11. [Statistics](#11-statistics)
+12. [Shopping list](#12-shopping-list)
+13. [Settings](#13-settings)
+14. [Running in the background](#14-running-in-the-background)
+15. [Keyboard and scanner](#15-keyboard-and-scanner)
+16. [Data and privacy](#16-data-and-privacy)
+17. [FAQ](#17-faq)
 
 ---
 
@@ -83,7 +84,7 @@ Finally, FilMaNH asks for the **electricity price** per kWh (for the electricity
 
 - **Notices** at the top show what needs your attention: wrong material in a slot, a print whose end is unknown,
   slots that don’t match what the printer reports ([Matching with the printer](#matching-with-the-printer)),
-  moisture, almost empty spools. The matching action sits right next to each one.
+  [maintenance](#maintenance) that is due, moisture, almost empty spools. The matching action sits right next to each one.
 - **Printers** with status, current print, remaining time and the slots with their remaining amount: slots 1–4 per
   AMS (with a heading when there are several), the external spool set apart. Click to open the printer.
 - **Recently printed** with costs.
@@ -159,15 +160,22 @@ the rest.
 
 On the label: number, colour (with the material in front unless the product name already contains it), brand and
 product, when the spool was opened, and a QR code with the number. Unopened spools get “Opened” with a line to fill
-in by hand.
+in by hand. Under **On the label** you can add **Print temperature** (from the filament catalog, where known),
+**Location**, **Purchase date**, **Price** and **Net weight** in an extra line; the label then gets slightly smaller,
+and a line that is too long is shortened. FilMaNH remembers your choice.
+
+Under **Print via:**
 
 - **Brother QL via USB** (Mac, e.g. QL-570): FilMaNH prints directly, no driver needed. **Format** lists every roll
   the printer supports; the loaded one is marked. If the chosen format does not match the loaded roll, FilMaNH says
   so and does not print; after changing the roll, **Check again**. The label adapts to the format, and the preview
   shows exactly what is printed.
-- **System print dialog (all printers)** under **Print via:** any printer with a driver – label printers (Brother,
-  Dymo, Niimbot, Phomemo, Zebra, Rollo) as well as an office printer for label sheets. On Windows, all label printing
-  goes through the print dialog.
+- **System printers:** every installed printer with its name and model; the default printer is marked. FilMaNH
+  prints directly to it, without another dialog – label printers (Brother, Dymo, Niimbot, Phomemo, Zebra, Rollo) as
+  well as an office printer for label sheets.
+- **System print dialog …** opens the usual dialog, e.g. to save as PDF.
+
+The preview shows all labels or all sheets exactly as they are printed.
 
 ![Label sheets](images/09b-etiketten-bogen.png)
 
@@ -198,6 +206,8 @@ When a print starts, FilMaNH checks:
 - **Wrong material or different colour** than the print file expects. **Ignore** hides the hint for this print
   everywhere.
 - **Spool will run out:** with the time it will be empty and whether a spare spool is in the AMS.
+- **Abrasive filament** (with carbon or glass fibre, glow) on a stainless steel or brass nozzle: the nozzle wears,
+  a hardened one is better. The printer reports which nozzle is installed.
 
 ![AMS](images/11-drucker-ams.png)
 
@@ -231,6 +241,23 @@ filament is loaded. FilMaNH compares this with the assigned spool, even when not
 **That’s right** and **Still there** apply until the printer reports something else; so does assigning by hand.
 Nothing is assigned without a click – automatically only Bambu spools with RFID, as only their ID is unique.
 
+### Maintenance
+
+![Maintenance](images/10b-wartung.png)
+
+The printer page shows the maintenance plan: each task with its interval in print hours or in days, weeks or months,
+and what is left until the next one. FilMaNH counts the print hours from the prints it has recorded. The first time,
+it creates suggestions for the model:
+
+- **Check nozzle, clean hotend:** every 200 print hours
+- **Clean and oil the guides** and **Lubricate the Z lead screws:** every 3 months
+- **Check belt tension:** every 6 months
+- **Clean the carbon rods** (X1 and P1): every 30 days
+- **Check the air filter** (enclosed printers): every 6 months
+
+**Done** starts counting again from now. **Change** edits the name and interval or deletes the task, **Add task**
+creates your own. Tasks that are due also appear on the overview, there with **Done** as well.
+
 ## 7. Check print file
 
 ![Check print file](images/13-druckdatei.png)
@@ -238,7 +265,9 @@ Nothing is assigned without a click – automatically only Bambu spools with RFI
 Find out before printing whether the filament is enough: in Bambu Studio export the sliced plate as `.gcode.3mf`
 and drop it onto the FilMaNH window or choose it via **Check print file**. FilMaNH shows for each filament which
 spools are enough and estimates the cost (material, electricity, machine). If no single spool is enough but two
-identical ones are, it shows **enough together** with both numbers.
+identical ones are, it shows **enough together** with both numbers. If the filament is abrasive and the nozzle is
+stainless steel or brass, a warning is shown. **Selling price** (expand) calculates a price from the costs, as in
+[projects](#9-projects).
 
 ## 8. History
 
@@ -265,6 +294,8 @@ deleted.
 - **Filament** per spool with amount and cost; **Costs** broken down into material, electricity and machine, net
   and gross.
 - **Open in Bambu Studio** opens the kept print file. If the model comes from MakerWorld, a link leads there.
+- **Project:** assign the print to a [project](#9-projects) or create one with **New project …**. **Selling price**
+  (expand) calculates the price for this print.
 - **…** menu: Replace photo, **Mark as waste** (part unusable – counts as a failed print in the statistics), Undo
   deduction and, as long as nothing is deducted, **Find print file again**.
 - FilMaNH checks every print file against the print: layer count and the filaments the printer actually uses. An
@@ -280,7 +311,25 @@ deleted.
 If FilMaNH could not see a print end and could not settle it later either: choose **Finished** or **Cancelled …**
 with the layer. The deduction follows.
 
-## 9. Models
+## 9. Projects
+
+![Projects](images/17a-projekte.png)
+
+A project groups prints for a job or customer, with totals for filament, time and costs. **New project** creates
+one. Prints are added with **Add prints** or in the print under **Project**.
+
+![Project](images/17b-projekt.png)
+
+- **Name**, **Customer** and **Note**.
+- **Prints** with date, printer, amount and cost; **×** takes a print out again.
+- **Selling price:** the print costs (material, electricity, machine) plus **Labour** at the hourly rate from
+  Settings › Costs, on top of that the **Failed-print surcharge** and then the **Markup** – net, gross and per
+  **piece**. The markup applies per project; left empty, the default from the settings applies.
+- **CSV** exports the prints, **Print …** an overview as an A4 page (also as PDF in the print dialog).
+- **Close** marks the project as closed, **Reopen** undoes that. **Delete project** deletes only the project; the
+  prints stay.
+
+## 10. Models
 
 ![Models](images/17-modelle.png)
 
@@ -291,7 +340,7 @@ All prints grouped by model, with count, cost and cancellations.
 Cost per print, material, success rate and all prints of the model. Under **Source files** you can attach the
 project file (`.3mf`); FilMaNH suggests the files recently opened in Bambu Studio.
 
-## 10. Statistics
+## 11. Statistics
 
 ![Statistics](images/19-auswertung.png)
 
@@ -299,7 +348,7 @@ Prints, filament, costs and waste (cancelled prints and prints marked as waste),
 per printer,
 reasons for cancellation and the most expensive models. Filter by printer and period, gross or net.
 
-## 11. Shopping list
+## 12. Shopping list
 
 ![Shopping list](images/20-einkauf.png)
 
@@ -307,19 +356,29 @@ Set a **Minimum stock** for a filament (here or under Spool › Edit). When the 
 listed under **Reorder** with shop and last price. **Purchased** creates the new spool with the data of the last
 purchase. **Copy list** copies the shopping list. Stars show your rating of the filament.
 
-## 12. Settings
+**Running out soon** lists filaments that, at the usage of the last 90 days, will be used up in less than 4 weeks –
+even without a minimum stock. Each filament shows roughly how long the stock will last.
 
-**General:** Appearance (light, dark, system), **Background image**, Language (Deutsch, English), Keep running when closed, Launch at
+## 13. Settings
+
+**General:** Appearance (light, dark, system), **Background image**, **Language** (as the system, Deutsch, English,
+Español, Français, Italiano, Nederlands, Polski; if the system uses none of them, English), Keep running when closed, Launch at
 login (recommended), Notifications (print finished, spool will run out, new spool detected).
 
-**Printers:** connected printers; search for more printers or add one by IP address.
+**Printers:** connected printers; search for more printers or add one by IP address, optionally with its **purchase
+price**.
 
 ![Printer settings](images/22-einst-drucker.png)
 
-**Costs:** currency, VAT, show prices gross or net, electricity price per kWh. Under **Your own values per printer**
-you can enter the power while printing and a machine hourly rate. Without your own value FilMaNH uses Bambu’s
-measured average for the model and the print’s material (e.g. A1 mini with PLA 80 W, P2S 200 W) – not the maximum
-power, which the printer only needs briefly while heating up.
+**Costs:** currency, VAT, show prices gross or net, electricity price per kWh.
+
+- **Selling price:** hourly rate for **Labour**, default **Markup** (can be changed per project) and **Failed-print
+  surcharge** – for the price calculator in projects, prints and Check print file.
+- **Your own values per printer:** **Power** while printing, **Purchase price**, **Service life** (default 5,000
+  hours) and the machine’s **Hourly rate**. Without your own hourly rate FilMaNH divides the purchase price (net) by
+  the service life. Without your own power value it uses Bambu’s measured average for the model and the print’s
+  material (e.g. A1 mini with PLA 80 W, P2S 200 W) – not the maximum power, which the printer only needs briefly
+  while heating up.
 
 ![Costs](images/23-einst-kosten.png)
 
@@ -363,7 +422,7 @@ red when an update is available.
 **Updates:** FilMaNH checks for a new version every hour. If there is one, **Update …** appears in the sidebar;
 **Install version …** downloads, verifies, installs and restarts. Nothing is installed without your click.
 
-## 13. Running in the background
+## 14. Running in the background
 
 Closing the window doesn’t quit FilMaNH – prints keep being tracked.
 
@@ -376,7 +435,7 @@ Closing the window doesn’t quit FilMaNH – prints keep being tracked.
 
 With **Launch at login** (Settings › General) FilMaNH starts in the background right after you log in.
 
-## 14. Keyboard and scanner
+## 15. Keyboard and scanner
 
 ![Commands](images/27-befehle.png)
 
@@ -385,7 +444,7 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
 - A barcode scanner reading the QR code of a FilMaNH label opens that spool directly.
 - Scanning the EAN of a spool or its box opens **New spool** – for a known EAN with the filament already selected.
 
-## 15. Data and privacy
+## 16. Data and privacy
 
 - All data stays on your computer, including print files, photos and timelapses, in the app’s data folder
   (Settings › Data › **Data folder** › **Open**).
@@ -400,7 +459,7 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
 
 The full privacy statement for the program and the apps: [DATENSCHUTZ.md](../DATENSCHUTZ.md) (German and English).
 
-## 16. FAQ
+## 17. FAQ
 
 **The printer isn’t found.** Is it switched on and on the same network? If it is on a different subnet, enter the
 subnet (“also in subnet”) or the IP address under Settings › Printers. If a printer from that subnet is already set

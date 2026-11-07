@@ -60,7 +60,7 @@ jedem Druck etwas eintragen musst.
 
 - Alle Drucker mit laufendem Druck, Restzeit und Slots samt Restmenge
 - Hinweise mit passender Aktion: falsches Material im Slot, Spule ohne Zuordnung, Filament zu lange offen, fast leere
-  Spulen
+  Spulen, fällige Wartung
 - Zuletzt gedruckt, mit Kosten
 
 </td>
@@ -73,7 +73,8 @@ jedem Druck etwas eintragen musst.
 - Drucker im Netz finden, Zugangscode aus Bambu Studio übernehmen
 - AMS live mit Feuchte, Temperatur und Feuchteverlauf der letzten 7 Tage
 - H2C und H2D mit zwei Düsen: AMS und externe Spulen je Düse
-- Beim Druckstart: falsches Material, andere Farbe, Spule reicht nicht
+- Beim Druckstart: falsches Material, andere Farbe, Spule reicht nicht, abrasives Filament auf weicher Düse
+- Wartungsplan je Drucker nach Druckstunden oder Zeit
 
 </td>
 </tr>
@@ -98,7 +99,8 @@ jedem Druck etwas eintragen musst.
 ### Drucke und Kosten
 
 - Verbrauch je Slot aus der Druckdatei, bei einem Abbruch nur bis zur erreichten Schicht
-- Kosten je Druck, netto und brutto: Material, Strom und Maschinenzeit
+- Kosten je Druck, netto und brutto: Material, Strom und Maschinenzeit (aus Kaufpreis und Nutzungsdauer)
+- Projekte: Drucke je Auftrag bündeln, mit Verkaufspreis aus Kosten, Arbeitszeit und Aufschlag
 - Verlauf mit Bild, 3D-Ansicht und Zeitraffer
 - Modelle: alle Drucke eines Modells mit Kosten und Erfolgsquote
 
@@ -111,8 +113,8 @@ jedem Druck etwas eintragen musst.
 
 ### Etiketten
 
-- Nummer, Farbe, Hersteller, Öffnungsdatum und QR-Code
-- Brother QL per USB direkt, ohne Treiber (Mac); andere Etikettendrucker und A4-Bögen über den Druckdialog
+- Nummer, Farbe, Hersteller, Öffnungsdatum und QR-Code; auf Wunsch Drucktemperatur, Lagerort, Kaufdatum, Preis
+- Brother QL per USB direkt, ohne Treiber (Mac); jeder Drucker des Systems für Rollen und A4-/Letter-Bögen
 - **Fehlende Etiketten** druckt genau die neuen Spulen
 
 </td>
@@ -125,6 +127,7 @@ jedem Druck etwas eintragen musst.
 - Kosten je Monat, Material und Drucker, Ausschuss und Abbruchgründe
 - **Druckdatei prüfen:** Reicht das Filament, was kostet der Druck?
 - Mindestbestand je Filament: Einkaufsliste mit Händler und letztem Preis
+- Reichweite nach dem Verbrauch: was in den nächsten Wochen leer wird
 
 </td>
 </tr>
@@ -139,7 +142,7 @@ jedem Druck etwas eintragen musst.
 </p>
 
 Spulen scannen, in Slots legen, wiegen, fotografieren und bearbeiten – zusammen mit FilMaNH auf deinem Rechner, im
-Heimnetz und verschlüsselt. Die App für **Android** gibt es unten zum Download, die für das **iPhone** erscheint
+Heimnetz und verschlüsselt, dazu ein Widget mit den laufenden Drucken. Die App für **Android** gibt es unten zum Download, die für das **iPhone** erscheint
 demnächst im App Store. Anleitungen: [Android](handbuch/android.md) · [iPhone](handbuch/iphone.md)
 
 ## Download
@@ -155,6 +158,8 @@ demnächst im App Store. Anleitungen: [Android](handbuch/android.md) · [iPhone]
 <sub>Android-App: mit dem Handy scannen</sub>
 
 Neue Versionen meldet das Programm auf dem Rechner selbst und installiert sie auf Klick.
+
+**Sprachen:** Deutsch, English, Español, Français, Italiano, Nederlands, Polski – am Rechner und am Handy.
 
 **Voraussetzungen:** Bambu-Lab-Drucker im selben Netzwerk wie der Rechner (geprüft mit A1 mini, P2S und H2C). Den
 Zugangscode übernimmt FilMaNH aus Bambu Studio, sonst steht er am Drucker unter **Einstellungen › WLAN**.
@@ -172,11 +177,13 @@ Spoolman. Mehr dazu: [Datenschutzerklärung](DATENSCHUTZ.md)
 
 ## Eingebaut, aber noch nicht getestet
 
-Diese Funktionen sind schon im Programm, konnten aber noch nicht an einem echten Drucker ausprobiert werden – es fehlt
-die passende Hardware oder die Situation kam noch nicht vor. Wer sie nutzt: Eine kurze
+Diese Funktionen sind schon im Programm, konnten aber noch nicht auf echter Hardware ausprobiert werden – es fehlt
+das passende Gerät oder die Situation kam noch nicht vor. Wer sie nutzt: Eine kurze
 [Rückmeldung](https://github.com/NikolausH76/FilMaNH/issues) hilft.
 
 - **AMS HT** als eigene Einheit
+- **Etiketten unter Windows** direkt auf einen Drucker des Systems
+- **Widget der Android-App** auf einem echten Handy (im Emulator geprüft)
 - **Spule leer gelaufen:** Läuft eine Spule im Druck leer, setzt ein Klick ihren Rest auf 0
 - **Trocknen im AMS 2 Pro und AMS HT:** Die eingelegten Spulen gelten danach als getrocknet – nicht, wenn die
   Trocknung vor der Hälfte der Zeit abgebrochen wurde

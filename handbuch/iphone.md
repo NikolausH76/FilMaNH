@@ -13,7 +13,8 @@ verschlüsselt. Die App erscheint demnächst im App Store.
 5. [Neue Spule](#5-neue-spule)
 6. [Scannen](#6-scannen)
 7. [Einstellungen](#7-einstellungen)
-8. [Häufige Fragen](#8-häufige-fragen)
+8. [Widget](#8-widget)
+9. [Häufige Fragen](#9-häufige-fragen)
 
 ---
 
@@ -126,12 +127,24 @@ Der Tab **Scannen** erkennt:
 Zahnrad oben rechts.
 
 - **Darstellung:** System, Hell oder Dunkel. **Hintergrundbild** ein oder aus.
-- **Sprache:** folgt dem iPhone; ein Tipp öffnet die Einstellungen von iOS für FilMaNH.
+- **Sprache:** Deutsch, English, Español, Français, Italiano, Nederlands, Polski – wie das iPhone, sonst Englisch; ein Tipp öffnet die Einstellungen von iOS für
+  FilMaNH.
 - **Rechner:** Name, Status und Adresse. **Neu koppeln** ersetzt die Kopplung, **Trennen** hebt sie auf. Am Rechner
   unter **Einstellungen › iPhone** lässt sich ein iPhone ebenfalls **Entfernen**.
 - **Handbuch** und **Fehler melden**.
 
-## 8. Häufige Fragen
+## 8. Widget
+
+Das Widget **Drucke** (ab App-Version 1.2) gibt es klein und mittel für den Home-Bildschirm und für den
+Sperrbildschirm. Es zeigt die laufenden Drucke mit Drucker, Fortschritt, dem voraussichtlichen Ende („fertig um
+17:54“) und einem Punkt in der Farbe der Spule, aus der gerade gedruckt wird – klein einen Druck oder bis zu drei
+knapp, mittel bis zu drei. Hinzufügen: lange auf den Home-Bildschirm tippen › **Bearbeiten** › **Widget hinzufügen**
+› **FilMaNH**. Ein Tipp aufs Widget öffnet die App.
+
+Das Widget holt den Stand selbst vom Rechner, nur im Heimnetz. Wie oft, entscheidet iOS; die App aktualisiert es
+sofort, wenn sie neue Daten hat. Ohne Verbindung steht der letzte Stand mit Uhrzeit da.
+
+## 9. Häufige Fragen
 
 **„Rechner nicht erreichbar“?** FilMaNH muss am Rechner laufen, **Einstellungen › iPhone** muss an sein, und das
 iPhone muss im selben WLAN sein. In den iOS-Einstellungen unter FilMaNH muss **Lokales Netzwerk** erlaubt sein.

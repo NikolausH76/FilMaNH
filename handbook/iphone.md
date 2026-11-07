@@ -13,7 +13,8 @@ coming soon to the App Store.
 5. [New spool](#5-new-spool)
 6. [Scan](#6-scan)
 7. [Settings](#7-settings)
-8. [FAQ](#8-faq)
+8. [Widget](#8-widget)
+9. [FAQ](#9-faq)
 
 ---
 
@@ -124,12 +125,22 @@ The **Scan** tab recognises:
 Gear at the top right.
 
 - **Appearance:** System, Light or Dark. **Background image** on or off.
-- **Language:** follows the iPhone; a tap opens the iOS settings for FilMaNH.
+- **Language:** Deutsch, English, Español, Français, Italiano, Nederlands, Polski – as the iPhone, otherwise English; a tap opens the iOS settings for FilMaNH.
 - **Computer:** name, status and address. **Pair again** replaces the pairing, **Unpair** removes it. On the
   computer, an iPhone can also be removed under **Settings › iPhone** (**Remove**).
 - **Manual** and **Report a problem**.
 
-## 8. FAQ
+## 8. Widget
+
+The **Prints** widget (app version 1.2 and later) comes in small and medium for the home screen and for the lock
+screen. It shows the running prints with printer, progress, the expected end (“done at 5:54 PM”) and a dot in the
+colour of the spool currently printing – small shows one print or up to three in brief, medium up to three. To add
+it: touch and hold the home screen › **Edit** › **Add Widget** › **FilMaNH**. Tapping the widget opens the app.
+
+The widget fetches the status from the computer itself, only on your home network. iOS decides how often; the app
+updates it right away when it has new data. Without a connection it shows the last status with its time.
+
+## 9. FAQ
 
 **"Computer not reachable"?** FilMaNH must be running on the computer, **Settings › iPhone** must be on, and the iPhone
 must be on the same Wi-Fi. In the iOS settings under FilMaNH, **Local Network** must be allowed.

@@ -60,7 +60,7 @@ anything after each print.
 
 - All printers with the current print, time left and slots with remaining amount
 - Notices with the matching action: wrong material in a slot, unassigned spool, filament open too long, spools almost
-  empty
+  empty, maintenance due
 - Recent prints, with cost
 
 </td>
@@ -73,7 +73,8 @@ anything after each print.
 - Find printers on the network, take the access code from Bambu Studio
 - Live AMS with humidity, temperature and the humidity history of the last 7 days
 - H2C and H2D with two nozzles: AMS and external spools per nozzle
-- At print start: wrong material, different colour, spool won't last
+- At print start: wrong material, different colour, spool won't last, abrasive filament on a soft nozzle
+- Maintenance plan per printer by print hours or time
 
 </td>
 </tr>
@@ -98,7 +99,8 @@ anything after each print.
 ### Prints and cost
 
 - Usage per slot from the print file; for a cancelled print only up to the layer reached
-- Cost per print, net and gross: material, electricity and machine time
+- Cost per print, net and gross: material, electricity and machine time (from purchase price and service life)
+- Projects: group prints per job, with a selling price from costs, labour and markup
 - History with image, 3D view and timelapse
 - Models: all prints of a model with cost and success rate
 
@@ -111,8 +113,8 @@ anything after each print.
 
 ### Labels
 
-- Number, colour, brand, date opened and QR code
-- Brother QL via USB directly, no driver needed (Mac); other label printers and A4 sheets via the print dialog
+- Number, colour, brand, date opened and QR code; optionally print temperature, location, purchase date, price
+- Brother QL via USB directly, no driver needed (Mac); any system printer for rolls and A4/Letter sheets
 - **Missing labels** prints exactly the new spools
 
 </td>
@@ -125,6 +127,7 @@ anything after each print.
 - Cost per month, material and printer, waste and cancellation reasons
 - **Check print file:** Is there enough filament, what will the print cost?
 - Minimum stock per filament: shopping list with shop and last price
+- Reach based on usage: what will run out in the coming weeks
 
 </td>
 </tr>
@@ -139,7 +142,7 @@ anything after each print.
 </p>
 
 Scan spools, put them in slots, weigh, photograph and edit them – together with FilMaNH on your computer, on your home
-network and encrypted. The **Android** app is available for download below; the **iPhone** app is coming soon to the
+network and encrypted, plus a widget with the running prints. The **Android** app is available for download below; the **iPhone** app is coming soon to the
 App Store. Guides: [Android](handbook/android.md) · [iPhone](handbook/iphone.md)
 
 ## Download
@@ -155,6 +158,8 @@ App Store. Guides: [Android](handbook/android.md) · [iPhone](handbook/iphone.md
 <sub>Android app: scan with your phone</sub>
 
 The program on your computer announces new versions itself and installs them with one click.
+
+**Languages:** Deutsch, English, Español, Français, Italiano, Nederlands, Polski – on the computer and on the phone.
 
 **Requirements:** Bambu Lab printers on the same network as the computer (tested with A1 mini, P2S and H2C). FilMaNH
 takes the access code from Bambu Studio; otherwise you find it on the printer under **Settings › WLAN**.
@@ -172,11 +177,13 @@ filament catalog (both on GitHub), for a shop link you paste and for importing f
 
 ## Built in, but not yet tested
 
-These features are already in the program but haven't been tried on a real printer yet – the matching hardware is
+These features are already in the program but haven't been tried on real hardware yet – the matching device is
 missing or the situation hasn't come up. If you use them, a short [report](https://github.com/NikolausH76/FilMaNH/issues)
 helps.
 
 - **AMS HT** as a unit of its own
+- **Labels on Windows** printed directly to a system printer
+- **Android app widget** on a real phone (checked in the emulator)
 - **Spool ran out:** if a spool runs out during a print, one click sets its remaining amount to 0
 - **Drying in the AMS 2 Pro and AMS HT:** the loaded spools count as dried afterwards – not if drying was stopped
   before half the time

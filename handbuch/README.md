@@ -13,14 +13,15 @@ lokal auf deinem Rechner und liest die Bambu-Lab-Drucker im Netzwerk nur aus.
 6. [Drucker](#6-drucker)
 7. [Druckdatei prüfen](#7-druckdatei-prüfen)
 8. [Verlauf](#8-verlauf)
-9. [Modelle](#9-modelle)
-10. [Auswertung](#10-auswertung)
-11. [Einkauf](#11-einkauf)
-12. [Einstellungen](#12-einstellungen)
-13. [Im Hintergrund](#13-im-hintergrund)
-14. [Tastatur und Scanner](#14-tastatur-und-scanner)
-15. [Daten und Datenschutz](#15-daten-und-datenschutz)
-16. [Häufige Fragen](#16-häufige-fragen)
+9. [Projekte](#9-projekte)
+10. [Modelle](#10-modelle)
+11. [Auswertung](#11-auswertung)
+12. [Einkauf](#12-einkauf)
+13. [Einstellungen](#13-einstellungen)
+14. [Im Hintergrund](#14-im-hintergrund)
+15. [Tastatur und Scanner](#15-tastatur-und-scanner)
+16. [Daten und Datenschutz](#16-daten-und-datenschutz)
+17. [Häufige Fragen](#17-häufige-fragen)
 
 ---
 
@@ -83,8 +84,8 @@ Die Einrichtung lässt sich mit **Später einrichten** überspringen und unter E
 ![Übersicht](bilder/01-uebersicht.png)
 
 - **Hinweise** oben zeigen, was Aufmerksamkeit braucht: falsches Material im Slot, Druck mit offenem Ende, Slots, die
-  nicht zur Meldung des Druckers passen ([Abgleich mit dem Drucker](#abgleich-mit-dem-drucker)), Feuchte, fast leere
-  Spulen. Die passende Aktion steht jeweils daneben.
+  nicht zur Meldung des Druckers passen ([Abgleich mit dem Drucker](#abgleich-mit-dem-drucker)), fällige
+  [Wartung](#wartung), Feuchte, fast leere Spulen. Die passende Aktion steht jeweils daneben.
 - **Drucker** mit Status, laufendem Druck, Restzeit und den Slots samt Restmenge: je AMS die Slots 1–4 (bei mehreren
   AMS mit Überschrift), abgesetzt die externe Spule. Ein Klick öffnet den Drucker.
 - **Zuletzt gedruckt** mit Kosten.
@@ -159,15 +160,22 @@ Spule samt Rolle wiegen und das Gewicht eintragen. FilMaNH zieht das Leergewicht
 
 Auf dem Etikett: Nummer, Farbe (davor das Material, wenn es nicht schon in der Bezeichnung steht), Hersteller und
 Bezeichnung, wann die Spule geöffnet wurde, und ein QR-Code mit der Nummer. Bei ungeöffneten Spulen steht
-„Geöffnet“ mit einem Strich zum Eintragen von Hand.
+„Geöffnet“ mit einem Strich zum Eintragen von Hand. Unter **Auf dem Etikett** kommen auf Wunsch **Drucktemperatur**
+(laut Filamentkatalog, wo bekannt), **Lagerort**, **Kaufdatum**, **Preis** und **Füllmenge** in eine Zusatzzeile; das
+Etikett rückt dafür etwas zusammen, eine zu lange Zeile wird gekürzt. FilMaNH merkt sich die Auswahl.
+
+Unter **Drucken über:**
 
 - **Brother QL per USB** (Mac, z.B. QL-570): FilMaNH druckt direkt, ohne Treiber. Unter **Format** stehen alle
   Rollen, die der Drucker kann; die eingelegte ist markiert. Passt das gewählte Format nicht zur eingelegten Rolle,
   sagt FilMaNH das und druckt nicht; nach dem Wechsel **Erneut prüfen**. Das Etikett passt sich dem Format an, die
   Vorschau zeigt genau das Druckbild.
-- **Druckdialog des Systems (alle Drucker)** unter **Drucken über:** jeder Drucker mit Treiber – Etikettendrucker
-  (Brother, Dymo, Niimbot, Phomemo, Zebra, Rollo) ebenso wie ein Bürodrucker für Etikettenbögen. Unter Windows geht
-  jeder Etikettendruck über den Druckdialog.
+- **Drucker des Systems:** jeder eingerichtete Drucker mit Namen und Modell, der Standarddrucker ist markiert.
+  FilMaNH druckt direkt darauf, ohne weiteren Dialog – Etikettendrucker (Brother, Dymo, Niimbot, Phomemo, Zebra,
+  Rollo) ebenso wie ein Bürodrucker für Etikettenbögen.
+- **Druckdialog des Systems …** öffnet den gewohnten Dialog, etwa um als PDF zu sichern.
+
+Die Vorschau zeigt alle Etiketten bzw. alle Bögen so, wie sie gedruckt werden.
 
 ![Etikettenbögen](bilder/09b-etiketten-bogen.png)
 
@@ -198,6 +206,8 @@ Beim Druckstart prüft FilMaNH:
 - **Falsches Material oder andere Farbe** als in der Druckdatei vorgesehen. **Ignorieren** blendet den Hinweis für
   diesen Druck überall aus.
 - **Spule reicht nicht:** mit Uhrzeit, wann sie leer wird, und ob eine Ersatzspule im AMS steckt.
+- **Abrasives Filament** (mit Kohle- oder Glasfaser, Glow) auf einer Düse aus Edelstahl oder Messing: Die Düse
+  verschleißt, besser eine gehärtete. Welche Düse eingebaut ist, meldet der Drucker.
 
 ![AMS](bilder/11-drucker-ams.png)
 
@@ -231,6 +241,23 @@ Filament steckt. FilMaNH vergleicht das mit der zugeordneten Spule, auch ohne la
 **Stimmt so** und **Steckt noch** gelten, bis der Drucker etwas anderes meldet; ebenso eine Zuordnung von Hand.
 Zugeordnet wird nur auf Klick – automatisch nur Bambu-Spulen mit RFID, denn nur deren Kennung ist eindeutig.
 
+### Wartung
+
+![Wartung](bilder/10b-wartung.png)
+
+Auf der Druckerseite steht der Wartungsplan: jede Aufgabe mit ihrem Abstand in Druckstunden oder Tagen, Wochen bzw.
+Monaten und dem, was bis zur nächsten bleibt. Die Druckstunden zählt FilMaNH aus den erfassten Drucken. Beim ersten
+Mal legt es Vorschläge für das Modell an:
+
+- **Düse prüfen, Hotend reinigen:** alle 200 Druckstunden
+- **Führungen reinigen und ölen** und **Z-Spindeln schmieren:** alle 3 Monate
+- **Riemenspannung prüfen:** alle 6 Monate
+- **Kohlefaserstangen reinigen** (X1 und P1): alle 30 Tage
+- **Luftfilter prüfen** (geschlossene Drucker): alle 6 Monate
+
+**Erledigt** zählt ab jetzt neu. **Ändern** passt Name und Abstand an oder löscht die Aufgabe, **Aufgabe hinzufügen**
+legt eigene an. Fällige Aufgaben stehen auch in der Übersicht, dort ebenfalls mit **Erledigt**.
+
 ## 7. Druckdatei prüfen
 
 ![Druckdatei prüfen](bilder/13-druckdatei.png)
@@ -238,7 +265,9 @@ Zugeordnet wird nur auf Klick – automatisch nur Bambu-Spulen mit RFID, denn nu
 Vor dem Druck klären, ob das Filament reicht: In Bambu Studio die geslicte Platte als `.gcode.3mf` exportieren und
 auf das FilMaNH-Fenster ziehen oder über **Druckdatei prüfen** auswählen. FilMaNH zeigt je Filament, welche
 Spulen reichen, und schätzt die Kosten (Material, Strom, Maschine). Reicht keine Spule allein, aber zwei gleiche
-zusammen, steht **reicht zusammen** mit beiden Nummern.
+zusammen, steht **reicht zusammen** mit beiden Nummern. Ist das Filament abrasiv und die Düse aus Edelstahl oder
+Messing, steht eine Warnung dabei. **Verkaufspreis** (aufklappen) rechnet aus den Kosten einen Preis wie bei den
+[Projekten](#9-projekte).
 
 ## 8. Verlauf
 
@@ -267,6 +296,8 @@ Laufende Drucke lassen sich nicht löschen.
   und brutto.
 - **In Bambu Studio öffnen** öffnet die aufbewahrte Druckdatei. Stammt das Modell von MakerWorld, führt ein Link
   dorthin.
+- **Projekt:** den Druck einem [Projekt](#9-projekte) zuordnen oder mit **Neues Projekt …** eines anlegen.
+  **Verkaufspreis** (aufklappen) rechnet den Preis für diesen Druck.
 - Menü **…**: Foto ersetzen, **Als Ausschuss markieren** (Teil unbrauchbar – zählt in der Auswertung als Fehldruck),
   Buchung zurücknehmen und, solange nicht gebucht ist, **Druckdatei neu suchen**.
 - Jede Druckdatei prüft FilMaNH am Inhalt: Schichtzahl und die Filamente, die der Drucker tatsächlich nutzt. Eine
@@ -282,7 +313,25 @@ Laufende Drucke lassen sich nicht löschen.
 Konnte FilMaNH das Ende eines Drucks nicht beobachten und auch später nicht sicher klären: **Fertig gedruckt**
 oder **Abgebrochen …** mit der Schicht wählen. Danach wird gebucht.
 
-## 9. Modelle
+## 9. Projekte
+
+![Projekte](bilder/17a-projekte.png)
+
+Ein Projekt fasst Drucke für einen Auftrag oder Kunden zusammen, mit Summen für Filament, Zeit und Kosten.
+**Neues Projekt** legt eines an. Drucke kommen über **Drucke hinzufügen** dazu oder im Druck unter **Projekt**.
+
+![Projekt](bilder/17b-projekt.png)
+
+- **Name**, **Kunde** und **Notiz**.
+- **Drucke** mit Datum, Drucker, Menge und Kosten; **×** nimmt einen Druck wieder heraus.
+- **Verkaufspreis:** die Druckkosten (Material, Strom, Maschine) plus **Arbeitszeit** zum Stundensatz aus
+  Einstellungen › Kosten, darauf der **Zuschlag für Fehldrucke** und darauf der **Aufschlag** – netto, brutto und je
+  **Stück**. Der Aufschlag gilt je Projekt; leer bleibt die Vorgabe aus den Einstellungen.
+- **CSV** exportiert die Drucke, **Drucken …** eine Übersicht als A4-Seite (im Druckdialog auch als PDF).
+- **Abschließen** markiert das Projekt als abgeschlossen, **Wieder öffnen** hebt das auf. **Projekt löschen** löscht
+  nur das Projekt; die Drucke bleiben.
+
+## 10. Modelle
 
 ![Modelle](bilder/17-modelle.png)
 
@@ -293,14 +342,14 @@ Alle Drucke nach Modell zusammengefasst, mit Anzahl, Kosten und Abbrüchen.
 Kosten je Druck, Material, Erfolgsquote und alle Drucke des Modells. Unter **Quelldateien** lässt sich die
 Projektdatei (`.3mf`) anhängen; FilMaNH schlägt dafür die zuletzt in Bambu Studio geöffneten Dateien vor.
 
-## 10. Auswertung
+## 11. Auswertung
 
 ![Auswertung](bilder/19-auswertung.png)
 
 Drucke, Filament, Kosten und Ausschuss (abgebrochene und als Ausschuss markierte Drucke), Kosten je Monat, je
 Material und je Drucker, Abbruchgründe und die teuersten Modelle. Filter nach Drucker und Zeitraum, Brutto oder Netto.
 
-## 11. Einkauf
+## 12. Einkauf
 
 ![Einkauf](bilder/20-einkauf.png)
 
@@ -309,19 +358,29 @@ darunter, steht es unter **Nachkaufen**, mit Händler und letztem Preis. **Gekau
 Daten des letzten Kaufs an. **Liste kopieren** kopiert die Einkaufsliste. Sterne zeigen deine Bewertung des
 Filaments.
 
-## 12. Einstellungen
+**Bald leer** zeigt Filamente, die nach dem Verbrauch der letzten 90 Tage in weniger als 4 Wochen aufgebraucht sind,
+auch ohne Mindestbestand. Bei jedem Filament steht, wie lange der Bestand noch ungefähr reicht.
 
-**Allgemein:** Darstellung (hell, dunkel, wie das System), **Hintergrundbild**, Sprache (Deutsch, English), Weiterlaufen beim Schließen,
+## 13. Einstellungen
+
+**Allgemein:** Darstellung (hell, dunkel, wie das System), **Hintergrundbild**, **Sprache** (wie das System, Deutsch,
+English, Español, Français, Italiano, Nederlands, Polski; spricht das System keine davon, Englisch), Weiterlaufen beim Schließen,
 Start mit dem Rechner (empfohlen), Mitteilungen (Druck fertig, Spule reicht nicht, neue Spule erkannt).
 
-**Drucker:** verbundene Drucker; weitere Drucker suchen oder per IP-Adresse hinzufügen.
+**Drucker:** verbundene Drucker; weitere Drucker suchen oder per IP-Adresse hinzufügen, auf Wunsch gleich mit
+**Kaufpreis**.
 
 ![Drucker-Einstellungen](bilder/22-einst-drucker.png)
 
-**Kosten:** Währung, Mehrwertsteuer, Anzeige brutto oder netto, Strompreis je kWh. Unter **Eigene Werte je Drucker**
-lassen sich die Leistung beim Drucken und ein Maschinenstundensatz eintragen. Ohne eigenen Wert rechnet FilMaNH mit
-Bambus gemessenem Durchschnitt für das Modell und das Material des Drucks (z.B. A1 mini mit PLA 80 W, P2S 200 W) –
-nicht mit der Höchstleistung, die der Drucker nur kurz beim Aufheizen braucht.
+**Kosten:** Währung, Mehrwertsteuer, Anzeige brutto oder netto, Strompreis je kWh.
+
+- **Verkaufspreis:** Stundensatz für die **Arbeitszeit**, Vorgabe für den **Aufschlag** (je Projekt änderbar) und
+  **Zuschlag für Fehldrucke** – für den Preisrechner in Projekten, Drucken und Druckdatei prüfen.
+- **Eigene Werte je Drucker:** **Leistung** beim Drucken, **Kaufpreis**, **Nutzungsdauer** (Vorgabe 5.000 Stunden)
+  und **Stundensatz** der Maschine. Ohne eigenen Stundensatz rechnet FilMaNH Kaufpreis (netto) geteilt durch
+  Nutzungsdauer. Ohne eigene Leistung nimmt es Bambus gemessenen Durchschnitt für das Modell und das Material des
+  Drucks (z.B. A1 mini mit PLA 80 W, P2S 200 W) – nicht die Höchstleistung, die der Drucker nur kurz beim Aufheizen
+  braucht.
 
 ![Kosten](bilder/23-einst-kosten.png)
 
@@ -367,7 +426,7 @@ ein Update da, wird sie rot.
 ein Klick auf **Version … installieren** lädt, prüft, installiert und startet neu. Ohne Klick wird nichts
 installiert.
 
-## 13. Im Hintergrund
+## 14. Im Hintergrund
 
 Das Fenster zu schließen beendet FilMaNH nicht – Drucke werden weiter verfolgt.
 
@@ -380,7 +439,7 @@ Das Fenster zu schließen beendet FilMaNH nicht – Drucke werden weiter verfolg
 
 Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nach dem Hochfahren gleich im Hintergrund.
 
-## 14. Tastatur und Scanner
+## 15. Tastatur und Scanner
 
 ![Befehle](bilder/27-befehle.png)
 
@@ -390,7 +449,7 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
 - Scannt er die EAN einer Spule oder ihres Kartons, öffnet sich **Neue Spule** – bei einer bekannten EAN mit dem
   Filament schon gewählt.
 
-## 15. Daten und Datenschutz
+## 16. Daten und Datenschutz
 
 - Alle Daten liegen auf deinem Rechner, auch Druckdateien, Fotos und Zeitraffer, im Datenordner der App
   (Einstellungen › Daten › **Datenordner** › **Öffnen**).
@@ -406,7 +465,7 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
 
 Die vollständige Datenschutzerklärung für Programm und Apps: [DATENSCHUTZ.md](../DATENSCHUTZ.md).
 
-## 16. Häufige Fragen
+## 17. Häufige Fragen
 
 **Der Drucker wird nicht gefunden.** Drucker eingeschaltet und im selben Netzwerk? Liegt er in einem anderen Netz,
 unter Einstellungen › Drucker das Netz („auch in Netz“) oder die IP-Adresse eingeben. Ist schon ein Drucker aus
