@@ -29,7 +29,9 @@ your computer and only reads from the Bambu Lab printers on your network.
 Download from [Releases](https://github.com/NikolausH76/FilMaNH/releases/latest).
 
 **macOS** (Apple Silicon and Intel): open `FilMaNH_…_universal.dmg` and drag FilMaNH into “Applications”. The app
-is notarized by Apple; on first launch just confirm that you want to open an app downloaded from the internet.
+is notarized by Apple; on first launch just confirm that you want to open an app downloaded from the internet. Don’t
+run it directly from the DMG – updates can’t be installed there. If FilMaNH does run from the DMG, the overview offers
+**Move to Applications**.
 
 **Windows 10/11** (64-bit): run `FilMaNH_…_x64-setup.exe`. If you see “Windows protected your PC”:
 **More info › Run anyway**. No administrator rights needed.
@@ -400,7 +402,8 @@ the print details.
 **Something doesn’t work.** On GitHub, fill in the form **Fehler melden / Report a bug** under
 [Issues](https://github.com/NikolausH76/FilMaNH/issues/new/choose). The diagnostics help: in the app under Settings ›
 About FilMaNH › **Diagnostics** › **Copy**, then paste them into the form – without serial numbers, addresses and
-codes.
+codes. The diagnostics also include the end of the error log (connection errors, prints not deducted, crashes), again
+without serial numbers, addresses or print names. The log itself is `fehlerprotokoll.log` in the data folder.
 
 ---
 

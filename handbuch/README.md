@@ -30,7 +30,8 @@ Download unter [Releases](https://github.com/NikolausH76/FilMaNH/releases/latest
 
 **macOS** (Apple Silicon und Intel): `FilMaNH_…_universal.dmg` öffnen und FilMaNH in den Ordner „Programme“
 ziehen. Die App ist von Apple geprüft (notarisiert); beim ersten Öffnen nur bestätigen, dass die aus dem Internet
-geladene App geöffnet werden soll.
+geladene App geöffnet werden soll. Nicht direkt aus dem DMG starten – dort lassen sich keine Updates einspielen.
+Läuft FilMaNH doch einmal aus dem DMG, bietet die Übersicht **In Programme verschieben** an.
 
 **Windows 10/11** (64 Bit): `FilMaNH_…_x64-setup.exe` starten. Bei „Der Computer wurde durch Windows geschützt“:
 **Weitere Informationen › Trotzdem ausführen**. Administratorrechte sind nicht nötig.
@@ -406,6 +407,8 @@ hinzufügen.
 **Etwas funktioniert nicht.** Auf GitHub unter [Issues](https://github.com/NikolausH76/FilMaNH/issues/new/choose) das
 Formular **Fehler melden / Report a bug** ausfüllen. Hilfreich ist die Diagnose: in der App unter Einstellungen ›
 Über FilMaNH › **Diagnose** › **Kopieren**, dann in das Formular einfügen – ohne Seriennummern, Adressen und Codes.
+Die Diagnose enthält auch das Ende des Fehlerprotokolls (Verbindungsfehler, nicht gebuchte Drucke, Abstürze), ebenfalls
+ohne Seriennummern, Adressen und Namen von Drucken. Das Protokoll selbst liegt als `fehlerprotokoll.log` im Datenordner.
 
 ---
 
