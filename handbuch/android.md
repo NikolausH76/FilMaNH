@@ -59,6 +59,10 @@ Ein Slot öffnet die Auswahl: **Im Slot** zeigt die Spule, **Slot leeren** nimmt
 einlegen** stehen passende Spulen oben (gleiches Material wie im Slot gemeldet, dann noch nirgends eingelegte), oder
 **Etikett scannen** und die Spule über ihren QR-Code wählen.
 
+Passt ein Slot nicht zur Meldung des Druckers, steht ein Hinweis auf der Karte des Druckers – wie am Rechner (siehe
+[Abgleich mit dem Drucker](README.md#abgleich-mit-dem-drucker)): **Ja**, **Andere …**, **Zuordnen**,
+**Andere Spule …**, **Stimmt so**, **Ja, entnommen** oder **Steckt noch**.
+
 ## 4. Spulen
 
 <p>

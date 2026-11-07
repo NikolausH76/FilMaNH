@@ -82,7 +82,8 @@ Finally, FilMaNH asks for the **electricity price** per kWh (for the electricity
 ![Overview](images/01-uebersicht.png)
 
 - **Notices** at the top show what needs your attention: wrong material in a slot, a print whose end is unknown,
-  an unassigned spool, moisture, almost empty spools. The matching action sits right next to each one.
+  slots that don’t match what the printer reports ([Matching with the printer](#matching-with-the-printer)),
+  moisture, almost empty spools. The matching action sits right next to each one.
 - **Printers** with status, current print, remaining time and the slots with their remaining amount: slots 1–4 per
   AMS (with a heading when there are several), the external spool set apart. Click to open the printer.
 - **Recently printed** with costs.
@@ -164,10 +165,19 @@ in by hand.
   the printer supports; the loaded one is marked. If the chosen format does not match the loaded roll, FilMaNH says
   so and does not print; after changing the roll, **Check again**. The label adapts to the format, and the preview
   shows exactly what is printed.
-- **System dialog:** for other label printers (Brother via its driver, Dymo, Niimbot, Phomemo) and A4 sheets, with
-  templates for common sizes. On Windows, all label printing goes through the system dialog.
+- **System print dialog (all printers)** under **Print via:** any printer with a driver – label printers (Brother,
+  Dymo, Niimbot, Phomemo, Zebra, Rollo) as well as an office printer for label sheets. On Windows, all label printing
+  goes through the print dialog.
 
-**Copies per spool** prints several identical labels. FilMaNH remembers which spools have a label.
+![Label sheets](images/09b-etiketten-bogen.png)
+
+**Template** lists label rolls plus A4 sheets from Avery Zweckform and Herma and US Letter sheets from Avery, each with
+its product number (equivalent ones combined), size and labels per sheet. If none fits, **Custom size …** sets up a
+single label or a sheet with columns, rows, margins and gaps.
+
+**Copies per spool** prints several identical labels, **Start at label** reuses partly used sheets. **Print
+outlines** adds the outlines – to align on plain paper first. Keep the scale at 100 % in the print dialog. FilMaNH
+remembers which spools have a label.
 
 ### Moisture
 
@@ -178,8 +188,9 @@ PETG, PCTG and PET show a notice after 30 days open, TPU after 14 days, PA, PC, 
 
 ![Printer](images/10-drucker.png)
 
-The current print in 3D – the part already printed is green – plus progress, layer, remaining time and when it
-will be done. **adjusted** means: this printer usually takes longer or shorter than it shows, and FilMaNH takes
+The current print in 3D in the colours of the assigned spools – the part already printed solid, the rest
+see-through – plus progress, layer, remaining time and when it will be done. Below, the filaments of the print with
+the spool in each slot (number as on the label); click one to reassign, and the model changes colour right away. **adjusted** means: this printer usually takes longer or shorter than it shows, and FilMaNH takes
 that into account. This only happens after three prints and only if it is measurably more accurate.
 
 When a print starts, FilMaNH checks:
@@ -198,8 +209,27 @@ spool. H2D and H2C have two external holders (left and right); an empty one with
 
 ![Assign spool](images/12-zuordnen.png)
 
-When a spool without RFID is loaded, FilMaNH asks which one it is: matching spools first, all others below.
-Clicking the slot opens the selection again at any time, e.g. after changing spools.
+When a spool without RFID is loaded, FilMaNH asks which one it is: matching spools first, all others below, each with
+its number and location. Clicking the slot opens the selection again at any time, e.g. after changing spools.
+
+### Matching with the printer
+
+![Matching](images/11b-abgleich.png)
+
+Every Bambu printer reports for each slot what is set (material, colour, the RFID chip for Bambu spools) and whether
+filament is loaded. FilMaNH compares this with the assigned spool, even when nothing is printing:
+
+- **Is this …?** No spool assigned, but exactly one in stock matches. **Yes** assigns it, **Other …** opens the
+  picker.
+- **… but no spool is assigned.** Several match, or none. **Assign** opens the picker.
+- **Different spool loaded?** The printer reports a different material, a clearly different colour or a different
+  RFID chip. If exactly one spool matches, **Assign #…** assigns it, otherwise **Other spool …**. **That’s right**
+  keeps the assignment.
+- **… removed?** The printer reports the slot as empty. **Yes, removed** clears the assignment, **Still there** keeps
+  it (e.g. when only the filament was unloaded).
+
+**That’s right** and **Still there** apply until the printer reports something else; so does assigning by hand.
+Nothing is assigned without a click – automatically only Bambu spools with RFID, as only their ID is unique.
 
 ## 7. Check print file
 
@@ -228,7 +258,7 @@ deleted.
 
 - **Photo:** the last frame of the timelapse, if “Timelapse” was switched on when sending the print. Without a
   timelapse, the last frame of the camera recording, if the printer records during the print (e.g. P2S). If there
-  is neither, you can add your own photo. **3D** and **Image** show the print file.
+  is neither, you can add your own photo. **3D** (in the spools’ colours) and **Image** show the print file.
 - **Play timelapse.** With **Download timelapses** (Settings › Tracking) it is on your computer after the print;
   otherwise it comes from the printer when you play it. **Save …** keeps a copy; on a Mac an AVI becomes a `.mov`
   that QuickTime plays. If the timelapse was off during the print, this is shown here.
@@ -337,9 +367,11 @@ red when an update is available.
 
 Closing the window doesn’t quit FilMaNH – prints keep being tracked.
 
-- **macOS:** icon at the top right of the menu bar, showing progress during a print. Quit completely with ⌘Q or
-  **Quit** in the icon’s menu.
-- **Windows:** icon at the bottom right in the notification area. Windows 11 first puts new icons under the **^**
+- **macOS:** icon at the top right of the menu bar. During a print it shows a spool in the colour of the filament
+  being printed, with the progress next to it; when several printers print, there is one spool per printer and the
+  percentages in the same order. Quit completely with ⌘Q or **Quit** in the icon’s menu.
+- **Windows:** icon at the bottom right in the notification area, during a print in the colour of the filament (one
+  spool per printer); the tooltip lists all printers with progress. Windows 11 first puts new icons under the **^**
   arrow; you can drag it from there onto the taskbar. Quit completely with **Quit** in the icon’s menu (right-click).
 
 With **Launch at login** (Settings › General) FilMaNH starts in the background right after you log in.

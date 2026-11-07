@@ -58,6 +58,10 @@ A slot opens the picker: **In slot** shows the spool, **Empty slot** takes it ou
 spools come first (same material as the printer reports for the slot, then spools not loaded anywhere), or **Scan
 label** and pick the spool by its QR code.
 
+If a slot doesn’t match what the printer reports, a notice appears on the printer’s card – as on the computer (see
+[Matching with the printer](README.md#matching-with-the-printer)): **Yes**, **Other …**, **Assign**,
+**Other spool …**, **That’s right**, **Yes, removed** or **Still there**.
+
 ## 4. Spools
 
 <p>

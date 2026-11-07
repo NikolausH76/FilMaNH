@@ -42,6 +42,7 @@ verschlüsselt. Die App erscheint demnächst im App Store.
 <p>
   <img src="bilder/iphone-drucker.png" width="240" alt="Drucker">
   <img src="bilder/iphone-slot.png" width="240" alt="Slot">
+  <img src="bilder/iphone-hinweis.png" width="240" alt="Hinweis">
 </p>
 
 Alle Drucker mit Zustand, laufendem Druck und Restzeit. Darunter jedes AMS mit den Slots 1–4 und der Feuchte (beim
@@ -50,6 +51,10 @@ Trocknen die Restzeit), dann die externe Spule (an H2D und H2C mit links/rechts)
 Ein Slot öffnet die Auswahl: **Im Slot** zeigt die Spule, **Slot leeren** nimmt sie heraus. Unter **Spule
 einlegen** stehen passende Spulen oben (gleiches Material wie im Slot gemeldet, dann noch nirgends eingelegte), oder
 **Etikett scannen** und die Spule über ihren QR-Code wählen.
+
+Passt ein Slot nicht zur Meldung des Druckers, steht ein Hinweis auf der Karte des Druckers – wie am Rechner (siehe
+[Abgleich mit dem Drucker](README.md#abgleich-mit-dem-drucker)): **Ja**, **Andere …**, **Zuordnen**,
+**Andere Spule …**, **Stimmt so**, **Ja, entnommen** oder **Steckt noch**.
 
 ## 4. Spulen
 

@@ -82,8 +82,9 @@ Die Einrichtung lässt sich mit **Später einrichten** überspringen und unter E
 
 ![Übersicht](bilder/01-uebersicht.png)
 
-- **Hinweise** oben zeigen, was Aufmerksamkeit braucht: falsches Material im Slot, Druck mit offenem Ende, Spule
-  ohne Zuordnung, Feuchte, fast leere Spulen. Die passende Aktion steht jeweils daneben.
+- **Hinweise** oben zeigen, was Aufmerksamkeit braucht: falsches Material im Slot, Druck mit offenem Ende, Slots, die
+  nicht zur Meldung des Druckers passen ([Abgleich mit dem Drucker](#abgleich-mit-dem-drucker)), Feuchte, fast leere
+  Spulen. Die passende Aktion steht jeweils daneben.
 - **Drucker** mit Status, laufendem Druck, Restzeit und den Slots samt Restmenge: je AMS die Slots 1–4 (bei mehreren
   AMS mit Überschrift), abgesetzt die externe Spule. Ein Klick öffnet den Drucker.
 - **Zuletzt gedruckt** mit Kosten.
@@ -164,10 +165,19 @@ Bezeichnung, wann die Spule geöffnet wurde, und ein QR-Code mit der Nummer. Bei
   Rollen, die der Drucker kann; die eingelegte ist markiert. Passt das gewählte Format nicht zur eingelegten Rolle,
   sagt FilMaNH das und druckt nicht; nach dem Wechsel **Erneut prüfen**. Das Etikett passt sich dem Format an, die
   Vorschau zeigt genau das Druckbild.
-- **Systemdialog:** für andere Etikettendrucker (Brother über den Treiber, Dymo, Niimbot, Phomemo) und A4-Bögen,
-  mit Vorlagen für gängige Größen. Unter Windows geht jeder Etikettendruck über den Systemdialog.
+- **Druckdialog des Systems (alle Drucker)** unter **Drucken über:** jeder Drucker mit Treiber – Etikettendrucker
+  (Brother, Dymo, Niimbot, Phomemo, Zebra, Rollo) ebenso wie ein Bürodrucker für Etikettenbögen. Unter Windows geht
+  jeder Etikettendruck über den Druckdialog.
 
-**Anzahl je Spule** druckt mehrere gleiche Etiketten. FilMaNH merkt sich, welche Spulen ein Etikett haben.
+![Etikettenbögen](bilder/09b-etiketten-bogen.png)
+
+Unter **Vorlage** stehen Etikettenrollen sowie A4-Bögen von Avery Zweckform und Herma und US-Letter-Bögen von Avery,
+jeweils mit Bestellnummer (gleichwertige zusammengefasst), Größe und Anzahl je Bogen. Passt keine, legt
+**Eigene Größe …** ein einzelnes Etikett oder einen Bogen mit Spalten, Zeilen, Rändern und Abständen an.
+
+**Anzahl je Spule** druckt mehrere gleiche Etiketten, **Beginnen bei Etikett** nutzt angefangene Bögen weiter.
+**Rahmen mitdrucken** druckt die Umrisse mit – zum Ausrichten erst auf Normalpapier. Im Druckdialog die Skalierung
+auf 100 % lassen. FilMaNH merkt sich, welche Spulen ein Etikett haben.
 
 ### Feuchte
 
@@ -178,8 +188,9 @@ PETG, PCTG und PET zeigen nach 30 Tagen offen einen Hinweis, TPU nach 14 Tagen, 
 
 ![Drucker](bilder/10-drucker.png)
 
-Der laufende Druck in 3D – der schon gedruckte Teil ist grün –, dazu Fortschritt, Schicht, Restzeit und Uhrzeit des
-Endes. **angepasst** heißt: Dieser Drucker braucht erfahrungsgemäß länger oder kürzer, als er anzeigt, und FilMaNH
+Der laufende Druck in 3D in den Farben der zugeordneten Spulen – der schon gedruckte Teil voll, der Rest
+durchscheinend –, dazu Fortschritt, Schicht, Restzeit und Uhrzeit des Endes. Darunter die Filamente des Drucks mit der
+Spule im Slot (Nummer wie auf dem Etikett); ein Klick darauf ordnet neu zu, das Modell färbt sich sofort um. **angepasst** heißt: Dieser Drucker braucht erfahrungsgemäß länger oder kürzer, als er anzeigt, und FilMaNH
 rechnet das ein. Das geschieht erst ab drei Drucken und nur, wenn es nachweislich genauer ist.
 
 Beim Druckstart prüft FilMaNH:
@@ -198,8 +209,27 @@ Druckers. **Einrichtung** oben rechts führt zu den Druckereinstellungen.
 
 ![Spule zuordnen](bilder/12-zuordnen.png)
 
-Steckt eine Spule ohne RFID im Slot, fragt FilMaNH, welche es ist: oben die passenden, darunter alle weiteren.
-Ein Klick auf den Slot öffnet die Auswahl jederzeit wieder, z.B. nach einem Spulenwechsel.
+Steckt eine Spule ohne RFID im Slot, fragt FilMaNH, welche es ist: oben die passenden, darunter alle weiteren, jeweils
+mit Nummer und Lagerort. Ein Klick auf den Slot öffnet die Auswahl jederzeit wieder, z.B. nach einem Spulenwechsel.
+
+### Abgleich mit dem Drucker
+
+![Abgleich](bilder/11b-abgleich.png)
+
+Jeder Bambu-Drucker meldet je Slot, was eingestellt ist (Material, Farbe, bei Bambu-Spulen der RFID-Chip) und ob
+Filament steckt. FilMaNH vergleicht das mit der zugeordneten Spule, auch ohne laufenden Druck:
+
+- **Ist das …?** Keine Spule zugeordnet, aber genau eine im Bestand passt. **Ja** ordnet sie zu, **Andere …** öffnet
+  die Auswahl.
+- **… aber keine Spule ist zugeordnet.** Es passen mehrere oder keine. **Zuordnen** öffnet die Auswahl.
+- **Andere Spule eingelegt?** Der Drucker meldet anderes Material, eine deutlich andere Farbe oder einen anderen
+  RFID-Chip. Passt genau eine Spule, ordnet **#… zuordnen** sie zu, sonst **Andere Spule …**. **Stimmt so** behält
+  die Zuordnung.
+- **… entnommen?** Der Slot ist laut Drucker leer. **Ja, entnommen** löst die Zuordnung, **Steckt noch** behält sie
+  (z.B. wenn nur das Filament ausgefahren ist).
+
+**Stimmt so** und **Steckt noch** gelten, bis der Drucker etwas anderes meldet; ebenso eine Zuordnung von Hand.
+Zugeordnet wird nur auf Klick – automatisch nur Bambu-Spulen mit RFID, denn nur deren Kennung ist eindeutig.
 
 ## 7. Druckdatei prüfen
 
@@ -228,7 +258,8 @@ Laufende Drucke lassen sich nicht löschen.
 
 - **Foto:** das letzte Bild des Zeitraffers, wenn beim Senden des Drucks „Zeitraffer“ eingeschaltet war. Ohne
   Zeitraffer das letzte Bild der Kameraaufzeichnung, falls der Drucker während des Drucks aufzeichnet (z.B. P2S).
-  Gibt es beides nicht, kannst du ein eigenes Foto hinzufügen. **3D** und **Bild** zeigen die Druckdatei.
+  Gibt es beides nicht, kannst du ein eigenes Foto hinzufügen. **3D** (in den Farben der Spulen) und **Bild** zeigen
+  die Druckdatei.
 - **Zeitraffer** abspielen. Mit **Zeitraffer herunterladen** (Einstellungen › Erfassung) liegt er nach dem Druck auf
   dem Rechner, sonst kommt er beim Abspielen vom Drucker. **Speichern …** sichert ihn; auf dem Mac wird ein AVI dabei
   zu einer `.mov`, die QuickTime abspielt. War der Zeitraffer beim Drucken aus, steht das hier.
@@ -340,9 +371,11 @@ installiert.
 
 Das Fenster zu schließen beendet FilMaNH nicht – Drucke werden weiter verfolgt.
 
-- **macOS:** Symbol oben rechts in der Menüleiste, während eines Drucks mit Fortschritt. Ganz beenden mit ⌘Q oder
-  **Beenden** im Menü des Symbols.
-- **Windows:** Symbol unten rechts im Infobereich. Windows 11 legt neue Symbole zunächst unter den Pfeil **^**; von
+- **macOS:** Symbol oben rechts in der Menüleiste. Während eines Drucks zeigt es eine Spule in der Farbe des
+  Filaments, das gerade gedruckt wird, daneben den Fortschritt; drucken mehrere Drucker, steht je Drucker eine Spule
+  da, die Prozente in derselben Reihenfolge. Ganz beenden mit ⌘Q oder **Beenden** im Menü des Symbols.
+- **Windows:** Symbol unten rechts im Infobereich, während eines Drucks in der Farbe des Filaments (je Drucker eine
+  Spule); der Tooltip nennt alle Drucker mit Fortschritt. Windows 11 legt neue Symbole zunächst unter den Pfeil **^**; von
   dort lässt es sich auf die Taskleiste ziehen. Ganz beenden mit **Beenden** im Menü des Symbols (Rechtsklick).
 
 Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nach dem Hochfahren gleich im Hintergrund.
