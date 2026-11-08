@@ -86,12 +86,14 @@ Finally, FilMaNH asks for the **electricity price** per kWh (for the electricity
 
 ![Overview](images/01-uebersicht.png)
 
-- **Notices** at the top show what needs your attention: wrong material in a slot, a print whose end is unknown,
-  slots that don’t match what the printer reports ([Matching with the printer](#matching-with-the-printer)),
-  [maintenance](#maintenance) that is due, moisture, almost empty spools. The matching action sits right next to each one.
-- **Printers** with status, current print, remaining time and the slots with their remaining amount: slots 1–4 per
-  AMS (with a heading when there are several), the external spool set apart. Click to open the printer.
-- **Recently printed** with costs.
+- **Printers** on the left, printing ones first: for the current print the progress with layer, time left, end and
+  estimated cost; notices about this print (wrong material, spool won’t last) right below. The slots show number,
+  colour and remaining amount of each spool: slots 1–4 per AMS (with a heading when there are several), the external
+  spool set apart. Click a printer to open it.
+- **Recently printed** with amount and cost.
+- **To do** on the right: everything that needs your attention – a print whose end is unknown, slots that don’t match
+  what the printer reports ([Matching with the printer](#matching-with-the-printer)), [maintenance](#maintenance) that
+  is due, moisture, prints not deducted, almost empty spools – each with the matching action.
 
 ## 5. Spools
 

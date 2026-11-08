@@ -87,12 +87,14 @@ Die Einrichtung lässt sich mit **Später einrichten** überspringen und unter E
 
 ![Übersicht](bilder/01-uebersicht.png)
 
-- **Hinweise** oben zeigen, was Aufmerksamkeit braucht: falsches Material im Slot, Druck mit offenem Ende, Slots, die
-  nicht zur Meldung des Druckers passen ([Abgleich mit dem Drucker](#abgleich-mit-dem-drucker)), fällige
-  [Wartung](#wartung), Feuchte, fast leere Spulen. Die passende Aktion steht jeweils daneben.
-- **Drucker** mit Status, laufendem Druck, Restzeit und den Slots samt Restmenge: je AMS die Slots 1–4 (bei mehreren
-  AMS mit Überschrift), abgesetzt die externe Spule. Ein Klick öffnet den Drucker.
-- **Zuletzt gedruckt** mit Kosten.
+- **Drucker** links, druckende zuerst: beim laufenden Druck Fortschritt mit Schicht, Restzeit, Ende und geschätzte
+  Kosten; Hinweise zu diesem Druck (falsches Material, Spule reicht nicht) direkt darunter. Die Slots zeigen je Spule
+  Nummer, Farbe und Rest: je AMS die Slots 1–4 (bei mehreren AMS mit Überschrift), abgesetzt die externe Spule. Ein
+  Klick auf den Drucker öffnet ihn.
+- **Zuletzt gedruckt** mit Menge und Kosten.
+- **Zu erledigen** rechts: alles, was Aufmerksamkeit braucht – Druck mit offenem Ende, Slots, die nicht zur Meldung des
+  Druckers passen ([Abgleich mit dem Drucker](#abgleich-mit-dem-drucker)), fällige [Wartung](#wartung), Feuchte,
+  nicht gebuchte Drucke, fast leere Spulen –, jeweils mit der passenden Aktion.
 
 ## 5. Spulen
 
