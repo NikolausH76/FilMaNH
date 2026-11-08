@@ -111,6 +111,7 @@ Type brand, material or colour into the search field, e.g. “sunlu petg white�
 filaments; picking one fills in colour, net weight and empty spool weight. Optionally add the price (gross or net),
 location and **Quantity**: 3 creates three spools, each with its own number. If a filament is not in the catalog:
 **Without catalog** and enter it yourself.
+Your own filament presets from Bambu Studio are in the catalog too.
 
 ![Choose a colour](images/04c-farbe.png)
 
@@ -306,8 +307,9 @@ deleted.
   deduction and, as long as nothing is deducted, **Find print file again**.
 - FilMaNH checks every print file against the print: layer count and the filaments the printer actually uses. An
   older file with the same name is not used.
-- **Not deducted – choose a spool.** appears when the printer reported no slot for a filament. You choose the spool;
-  FilMaNH does not guess.
+- **Not deducted – choose a spool.** appears when the printer reported no slot for a filament or the spool was only
+  put into the slot after the print (it may already be meant for the next print). You choose the spool; FilMaNH does
+  not guess. If the print file lists no filaments, enter the usage as for a print without a file.
 - For cancelled prints the printer’s message is shown.
 
 ### End unknown
@@ -331,7 +333,8 @@ one. Prints are added with **Add prints** or in the print under **Project**.
 - **Selling price:** the print costs (material, electricity, machine) plus **Labour** at the hourly rate from
   Settings › Costs, on top of that the **Failed-print surcharge** and then the **Markup** – net, gross and per
   **piece**. The markup applies per project; left empty, the default from the settings applies.
-- **CSV** exports the prints, **Print …** an overview as an A4 page (also as PDF in the print dialog).
+- **CSV** exports the prints, **Print …** an overview as an A4 page with total and selling price (also as PDF in the
+  print dialog).
 - **Close** marks the project as closed, **Reopen** undoes that. **Delete project** deletes only the project; the
   prints stay.
 
@@ -350,7 +353,7 @@ project file (`.3mf`); FilMaNH suggests the files recently opened in Bambu Studi
 
 ![Statistics](images/19-auswertung.png)
 
-Prints, filament, costs and waste (cancelled prints and prints marked as waste), costs per month, per material and
+Prints, filament, costs and waste (prints cancelled after the first layer and prints marked as waste), costs per month, per material and
 per printer,
 reasons for cancellation and the most expensive models. Filter by printer and period, gross or net.
 
@@ -377,7 +380,9 @@ price**.
 ![Printer settings](images/22-einst-drucker.png)
 
 **Costs:** currency, VAT and whether prices are shown **Gross** or **Net**. All amounts on this page are shown and
-entered that way; internally FilMaNH calculates net.
+entered that way; internally FilMaNH calculates net. The VAT applies to electricity, printer purchase,
+selling price and new spools; each spool keeps its own rate. On a new installation, currency and VAT are preset for
+the system’s country.
 
 - **Electricity:** **Electricity price** per kWh and the power of each printer. Without your own value FilMaNH uses
   Bambu’s measured average for the model and the print’s material (e.g. A1 mini with PLA 80 W, P2S 200 W) – not the
@@ -471,7 +476,8 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
   network (port 47474, or one of the next nine if it is in use); only paired phones get any data. Once no phone is
   paired any more, the service stops after a few minutes. Nothing goes to the internet.
 - FilMaNH only goes online to check for updates, to update the catalog (when you click), for a Spoolman import if
-  you start one, and for a shop link when you paste one (then FilMaNH fetches exactly that page).
+  you start one, and for a shop link when you paste one or scan it with your phone (then FilMaNH fetches exactly that
+  page – never an address on your own network).
 
 The full privacy statement for the program and the apps: [DATENSCHUTZ.md](../DATENSCHUTZ.md) (German and English).
 

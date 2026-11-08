@@ -23,7 +23,8 @@ den Entwickler oder für Dritte. Es gibt kein Konto, keine Werbung, keine Analys
 - Es liest deine 3D-Drucker im Heimnetz aus und speichert alle Daten lokal auf deinem Rechner.
 - Ins Internet verbindet es sich nur
   - zur Suche nach Updates und für den Filament-Katalog (beides auf GitHub),
-  - wenn du einen Shop-Link einfügst: zur Seite dieses Shops,
+  - wenn du einen Shop-Link einfügst oder mit dem Handy scannst: zur Seite dieses Shops (nie zu einer Adresse im
+    eigenen Netzwerk),
   - wenn du Spulen aus einem Spoolman-Server übernimmst: zu diesem Server.
 - Der Installer für Windows lädt bei Bedarf Microsoft WebView2 nach (die Anzeige-Komponente von Windows), wenn sie auf
   dem Rechner fehlt.
@@ -59,7 +60,8 @@ or for third parties. There is no account, no advertising, no analytics and no t
 - It reads your 3D printers on your home network and stores all data locally on your computer.
 - It only connects to the internet
   - to check for updates and for the filament catalog (both on GitHub),
-  - when you paste a shop link: to that shop's page,
+  - when you paste a shop link or scan one with your phone: to that shop's page (never to an address on your own
+    network),
   - when you import spools from a Spoolman server: to that server.
 - The Windows installer downloads Microsoft WebView2 (the Windows display component) if it is missing on the computer.
 

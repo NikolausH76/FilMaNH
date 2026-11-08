@@ -112,6 +112,7 @@ Hersteller, Material oder Farbe ins Suchfeld tippen, z.B. „sunlu petg weiß“
 Filamente; die Auswahl füllt Farbe, Füllmenge und Leergewicht aus. Dazu optional Preis (brutto oder netto),
 Lagerort und **Anzahl**: Bei 3 entstehen drei Spulen mit eigener Nummer. Steht ein Filament nicht im Katalog:
 **Ohne Katalog** und selbst eintragen.
+Auch deine eigenen Filamentprofile aus Bambu Studio stehen im Katalog.
 
 ![Farbe wählen](bilder/04c-farbe.png)
 
@@ -308,8 +309,9 @@ Laufende Drucke lassen sich nicht löschen.
   Buchung zurücknehmen und, solange nicht gebucht ist, **Druckdatei neu suchen**.
 - Jede Druckdatei prüft FilMaNH am Inhalt: Schichtzahl und die Filamente, die der Drucker tatsächlich nutzt. Eine
   ältere Datei gleichen Namens wird so nicht verwendet.
-- **Nicht gebucht – Spule wählen.** erscheint, wenn der Drucker für ein Filament keinen Slot gemeldet hat. Die Spule
-  wählst du selbst; FilMaNH rät sie nicht.
+- **Nicht gebucht – Spule wählen.** erscheint, wenn der Drucker für ein Filament keinen Slot gemeldet hat oder die
+  Spule erst nach dem Druck in den Slot kam (sie könnte schon für den nächsten Druck sein). Die Spule wählst du selbst;
+  FilMaNH rät sie nicht. Nennt die Druckdatei keine Filamente, trägst du den Verbrauch wie ohne Druckdatei ein.
 - Bei Abbrüchen steht die Meldung des Druckers dabei.
 
 ### Ende offen
@@ -333,7 +335,8 @@ Ein Projekt fasst Drucke für einen Auftrag oder Kunden zusammen, mit Summen fü
 - **Verkaufspreis:** die Druckkosten (Material, Strom, Maschine) plus **Arbeitszeit** zum Stundensatz aus
   Einstellungen › Kosten, darauf der **Zuschlag für Fehldrucke** und darauf der **Aufschlag** – netto, brutto und je
   **Stück**. Der Aufschlag gilt je Projekt; leer bleibt die Vorgabe aus den Einstellungen.
-- **CSV** exportiert die Drucke, **Drucken …** eine Übersicht als A4-Seite (im Druckdialog auch als PDF).
+- **CSV** exportiert die Drucke, **Drucken …** eine Übersicht als A4-Seite mit Summe und Verkaufspreis (im Druckdialog
+  auch als PDF).
 - **Abschließen** markiert das Projekt als abgeschlossen, **Wieder öffnen** hebt das auf. **Projekt löschen** löscht
   nur das Projekt; die Drucke bleiben.
 
@@ -352,7 +355,7 @@ Projektdatei (`.3mf`) anhängen; FilMaNH schlägt dafür die zuletzt in Bambu St
 
 ![Auswertung](bilder/19-auswertung.png)
 
-Drucke, Filament, Kosten und Ausschuss (abgebrochene und als Ausschuss markierte Drucke), Kosten je Monat, je
+Drucke, Filament, Kosten und Ausschuss (nach der ersten Schicht abgebrochene und als Ausschuss markierte Drucke), Kosten je Monat, je
 Material und je Drucker, Abbruchgründe und die teuersten Modelle. Filter nach Drucker und Zeitraum, Brutto oder Netto.
 
 ## 12. Einkauf
@@ -379,7 +382,9 @@ Start mit dem Rechner (empfohlen), Mitteilungen (Druck fertig, Spule reicht nich
 ![Drucker-Einstellungen](bilder/22-einst-drucker.png)
 
 **Kosten:** Währung, Mehrwertsteuer und ob Preise **Brutto** oder **Netto** angezeigt werden. Alle Beträge auf dieser
-Seite werden so angezeigt und eingegeben; intern rechnet FilMaNH netto.
+Seite werden so angezeigt und eingegeben; intern rechnet FilMaNH netto. Die Mehrwertsteuer gilt für Strom,
+Anschaffung, Verkaufspreis und neue Spulen; jede Spule behält ihren Satz. Bei einer neuen Installation sind Währung
+und Mehrwertsteuer nach dem Land des Systems vorbelegt.
 
 - **Strom:** **Strompreis** je kWh und die Leistung jedes Druckers. Ohne eigene Leistung nimmt FilMaNH Bambus
   gemessenen Durchschnitt für das Modell und das Material des Drucks (z.B. A1 mini mit PLA 80 W, P2S 200 W) – nicht
@@ -475,8 +480,8 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
   verschlüsselte Verbindungen an (Port 47474, ist er belegt, einer der nächsten neun); Daten bekommen nur gekoppelte
   Handys. Ist kein Handy mehr gekoppelt, geht der Dienst nach wenigen Minuten aus. Ins Internet geht dabei nichts.
 - Ins Internet geht FilMaNH nur für die Update-Suche, die Katalog-Aktualisierung (auf Klick), einen
-  Spoolman-Import, wenn du einen startest, und für einen Shop-Link, wenn du einen einfügst (dann ruft FilMaNH genau
-  diese Seite ab).
+  Spoolman-Import, wenn du einen startest, und für einen Shop-Link, wenn du einen einfügst oder mit dem Handy
+  scannst (dann ruft FilMaNH genau diese Seite ab – nie eine Adresse im eigenen Netzwerk).
 
 Die vollständige Datenschutzerklärung für Programm und Apps: [DATENSCHUTZ.md](../DATENSCHUTZ.md).
 
