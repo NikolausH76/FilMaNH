@@ -20,8 +20,7 @@ verschlüsselt. Die App erscheint demnächst im App Store.
 
 ## 1. Voraussetzungen
 
-- FilMaNH ab Version 0.5 läuft auf dem Rechner (Mac oder Windows). Das Fenster darf geschlossen sein.
-- Am Rechner ist **Einstellungen › iPhone** eingeschaltet (ab Werk aus).
+- FilMaNH ab Version 0.5 läuft auf dem Rechner (Mac oder Windows). Das Fenster darf geschlossen sein. Bis Version 0.9.4 heißt **Einstellungen › Handy** dort noch **iPhone**.
 - iPhone mit iOS 17 oder neuer im selben WLAN wie der Rechner.
 
 ## 2. Koppeln
@@ -31,7 +30,7 @@ verschlüsselt. Die App erscheint demnächst im App Store.
   <img src="bilder/iphone-koppeln.png" width="240" alt="Koppeln">
 </p>
 
-1. Am Rechner in FilMaNH: **Einstellungen › iPhone › QR-Code zeigen**.
+1. Am Rechner in FilMaNH: **Einstellungen › Handy › QR-Code zeigen**.
 2. Auf dem iPhone **Mit Rechner koppeln** antippen, den Code scannen und **Koppeln** bestätigen.
 3. Beim ersten Mal fragt iOS nach dem **lokalen Netzwerk**: erlauben. Ohne diese Erlaubnis findet das iPhone den
    Rechner nicht.
@@ -130,7 +129,7 @@ Zahnrad oben rechts.
 - **Sprache:** Deutsch, English, Español, Français, Italiano, Nederlands, Polski – wie das iPhone, sonst Englisch; ein Tipp öffnet die Einstellungen von iOS für
   FilMaNH.
 - **Rechner:** Name, Status und Adresse. **Neu koppeln** ersetzt die Kopplung, **Trennen** hebt sie auf. Am Rechner
-  unter **Einstellungen › iPhone** lässt sich ein iPhone ebenfalls **Entfernen**.
+  unter **Einstellungen › Handy** lässt sich ein iPhone ebenfalls **Entfernen**.
 - **Handbuch** und **Fehler melden**.
 
 ## 8. Widget
@@ -146,10 +145,9 @@ sofort, wenn sie neue Daten hat. Ohne Verbindung steht der letzte Stand mit Uhrz
 
 ## 9. Häufige Fragen
 
-**„Rechner nicht erreichbar“?** FilMaNH muss am Rechner laufen, **Einstellungen › iPhone** muss an sein, und das
-iPhone muss im selben WLAN sein. In den iOS-Einstellungen unter FilMaNH muss **Lokales Netzwerk** erlaubt sein.
+**„Rechner nicht erreichbar“?** FilMaNH muss am Rechner laufen, und das iPhone muss im selben WLAN sein. In den iOS-Einstellungen unter FilMaNH muss **Lokales Netzwerk** erlaubt sein.
 
-Läuft FilMaNH auf einem **Windows-PC**, blockiert oft die Windows-Firewall: am Rechner unter **Einstellungen › iPhone**
+Läuft FilMaNH auf einem **Windows-PC**, blockiert oft die Windows-Firewall: am Rechner unter **Einstellungen › Handy**
 bei **Windows-Firewall** auf **Freigeben** klicken und die Rückfrage von Windows bestätigen.
 
 **Geht das auch unterwegs?** Nein. Die App spricht nur im Heimnetz mit dem Rechner; ins Internet geht dabei nichts.

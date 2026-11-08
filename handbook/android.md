@@ -29,15 +29,13 @@ edit them. The data stays on the computer. The phone only connects to it on your
   (also in the settings: **Download app version …**). Tapping it downloads the APK in the browser. The app itself does
   not go online for this – it learns it from the computer.
 
-On the computer: FilMaNH 0.5 or later is running (the window may be closed), and **Settings › iPhone** is switched on
-(off by default). The section is called “iPhone” on the computer but applies to Android too. Phone and computer are on
-the same Wi-Fi.
+On the computer: FilMaNH 0.5 or later is running (the window may be closed). Up to version 0.9.4, **Settings › Phone** is still called **iPhone** there. Phone and computer are on the same Wi-Fi.
 
 ## 2. Pairing
 
 <img src="images/android-start.png" width="240" alt="Start">
 
-1. On the computer in FilMaNH: **Settings › iPhone › Show QR code**.
+1. On the computer in FilMaNH: **Settings › Phone › Show QR code**.
 2. On the phone, tap **Pair with computer**, scan the code and confirm with **Pair**. The first time, Android asks for
    camera access: allow it.
 
@@ -136,7 +134,7 @@ Gear at the top right.
 - **Language:** Deutsch, English, Español, Français, Italiano, Nederlands, Polski – as the phone, otherwise English; a tap opens Android's language setting for
   FilMaNH.
 - **Computer:** name, status and address. **Pair again** replaces the pairing, **Unpair** removes it. On the
-  computer, the phone can also be removed under **Settings › iPhone** (**Remove**).
+  computer, the phone can also be removed under **Settings › Phone** (**Remove**).
 - **Manual** and **Report a problem**.
 
 ## 8. Widget
@@ -151,10 +149,9 @@ The widget fetches the status from the computer itself, only on your home networ
 
 ## 9. FAQ
 
-**"Computer not reachable"?** FilMaNH must be running on the computer, **Settings › iPhone** must be on, and the phone
-must be on the same Wi-Fi.
+**"Computer not reachable"?** FilMaNH must be running on the computer, and the phone must be on the same Wi-Fi.
 
-If FilMaNH runs on a **Windows PC**, the Windows Firewall often blocks it: on the computer, under **Settings › iPhone**,
+If FilMaNH runs on a **Windows PC**, the Windows Firewall often blocks it: on the computer, under **Settings › Phone**,
 click **Allow** next to **Windows Firewall** and confirm the Windows prompt.
 
 **Does it work away from home?** No. The app only talks to the computer on your home network; nothing goes to the

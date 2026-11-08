@@ -378,15 +378,18 @@ Start mit dem Rechner (empfohlen), Mitteilungen (Druck fertig, Spule reicht nich
 
 ![Drucker-Einstellungen](bilder/22-einst-drucker.png)
 
-**Kosten:** Währung, Mehrwertsteuer, Anzeige brutto oder netto, Strompreis je kWh.
+**Kosten:** Währung, Mehrwertsteuer und ob Preise **Brutto** oder **Netto** angezeigt werden. Alle Beträge auf dieser
+Seite werden so angezeigt und eingegeben; intern rechnet FilMaNH netto.
 
-- **Verkaufspreis:** Stundensatz für die **Arbeitszeit**, Vorgabe für den **Aufschlag** (je Projekt änderbar) und
-  **Zuschlag für Fehldrucke** – für den Preisrechner in Projekten, Drucken und Druckdatei prüfen.
-- **Eigene Werte je Drucker:** **Leistung** beim Drucken, **Kaufpreis**, **Nutzungsdauer** (Vorgabe 5.000 Stunden)
-  und **Stundensatz** der Maschine. Ohne eigenen Stundensatz rechnet FilMaNH Kaufpreis (netto) geteilt durch
-  Nutzungsdauer. Ohne eigene Leistung nimmt es Bambus gemessenen Durchschnitt für das Modell und das Material des
-  Drucks (z.B. A1 mini mit PLA 80 W, P2S 200 W) – nicht die Höchstleistung, die der Drucker nur kurz beim Aufheizen
-  braucht.
+- **Strom:** **Strompreis** je kWh und die Leistung jedes Druckers. Ohne eigene Leistung nimmt FilMaNH Bambus
+  gemessenen Durchschnitt für das Modell und das Material des Drucks (z.B. A1 mini mit PLA 80 W, P2S 200 W) – nicht
+  die Höchstleistung, die der Drucker nur kurz beim Aufheizen braucht.
+- **Anschaffung der Drucker:** je Drucker **Kaufpreis** und **Nutzungsdauer** (Vorgabe 5.000 Druckstunden); daneben
+  steht, was das **je Druckstunde** ausmacht (z.B. 799 € über 5.000 h = 0,16 €). Dieser Betrag mal der Druckzeit kommt zu jedem gebuchten Druck, auch zu älteren, immer mit dem aktuellen Kaufpreis. Ist **In die Kosten einrechnen** aus, zählt die
+  Anschaffung nirgends mit.
+- **Verkaufspreis:** **Stundensatz für deine Arbeit**, Vorgabe für den **Aufschlag** (je Projekt änderbar) und
+  **Zuschlag für Fehldrucke** – für den Preisrechner in Projekten, Drucken und Druckdatei prüfen. Der Stundensatz
+  zählt nur für die **Arbeitszeit**, die du dort einträgst, nie für die Druckzeit.
 
 ![Kosten](bilder/23-einst-kosten.png)
 
@@ -402,18 +405,20 @@ und Zeitraffer höchstens belegen.
   die Druckdatei kurz ab, und FilMaNH übernimmt sie. So wird auch gebucht, wenn der Drucker die Datei nicht
   herausgibt. Einzurichten ist nichts.
 
-**iPhone:** Verbindung zur FilMaNH-App auf dem iPhone (aus ab Werk; die App erscheint demnächst im App Store).
-**QR-Code zeigen** öffnet das Koppeln: In der App **Mit Rechner koppeln** antippen und den Code scannen. Die
-Verbindung bleibt im Heimnetz und ist verschlüsselt; gekoppelte iPhones lassen sich hier wieder **Entfernen**. Beim
-ersten Einschalten fragen macOS bzw. Windows, ob FilMaNH Verbindungen annehmen darf: **Erlauben** (unter Windows für
-private Netzwerke).
+**Handy:** Koppeln mit der FilMaNH-App für iPhone oder Android (die iPhone-App erscheint demnächst im App Store).
+**QR-Code zeigen** öffnet das Koppeln: In der App **Mit Rechner koppeln** antippen und den Code scannen. Es lassen sich
+beliebig viele Handys koppeln; jedes steht unter **Gekoppelte Geräte** und lässt sich dort wieder **Entfernen**. Die
+Verbindung bleibt im Heimnetz und ist verschlüsselt. Beim ersten Koppeln fragen macOS bzw. Windows, ob FilMaNH
+Verbindungen annehmen darf: **Erlauben** (unter Windows für private Netzwerke).
 
-![iPhone](bilder/28-einst-iphone.png)
+Solange kein Handy gekoppelt ist, steht unten in der Seitenleiste **Handy-App**: Ein Klick zeigt, was die Apps können,
+mit QR-Code zum Laden der Android-App. **Ausblenden** entfernt den Hinweis.
 
-![iPhone koppeln](bilder/29-iphone-koppeln.png)
+![Handy](bilder/28-einst-iphone.png)
 
-Der Bereich gilt für iPhone und Android. Was die Apps können, steht in den Handbüchern für [iPhone](iphone.md) und
-[Android](android.md).
+![Handy koppeln](bilder/29-iphone-koppeln.png)
+
+Was die Apps können, steht in den Handbüchern für [iPhone](iphone.md) und [Android](android.md).
 
 **Daten:** tägliche Sicherung (die letzten 14 Stände), Export und Import aller Daten, Druckverlauf als CSV, Datenordner. Sicherung und Export enthalten die Datenbank: Spulen, Buchungen,
 Drucke und Einstellungen – nicht Fotos, Druckdateien, 3D-Ansichten, Zeitraffer und Quelldateien. Die liegen im
@@ -431,6 +436,8 @@ ein Update da, wird sie rot.
 **Updates:** FilMaNH sucht stündlich nach einer neuen Version. Gibt es eine, steht **Update …** in der Seitenleiste;
 ein Klick auf **Version … installieren** lädt, prüft, installiert und startet neu. Ohne Klick wird nichts
 installiert.
+
+**Hilfe:** dieses Handbuch in der Sprache der App, mit Suche über alle Kapitel. **F1** öffnet es von überall.
 
 ## 14. Im Hintergrund
 
@@ -450,6 +457,7 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
 ![Befehle](bilder/27-befehle.png)
 
 - **⌘K** (Mac) bzw. **Strg+K** (Windows): Suche nach Spulen, Drucken, Modellen und Befehlen.
+- **F1**: [Hilfe](#13-einstellungen).
 - Eine `.gcode.3mf` auf das Fenster ziehen: Druckdatei prüfen.
 - Ein Barcodescanner, der den QR-Code eines FilMaNH-Etiketts liest, öffnet direkt die Spule.
 - Scannt er die EAN einer Spule oder ihres Kartons, öffnet sich **Neue Spule** – bei einer bekannten EAN mit dem
@@ -463,8 +471,9 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
   auf diesem Rechner ablegt – nichts sonst.
 - Kein Konto, keine Cloud. FilMaNH liest die Drucker nur aus und steuert sie nicht. Zugangscodes liegen im
   Schlüsselbund des Systems.
-- Ist die **Verbindung zum iPhone** eingeschaltet, nimmt FilMaNH im Heimnetz verschlüsselte Verbindungen von
-  gekoppelten iPhones an (Port 47474). Ins Internet geht dabei nichts.
+- Solange ein Handy gekoppelt ist oder der QR-Code zum Koppeln offen ist, nimmt FilMaNH im lokalen Netzwerk
+  verschlüsselte Verbindungen an (Port 47474, ist er belegt, einer der nächsten neun); Daten bekommen nur gekoppelte
+  Handys. Ist kein Handy mehr gekoppelt, geht der Dienst nach wenigen Minuten aus. Ins Internet geht dabei nichts.
 - Ins Internet geht FilMaNH nur für die Update-Suche, die Katalog-Aktualisierung (auf Klick), einen
   Spoolman-Import, wenn du einen startest, und für einen Shop-Link, wenn du einen einfügst (dann ruft FilMaNH genau
   diese Seite ab).

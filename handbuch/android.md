@@ -30,15 +30,14 @@ verschlüsselt.
   einer neueren App gehört (auch in den Einstellungen: **App-Version … herunterladen**). Antippen lädt die APK im
   Browser. Die App selbst geht dafür nicht ins Internet – sie erfährt es vom Rechner.
 
-Voraussetzungen am Rechner: FilMaNH ab Version 0.5 läuft (das Fenster darf geschlossen sein), und
-**Einstellungen › iPhone** ist eingeschaltet (ab Werk aus). Der Bereich heißt am Rechner „iPhone“, gilt aber auch für
-Android. Handy und Rechner sind im selben WLAN.
+Voraussetzungen am Rechner: FilMaNH ab Version 0.5 läuft (das Fenster darf geschlossen sein). Bis Version 0.9.4 heißt **Einstellungen › Handy** dort noch **iPhone**. Handy und Rechner sind
+im selben WLAN.
 
 ## 2. Koppeln
 
 <img src="bilder/android-start.png" width="240" alt="Start">
 
-1. Am Rechner in FilMaNH: **Einstellungen › iPhone › QR-Code zeigen**.
+1. Am Rechner in FilMaNH: **Einstellungen › Handy › QR-Code zeigen**.
 2. Auf dem Handy **Mit Rechner koppeln** antippen, den Code scannen und **Koppeln** bestätigen. Beim ersten Mal fragt
    Android nach der Kamera: erlauben.
 
@@ -138,7 +137,7 @@ Zahnrad oben rechts.
 - **Sprache:** Deutsch, English, Español, Français, Italiano, Nederlands, Polski – wie das Handy, sonst Englisch; ein Tipp öffnet die Spracheinstellung von Android
   für FilMaNH.
 - **Rechner:** Name, Status und Adresse. **Neu koppeln** ersetzt die Kopplung, **Trennen** hebt sie auf. Am Rechner
-  unter **Einstellungen › iPhone** lässt sich das Handy ebenfalls **Entfernen**.
+  unter **Einstellungen › Handy** lässt sich das Handy ebenfalls **Entfernen**.
 - **Handbuch** und **Fehler melden**.
 
 ## 8. Widget
@@ -153,10 +152,9 @@ sofort, wenn sie neue Daten hat. Ohne Verbindung steht der letzte Stand mit Uhrz
 
 ## 9. Häufige Fragen
 
-**„Rechner nicht erreichbar“?** FilMaNH muss am Rechner laufen, **Einstellungen › iPhone** muss an sein, und das
-Handy muss im selben WLAN sein.
+**„Rechner nicht erreichbar“?** FilMaNH muss am Rechner laufen, und das Handy muss im selben WLAN sein.
 
-Läuft FilMaNH auf einem **Windows-PC**, blockiert oft die Windows-Firewall: am Rechner unter **Einstellungen › iPhone**
+Läuft FilMaNH auf einem **Windows-PC**, blockiert oft die Windows-Firewall: am Rechner unter **Einstellungen › Handy**
 bei **Windows-Firewall** auf **Freigeben** klicken und die Rückfrage von Windows bestätigen.
 
 **Geht das auch unterwegs?** Nein. Die App spricht nur im Heimnetz mit dem Rechner; ins Internet geht dabei nichts.

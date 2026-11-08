@@ -20,8 +20,7 @@ coming soon to the App Store.
 
 ## 1. Requirements
 
-- FilMaNH 0.5 or later runs on the computer (Mac or Windows). The window may be closed.
-- On the computer, **Settings › iPhone** is switched on (off by default).
+- FilMaNH 0.5 or later runs on the computer (Mac or Windows). The window may be closed. Up to version 0.9.4, **Settings › Phone** is still called **iPhone** there.
 - An iPhone with iOS 17 or later on the same Wi-Fi as the computer.
 
 ## 2. Pairing
@@ -31,7 +30,7 @@ coming soon to the App Store.
   <img src="images/iphone-koppeln.png" width="240" alt="Pair">
 </p>
 
-1. On the computer in FilMaNH: **Settings › iPhone › Show QR code**.
+1. On the computer in FilMaNH: **Settings › Phone › Show QR code**.
 2. On the iPhone, tap **Pair with computer**, scan the code and confirm with **Pair**.
 3. The first time, iOS asks about the **local network**: allow it. Without this permission the iPhone cannot find the
    computer.
@@ -127,7 +126,7 @@ Gear at the top right.
 - **Appearance:** System, Light or Dark. **Background image** on or off.
 - **Language:** Deutsch, English, Español, Français, Italiano, Nederlands, Polski – as the iPhone, otherwise English; a tap opens the iOS settings for FilMaNH.
 - **Computer:** name, status and address. **Pair again** replaces the pairing, **Unpair** removes it. On the
-  computer, an iPhone can also be removed under **Settings › iPhone** (**Remove**).
+  computer, an iPhone can also be removed under **Settings › Phone** (**Remove**).
 - **Manual** and **Report a problem**.
 
 ## 8. Widget
@@ -142,10 +141,9 @@ updates it right away when it has new data. Without a connection it shows the la
 
 ## 9. FAQ
 
-**"Computer not reachable"?** FilMaNH must be running on the computer, **Settings › iPhone** must be on, and the iPhone
-must be on the same Wi-Fi. In the iOS settings under FilMaNH, **Local Network** must be allowed.
+**"Computer not reachable"?** FilMaNH must be running on the computer, and the iPhone must be on the same Wi-Fi. In the iOS settings under FilMaNH, **Local Network** must be allowed.
 
-If FilMaNH runs on a **Windows PC**, the Windows Firewall often blocks it: on the computer, under **Settings › iPhone**,
+If FilMaNH runs on a **Windows PC**, the Windows Firewall often blocks it: on the computer, under **Settings › Phone**,
 click **Allow** next to **Windows Firewall** and confirm the Windows prompt.
 
 **Does it work away from home?** No. The app only talks to the computer on your home network; nothing goes to the

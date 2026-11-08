@@ -376,15 +376,18 @@ price**.
 
 ![Printer settings](images/22-einst-drucker.png)
 
-**Costs:** currency, VAT, show prices gross or net, electricity price per kWh.
+**Costs:** currency, VAT and whether prices are shown **Gross** or **Net**. All amounts on this page are shown and
+entered that way; internally FilMaNH calculates net.
 
-- **Selling price:** hourly rate for **Labour**, default **Markup** (can be changed per project) and **Failed-print
-  surcharge** – for the price calculator in projects, prints and Check print file.
-- **Your own values per printer:** **Power** while printing, **Purchase price**, **Service life** (default 5,000
-  hours) and the machine’s **Hourly rate**. Without your own hourly rate FilMaNH divides the purchase price (net) by
-  the service life. Without your own power value it uses Bambu’s measured average for the model and the print’s
-  material (e.g. A1 mini with PLA 80 W, P2S 200 W) – not the maximum power, which the printer only needs briefly
-  while heating up.
+- **Electricity:** **Electricity price** per kWh and the power of each printer. Without your own value FilMaNH uses
+  Bambu’s measured average for the model and the print’s material (e.g. A1 mini with PLA 80 W, P2S 200 W) – not the
+  maximum power, which the printer only needs briefly while heating up.
+- **Printer purchase:** **Purchase price** and **Service life** per printer (default 5,000 print hours); next to them
+  is what that comes to **per print hour** (e.g. €799 over 5,000 h = €0.16). This amount times the print time is added to every booked print, older ones too, always with the current purchase price. With **Include in costs** off, the purchase
+  counts nowhere.
+- **Selling price:** **Hourly rate for your work**, default **Markup** (can be changed per project) and **Failed-print
+  surcharge** – for the price calculator in projects, prints and Check print file. The hourly rate only applies to the
+  **Labour** time you enter there, never to the print time.
 
 ![Costs](images/23-einst-kosten.png)
 
@@ -400,17 +403,20 @@ files and timelapses may use.
   stores the print file and FilMaNH takes it. This way usage is booked even if the printer does not provide the
   file. Nothing to set up.
 
-**iPhone:** connection to the FilMaNH app on the iPhone (off by default; the app is coming soon to the App Store).
-**Show QR code** starts pairing: tap **Pair with computer** in the app and scan the code. The connection stays on
-your home network and is encrypted; **Remove** disconnects a paired iPhone. When you turn it on for the first time,
-macOS or Windows asks whether FilMaNH may accept connections: **Allow** (on Windows for private networks).
+**Phone:** pairing with the FilMaNH app for iPhone or Android (the iPhone app is coming soon to the App Store).
+**Show QR code** starts pairing: tap **Pair with computer** in the app and scan the code. You can pair as many phones
+as you like; each one is listed under **Paired devices** and can be removed there with **Remove**. The connection stays
+on your home network and is encrypted. When you pair for the first time, macOS or Windows asks whether FilMaNH may
+accept connections: **Allow** (on Windows for private networks).
 
-![iPhone](images/28-einst-iphone.png)
+As long as no phone is paired, **Phone app** appears at the bottom of the sidebar: a click shows what the apps do,
+with a QR code to download the Android app. **Hide** removes the hint.
 
-![Pair iPhone](images/29-iphone-koppeln.png)
+![Phone](images/28-einst-iphone.png)
 
-This section applies to iPhone and Android. What the apps can do is described in the handbooks for [iPhone](iphone.md)
-and [Android](android.md).
+![Pair phone](images/29-iphone-koppeln.png)
+
+What the apps can do is described in the handbooks for [iPhone](iphone.md) and [Android](android.md).
 
 **Data:** daily backup (the last 14), export and import of all data, print history as CSV, data folder. Backup and export contain the database: spools, bookings, prints and settings – not
 photos, print files, 3D views, timelapses and source files. Those are in the data folder (`drucke`, `modelle`); copy
@@ -427,6 +433,8 @@ red when an update is available.
 
 **Updates:** FilMaNH checks for a new version every hour. If there is one, **Update …** appears in the sidebar;
 **Install version …** downloads, verifies, installs and restarts. Nothing is installed without your click.
+
+**Help:** this handbook in the app’s language, with search across all chapters. **F1** opens it from anywhere.
 
 ## 14. Running in the background
 
@@ -446,6 +454,7 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
 ![Commands](images/27-befehle.png)
 
 - **⌘K** (Mac) or **Ctrl+K** (Windows): search spools, prints, models and commands.
+- **F1**: [help](#13-settings).
 - Drop a `.gcode.3mf` onto the window: check print file.
 - A barcode scanner reading the QR code of a FilMaNH label opens that spool directly.
 - Scanning the EAN of a spool or its box opens **New spool** – for a known EAN with the filament already selected.
@@ -458,8 +467,9 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
   this computer – nothing else.
 - No account, no cloud. FilMaNH only reads from the printers and never controls them. Access codes are stored in
   the system keychain.
-- With the **iPhone connection** turned on, FilMaNH accepts encrypted connections from paired iPhones on your home
-  network (port 47474). Nothing goes to the internet.
+- As long as a phone is paired or the pairing QR code is open, FilMaNH accepts encrypted connections on your local
+  network (port 47474, or one of the next nine if it is in use); only paired phones get any data. Once no phone is
+  paired any more, the service stops after a few minutes. Nothing goes to the internet.
 - FilMaNH only goes online to check for updates, to update the catalog (when you click), for a Spoolman import if
   you start one, and for a shop link when you paste one (then FilMaNH fetches exactly that page).
 
