@@ -294,7 +294,7 @@ it replaces the preview. Filter by period, result and printer; search; gross or 
 Page through at the bottom, **10**, **25** or **50 per page**.
 
 **Delete:** tick prints (the box above the list selects all on the page), then **Delete** and **Really delete**. The
-entry, print file, photo and timelapse are removed; the usage stays booked on the spools. Running prints cannot be
+entry, print file, photos and timelapse are removed; the usage stays booked on the spools. Running prints cannot be
 deleted.
 
 ### Print details
@@ -302,8 +302,11 @@ deleted.
 ![Print](images/15-druck.png)
 
 - **Photo:** the last frame of the timelapse, if “Timelapse” was switched on when sending the print. Without a
-  timelapse, the last frame of the camera recording, if the printer records during the print (e.g. P2S). If there
-  is neither, you can add your own photo. **3D** (in the spools’ colours) and **Image** show the print file.
+  timelapse, the last frame of the camera recording, if the printer records during the print (e.g. P2S). **3D** (in
+  the spools’ colours) and **Image** show the print file.
+- **Own photos:** below it, as many as you like – with **+** or by dragging images into the window. Without a frame
+  from the timelapse or camera, the first one is shown large. A click opens the large view: **←** **→** to browse,
+  **Esc** closes, **Delete** removes the photo.
 - **Play timelapse.** With **Download timelapses** (Settings › Tracking) it is on your computer after the print;
   otherwise it comes from the printer when you play it. **Save …** keeps a copy; on a Mac an AVI becomes a `.mov`
   that QuickTime plays. If the timelapse was off during the print, this is shown here.
@@ -313,7 +316,7 @@ deleted.
 - **Open in Bambu Studio** opens the kept print file. If the model comes from MakerWorld, a link leads there.
 - **Project:** assign the print to a [project](#9-projects) or create one with **New project …**. **Selling price**
   (expand) calculates the price for this print.
-- **…** menu: Replace photo, **Mark as waste** (part unusable – counts as a failed print in the statistics), Undo
+- **…** menu: **Mark as waste** (part unusable – counts as a failed print in the statistics), Undo
   deduction and, as long as nothing is deducted, **Find print file again**.
 - FilMaNH checks every print file against the print: layer count and the filaments the printer actually uses. An
   older file with the same name is not used.
@@ -343,10 +346,12 @@ one. Prints are added with **Add prints** or in the print under **Project**.
 - **Selling price:** the print costs (material, electricity, machine) plus **Labour** at the hourly rate from
   Settings › Costs, on top of that the **Failed-print surcharge** and then the **Markup** – net, gross and per
   **piece**. The markup applies per project; left empty, the default from the settings applies.
+- **Photos:** the project’s own photos and those of its prints, with a link to the print. **Add photo …** or drag
+  images into the window; a click opens the large view.
 - **CSV** exports the prints, **Print …** an overview as an A4 page with total and selling price (also as PDF in the
   print dialog).
-- **Close** marks the project as closed, **Reopen** undoes that. **Delete project** deletes only the project; the
-  prints stay.
+- **Close** marks the project as closed, **Reopen** undoes that. **Delete project** deletes only the project and its
+  photos; the prints stay.
 
 ## 10. Models
 
@@ -456,7 +461,7 @@ with a QR code to download the Android app. **Hide** removes the hint.
 What the apps can do is described in the handbooks for [iPhone](iphone.md) and [Android](android.md).
 
 **Data:** daily backup (the last 14), export and import of all data, print history as CSV, data folder. Backup and export contain the database: spools, bookings, prints and settings – not
-photos, print files, 3D views, timelapses and source files. Those are in the data folder (`drucke`, `modelle`); copy
+photos, print files, 3D views, timelapses and source files. Those are in the data folder (`drucke`, `fotos`, `modelle`); copy
 it along when moving to another computer. **Import from Spoolman** reads spools from a Spoolman server or a Spoolman
 export file.
 
@@ -544,7 +549,7 @@ deducts it – even if the printer has been switched off in the meantime.
 
 **How do I get a photo of the finished part?** Switch on the timelapse in Bambu Studio when sending the print – it
 is set for each print (**Print plate › Timelapse**).
-If the printer records with its camera, you get the photo even without a timelapse. Otherwise add your own photo in
+If the printer records with its camera, you get the photo even without a timelapse. Otherwise add your own photos in
 the print details.
 
 **Something doesn’t work.** On GitHub, fill in the form **Fehler melden / Report a bug** under

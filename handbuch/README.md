@@ -294,7 +294,7 @@ statt der Vorschau. Filter nach Zeitraum, Ergebnis und Drucker, Suche, Brutto od
 Liste. Unten blättern, wahlweise **10**, **25** oder **50 je Seite**.
 
 **Löschen:** Drucke anhaken (das Kästchen über der Liste wählt alle der Seite), dann **Löschen** und **Wirklich
-löschen**. Eintrag, Druckdatei, Foto und Zeitraffer verschwinden; der Verbrauch bleibt auf den Spulen gebucht.
+löschen**. Eintrag, Druckdatei, Fotos und Zeitraffer verschwinden; der Verbrauch bleibt auf den Spulen gebucht.
 Laufende Drucke lassen sich nicht löschen.
 
 ### Druck im Detail
@@ -303,8 +303,10 @@ Laufende Drucke lassen sich nicht löschen.
 
 - **Foto:** das letzte Bild des Zeitraffers, wenn beim Senden des Drucks „Zeitraffer“ eingeschaltet war. Ohne
   Zeitraffer das letzte Bild der Kameraaufzeichnung, falls der Drucker während des Drucks aufzeichnet (z.B. P2S).
-  Gibt es beides nicht, kannst du ein eigenes Foto hinzufügen. **3D** (in den Farben der Spulen) und **Bild** zeigen
-  die Druckdatei.
+  **3D** (in den Farben der Spulen) und **Bild** zeigen die Druckdatei.
+- **Eigene Fotos:** darunter beliebig viele – mit **+** oder indem du Bilder ins Fenster ziehst. Ohne Bild aus
+  Zeitraffer oder Kamera steht das erste groß. Ein Klick öffnet die große Ansicht: **←** **→** blättern, **Esc**
+  schließt, **Löschen** entfernt das Foto.
 - **Zeitraffer** abspielen. Mit **Zeitraffer herunterladen** (Einstellungen › Erfassung) liegt er nach dem Druck auf
   dem Rechner, sonst kommt er beim Abspielen vom Drucker. **Speichern …** sichert ihn; auf dem Mac wird ein AVI dabei
   zu einer `.mov`, die QuickTime abspielt. War der Zeitraffer beim Drucken aus, steht das hier.
@@ -315,7 +317,7 @@ Laufende Drucke lassen sich nicht löschen.
   dorthin.
 - **Projekt:** den Druck einem [Projekt](#9-projekte) zuordnen oder mit **Neues Projekt …** eines anlegen.
   **Verkaufspreis** (aufklappen) rechnet den Preis für diesen Druck.
-- Menü **…**: Foto ersetzen, **Als Ausschuss markieren** (Teil unbrauchbar – zählt in der Auswertung als Fehldruck),
+- Menü **…**: **Als Ausschuss markieren** (Teil unbrauchbar – zählt in der Auswertung als Fehldruck),
   Buchung zurücknehmen und, solange nicht gebucht ist, **Druckdatei neu suchen**.
 - Jede Druckdatei prüft FilMaNH am Inhalt: Schichtzahl und die Filamente, die der Drucker tatsächlich nutzt. Eine
   ältere Datei gleichen Namens wird so nicht verwendet.
@@ -345,10 +347,12 @@ Ein Projekt fasst Drucke für einen Auftrag oder Kunden zusammen, mit Summen fü
 - **Verkaufspreis:** die Druckkosten (Material, Strom, Maschine) plus **Arbeitszeit** zum Stundensatz aus
   Einstellungen › Kosten, darauf der **Zuschlag für Fehldrucke** und darauf der **Aufschlag** – netto, brutto und je
   **Stück**. Der Aufschlag gilt je Projekt; leer bleibt die Vorgabe aus den Einstellungen.
+- **Fotos:** eigene Fotos des Projekts und die seiner Drucke, mit Link zum Druck. **Foto hinzufügen …** oder Bilder
+  ins Fenster ziehen; ein Klick öffnet die große Ansicht.
 - **CSV** exportiert die Drucke, **Drucken …** eine Übersicht als A4-Seite mit Summe und Verkaufspreis (im Druckdialog
   auch als PDF).
 - **Abschließen** markiert das Projekt als abgeschlossen, **Wieder öffnen** hebt das auf. **Projekt löschen** löscht
-  nur das Projekt; die Drucke bleiben.
+  nur das Projekt und seine Fotos; die Drucke bleiben.
 
 ## 10. Modelle
 
@@ -460,7 +464,7 @@ Was die Apps können, steht in den Handbüchern für [iPhone](iphone.md) und [An
 
 **Daten:** tägliche Sicherung (die letzten 14 Stände), Export und Import aller Daten, Druckverlauf als CSV, Datenordner. Sicherung und Export enthalten die Datenbank: Spulen, Buchungen,
 Drucke und Einstellungen – nicht Fotos, Druckdateien, 3D-Ansichten, Zeitraffer und Quelldateien. Die liegen im
-Datenordner (`drucke`, `modelle`); wer umzieht, kopiert ihn mit. **Aus Spoolman übernehmen** liest Spulen aus einem
+Datenordner (`drucke`, `fotos`, `modelle`); wer umzieht, kopiert ihn mit. **Aus Spoolman übernehmen** liest Spulen aus einem
 Spoolman-Server oder einer Spoolman-Exportdatei.
 
 ![Daten](bilder/25-einst-daten.png)
@@ -549,7 +553,7 @@ Start nach und bucht ihn – auch wenn der Drucker inzwischen aus ist.
 
 **Wie bekomme ich ein Foto vom fertigen Teil?** Beim Senden des Drucks in Bambu Studio den Zeitraffer einschalten –
 das gilt für jeden Druck einzeln (**Druckplatte drucken › Zeitraffer**).
-Zeichnet der Drucker mit der Kamera auf, kommt das Foto auch ohne Zeitraffer. Sonst ein eigenes Foto im Druck
+Zeichnet der Drucker mit der Kamera auf, kommt das Foto auch ohne Zeitraffer. Sonst eigene Fotos im Druck
 hinzufügen.
 
 **Etwas funktioniert nicht.** Auf GitHub unter [Issues](https://github.com/NikolausH76/FilMaNH/issues/new/choose) das
