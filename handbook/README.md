@@ -214,7 +214,8 @@ that into account. This only happens after three prints and only if it is measur
 
 When a print starts, FilMaNH checks:
 
-- **Wrong material or different colour** than the print file expects. **Ignore** hides the hint for this print
+- **Wrong material or different colour** than the print file expects, with the slot. **Assign spool** opens the
+  selection for this slot with suggestions matching the print file; **Ignore** hides the hint for this print
   everywhere.
 - **Spool will run out:** with the time it will be empty and whether a spare spool is in the AMS.
 - **Abrasive filament** (with carbon or glass fibre, glow) on a stainless steel or brass nozzle: the nozzle wears,
@@ -232,6 +233,10 @@ spool. H2D and H2C have two external holders (left and right); an empty one with
 
 When a spool without RFID is loaded, FilMaNH asks which one it is: matching spools first, all others below, each with
 its number and location. Clicking the slot opens the selection again at any time, e.g. after changing spools.
+
+If the spool is not in stock yet, **New spool …** creates it and assigns it to this slot right away – during a print
+it counts for that print. The search starts with the material and colour from the print file or the printer, nearest
+colour first. If no existing spool matches, the button is at the top.
 
 ### Matching with the printer
 

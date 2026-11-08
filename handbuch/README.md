@@ -214,8 +214,9 @@ rechnet das ein. Das geschieht erst ab drei Drucken und nur, wenn es nachweislic
 
 Beim Druckstart prüft FilMaNH:
 
-- **Falsches Material oder andere Farbe** als in der Druckdatei vorgesehen. **Ignorieren** blendet den Hinweis für
-  diesen Druck überall aus.
+- **Falsches Material oder andere Farbe** als in der Druckdatei vorgesehen, mit dem Slot. **Spule zuordnen** öffnet
+  die Auswahl für diesen Slot, Vorschläge passend zur Druckdatei; **Ignorieren** blendet den Hinweis für diesen Druck
+  überall aus.
 - **Spule reicht nicht:** mit Uhrzeit, wann sie leer wird, und ob eine Ersatzspule im AMS steckt.
 - **Abrasives Filament** (mit Kohle- oder Glasfaser, Glow) auf einer Düse aus Edelstahl oder Messing: Die Düse
   verschleißt, besser eine gehärtete. Welche Düse eingebaut ist, meldet der Drucker.
@@ -232,6 +233,10 @@ Druckers. **Einrichtung** oben rechts führt zu den Druckereinstellungen.
 
 Steckt eine Spule ohne RFID im Slot, fragt FilMaNH, welche es ist: oben die passenden, darunter alle weiteren, jeweils
 mit Nummer und Lagerort. Ein Klick auf den Slot öffnet die Auswahl jederzeit wieder, z.B. nach einem Spulenwechsel.
+
+Fehlt die Spule noch im Bestand, legt **Neue Spule …** sie an und ordnet sie gleich diesem Slot zu – bei laufendem
+Druck gilt sie für ihn. Die Suche beginnt mit Material und Farbe aus der Druckdatei bzw. vom Drucker, die nächste
+Farbe zuerst. Passt keine vorhandene Spule, steht die Schaltfläche oben.
 
 ### Abgleich mit dem Drucker
 
