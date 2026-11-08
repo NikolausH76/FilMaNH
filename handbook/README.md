@@ -72,8 +72,12 @@ Finally, FilMaNH asks for the **electricity price** per kWh (for the electricity
 - **When a print ends**, FilMaNH reads from the print file how much filament each slot used and deducts it from
   the spool, including the flushing for colour changes. If a print is cancelled, only the layers actually printed
   are deducted.
-- **If your computer was off**, FilMaNH catches up on the next start with whatever the printer did in the meantime.
+- **If your computer was off or asleep**, FilMaNH catches up when it wakes up or starts next with whatever the printer
+  did in the meantime. If the printer cannot be reached then, FilMaNH decides from the start and the planned duration:
+  once the expected end is well past, it deducts; if the printer later reports otherwise, it corrects that.
   Anything it cannot settle for sure appears as a notice that you confirm with one click.
+- **Not deducted?** If a print is over but not deducted (e.g. because no spool was assigned), a red **Not deducted**
+  banner appears at the top of every page until it is settled, and you get a notification.
 - **Weighing** makes the stock exact. From your weighings FilMaNH learns how far the real consumption of each
   filament differs from the calculation and takes that into account from then on.
 - **“~”** in front of a weight means estimated, may be slightly off. Weighing makes it exact again.
@@ -483,7 +487,8 @@ name, assignments and history are kept.
 
 **The stock is off.** Weigh the spool. Over time FilMaNH learns from your weighings and calculates more precisely.
 
-**My computer was off during a print.** FilMaNH catches up on the print at the next start.
+**My computer was off or asleep during a print.** FilMaNH catches up on the print when it wakes up or starts next and
+deducts it – even if the printer has been switched off in the meantime.
 
 **How do I get a photo of the finished part?** Switch on the timelapse in Bambu Studio when sending the print – it
 is set for each print (**Print plate › Timelapse**).

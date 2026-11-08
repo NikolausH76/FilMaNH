@@ -73,8 +73,12 @@ Die Einrichtung lässt sich mit **Später einrichten** überspringen und unter E
 - **Am Ende jedes Drucks** liest FilMaNH aus der Druckdatei, wie viel Filament aus welchem Slot verbraucht wurde,
   und bucht es von der Spule ab, das Spülen beim Farbwechsel eingeschlossen. Bei einem Abbruch wird nur bis zur
   erreichten Schicht gebucht.
-- **War der Rechner aus**, holt FilMaNH beim nächsten Start nach, was der Drucker in der Zwischenzeit gedruckt hat.
+- **War der Rechner aus oder im Ruhezustand**, holt FilMaNH beim Aufwachen bzw. nächsten Start nach, was der Drucker in
+  der Zwischenzeit gedruckt hat. Ist der Drucker dann nicht erreichbar, entscheidet FilMaNH aus Beginn und geplanter
+  Dauer: Ist das erwartete Ende deutlich vorbei, wird gebucht; meldet der Drucker später anderes, wird korrigiert.
   Was sich nicht sicher klären lässt, erscheint als Hinweis und wird mit einem Klick bestätigt.
+- **Nicht gebucht?** Ist ein Druck vorbei, aber nicht gebucht (z.B. weil keine Spule zugeordnet war), steht oben auf
+  jeder Seite ein rotes Banner **Nicht gebucht**, bis es erledigt ist, und es kommt eine Mitteilung.
 - **Wiegen** macht den Bestand genau. Aus den Wiegungen lernt FilMaNH, wie stark der echte Verbrauch je Filament
   von der Berechnung abweicht, und rechnet das künftig ein.
 - **„ca.“** vor einem Gewicht heißt: geschätzt, kann etwas abweichen. Wiegen macht den Wert wieder genau.
@@ -489,7 +493,8 @@ noch einmal hinzufügen – Name, Zuordnungen und Verlauf bleiben erhalten.
 
 **Der Bestand stimmt nicht.** Spule wiegen. Mit der Zeit lernt FilMaNH aus den Wiegungen und rechnet genauer.
 
-**Der Rechner war während eines Drucks aus.** FilMaNH holt den Druck beim nächsten Start nach.
+**Der Rechner war während eines Drucks aus oder hat geschlafen.** FilMaNH holt den Druck beim Aufwachen bzw. nächsten
+Start nach und bucht ihn – auch wenn der Drucker inzwischen aus ist.
 
 **Wie bekomme ich ein Foto vom fertigen Teil?** Beim Senden des Drucks in Bambu Studio den Zeitraffer einschalten –
 das gilt für jeden Druck einzeln (**Druckplatte drucken › Zeitraffer**).
