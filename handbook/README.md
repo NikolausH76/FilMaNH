@@ -93,7 +93,7 @@ Finally, FilMaNH asks for the **electricity price** per kWh (for the electricity
 - **Recently printed** with amount and cost.
 - **To do** on the right: everything that needs your attention – a print whose end is unknown, slots that don’t match
   what the printer reports ([Matching with the printer](#matching-with-the-printer)), [maintenance](#maintenance) that
-  is due, moisture, prints not deducted, almost empty spools – each with the matching action.
+  is due, moisture, prints not deducted, almost empty spools, spools in a printer without a price – each with the matching action.
 
 ## 5. Spools
 
@@ -153,6 +153,10 @@ The **Rating** (1–5 stars) applies to the filament, i.e. to all spools of that
 clears it. Under **Edit** you can enter EANs by hand, several separated by commas (e.g. with spool and refill). You
 can also change the **Brand**, **Product**, **Material** and **Color** there (with the same colour choice as when
 creating); this applies to all spools of this filament.
+
+If a spool only gets a **price** later, FilMaNH recalculates the costs of the prints already deducted from it.
+If an existing price changes, past costs stay as they were – unless you tick **Recalculate costs of past prints
+with the new price**.
 
 ### Weigh
 
@@ -299,7 +303,8 @@ deleted.
   otherwise it comes from the printer when you play it. **Save …** keeps a copy; on a Mac an AVI becomes a `.mov`
   that QuickTime plays. If the timelapse was off during the print, this is shown here.
 - **Filament** per spool with amount and cost; **Costs** broken down into material, electricity and machine, net
-  and gross.
+  and gross. If a spool has no price, it says **Price missing** or “+ ?” after the known amount (also in the
+  history), with a link to the spool below.
 - **Open in Bambu Studio** opens the kept print file. If the model comes from MakerWorld, a link leads there.
 - **Project:** assign the print to a [project](#9-projects) or create one with **New project …**. **Selling price**
   (expand) calculates the price for this print.
@@ -353,9 +358,29 @@ project file (`.3mf`); FilMaNH suggests the files recently opened in Bambu Studi
 
 ![Statistics](images/19-auswertung.png)
 
-Prints, filament, costs and waste (prints cancelled after the first layer and prints marked as waste), costs per month, per material and
-per printer,
-reasons for cancellation and the most expensive models. Filter by printer and period, gross or net.
+Filter by printer and period, gross or net. Waste means prints cancelled after the first layer and prints marked as
+waste.
+
+- **Key figures:** prints, filament, costs with the change from the previous period (the 30 days before, the same
+  time last year or the previous month), waste and **purge waste**: filament flushed during color changes, its cost and
+  its share of the filament.
+- **Costs per month:** the last 12 months. Click a month to see its days; the whole page then shows that month.
+  **Back** returns to the previous period.
+- **Where the money goes:** material, purge waste, electricity and machine (printer purchase) as shares of the costs.
+- **By material**, **By printer**, the most expensive **Models** and **Purge waste by model**.
+- **Colors:** the most printed colors, wider the more grams; hover for filament and amount.
+- **When you print:** print hours by weekday and time of day (the stronger, the more) and the **utilization** of
+  each printer: print hours relative to the hours in the period.
+- **Reasons for cancellation:** the most common messages of cancelled prints.
+- **Humidity and failed prints:** the share of failed prints by AMS humidity at print start and by whether all spools
+  of the print were dried in the 7 days before. Only from 20 prints with a reading, each row from 5 prints. Prints
+  from the external spool have no reading.
+- **Estimate vs. reality:** how much longer or shorter normally finished prints took than the slicer predicted
+  (median, from 3 prints per printer), and how much weighed spools differ from the slicer weight (per filament, from
+  all weighings).
+- **By month** or **By day:** the figures behind the chart.
+- **Stock:** the current stock, regardless of the period: value of the remaining filament, spools without use for
+  more than 6 months, and spools that have been open for more than 60 days and not dried since.
 
 ## 12. Shopping list
 
@@ -396,7 +421,7 @@ the system’s country.
 
 ![Costs](images/23-einst-kosten.png)
 
-**Tracking:** threshold for “almost empty”, learn correction from weighings, create Bambu spools with RFID
+**Tracking:** threshold for “almost empty”, learn correction from weighings, humidity in statistics, create Bambu spools with RFID
 automatically, keep print files (file and image, or image only), download timelapses and the maximum space print
 files and timelapses may use.
 
@@ -407,6 +432,8 @@ files and timelapses may use.
 - **Take print files from Bambu Studio:** when you print from Bambu Studio on this computer, Bambu Studio briefly
   stores the print file and FilMaNH takes it. This way usage is booked even if the printer does not provide the
   file. Nothing to set up.
+- **Humidity in statistics:** shows “Humidity and failed prints” in Statistics. FilMaNH always records the
+  humidity at print start, even when the switch is off.
 
 **Phone:** pairing with the FilMaNH app for iPhone or Android (the iPhone app is coming soon to the App Store).
 **Show QR code** starts pairing: tap **Pair with computer** in the app and scan the code. You can pair as many phones
@@ -460,6 +487,8 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
 
 - **⌘K** (Mac) or **Ctrl+K** (Windows): search spools, prints, models and commands.
 - **F1**: [help](#13-settings).
+- **⌘[** or **⌘←** (Mac) or **Alt+←** (Windows), the back button of the mouse or the arrow before the page title: one
+  step back along the way you came; **⌘]** or **Alt+→** goes forward again.
 - Drop a `.gcode.3mf` onto the window: check print file.
 - A barcode scanner reading the QR code of a FilMaNH label opens that spool directly.
 - Scanning the EAN of a spool or its box opens **New spool** – for a known EAN with the filament already selected.

@@ -94,7 +94,7 @@ Die Einrichtung lässt sich mit **Später einrichten** überspringen und unter E
 - **Zuletzt gedruckt** mit Menge und Kosten.
 - **Zu erledigen** rechts: alles, was Aufmerksamkeit braucht – Druck mit offenem Ende, Slots, die nicht zur Meldung des
   Druckers passen ([Abgleich mit dem Drucker](#abgleich-mit-dem-drucker)), fällige [Wartung](#wartung), Feuchte,
-  nicht gebuchte Drucke, fast leere Spulen –, jeweils mit der passenden Aktion.
+  nicht gebuchte Drucke, fast leere Spulen, Spulen im Drucker ohne Preis –, jeweils mit der passenden Aktion.
 
 ## 5. Spulen
 
@@ -154,6 +154,10 @@ Die **Bewertung** (1–5 Sterne) gilt für das Filament, also für alle Spulen d
 löscht sie. Unter **Bearbeiten** lassen sich EANs von Hand eintragen, mehrere durch Komma getrennt (z.B. mit Spule
 und Refill). Dort lassen sich auch **Hersteller**, **Bezeichnung**, **Material** und **Farbe** ändern (mit derselben Farbauswahl
 wie beim Anlegen); das gilt für alle Spulen dieses Filaments.
+
+Bekommt eine Spule erst nachträglich einen **Preis**, rechnet FilMaNH die Kosten ihrer schon gebuchten Drucke damit
+nach. Ändert sich ein vorhandener Preis, bleiben die bisherigen Kosten – außer mit **Kosten bisheriger Drucke mit
+dem neuen Preis rechnen**.
 
 ### Wiegen
 
@@ -300,7 +304,8 @@ Laufende Drucke lassen sich nicht löschen.
   dem Rechner, sonst kommt er beim Abspielen vom Drucker. **Speichern …** sichert ihn; auf dem Mac wird ein AVI dabei
   zu einer `.mov`, die QuickTime abspielt. War der Zeitraffer beim Drucken aus, steht das hier.
 - **Filament** je Spule mit Menge und Kosten; **Kosten** aufgeschlüsselt nach Material, Strom und Maschine, netto
-  und brutto.
+  und brutto. Hat eine Spule keinen Preis, steht **Preis fehlt** bzw. „+ ?“ hinter dem bekannten Betrag (auch im
+  Verlauf), darunter die Spule mit Link.
 - **In Bambu Studio öffnen** öffnet die aufbewahrte Druckdatei. Stammt das Modell von MakerWorld, führt ein Link
   dorthin.
 - **Projekt:** den Druck einem [Projekt](#9-projekte) zuordnen oder mit **Neues Projekt …** eines anlegen.
@@ -355,8 +360,29 @@ Projektdatei (`.3mf`) anhängen; FilMaNH schlägt dafür die zuletzt in Bambu St
 
 ![Auswertung](bilder/19-auswertung.png)
 
-Drucke, Filament, Kosten und Ausschuss (nach der ersten Schicht abgebrochene und als Ausschuss markierte Drucke), Kosten je Monat, je
-Material und je Drucker, Abbruchgründe und die teuersten Modelle. Filter nach Drucker und Zeitraum, Brutto oder Netto.
+Filter nach Drucker und Zeitraum, Brutto oder Netto. Ausschuss sind nach der ersten Schicht abgebrochene und als
+Ausschuss markierte Drucke.
+
+- **Kennzahlen:** Drucke, Filament, Kosten mit der Änderung zum Vorzeitraum (die 30 Tage davor, dieselbe Zeit im
+  Vorjahr bzw. der Vormonat), Ausschuss und **Spülabfall**: beim Farbwechsel gespültes Filament, seine Kosten und sein
+  Anteil am Filament.
+- **Kosten je Monat:** die letzten 12 Monate. Ein Klick auf einen Monat zeigt seine Tage, und die ganze Seite gilt
+  dann für diesen Monat; **Zurück** führt zum vorigen Zeitraum.
+- **Wofür das Geld geht:** Material, Spülabfall, Strom und Maschine (Anschaffung der Drucker) als Anteile der Kosten.
+- **Je Material**, **Je Drucker**, die teuersten **Modelle** und **Spülabfall je Modell**.
+- **Farben:** die meistgedruckten Farben, je mehr Gramm, desto breiter; beim Darüberfahren Filament und Menge.
+- **Wann gedruckt wird:** Druckstunden nach Wochentag und Uhrzeit (je kräftiger, desto mehr) und die **Auslastung**
+  je Drucker: Druckstunden im Verhältnis zu den Stunden des Zeitraums.
+- **Abbruchgründe:** die häufigsten Meldungen abgebrochener Drucke.
+- **Feuchte und Fehldrucke:** Anteil der Fehldrucke nach der Feuchte im AMS beim Druckstart und danach, ob alle
+  Spulen des Drucks in den 7 Tagen davor getrocknet wurden. Erst ab 20 Drucken mit Messwert, jede Zeile ab 5 Drucken.
+  Drucke von der externen Spule haben keinen Messwert.
+- **Schätzung und Wirklichkeit:** wie viel länger oder kürzer normal beendete Drucke dauerten als vom Slicer
+  vorhergesagt (Median, ab 3 Drucken je Drucker), und um wie viel gewogene Spulen vom Gewicht laut Slicer abweichen
+  (je Filament, aus allen Wiegungen).
+- **Je Monat** bzw. **Je Tag:** die Zahlen hinter dem Diagramm.
+- **Lager:** der aktuelle Bestand, unabhängig vom Zeitraum: Wert der Restmengen, Spulen ohne Verbrauch seit über
+  6 Monaten und Spulen, die seit über 60 Tagen offen und seitdem nicht getrocknet sind.
 
 ## 12. Einkauf
 
@@ -398,7 +424,7 @@ und Mehrwertsteuer nach dem Land des Systems vorbelegt.
 
 ![Kosten](bilder/23-einst-kosten.png)
 
-**Erfassung:** Grenze für „fast leer“, Korrektur aus Wiegungen lernen, Bambu-Spulen mit RFID automatisch anlegen,
+**Erfassung:** Grenze für „fast leer“, Korrektur aus Wiegungen lernen, Feuchte in der Auswertung, Bambu-Spulen mit RFID automatisch anlegen,
 Druckdateien aufbewahren (Datei und Bild, oder nur Bild), Zeitraffer herunterladen und wie viel Platz Druckdateien
 und Zeitraffer höchstens belegen.
 
@@ -409,6 +435,8 @@ und Zeitraffer höchstens belegen.
 - **Druckdateien aus Bambu Studio übernehmen:** Druckst du aus Bambu Studio auf diesem Rechner, legt Bambu Studio
   die Druckdatei kurz ab, und FilMaNH übernimmt sie. So wird auch gebucht, wenn der Drucker die Datei nicht
   herausgibt. Einzurichten ist nichts.
+- **Feuchte in der Auswertung:** zeigt in der Auswertung „Feuchte und Fehldrucke“. Die Feuchte beim Druckstart
+  hält FilMaNH immer fest, auch wenn der Schalter aus ist.
 
 **Handy:** Koppeln mit der FilMaNH-App für iPhone oder Android (die iPhone-App erscheint demnächst im App Store).
 **QR-Code zeigen** öffnet das Koppeln: In der App **Mit Rechner koppeln** antippen und den Code scannen. Es lassen sich
@@ -463,6 +491,8 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
 
 - **⌘K** (Mac) bzw. **Strg+K** (Windows): Suche nach Spulen, Drucken, Modellen und Befehlen.
 - **F1**: [Hilfe](#13-einstellungen).
+- **⌘[** oder **⌘←** (Mac) bzw. **Alt+←** (Windows), die Zurück-Taste der Maus oder der Pfeil vor dem Titel: einen
+  Schritt zurück auf dem Weg, den man gekommen ist; **⌘]** bzw. **Alt+→** wieder vor.
 - Eine `.gcode.3mf` auf das Fenster ziehen: Druckdatei prüfen.
 - Ein Barcodescanner, der den QR-Code eines FilMaNH-Etiketts liest, öffnet direkt die Spule.
 - Scannt er die EAN einer Spule oder ihres Kartons, öffnet sich **Neue Spule** – bei einer bekannten EAN mit dem
