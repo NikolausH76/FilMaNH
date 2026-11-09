@@ -51,7 +51,8 @@ anything after each print.
    wrong material or filament left open too long, statistics and a shopping list.
 
 > [!NOTE]
-> FilMaNH only reads from the printers. It never sends them commands and needs neither LAN-only mode nor developer mode.
+> FilMaNH reads from the printers and needs neither LAN-only mode nor developer mode. On the printer it only switches
+> the chamber light, on click or as you set it. It deletes files on the printer's storage only when you confirm.
 
 ## Features
 
@@ -84,6 +85,8 @@ anything after each print.
 - H2C and H2D with two nozzles: AMS and external spools per nozzle
 - At print start: wrong material, different colour, spool won't last, abrasive filament on a soft nozzle
 - Maintenance plan per printer by print hours or time
+- Switch the chamber light, optionally off automatically after the print
+- Printer storage: view and clean up camera recordings, timelapses and print files
 
 </td>
 </tr>
@@ -218,5 +221,5 @@ Please open an [issue](https://github.com/NikolausH76/FilMaNH/issues).
 *Free to use, all rights reserved; the source code is not public.* ([Lizenz / License](LICENSE.txt))
 
 FilMaNH ist ein unabhängiges Projekt und nicht mit Bambu Lab verbunden. Es nutzt das inoffizielle lokale Protokoll
-der Drucker und greift nur lesend zu. *FilMaNH is an independent project and not affiliated with Bambu Lab. It uses
-the printers’ unofficial local protocol and only reads from them.*
+der Drucker. *FilMaNH is an independent project and not affiliated with Bambu Lab. It uses the printers’ unofficial
+local protocol.*

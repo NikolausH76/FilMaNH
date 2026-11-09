@@ -3,7 +3,8 @@
 *Deutsch · [English](../handbook/README.md) · [iPhone-App](iphone.md) · [Android-App](android.md)*
 
 FilMaNH verwaltet deine Filamentspulen und bucht den Verbrauch jedes Drucks automatisch ab. Das Programm läuft
-lokal auf deinem Rechner und liest die Bambu-Lab-Drucker im Netzwerk nur aus.
+lokal auf deinem Rechner und liest die Bambu-Lab-Drucker im Netzwerk aus; auf einem Drucker löscht es nur Dateien,
+wenn du es bestätigst.
 
 1. [Installation](#1-installation)
 2. [Ersteinrichtung](#2-ersteinrichtung)
@@ -276,6 +277,17 @@ sein (Einstellungen am Drucker, oft ab Werk aus). Ist es aus, steht das auf der 
 kein **Live**. Bricht das Bild ab, verbindet **Erneut versuchen** neu. FilMaNH sieht nur zu und ändert am Drucker
 nichts.
 
+**Speicher** zeigt nach **Anzeigen**, was auf der Speicherkarte bzw. im internen Speicher des Druckers liegt:
+Kameraaufzeichnungen, Zeitraffer und Druckdateien, je mit Zahl und Größe. **Löschen …** entfernt einen ganzen Bereich;
+aufgeklappt lassen sich einzelne Dateien auswählen. FilMaNH fragt vorher nach und löscht nur, wenn der Drucker
+verbunden ist und nicht druckt – System- und Protokolldateien des Druckers nie. Zeitraffer von Drucken in FilMaNH
+sichert es vorher im Druckordner, Druckdateien bei **Druckdateien aufbewahren** ebenso, soweit die Speichergrenze
+reicht. **in FilMaNH gesichert** heißt: Die Datei liegt schon auf dem Rechner.
+
+**Licht** oben rechts schaltet das Innenlicht des Druckers an oder aus (beim H2C beide Innenlichter), in der Übersicht
+das Lampensymbol an der Druckerkarte. Es erscheint nur, wenn der Drucker verbunden ist und ein Innenlicht meldet. Das
+Innenlicht ist das Einzige, was FilMaNH am Drucker schaltet.
+
 ### Spule zuordnen
 
 ![Spule zuordnen](bilder/12-zuordnen.png)
@@ -503,6 +515,11 @@ Wunsch gleich mit **Kaufpreis** hinzufügen. Ist der Drucker schon eingerichtet,
 **Druckstunden bisher:** je Drucker der Wert vom Display. Die Druckstunden gesamt (Übersicht, Seite des
 Druckers) sind dieser Wert plus die danach erfassten Drucke; ohne Wert nur die von FilMaNH erfassten.
 
+**Innenlicht:** je Drucker **Nach dem Druck ausschalten** – nie, sofort oder nach 1, 5, 10 oder 30 Minuten. Das gilt
+nur für einen fertigen Druck; nach einem Abbruch oder Fehler bleibt das Licht an. Beginnt in der Wartezeit ein neuer
+Druck oder schaltet jemand das Licht, bleibt es, wie es ist. **Beim Druckstart an** schaltet das Licht zu Beginn jedes
+Drucks ein. Beides nur, solange FilMaNH läuft und mit dem Drucker verbunden ist.
+
 ![Drucker-Einstellungen](bilder/22-einst-drucker.png)
 
 **Kosten:** Währung, Mehrwertsteuer und ob Preise **Brutto** oder **Netto** angezeigt werden. Alle Beträge auf dieser
@@ -617,8 +634,9 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
   (Einstellungen › Daten › **Datenordner** › **Öffnen**).
 - Mit **Druckdateien aus Bambu Studio übernehmen** liest FilMaNH die Druckdateien, die Bambu Studio beim Drucken
   auf diesem Rechner ablegt – nichts sonst.
-- Kein Konto, keine Cloud. FilMaNH liest die Drucker nur aus und steuert sie nicht. Zugangscodes liegen im
-  Schlüsselbund des Systems.
+- Kein Konto, keine Cloud. FilMaNH liest die Drucker aus und steuert sie nicht – bis auf das Innenlicht, das es nur
+  auf Klick oder nach deiner Einstellung schaltet. Auf dem Speicher eines Druckers löscht es nur Dateien, die du
+  unter **Speicher** auswählst und bestätigst. Zugangscodes liegen im Schlüsselbund des Systems.
 - Das Kamerabild (**Live**) kommt nur auf Klick direkt vom Drucker ins Fenster und wird nicht gespeichert.
 - Solange ein Handy gekoppelt ist oder der QR-Code zum Koppeln offen ist, nimmt FilMaNH im lokalen Netzwerk
   verschlüsselte Verbindungen an (Port 47474, ist er belegt, einer der nächsten neun); Daten bekommen nur gekoppelte

@@ -51,7 +51,9 @@ jedem Druck etwas eintragen musst.
    falschem Material oder zu lange offenem Filament, Auswertung und eine Einkaufsliste.
 
 > [!NOTE]
-> FilMaNH liest die Drucker nur aus. Es schickt ihnen keine Befehle und braucht weder LAN-Modus noch Entwicklermodus.
+> FilMaNH liest die Drucker aus und braucht weder LAN-Modus noch Entwicklermodus. Am Drucker schaltet es nur das
+> Innenlicht, auf Klick oder nach deiner Einstellung. Dateien auf dem Druckerspeicher löscht es nur, wenn du es
+> bestätigst.
 
 ## Funktionen
 
@@ -83,6 +85,8 @@ jedem Druck etwas eintragen musst.
 - H2C und H2D mit zwei Düsen: AMS und externe Spulen je Düse
 - Beim Druckstart: falsches Material, andere Farbe, Spule reicht nicht, abrasives Filament auf weicher Düse
 - Wartungsplan je Drucker nach Druckstunden oder Zeit
+- Innenlicht schalten, auf Wunsch automatisch aus nach dem Druck
+- Speicher des Druckers: Kameraaufzeichnungen, Zeitraffer und Druckdateien anzeigen und aufräumen
 
 </td>
 </tr>
@@ -216,5 +220,5 @@ Bitte als [Issue](https://github.com/NikolausH76/FilMaNH/issues) melden.
 *Free to use, all rights reserved; the source code is not public.* ([Lizenz / License](LICENSE.txt))
 
 FilMaNH ist ein unabhängiges Projekt und nicht mit Bambu Lab verbunden. Es nutzt das inoffizielle lokale Protokoll
-der Drucker und greift nur lesend zu. *FilMaNH is an independent project and not affiliated with Bambu Lab. It uses
-the printers’ unofficial local protocol and only reads from them.*
+der Drucker. *FilMaNH is an independent project and not affiliated with Bambu Lab. It uses the printers’ unofficial
+local protocol.*

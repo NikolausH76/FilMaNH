@@ -3,7 +3,8 @@
 *[Deutsch](../handbuch/README.md) · English · [iPhone app](iphone.md) · [Android app](android.md)*
 
 FilMaNH keeps track of your filament spools and deducts what every print uses, automatically. It runs locally on
-your computer and only reads from the Bambu Lab printers on your network.
+your computer and reads from the Bambu Lab printers on your network; on a printer it only deletes files you
+confirm.
 
 1. [Installation](#1-installation)
 2. [First setup](#2-first-setup)
@@ -276,6 +277,17 @@ deliver video, A1, A1 mini, P1P and P1S still images. For video, **LAN Mode Live
 (printer settings; often off by default). If it is off, the printer page says so and the Overview shows no **Live**.
 If the image stops, **Try again** reconnects. FilMaNH only watches and changes nothing on the printer.
 
+**Storage** shows, after **Show**, what is on the printer's SD card or internal storage: camera recordings,
+timelapses and print files, each with count and size. **Delete …** removes a whole category; expanded, you can select
+single files. FilMaNH asks first and only deletes while the printer is connected and not printing – never the
+printer's system files or logs. Timelapses of prints in FilMaNH are saved to the print's folder first, print files too
+with **Keep print files**, as far as the storage limit allows. **saved in FilMaNH** means the file is already on your
+computer.
+
+**Light** at the top right turns the printer’s chamber light on or off (on the H2C both chamber lights); in the
+Overview, the bulb icon on the printer card does the same. It only appears while the printer is connected and reports
+a chamber light. The chamber light is the only thing FilMaNH switches on the printer.
+
 ### Assign a spool
 
 ![Assign spool](images/12-zuordnen.png)
@@ -498,6 +510,11 @@ code, and the assignments stay.
 **Print hours so far:** per printer, the value from its display. Total print hours (overview, printer page) are
 this value plus the prints recorded since; without a value, only those recorded by FilMaNH.
 
+**Chamber light:** per printer, **Turn off after the print** – never, immediately or after 1, 5, 10 or 30 minutes.
+This only applies to a finished print; after a cancel or failure the light stays on. If a new print starts during the
+wait or someone switches the light, it stays as it is. **On at print start** turns the light on when each print
+begins. Both only while FilMaNH is running and connected to the printer.
+
 ![Printer settings](images/22-einst-drucker.png)
 
 **Costs:** currency, VAT and whether prices are shown **Gross** or **Net**. All amounts on this page are shown and
@@ -610,8 +627,9 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
   (Settings › Data › **Data folder** › **Open**).
 - With **Take print files from Bambu Studio**, FilMaNH reads the print files Bambu Studio stores while printing on
   this computer – nothing else.
-- No account, no cloud. FilMaNH only reads from the printers and never controls them. Access codes are stored in
-  the system keychain.
+- No account, no cloud. FilMaNH reads from the printers and never controls them – except the chamber light, which it
+  switches only when you click or as you set it. On a printer's storage it only deletes files you select under
+  **Storage** and confirm. Access codes are stored in the system keychain.
 - The camera image (**Live**) only comes on a click, directly from the printer into the window, and is not saved.
 - As long as a phone is paired or the pairing QR code is open, FilMaNH accepts encrypted connections on your local
   network (port 47474, or one of the next nine if it is in use); only paired phones get any data. Once no phone is
