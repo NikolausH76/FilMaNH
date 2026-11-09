@@ -25,13 +25,13 @@ verschlüsselt.
   [Startseite](../README.md#download) mit dem Handy scannen.
 - Die Datei öffnen. Beim ersten Mal fragt Android, ob der Browser bzw. die Dateien-App Apps installieren darf:
   erlauben, dann **Installieren**.
-- Updates: die neue APK genauso installieren. Kopplung und Einstellungen bleiben erhalten. Ab App-Version 1.1.3
-  zeigt die App unter der Kopfzeile **Neue App-Version … – zum Herunterladen tippen**, sobald FilMaNH am Rechner zu
-  einer neueren App gehört (auch in den Einstellungen: **App-Version … herunterladen**). Antippen lädt die APK im
-  Browser. Die App selbst geht dafür nicht ins Internet – sie erfährt es vom Rechner.
+- Updates: die neue APK genauso installieren. Kopplung und Einstellungen bleiben erhalten. Die App zeigt unter der
+  Kopfzeile **Neue App-Version … – zum Herunterladen tippen**, sobald FilMaNH am Rechner zu einer neueren App gehört
+  (auch in den Einstellungen: **App-Version … herunterladen**). Antippen lädt die APK im Browser. Die App selbst geht
+  dafür nicht ins Internet – sie erfährt es vom Rechner.
 
-Voraussetzungen am Rechner: FilMaNH ab Version 0.5 läuft (das Fenster darf geschlossen sein). Bis Version 0.9.4 heißt **Einstellungen › Handy** dort noch **iPhone**. Handy und Rechner sind
-im selben WLAN.
+Voraussetzungen am Rechner: FilMaNH läuft (das Fenster darf geschlossen sein). Handy und Rechner sind im selben
+WLAN.
 
 ## 2. Koppeln
 
@@ -52,16 +52,19 @@ Den Code kann auch die Kamera-App des Handys lesen; der Link öffnet FilMaNH dir
   <img src="bilder/android-slot.png" width="240" alt="Slot">
 </p>
 
-Alle Drucker mit Zustand, laufendem Druck, Restzeit und Schicht. Darunter jedes AMS mit den Slots 1–4 und der
-Feuchte (beim Trocknen die Restzeit), dann die externe Spule (an H2D und H2C mit links/rechts).
+Alle Drucker mit Bild, Verbindung und laufendem Druck mit Schicht und Restzeit. Darunter jedes AMS als Bild: jede
+Spule in ihrer Farbe im Fenster, der geladene Slot markiert, ein Slot mit Filament, aber ohne zugeordnete Spule
+gestrichelt; unter jedem Fenster die Nummer der Spule bzw. das gemeldete Material. Dazu Feuchte und Temperatur (beim
+Trocknen die Restzeit), dann die externe Spule (bei zwei Düsen wie an H2D und H2C mit links/rechts).
 
 Ein Slot öffnet die Auswahl: **Im Slot** zeigt die Spule, **Slot leeren** nimmt sie heraus. Unter **Spule
-einlegen** stehen passende Spulen oben (gleiches Material wie im Slot gemeldet, dann noch nirgends eingelegte), oder
-**Etikett scannen** und die Spule über ihren QR-Code wählen.
+einlegen** stehen passende Spulen oben (gleiches Material wie im Slot gemeldet, dann noch nirgends eingelegte), mit
+Suche – oder **Etikett scannen** und die Spule über ihren QR-Code wählen (auch eine EAN, wenn sie zu genau einer Spule
+gehört).
 
-Passt ein Slot nicht zur Meldung des Druckers, steht ein Hinweis auf der Karte des Druckers – wie am Rechner (siehe
-[Abgleich mit dem Drucker](README.md#abgleich-mit-dem-drucker)): **Ja**, **Andere …**, **Zuordnen**,
-**Andere Spule …**, **Stimmt so**, **Ja, entnommen** oder **Steckt noch**.
+Passt ein Slot nicht zur Meldung des Druckers, steht ein Hinweis auf der Karte des Druckers, solange er verbunden ist
+– wie am Rechner (siehe [Abgleich mit dem Drucker](README.md#abgleich-mit-dem-drucker)): **Ja**, **Andere …**,
+**Zuordnen**, **#… zuordnen**, **Andere Spule …**, **Stimmt so**, **Ja, entnommen** oder **Steckt noch**.
 
 ## 4. Spulen
 
@@ -71,26 +74,28 @@ Passt ein Slot nicht zur Meldung des Druckers, steht ein Hinweis auf der Karte d
   <img src="bilder/android-spule-aktionen.png" width="240" alt="Spule: Aktionen">
 </p>
 
-Suche nach Nummer, Hersteller und Farbe; Filter **Im Bestand**, **Fast leer** und **Archiv**. Das Symbol oben rechts
-sortiert nach Nummer, Rest oder Hersteller.
+Suche nach Nummer, Hersteller, Farbe, Material und Bezeichnung; Filter **Im Bestand**, **Fast leer** und
+**Archiv**. Das Symbol rechts neben **Spulen** sortiert nach Nummer, Rest oder Hersteller.
 
-Eine Spule zeigt Rest, Füllung, leere Spule, Ort, Preis, Händler und Kaufdatum und den **Verlauf** aller Buchungen.
-Die Sterne bewerten das Filament; derselbe Stern noch einmal löscht die Bewertung. Darunter:
+Eine Spule zeigt Rest, Füllung, leere Spule, Ort, wann sie zuletzt gewogen und getrocknet wurde, Preis, Händler,
+Kaufdatum, Öffnungsdatum, Charge und Notiz, dazu den **Verlauf** aller Buchungen. Die Sterne bewerten das Filament;
+derselbe Stern noch einmal löscht die Bewertung. Darunter:
 
 - **In Slot legen** – Drucker und Slot wählen.
 - **Wiegen** – siehe unten.
-- **Foto aufnehmen** – das Foto gilt für alle Spulen dieses Filaments.
+- **Foto aufnehmen** – das Foto gilt für alle Spulen dieses Filaments; **Foto entfernen** nimmt es wieder weg.
 - **Heute getrocknet** – setzt die Feuchte-Zeit zurück.
 - **Weitere Spule wie diese** – neue Spule desselben Filaments.
 - **EAN scannen** – Strichcode der Spule merken; eine EAN antippen entfernt sie.
-- **Archivieren** – leere Spule ablegen.
-- **Löschen …** – versehentlich angelegte Spule entfernen; geht nur ohne gebuchte Drucke (ab FilMaNH 0.7).
+- **Archivieren** – Spule ablegen; eine archivierte holt **Zurückholen** zurück.
+- **Löschen …** – versehentlich angelegte Spule entfernen; geht nur ohne gebuchte Drucke.
 
 ### Wiegen
 
 <img src="bilder/android-wiegen.png" width="240" alt="Wiegen">
 
 Spule samt Rolle wiegen und das Gewicht eintippen. FilMaNH zieht das Leergewicht ab und zeigt den Rest gleich an.
+Ohne Leergewicht geht das nicht – dann unter **Bearbeiten** bei **Leere Spule** eintragen.
 
 ### Bearbeiten
 
@@ -98,8 +103,10 @@ Spule samt Rolle wiegen und das Gewicht eintippen. FilMaNH zieht das Leergewicht
 
 **Bearbeiten** oben rechts. Hersteller, Bezeichnung, Material, Farbname und Farbe gelten für das Filament, also für
 alle Spulen dieser Sorte. Die Farbe kommt aus der Farbbibliothek (Standard, Matt, Seide, Galaxy, Transparent,
-Mehrfarbig) oder wird selbst eingestellt; **+** fügt Farben für Verlaufs- und mehrfarbiges Filament hinzu. Dazu Rest, leere Spule, Lagerort, Mindestbestand, Preis (brutto oder netto), MwSt.,
-Händler, Kaufdatum, **Geöffnet am**, Charge und Notiz.
+Mehrfarbig) oder als Farbwert (#RRGGBB) eingetippt; **+** fügt Farben für Verlaufs- und mehrfarbiges Filament hinzu.
+Dazu Rest, leere Spule, Lagerort, Mindestbestand, Preis (brutto oder netto), MwSt., Händler, Kaufdatum, **Geöffnet
+am**, Charge und Notiz. Ändert sich der Preis einer Spule, mit der schon gedruckt wurde, rechnet **Kosten bisheriger
+Drucke mit dem neuen Preis rechnen** auch diese neu.
 
 ## 5. Neue Spule
 
@@ -108,21 +115,21 @@ Händler, Kaufdatum, **Geöffnet am**, Charge und Notiz.
   <img src="bilder/android-farbe.png" width="240" alt="Farbe">
 </p>
 
-**+** unten rechts in der Spulenliste. Die Suche geht über den Katalog des Rechners (Hersteller, Bezeichnung,
-Farbe). **Eigenes Filament** zum selbst Eintragen (Farbe wie beim Bearbeiten), darunter die **Vorhandenen Filamente**. Danach Füllung, Kauf,
-Lagerort und Anzahl, dann **Anlegen**.
+**+** unten rechts in der Spulenliste. Die Suche geht über deine vorhandenen Filamente und den Katalog des Rechners
+(Hersteller, Bezeichnung, Farbe). **Eigenes Filament** zum selbst Eintragen (Farbe wie beim Bearbeiten), darunter die
+**Vorhandenen Filamente** und der **Katalog**. Danach Füllung, leere Spule, Preis, Kauf, Lagerort, EAN und Anzahl,
+dann **Anlegen**.
 
-Das Etikett druckt der Rechner: Dort steht in der Spulenliste **Fehlende Etiketten** mit allen neuen Spulen (ab
-FilMaNH 0.6).
+Das Etikett druckt der Rechner: Dort steht in der Spulenliste **Fehlende Etiketten** mit allen neuen Spulen.
 
 ## 6. Scannen
 
 Der Bereich **Scannen** erkennt:
 
 - **FilMaNH-Etikett** (QR-Code) – öffnet die Spule.
-- **EAN** (Strichcode auf Spule oder Karton) – zeigt die Spulen mit dieser EAN. Dazu **Neue Spule anlegen** bzw.
-  **Weitere Spule anlegen**, **Vorhandener Spule zuordnen** oder **Am Rechner weitermachen**: Dort öffnet sich
-  **Neue Spule** mit der EAN.
+- **EAN** (Strichcode auf Spule oder Karton) – zeigt die Spulen mit dieser EAN. Dazu **Weitere Spule anlegen** und
+  **Einer anderen Spule zuordnen**, bei einer neuen EAN **Neue Spule anlegen** und **Vorhandener Spule zuordnen** –
+  oder **Am Rechner weitermachen**: Dort öffnet sich **Neue Spule** mit der EAN.
 - **Link** (z.B. Produktseite) – **An den Rechner schicken** öffnet dort **Neue Spule**, und FilMaNH liest Name,
   Preis und Shop von der Seite.
 - **Kopplungs-Code** – koppelt mit dem Rechner.
@@ -131,28 +138,34 @@ Der Bereich **Scannen** erkennt:
 
 <img src="bilder/android-einstellungen.png" width="240" alt="Einstellungen">
 
-Zahnrad oben rechts.
+Zahnrad oben rechts. Oben steht die Version der App.
 
-- **Darstellung:** System, Hell oder Dunkel. **Hintergrundbild** ein oder aus.
+- **Darstellung:** System, Hell oder Dunkel. **Hintergrundbild** ein oder aus (bis du es hier änderst, wie am
+  Rechner).
 - **Sprache:** Deutsch, English, Español, Français, Italiano, Nederlands, Polski – wie das Handy, sonst Englisch; ein Tipp öffnet die Spracheinstellung von Android
   für FilMaNH.
-- **Rechner:** Name, Status und Adresse. **Neu koppeln** ersetzt die Kopplung, **Trennen** hebt sie auf. Am Rechner
-  unter **Einstellungen › Handy** lässt sich das Handy ebenfalls **Entfernen**.
+- **Rechner:** Name, Status, Version von FilMaNH und Adresse. **Neu koppeln** ersetzt die Kopplung, **Trennen** hebt
+  sie auf. Am Rechner unter **Einstellungen › Handy** lässt sich das Handy ebenfalls **Entfernen**.
+- Mit Beispieldaten: **Beispieldaten beenden**.
 - **Handbuch** und **Fehler melden**.
 
 ## 8. Widget
 
-Das Widget **Drucke** (ab App-Version 1.3) zeigt auf dem Startbildschirm bis zu drei laufende Drucke: Name,
+Das Widget **Drucke** zeigt auf dem Startbildschirm bis zu drei laufende Drucke: Name,
 Drucker, Fortschritt, das voraussichtliche Ende („fertig um 17:54“) und einen Punkt in der Farbe der Spule, aus der
 gerade gedruckt wird. Hinzufügen: lange auf eine freie Stelle des Startbildschirms tippen › **Widgets** › **FilMaNH**
 › **Drucke**. Ein Tipp aufs Widget öffnet die App.
 
 Das Widget holt den Stand selbst vom Rechner, nur im Heimnetz. Android aktualisiert es etwa alle 30 Minuten, die App
-sofort, wenn sie neue Daten hat. Ohne Verbindung steht der letzte Stand mit Uhrzeit da.
+sofort, wenn sie neue Daten hat. Ohne Verbindung steht der letzte Stand mit Uhrzeit da, höchstens 12 Stunden lang.
 
 ## 9. Häufige Fragen
 
-**„Rechner nicht erreichbar“?** FilMaNH muss am Rechner laufen, und das Handy muss im selben WLAN sein.
+**„Rechner nicht erreichbar“?** FilMaNH muss am Rechner laufen, und das Handy muss im selben WLAN sein. Bis dahin
+zeigt die App den letzten Stand mit Uhrzeit; Änderungen klappen erst wieder, wenn der Rechner erreichbar ist.
+
+**„App und FilMaNH auf dem Rechner passen nicht zusammen“?** Die App und FilMaNH am Rechner auf die neueste Version
+bringen.
 
 Läuft FilMaNH auf einem **Windows-PC**, blockiert oft die Windows-Firewall: am Rechner unter **Einstellungen › Handy**
 bei **Windows-Firewall** auf **Freigeben** klicken und die Rückfrage von Windows bestätigen.

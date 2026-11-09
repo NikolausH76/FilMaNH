@@ -38,8 +38,8 @@ run it directly from the DMG – updates can’t be installed there. If FilMaNH 
 **More info › Run anyway**. No administrator rights needed.
 
 Your computer and printers need to be on the same network. Nothing has to be changed on the printer. FilMaNH
-connects to the printer's ports 8883 (status) and 990 (print files) – if there is a firewall in between, both must
-be open.
+connects to the printer's ports 8883 (status) and 990 (print files), and for the camera image to 322 (video) or 6000
+(still images) – if there is a firewall in between, they must be open.
 
 ## 2. First setup
 
@@ -49,6 +49,7 @@ On first launch FilMaNH searches your network for printers and asks for each one
 
 - **Access code:** If Bambu Studio is set up on the computer, FilMaNH takes the code from there. Otherwise you find
   it on the printer under **Settings › WLAN**.
+- **Purchase price** (optional): for the machine costs, see [Settings](#13-settings).
 - **No printer found:** If the printer is on a different subnet (e.g. a separate network for smart-home devices),
   enter that subnet like `192.168.2` or the printer’s IP address.
 
@@ -57,7 +58,8 @@ Next, FilMaNH asks what to do with prints that are already on the SD card:
 ![Prints on the SD card](images/03-setup-karte.png)
 
 - **Start from now:** older prints are left out.
-- **Add earlier prints to the history:** they show up in History and Models, but nothing is deducted from spools.
+- **Add earlier prints to the history:** they show up in History and Models, but nothing is deducted from spools,
+  and they don’t count in Statistics.
 
 Finally, FilMaNH asks for the **electricity price** per kWh (for the electricity cost of prints) and whether to
 **launch at login** – recommended, so FilMaNH follows every print.
@@ -79,7 +81,8 @@ Finally, FilMaNH asks for the **electricity price** per kWh (for the electricity
 - **Not deducted?** If a print is over but not deducted (e.g. because no spool was assigned), a red **Not deducted**
   banner appears at the top of every page until it is settled, and you get a notification.
 - **Weighing** makes the stock exact. From your weighings FilMaNH learns how far the real consumption of each
-  filament differs from the calculation and takes that into account from then on.
+  filament differs from the calculation and takes that into account from the second weighing on (can be switched
+  off under Settings › Tracking).
 - **“~”** in front of a weight means estimated, may be slightly off. Weighing makes it exact again.
 
 ## 4. Overview
@@ -87,34 +90,47 @@ Finally, FilMaNH asks for the **electricity price** per kWh (for the electricity
 ![Overview](images/01-uebersicht.png)
 
 - **Printers** on the left, printing ones first: for the current print the progress with layer, time left, end and
-  estimated cost; notices about this print (wrong material, spool won’t last) right below. Then the printer and each AMS as a picture: every spool in its colour, the height shows how full it is, the loaded
-  slot is marked; beside it number, colour and remaining amount per slot, plus the AMS humidity and temperature. The
-  external spool set apart. Click a printer to open it.
-  Top right of the card: total print hours.
+  estimated cost; notices about this print (wrong material, different colour, abrasive filament, spool won’t last)
+  right below. Then the printer and each AMS as a picture: every spool in its colour, the loaded slot marked, a slot
+  with filament but no assigned spool dashed; beside it number, colour and remaining amount per slot, plus the AMS
+  humidity and temperature and a running drying cycle. The external spool set apart. Click a printer to open it.
+  Top right of the card: total print hours and **Live** (see [Printers](#6-printers)).
 - **Recently printed** with amount and cost.
-- **To do** on the right: everything that needs your attention – a print whose end is unknown, slots that don’t match
-  what the printer reports ([Matching with the printer](#matching-with-the-printer)), [maintenance](#maintenance) that
-  is due, moisture, prints not deducted, almost empty spools, spools in a printer without a price – each with the matching action.
+- **To do** on the right, each with the matching action:
+  - A print whose end is unknown ([End unknown](#end-unknown)): **Finished** deducts it with one click if all spools
+    of the print are known, otherwise **View**.
+  - Prints not deducted, including those whose print file could not be obtained.
+  - Slots that don’t match what the printer reports ([Matching with the printer](#matching-with-the-printer)).
+  - [Maintenance](#maintenance) that is due, with **Done**.
+  - Spools in a printer that have been open too long ([Moisture](#moisture)), with **Dried**.
+  - Spools in a printer without a price, with **Enter price** – only once any spool has a price.
+  - Bambu spools whose remaining amount according to RFID differs from the calculated one by 15 percentage points or
+    more: **Weigh** or **Ignore**. Spools weighed in the last 7 days are left out.
+  - Almost empty spools; **Show** opens them in the spool list.
 
 ## 5. Spools
 
 ![Spools](images/05-spulen.png)
 
-Filter by state (Full, Opened, Almost empty, Empty, Archive), material, brand and location; search; grid or list
-view. **Labels** prints labels for all spools shown. **Missing labels** appears as soon as new spools have no label
-yet (including spools created on the iPhone) and prints exactly those.
+Filter by state (Full, Opened, Almost empty, Empty, Archive), material, brand and location; search; view as
+**Grid** or **List**. **Labels** prints labels for all spools shown. **Missing labels** appears as soon as new spools
+have no label yet (including spools created on a phone) and prints exactly those.
 
-The **sort order** (number, fill level, name, brand, material, last used, newest first) is remembered.
+The **sort order** (number, fill level in either direction, name, brand, material, last used, newest first) is
+remembered. Filters and search stay when you come back from a spool.
 
 ### New spool
 
 ![New spool](images/04-neue-spule.png)
 
-Type brand, material or colour into the search field, e.g. “sunlu petg white”. The catalog knows more than 7,000
-filaments; picking one fills in colour, net weight and empty spool weight. Optionally add the price (gross or net),
-location and **Quantity**: 3 creates three spools, each with its own number. If a filament is not in the catalog:
-**Without catalog** and enter it yourself.
+Type brand, material or colour into the search field, e.g. “sunlu petg white”. Filaments you already have are listed
+first under **Existing**, below them the **Catalog** with more than 7,000 filaments; picking one fills in colour, net
+weight and empty spool weight. Optionally add the price (gross or net), location and **Quantity**: 3 creates three
+spools, each with its own number. If a filament is not in the catalog: **Without catalog** and enter it yourself.
 Your own filament presets from Bambu Studio are in the catalog too.
+
+Under **More details**: net weight, **Remaining now** (for a spool that is already in use; empty means full), empty
+spool, VAT, purchase date, shop, batch and EAN.
 
 ![Choose a colour](images/04c-farbe.png)
 
@@ -139,15 +155,23 @@ load them.
 
 ![Spool](images/06-spule.png)
 
-Remaining amount, location (slot or shelf), material, price, moisture, **Rating** and every deduction in the
-history. **More** shows batch, accuracy, learned correction, minimum stock, EAN and note. **Use up the rest** lists models you have
-printed before that the remaining filament is still enough for.
+Remaining amount, location (slot or shelf; click to change it), material, price, moisture, **Rating** and every
+deduction in the history. If the remaining amount is only estimated, **Not weighed since …** appears with **Weigh**.
+**More** shows the remaining value and price per kg, accuracy, batch, when the spool was added, opened and dried,
+Bambu ID, EAN, the learned **Correction** (applies from the second weighing), minimum stock and note.
+
+Click an entry in the history to see its source and accuracy. Weighings and corrections can be reverted there with
+**Undo**, prints in the print with **Undo deduction**.
+
+If the spool is almost empty or below 30 %, **Use up the rest** lists single-colour models in the same material that
+you have printed before and that the remaining filament is still enough for.
 
 ![Spool menu](images/07-spule-mehr.png)
 
-In the **…** menu: Edit, Correct remaining, Change location, Another spool like this, Print label, Add photo,
-Archive and Delete. A **photo** of the spool shows its real colour in the centre of the ring; without a photo, the
-centre shows the filament’s texture in its colour – glossy for silk, sparkling for galaxy.
+**Weigh** is at the top. In the **…** menu: Edit, Correct remaining, Change location, Another spool like this, Print
+label, Add photo (or change and remove it), Archive (or **Unarchive**) and Delete. A **photo** applies to all spools of
+this filament and shows the real colour in the centre of the ring; without a photo, the centre shows the filament’s
+texture in its colour – glossy for silk, sparkling for galaxy.
 
 **Delete** removes a spool for good, e.g. one created by mistake. This only works as long as no print has been
 deducted from it; otherwise **Archive** – that keeps history and costs.
@@ -166,17 +190,22 @@ with the new price**.
 ![Weigh](images/08-wiegen.png)
 
 Weigh the spool including the reel and enter the weight. FilMaNH subtracts the empty spool weight and takes over
-the rest.
+the rest. This needs the empty spool weight – if it is missing, enter it under **Edit** at **Empty spool**. If the
+result differs clearly from the calculated amount, FilMaNH tells you (is a print missing? is the empty spool weight
+right?).
+
+**Correct remaining** sets the remaining amount directly, optionally with a reason.
 
 ### Labels
 
 ![Labels](images/09-etiketten.png)
 
 On the label: number, colour (with the material in front unless the product name already contains it), brand and
-product, when the spool was opened, and a QR code with the number. Unopened spools get “Opened” with a line to fill
-in by hand. Under **On the label** you can add **Print temperature** (from the filament catalog, where known),
-**Location**, **Purchase date**, **Price** and **Net weight** in an extra line; the label then gets slightly smaller,
-and a line that is too long is shortened. FilMaNH remembers your choice.
+product, when the spool was opened, and a QR code with the number (can be switched off: **QR code with the spool
+number**). Unopened spools get “Opened” with a line to fill in by hand. Under **On the label** you can add **Print
+temperature** (from the filament catalog, where known), **Location**, **Purchase date**, **Price** and **Net weight** in
+an extra line; the label then gets slightly smaller, and a line that is too long is shortened. FilMaNH remembers your
+choice.
 
 Under **Print via:**
 
@@ -203,12 +232,15 @@ remembers which spools have a label.
 
 ### Moisture
 
-PETG, PCTG and PET show a notice after 30 days open, TPU after 14 days, PA, PC, PVA and BVOH after 7 days.
-**Dried** resets the time.
+PETG, PCTG and PET show a notice after 30 days open, TPU and TPE after 14 days, PA, PPA, PC, PVA and BVOH after
+7 days. The time counts from opening or the last drying. A spool in an AMS below 20 % humidity gets no notice.
+**Dried** (on the notice or in the spool) resets the time.
 
 ## 6. Printers
 
 ![Printer](images/10-drucker.png)
+
+The sidebar lists all printers, with progress while printing; click one to open its page.
 
 The current print in 3D in the colours of the assigned spools – the part already printed solid, the rest
 see-through – plus progress, layer, remaining time and when it will be done. Below, the filaments of the print with
@@ -226,15 +258,23 @@ When a print starts, FilMaNH checks:
 
 ![AMS](images/11-drucker-ams.png)
 
-Further down: the printer and each AMS as a picture, every slot with its spool in its colour (height = fill level),
-below it number, name and remaining amount. Humidity and temperature are shown on the AMS, on the AMS HT in its
-display; a running drying cycle with its time left above. Then the humidity of the last 7 days and the external
-spool. H2D and H2C have two external holders (left and right); an empty one without an assigned spool is not shown. Drag a spool from **Spools on the shelf** onto a slot to assign it. Below are all prints of this printer.
+Further down: the printer and each AMS as a picture. Every spool sits in its window in its colour, with the
+material on the feeder; the loaded slot is marked, a slot with filament but no assigned spool is dashed. Below that
+number, name and remaining amount; click a slot to open the [assignment](#assign-a-spool). Humidity and temperature
+are shown on the AMS, on the AMS HT in its display; a running drying cycle with its time left above. Without a
+connection FilMaNH shows the saved assignments. Then the humidity of the last 7 days with the last drying, and the
+external spool. H2D and H2C have two external holders (left and right); an empty one without an assigned spool is not
+shown. Drag a spool from **Spools on the shelf** onto a slot to assign it. Also on the page: the
+[maintenance](#maintenance), the latest prints of this printer, and at the very bottom model, firmware and IP address.
 **Setup** at the top right opens the printer settings.
 
-**Live** at the top right shows the camera image while the page is open; on the Overview, **Live** on the printer
-card opens the page with the image right away. X1, H2D, H2S, H2C and P2S deliver video, A1, A1 mini and P1S still
-images. For video, **LAN Mode Liveview** must be on at the printer (printer settings; often off by default) – otherwise FilMaNH tells you. FilMaNH only watches and changes nothing on the printer.
+![Live](images/10c-live.png)
+
+**Live** at the top right shows the camera image while the page is open; its top left corner shows how old it is.
+On the Overview, **Live** on the printer card opens the page with the image right away. X1, H2D, H2S, H2C and P2S
+deliver video, A1, A1 mini, P1P and P1S still images. For video, **LAN Mode Liveview** must be on at the printer
+(printer settings; often off by default). If it is off, the printer page says so and the Overview shows no **Live**.
+If the image stops, **Try again** reconnects. FilMaNH only watches and changes nothing on the printer.
 
 ### Assign a spool
 
@@ -242,6 +282,7 @@ images. For video, **LAN Mode Liveview** must be on at the printer (printer sett
 
 When a spool without RFID is loaded, FilMaNH asks which one it is: matching spools first, all others below, each with
 its number and location. Clicking the slot opens the selection again at any time, e.g. after changing spools.
+If a spool is already assigned, it is shown at the top; **Unload** clears the assignment.
 
 If the spool is not in stock yet, **New spool …** creates it and assigns it to this slot right away – during a print
 it counts for that print. The search starts with the material and colour from the print file or the printer, nearest
@@ -299,7 +340,8 @@ stainless steel or brass, a warning is shown. **Selling price** (expand) calcula
 ![History](images/14-verlauf.png)
 
 Every print with image, printer, time, duration, consumption and cost; if there is a photo of the finished part,
-it replaces the preview. Filter by period, result and printer; search; gross or net. **CSV** exports the list.
+it replaces the preview. Click the image to see the print in 3D. Filter by period, result (Finished, Cancelled,
+Running or open, Not deducted), printer and material; search; gross or net. **CSV** exports the list.
 Page through at the bottom, **10**, **25** or **50 per page**.
 
 **Delete:** tick prints (the box above the list selects all on the page), then **Delete** and **Really delete**. The
@@ -318,28 +360,40 @@ deleted.
   **Esc** closes, **Delete** removes the photo.
 - **Play timelapse.** With **Download timelapses** (Settings › Tracking) it is on your computer after the print;
   otherwise it comes from the printer when you play it. **Save …** keeps a copy; on a Mac an AVI becomes a `.mov`
-  that QuickTime plays. If the timelapse was off during the print, this is shown here.
-- **Filament** per spool with amount and cost; **Costs** broken down into material, electricity and machine, net
-  and gross. If a spool has no price, it says **Price missing** or “+ ?” after the known amount (also in the
-  history), with a link to the spool below.
-- **Open in Bambu Studio** opens the kept print file. If the model comes from MakerWorld, a link leads there.
-- **Project:** assign the print to a [project](#9-projects) or create one with **New project …**. **Selling price**
-  (expand) calculates the price for this print.
-- **…** menu: **Mark as waste** (part unusable – counts as a failed print in the statistics), Undo
-  deduction and, as long as nothing is deducted, **Find print file again**.
+  that QuickTime plays. If the timelapse was off during the print, this is shown here. Otherwise **Find timelapse**
+  fetches it (or the last frame of the camera recording) from the printer afterwards.
+- **Filament** per spool with amount (of which flushing) and cost; **Costs** broken down into material, electricity
+  and machine, net and gross. During the print, the costs estimated from the print file are shown. If a spool has no
+  price, it says **Price missing** or “+ ?” after the known amount (also in the history), with a link to the spool
+  below.
+- **Spool changed during the print** (e.g. to the spare spool in the AMS): the filament is listed with its sections
+  per spool and layer; each section is deducted separately.
+- **Open in Bambu Studio** opens the kept print file. If the model comes from MakerWorld, **MakerWorld** leads there.
+- **Project:** assign the print to a [project](#9-projects) or create one with **New project …**; closed projects are
+  not offered. **Selling price** (expand) calculates the price for this print. Below it a **Note**.
+- **…** menu: **Mark as waste** (part unusable – counts as a failed print in the statistics; **Not waste** undoes
+  it), **Undo deduction** (after that, FilMaNH only deducts again on **Deduct**) and, as long as nothing is deducted,
+  **Find print file again**.
 - FilMaNH checks every print file against the print: layer count and the filaments the printer actually uses. An
   older file with the same name is not used.
 - **Not deducted – choose a spool.** appears when the printer reported no slot for a filament or the spool was only
-  put into the slot after the print (it may already be meant for the next print). You choose the spool; FilMaNH does
-  not guess. If the print file lists no filaments, enter the usage as for a print without a file.
-- For cancelled prints the printer’s message is shown.
+  put into the slot after the print (it may already be meant for the next print). You choose the spool yourself and
+  click **Deduct**; FilMaNH does not guess.
+- **Print file not available** or without filament data: **Enter usage …** – spool and grams per row, **Another spool**
+  for more, then **Deduct**. For Bambu spools FilMaNH suggests the amount from the RFID reading (“from RFID, rough”).
+- **… ran out.** If the printer reports that a spool ran out, **Set remaining to 0** sets its remaining amount to 0.
+- If objects were skipped on the printer, the full amount of the print file is still deducted; weighing makes the
+  stock exact again.
+- For cancelled prints the reason is shown at the top. All error messages of the printer during the print are listed
+  under **Printer messages**.
 
 ### End unknown
 
 ![End unknown](images/16-druck-offen.png)
 
 If FilMaNH could not see a print end and could not settle it later either: choose **Finished** or **Cancelled …**
-with the layer. The deduction follows.
+with the layer, and the spool where needed. The deduction follows. If FilMaNH only found the print as a file on the
+SD card (the computer was off), there is also **Not printed**.
 
 ## 9. Projects
 
@@ -366,34 +420,47 @@ one. Prints are added with **Add prints** or in the print under **Project**.
 
 ![Models](images/17-modelle.png)
 
-All prints grouped by model, with count, cost and cancellations.
+All prints grouped by model, with count, cost and cancellations; search by name.
 
 ![Model](images/18-modell.png)
 
-Cost per print, material, success rate and all prints of the model. Under **Source files** you can attach the
-project file (`.3mf`); FilMaNH suggests the files recently opened in Bambu Studio.
+Cost, material, success rate and all prints of the model.
+
+- **Source files:** **Attach file …** (or drag files into the window) takes project 3MF, STL, STEP and OBJ; FilMaNH
+  keeps a copy in the data folder and suggests the files recently opened in Bambu Studio to **Attach**. **3D** shows
+  the real model for STL and 3MF, **Open** opens the file with the program the system uses for it.
+- **…** menu: **Rename** and **Merge with another model** (e.g. for two versions of the same model). **Detach** on a
+  print removes it from this model.
 
 ## 11. Statistics
 
 ![Statistics](images/19-auswertung.png)
 
-Filter by printer and period, gross or net. Waste means prints cancelled after the first layer and prints marked as
-waste.
+Filter by printer (if there are several) and period (**30 days**, the current year, **All**), gross or net. Waste
+means prints cancelled after the first layer and prints marked as waste. Earlier prints taken over from the SD card
+don’t count.
 
 - **Key figures:** prints, filament, costs with the change from the previous period (the 30 days before, the same
   time last year or the previous month), waste and **purge waste**: filament flushed during color changes (including the
-  prime tower), its cost and its share of the filament.
+  prime tower), its cost and its share of the filament. If not all prints are deducted or prices are missing, this is
+  noted below the costs.
 - **Costs per month:** the last 12 months. Click a month to see its days; the whole page then shows that month.
   **Back** returns to the previous period.
 - **Where the money goes:** material, purge waste, electricity and machine (printer purchase) as shares of the costs.
 - **By material**, **By printer**, the most expensive **Models** and **Purge waste by model**.
+
+![Colors and print times](images/19b-auswertung-zeiten.png)
+
 - **Colors:** the most printed colors, wider the more grams; hover for filament and amount.
 - **When you print:** print hours by weekday and time of day (the stronger, the more) and the **utilization** of
   each printer: print hours relative to the hours in the period.
 - **Reasons for cancellation:** the most common messages of cancelled prints.
+
+![Humidity and estimate](images/19c-auswertung-feuchte.png)
+
 - **Humidity and failed prints:** the share of failed prints by AMS humidity at print start and by whether all spools
   of the print were dried in the 7 days before. Only from 20 prints with a reading, each row from 5 prints. Prints
-  from the external spool have no reading.
+  from the external spool have no reading. Can be switched off under Settings › Tracking.
 - **Estimate vs. reality:** how much longer or shorter normally finished prints took than the slicer predicted
   (median, from 3 prints per printer), and how much weighed spools differ from the slicer weight (per filament, from
   all weighings).
@@ -405,21 +472,29 @@ waste.
 
 ![Shopping list](images/20-einkauf.png)
 
-Set a **Minimum stock** for a filament (here or under Spool › Edit). When the stock falls below it, the filament is
-listed under **Reorder** with shop and last price. **Purchased** creates the new spool with the data of the last
-purchase. **Copy list** copies the shopping list. Stars show your rating of the filament.
+Set a **Minimum stock** in spools for a filament (under Spool › Edit or here under **Almost empty, no minimum
+stock**). When the stock falls below it, the filament is listed under **Reorder** with shop and last price; almost
+empty spools don’t count. **Purchased** creates the new spool with the data of the last purchase. **Copy list**
+copies the shopping list. Stars show your rating of the filament.
 
 **Running out soon** lists filaments that, at the usage of the last 90 days, will be used up in less than 4 weeks –
 even without a minimum stock. Each filament shows roughly how long the stock will last.
 
+**Almost empty, no minimum stock** lists almost empty spools whose filament has no minimum stock; you can enter one
+right there.
+
 ## 13. Settings
 
-**General:** Appearance (light, dark, system), **Background image**, **Language** (as the system, Deutsch, English,
-Español, Français, Italiano, Nederlands, Polski; if the system uses none of them, English), Keep running when closed, Launch at
-login (recommended), Notifications (print finished, spool will run out, new spool detected).
+**General:** **Appearance** (System, Light, Dark), **Background image**, **Language** (as the system, Deutsch,
+English, Español, Français, Italiano, Nederlands, Polski; if the system uses none of them, English), **Keep running
+when closed**, **Launch at login** (recommended), **Notifications** (print finished, spool will run out, new spool
+detected).
 
-**Printers:** connected printers; search for more printers or add one by IP address, optionally with its **purchase
-price**.
+**Printers:** connected printers with model, address and status; **Remove** takes one out. **Search network** finds
+more printers, also in another subnet if you like (**also in subnet**); **Use new address** takes over a printer that
+is already set up under a new address. Or add one by IP address with name, access code and optionally its **purchase
+price**. If the printer is already set up, the button reads **Update**: it takes over a new address and a new access
+code, and the assignments stay.
 **Print hours so far:** per printer, the value from its display. Total print hours (overview, printer page) are
 this value plus the prints recorded since; without a value, only those recorded by FilMaNH.
 
@@ -428,7 +503,8 @@ this value plus the prints recorded since; without a value, only those recorded 
 **Costs:** currency, VAT and whether prices are shown **Gross** or **Net**. All amounts on this page are shown and
 entered that way; internally FilMaNH calculates net. The VAT applies to electricity, printer purchase,
 selling price and new spools; each spool keeps its own rate. On a new installation, currency and VAT are preset for
-the system’s country.
+the system’s country (USA and Canada 0 %, since sales tax there varies by state or province; without a recognised
+country euro and 19 %).
 
 - **Electricity:** **Electricity price** per kWh and the power of each printer. Without your own value FilMaNH uses
   Bambu’s measured average for the model and the print’s material (e.g. A1 mini with PLA 80 W, P2S 200 W) – not the
@@ -460,7 +536,8 @@ files and timelapses may use.
 **Show QR code** starts pairing: tap **Pair with computer** in the app and scan the code. You can pair as many phones
 as you like; each one is listed under **Paired devices** and can be removed there with **Remove**. The connection stays
 on your home network and is encrypted. When you pair for the first time, macOS or Windows asks whether FilMaNH may
-accept connections: **Allow** (on Windows for private networks).
+accept connections: **Allow** (on Windows for private networks). On Windows, the **Windows Firewall** row shows
+whether the phone app gets through; if not, **Allow** sets that up.
 
 As long as no phone is paired, **Phone app** appears at the bottom of the sidebar: a click shows what the apps do,
 with a QR code to download the Android app. **Hide** removes the hint.
@@ -471,27 +548,39 @@ with a QR code to download the Android app. **Hide** removes the hint.
 
 What the apps can do is described in the handbooks for [iPhone](iphone.md) and [Android](android.md).
 
-**Data:** daily backup (the last 14), export and import of all data, print history as CSV, data folder. Backup and export contain the database: spools, bookings, prints and settings – not
-photos, print files, 3D views, timelapses and source files. Those are in the data folder (`drucke`, `fotos`, `modelle`); copy
-it along when moving to another computer. **Import from Spoolman** reads spools from a Spoolman server or a Spoolman
-export file.
+**Data:**
+
+- **Backup:** daily and automatic, the last 14; **Back up now** creates one right away, **Open folder** shows them.
+  **Restore …** brings a backup back, and FilMaNH then restarts.
+- **Export** of all data as JSON; **Import** replaces the current data, which is kept as a backup.
+- **Print history** as CSV with all costs, net and gross; **Data folder** › **Open** shows the app’s folder.
+- Backup and export contain the database: spools, bookings, prints and settings – not photos, print files, 3D views,
+  timelapses and source files. Those are in the data folder (`drucke`, `fotos`, `modelle`); copy it along when moving
+  to another computer.
+- **Import from Spoolman** reads spools from a Spoolman server (enter the address, **Check**) or a Spoolman export
+  file (**File …**). First it shows what was found, then a second click imports the new spools. Archived spools and
+  spools with a diameter other than 1.75 mm are left out; importing again creates no duplicates.
 
 ![Data](images/25-einst-daten.png)
 
-**About FilMaNH:** version, update the filament catalog, updates, **Diagnostics › Copy** (for support, without serial
-numbers, addresses and codes), licenses. The installed version is also shown at the top of the sidebar; it turns
-red when an update is available.
+**About FilMaNH:** version, filament catalog with its date (**Update** loads the latest), updates, **Diagnostics ›
+Copy** (for support, without serial numbers, addresses and codes), licenses. The installed version is also shown at
+the top of the sidebar; it turns red when an update is available.
 
 ![About FilMaNH](images/26-einst-ueber.png)
 
-**Updates:** FilMaNH checks for a new version every hour. If there is one, **Update …** appears in the sidebar;
-**Install version …** downloads, verifies, installs and restarts. Nothing is installed without your click.
+**Updates:** With **Check for updates automatically** (on by default) FilMaNH checks for a new version every hour;
+**Check for updates** checks right away. If there is one, **Update …** appears in the sidebar and **New in …** shows
+what changes; **Install version …** downloads, verifies, installs and restarts. Nothing is installed without your
+click.
 
-**Help:** this handbook in the app’s language, with search across all chapters. **F1** opens it from anywhere.
+**Help:** this handbook in the app’s language, plus the handbooks of the phone apps, with search across all chapters.
+**F1** opens it from anywhere.
 
 ## 14. Running in the background
 
-Closing the window doesn’t quit FilMaNH – prints keep being tracked.
+Closing the window doesn’t quit FilMaNH – prints keep being tracked (Settings › General › **Keep running when
+closed**, on by default).
 
 - **macOS:** icon at the top right of the menu bar. During a print it shows a spool in the colour of the filament
   being printed, with the progress next to it; when several printers print, there is one spool per printer and the
@@ -506,11 +595,12 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
 
 ![Commands](images/27-befehle.png)
 
-- **⌘K** (Mac) or **Ctrl+K** (Windows): search spools, prints, models and commands.
+- **⌘K** (Mac) or **Ctrl+K** (Windows): search spools, printers, prints, models and commands.
 - **F1**: [help](#13-settings).
 - **⌘[** or **⌘←** (Mac) or **Alt+←** (Windows), the back button of the mouse or the arrow before the page title: one
-  step back along the way you came; **⌘]** or **Alt+→** goes forward again.
-- Drop a `.gcode.3mf` onto the window: check print file.
+  step back along the way you came; **⌘]** or **Alt+→** or the forward button of the mouse goes forward again.
+- Drop a `.gcode.3mf` onto the window: check print file. Drop images onto a print or project: add them as photos.
+  Drop files onto a model: attach them as source files.
 - A barcode scanner reading the QR code of a FilMaNH label opens that spool directly.
 - Scanning the EAN of a spool or its box opens **New spool** – for a known EAN with the filament already selected.
 
@@ -522,6 +612,7 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
   this computer – nothing else.
 - No account, no cloud. FilMaNH only reads from the printers and never controls them. Access codes are stored in
   the system keychain.
+- The camera image (**Live**) only comes on a click, directly from the printer into the window, and is not saved.
 - As long as a phone is paired or the pairing QR code is open, FilMaNH accepts encrypted connections on your local
   network (port 47474, or one of the next nine if it is in use); only paired phones get any data. Once no phone is
   paired any more, the service stops after a few minutes. Nothing goes to the internet.
@@ -548,12 +639,23 @@ on FilMaNH (the **Open System Settings** button on the overview takes you there)
 already on, switch it off and on once.
 
 **The printer got a new IP address.** If a printer is unreachable for a few minutes, FilMaNH looks for it on the
-network itself and connects to the new address. If that doesn’t work, add the printer again under Settings › Printers –
-name, assignments and history are kept.
+network itself and connects to the new address. If that doesn’t work: under Settings › Printers **Search network** and
+**Use new address**, or enter the new IP address and **Update** – name, assignments and history are kept.
 
-**Do I have to switch on LAN-only mode or developer mode on the printer?** No.
+**“Wrong access code”.** The code on the printer has changed (e.g. after a reset). Under Settings › Printers enter
+the IP address and the new code and click **Update** – assignments and history are kept.
+
+**Do I have to switch on LAN-only mode or developer mode on the printer?** No. Only the video under **Live** needs
+**LAN Mode Liveview** on (see [Printers](#6-printers)).
+
+**Live shows no image.** “Video over LAN is off on the printer”: switch on **LAN Mode Liveview** at the printer.
+“Camera busy”: close other live views, e.g. in Bambu Studio. If there is a firewall between computer and printer,
+ports 322 and 6000 must be open.
 
 **The stock is off.** Weigh the spool. Over time FilMaNH learns from your weighings and calculates more precisely.
+
+**The costs say “Price missing”.** A spool of the print has no price. Enter it under Spool › Edit; FilMaNH then
+recalculates the costs of prints already deducted.
 
 **My computer was off or asleep during a print.** FilMaNH catches up on the print when it wakes up or starts next and
 deducts it – even if the printer has been switched off in the meantime.

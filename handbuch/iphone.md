@@ -20,7 +20,7 @@ verschlüsselt. Die App erscheint demnächst im App Store.
 
 ## 1. Voraussetzungen
 
-- FilMaNH ab Version 0.5 läuft auf dem Rechner (Mac oder Windows). Das Fenster darf geschlossen sein. Bis Version 0.9.4 heißt **Einstellungen › Handy** dort noch **iPhone**.
+- FilMaNH läuft auf dem Rechner (Mac oder Windows). Das Fenster darf geschlossen sein.
 - iPhone mit iOS 17 oder neuer im selben WLAN wie der Rechner.
 
 ## 2. Koppeln
@@ -32,8 +32,10 @@ verschlüsselt. Die App erscheint demnächst im App Store.
 
 1. Am Rechner in FilMaNH: **Einstellungen › Handy › QR-Code zeigen**.
 2. Auf dem iPhone **Mit Rechner koppeln** antippen, den Code scannen und **Koppeln** bestätigen.
-3. Beim ersten Mal fragt iOS nach dem **lokalen Netzwerk**: erlauben. Ohne diese Erlaubnis findet das iPhone den
-   Rechner nicht.
+3. Beim ersten Mal fragt iOS nach der Kamera und dem **lokalen Netzwerk**: beides erlauben. Ohne das lokale Netzwerk
+   findet das iPhone den Rechner nicht.
+
+Den Code kann auch die Kamera-App des iPhones lesen; der Link öffnet FilMaNH direkt zum Bestätigen.
 
 **Beispieldaten ansehen** zeigt die App ohne Rechner mit erfundenen Spulen; Änderungen werden nicht gespeichert.
 
@@ -45,16 +47,19 @@ verschlüsselt. Die App erscheint demnächst im App Store.
   <img src="bilder/iphone-hinweis.png" width="240" alt="Hinweis">
 </p>
 
-Alle Drucker mit Zustand, laufendem Druck und Restzeit. Darunter jedes AMS mit den Slots 1–4 und der Feuchte (beim
-Trocknen die Restzeit), dann die externe Spule (an H2D und H2C mit links/rechts).
+Alle Drucker mit Bild, Verbindung und laufendem Druck mit Schicht und Restzeit. Darunter jedes AMS als Bild: jede
+Spule in ihrer Farbe im Fenster, der geladene Slot markiert, ein Slot mit Filament, aber ohne zugeordnete Spule
+gestrichelt; unter jedem Fenster die Nummer der Spule bzw. das gemeldete Material. Dazu Feuchte und Temperatur (beim
+Trocknen die Restzeit), dann die externe Spule (bei zwei Düsen wie an H2D und H2C mit links/rechts).
 
 Ein Slot öffnet die Auswahl: **Im Slot** zeigt die Spule, **Slot leeren** nimmt sie heraus. Unter **Spule
-einlegen** stehen passende Spulen oben (gleiches Material wie im Slot gemeldet, dann noch nirgends eingelegte), oder
-**Etikett scannen** und die Spule über ihren QR-Code wählen.
+einlegen** stehen passende Spulen oben (gleiches Material wie im Slot gemeldet, dann noch nirgends eingelegte), mit
+Suche – oder **Etikett scannen** und die Spule über ihren QR-Code wählen (auch eine EAN, wenn sie zu genau einer Spule
+gehört).
 
-Passt ein Slot nicht zur Meldung des Druckers, steht ein Hinweis auf der Karte des Druckers – wie am Rechner (siehe
-[Abgleich mit dem Drucker](README.md#abgleich-mit-dem-drucker)): **Ja**, **Andere …**, **Zuordnen**,
-**Andere Spule …**, **Stimmt so**, **Ja, entnommen** oder **Steckt noch**.
+Passt ein Slot nicht zur Meldung des Druckers, steht ein Hinweis auf der Karte des Druckers, solange er verbunden ist
+– wie am Rechner (siehe [Abgleich mit dem Drucker](README.md#abgleich-mit-dem-drucker)): **Ja**, **Andere …**,
+**Zuordnen**, **#… zuordnen**, **Andere Spule …**, **Stimmt so**, **Ja, entnommen** oder **Steckt noch**.
 
 ## 4. Spulen
 
@@ -64,26 +69,28 @@ Passt ein Slot nicht zur Meldung des Druckers, steht ein Hinweis auf der Karte d
   <img src="bilder/iphone-spule-aktionen.png" width="240" alt="Spule: Aktionen">
 </p>
 
-Suche nach Nummer, Hersteller und Farbe; Filter **Im Bestand**, **Fast leer** und **Archiv**. Die Pfeile oben links
-sortieren nach Nummer, Rest oder Hersteller.
+Suche nach Nummer, Hersteller, Farbe, Material und Bezeichnung; Filter **Im Bestand**, **Fast leer** und
+**Archiv**. Die Pfeile oben links sortieren nach Nummer, Rest oder Hersteller.
 
-Eine Spule zeigt Rest, Füllung, leere Spule, Ort, Preis, Händler und Kaufdatum und den **Verlauf** aller Buchungen.
-Die Sterne bewerten das Filament; derselbe Stern noch einmal löscht die Bewertung. Darunter:
+Eine Spule zeigt Rest, Füllung, leere Spule, Ort, wann sie zuletzt gewogen und getrocknet wurde, Preis, Händler,
+Kaufdatum, Öffnungsdatum, Charge und Notiz, dazu den **Verlauf** der Buchungen (die neuesten, **Ganzer Verlauf** zeigt
+alle). Die Sterne bewerten das Filament; derselbe Stern noch einmal löscht die Bewertung. Darunter:
 
 - **In Slot legen** – Drucker und Slot wählen.
 - **Wiegen** – siehe unten.
-- **Foto aufnehmen** – das Foto gilt für alle Spulen dieses Filaments.
+- **Foto aufnehmen** – das Foto gilt für alle Spulen dieses Filaments; **Foto entfernen** nimmt es wieder weg.
 - **Heute getrocknet** – setzt die Feuchte-Zeit zurück.
 - **Weitere Spule wie diese** – neue Spule desselben Filaments.
-- **EAN scannen** – Strichcode der Spule merken.
-- **Archivieren** – leere Spule ablegen.
-- **Löschen …** – versehentlich angelegte Spule entfernen; geht nur ohne gebuchte Drucke (ab FilMaNH 0.7).
+- **EAN scannen** – Strichcode der Spule merken; eine EAN antippen entfernt sie.
+- **Archivieren** – Spule ablegen; eine archivierte holt **Zurückholen** zurück.
+- **Löschen …** – versehentlich angelegte Spule entfernen; geht nur ohne gebuchte Drucke.
 
 ### Wiegen
 
 <img src="bilder/iphone-wiegen.png" width="240" alt="Wiegen">
 
 Spule samt Rolle wiegen und das Gewicht eintippen. FilMaNH zieht das Leergewicht ab und zeigt den Rest gleich an.
+Ohne Leergewicht geht das nicht – dann unter **Bearbeiten** bei **Leere Spule** eintragen.
 
 ### Bearbeiten
 
@@ -92,7 +99,8 @@ Spule samt Rolle wiegen und das Gewicht eintippen. FilMaNH zieht das Leergewicht
 **Bearbeiten** oben rechts. Hersteller, Bezeichnung, Material, Farbname und Farbe gelten für das Filament, also für
 alle Spulen dieser Sorte. Die Farbe kommt aus der Farbbibliothek (Standard, Matt, Seide, Galaxy, Transparent,
 Mehrfarbig) oder wird selbst eingestellt; **+** fügt Farben für Verlaufs- und mehrfarbiges Filament hinzu. Dazu Rest, leere Spule, Lagerort, Mindestbestand, Preis (brutto oder netto), MwSt.,
-Händler, Kaufdatum, **Geöffnet am**, Charge und Notiz.
+Händler, Kaufdatum, **Geöffnet am**, Charge und Notiz. Ändert sich der Preis einer Spule, mit der schon gedruckt
+wurde, rechnet **Kosten bisheriger Drucke mit dem neuen Preis rechnen** auch diese neu.
 
 ## 5. Neue Spule
 
@@ -101,35 +109,37 @@ Händler, Kaufdatum, **Geöffnet am**, Charge und Notiz.
   <img src="bilder/iphone-farbe.png" width="240" alt="Farbe">
 </p>
 
-**+** in der Spulenliste. Die Suche geht über den Katalog des Rechners (Hersteller, Bezeichnung, Farbe). **Eigenes
-Filament** zum selbst Eintragen (Farbe wie beim Bearbeiten), darunter die **Vorhandenen Filamente**. Danach Füllung, Kauf, Lagerort und Anzahl,
-dann **Anlegen**.
+**+** oben rechts. Die Suche geht über deine vorhandenen Filamente und den Katalog des Rechners (Hersteller,
+Bezeichnung, Farbe). **Eigenes Filament** zum selbst Eintragen (Farbe wie beim Bearbeiten), darunter die **Vorhandenen
+Filamente** und der **Katalog**. Danach Füllung, leere Spule, Preis, Kauf, Lagerort, EAN und Anzahl, dann **Anlegen**.
 
-Das Etikett druckt der Rechner: Dort steht in der Spulenliste **Fehlende Etiketten** mit allen neuen Spulen (ab
-FilMaNH 0.6).
+Das Etikett druckt der Rechner: Dort steht in der Spulenliste **Fehlende Etiketten** mit allen neuen Spulen.
 
 ## 6. Scannen
 
 Der Tab **Scannen** erkennt:
 
 - **FilMaNH-Etikett** (QR-Code) – öffnet die Spule.
-- **EAN** (Strichcode auf Spule oder Karton) – zeigt die Spulen mit dieser EAN. Dazu **Neue Spule anlegen** bzw.
-  **Weitere Spule anlegen**, **Vorhandener Spule zuordnen** oder **Am Rechner weitermachen**: Dort öffnet sich
-  **Neue Spule** mit der EAN.
+- **EAN** (Strichcode auf Spule oder Karton) – zeigt die Spulen mit dieser EAN. Dazu **Weitere Spule anlegen** und
+  **Einer anderen Spule zuordnen**, bei einer neuen EAN **Neue Spule anlegen** und **Vorhandener Spule zuordnen** –
+  oder **Am Rechner weitermachen**: Dort öffnet sich **Neue Spule** mit der EAN.
 - **Link** (z.B. Produktseite) – **An den Rechner schicken** öffnet dort **Neue Spule**, und FilMaNH liest Name,
   Preis und Shop von der Seite.
+- **Kopplungs-Code** – koppelt mit dem Rechner.
 
 ## 7. Einstellungen
 
 <img src="bilder/iphone-einstellungen.png" width="240" alt="Einstellungen">
 
-Zahnrad oben rechts.
+Zahnrad oben rechts. Oben steht die Version der App.
 
 - **Darstellung:** System, Hell oder Dunkel. **Hintergrundbild** ein oder aus.
 - **Sprache:** Deutsch, English, Español, Français, Italiano, Nederlands, Polski – wie das iPhone, sonst Englisch; ein Tipp öffnet die Einstellungen von iOS für
   FilMaNH.
-- **Rechner:** Name, Status und Adresse. **Neu koppeln** ersetzt die Kopplung, **Trennen** hebt sie auf. Am Rechner
-  unter **Einstellungen › Handy** lässt sich ein iPhone ebenfalls **Entfernen**.
+- **Rechner:** Name, Status, Version von FilMaNH und Adresse. **Neu koppeln** ersetzt die Kopplung, **Trennen** hebt
+  sie auf. Am Rechner unter **Einstellungen › Handy** lässt sich ein iPhone ebenfalls **Entfernen**. Ist der Rechner
+  nicht erreichbar, führt **„Lokales Netzwerk“ erlauben** zur Einstellung von iOS.
+- Mit Beispieldaten: **Beispieldaten beenden**.
 - **Handbuch** und **Fehler melden**.
 
 ## 8. Widget
@@ -137,15 +147,20 @@ Zahnrad oben rechts.
 Das Widget **Drucke** (ab App-Version 1.2) gibt es klein und mittel für den Home-Bildschirm und für den
 Sperrbildschirm. Es zeigt die laufenden Drucke mit Drucker, Fortschritt, dem voraussichtlichen Ende („fertig um
 17:54“) und einem Punkt in der Farbe der Spule, aus der gerade gedruckt wird – klein einen Druck oder bis zu drei
-knapp, mittel bis zu drei. Hinzufügen: lange auf den Home-Bildschirm tippen › **Bearbeiten** › **Widget hinzufügen**
+knapp, mittel bis zu drei. Auf dem Sperrbildschirm zeigt es den ersten Druck als Zeile oder als Ring mit den
+Prozent. Hinzufügen: lange auf den Home-Bildschirm tippen › **Bearbeiten** › **Widget hinzufügen**
 › **FilMaNH**. Ein Tipp aufs Widget öffnet die App.
 
 Das Widget holt den Stand selbst vom Rechner, nur im Heimnetz. Wie oft, entscheidet iOS; die App aktualisiert es
-sofort, wenn sie neue Daten hat. Ohne Verbindung steht der letzte Stand mit Uhrzeit da.
+sofort, wenn sie neue Daten hat. Ohne Verbindung steht der letzte Stand mit Uhrzeit da, höchstens 12 Stunden lang.
 
 ## 9. Häufige Fragen
 
 **„Rechner nicht erreichbar“?** FilMaNH muss am Rechner laufen, und das iPhone muss im selben WLAN sein. In den iOS-Einstellungen unter FilMaNH muss **Lokales Netzwerk** erlaubt sein.
+Bis dahin zeigt die App den letzten Stand mit Uhrzeit; Änderungen klappen erst wieder, wenn der Rechner erreichbar ist.
+
+**„App und FilMaNH auf dem Rechner passen nicht zusammen“?** Die App und FilMaNH am Rechner auf die neueste Version
+bringen.
 
 Läuft FilMaNH auf einem **Windows-PC**, blockiert oft die Windows-Firewall: am Rechner unter **Einstellungen › Handy**
 bei **Windows-Firewall** auf **Freigeben** klicken und die Rückfrage von Windows bestätigen.

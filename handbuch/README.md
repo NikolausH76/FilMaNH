@@ -38,8 +38,8 @@ Läuft FilMaNH doch einmal aus dem DMG, bietet die Übersicht **In Programme ver
 **Weitere Informationen › Trotzdem ausführen**. Administratorrechte sind nicht nötig.
 
 Rechner und Drucker müssen im selben Netzwerk erreichbar sein. Am Drucker muss nichts umgestellt werden. FilMaNH
-verbindet sich mit den Ports 8883 (Zustand) und 990 (Druckdateien) des Druckers – liegt eine Firewall dazwischen,
-müssen beide offen sein.
+verbindet sich mit den Ports 8883 (Zustand) und 990 (Druckdateien) des Druckers, für das Kamerabild mit 322 (Video)
+bzw. 6000 (Einzelbilder) – liegt eine Firewall dazwischen, müssen sie offen sein.
 
 ## 2. Ersteinrichtung
 
@@ -49,6 +49,7 @@ Beim ersten Start sucht FilMaNH die Drucker im Netzwerk und fragt für jeden ein
 
 - **Zugangscode:** Ist Bambu Studio auf dem Rechner eingerichtet, übernimmt FilMaNH den Code von dort. Sonst steht
   er am Drucker unter **Einstellungen › WLAN**.
+- **Kaufpreis** (optional): für die Maschinenkosten, siehe [Einstellungen](#13-einstellungen).
 - **Kein Drucker gefunden:** Liegt der Drucker in einem anderen Netz (z.B. einem eigenen Netz für Smart-Home-Geräte),
   das Netz wie `192.168.2` oder die IP-Adresse des Druckers eingeben.
 
@@ -58,7 +59,7 @@ Danach fragt FilMaNH, was mit den Drucken passieren soll, die schon auf der Spei
 
 - **Ab jetzt beginnen:** Alte Drucke bleiben außen vor.
 - **Frühere Drucke in den Verlauf übernehmen:** Sie erscheinen im Verlauf und unter Modelle, es wird aber nichts
-  von Spulen abgebucht.
+  von Spulen abgebucht, und in der Auswertung zählen sie nicht.
 
 Zum Schluss fragt FilMaNH nach dem **Strompreis** je kWh (für die Stromkosten der Drucke) und ob es **mit dem Rechner
 starten** soll – empfohlen, so verfolgt FilMaNH jeden Druck.
@@ -80,7 +81,8 @@ Die Einrichtung lässt sich mit **Später einrichten** überspringen und unter E
 - **Nicht gebucht?** Ist ein Druck vorbei, aber nicht gebucht (z.B. weil keine Spule zugeordnet war), steht oben auf
   jeder Seite ein rotes Banner **Nicht gebucht**, bis es erledigt ist, und es kommt eine Mitteilung.
 - **Wiegen** macht den Bestand genau. Aus den Wiegungen lernt FilMaNH, wie stark der echte Verbrauch je Filament
-  von der Berechnung abweicht, und rechnet das künftig ein.
+  von der Berechnung abweicht, und rechnet das ab der zweiten Wiegung ein (abschaltbar unter Einstellungen ›
+  Erfassung).
 - **„ca.“** vor einem Gewicht heißt: geschätzt, kann etwas abweichen. Wiegen macht den Wert wieder genau.
 
 ## 4. Übersicht
@@ -88,34 +90,47 @@ Die Einrichtung lässt sich mit **Später einrichten** überspringen und unter E
 ![Übersicht](bilder/01-uebersicht.png)
 
 - **Drucker** links, druckende zuerst: beim laufenden Druck Fortschritt mit Schicht, Restzeit, Ende und geschätzte
-  Kosten; Hinweise zu diesem Druck (falsches Material, Spule reicht nicht) direkt darunter. Dann Drucker und AMS als Bild: jede Spule in ihrer Farbe, die Höhe zeigt den Füllstand, der geladene Slot ist
-  markiert; daneben je Slot Nummer, Farbe und Rest, dazu Feuchte und Temperatur des AMS. Abgesetzt die externe Spule. Ein
-  Klick auf den Drucker öffnet ihn.
-  Rechts im Kopf der Karte: die Druckstunden gesamt.
+  Kosten; Hinweise zu diesem Druck (falsches Material, andere Farbe, abrasives Filament, Spule reicht nicht) direkt
+  darunter. Dann Drucker und AMS als Bild: jede Spule in ihrer Farbe, der geladene Slot markiert, ein Slot mit
+  Filament, aber ohne zugeordnete Spule gestrichelt; daneben je Slot Nummer, Farbe und Rest, dazu Feuchte und
+  Temperatur des AMS und eine laufende Trocknung. Abgesetzt die externe Spule. Ein Klick auf den Drucker öffnet ihn.
+  Rechts im Kopf der Karte: die Druckstunden gesamt und **Live** (siehe [Drucker](#6-drucker)).
 - **Zuletzt gedruckt** mit Menge und Kosten.
-- **Zu erledigen** rechts: alles, was Aufmerksamkeit braucht – Druck mit offenem Ende, Slots, die nicht zur Meldung des
-  Druckers passen ([Abgleich mit dem Drucker](#abgleich-mit-dem-drucker)), fällige [Wartung](#wartung), Feuchte,
-  nicht gebuchte Drucke, fast leere Spulen, Spulen im Drucker ohne Preis –, jeweils mit der passenden Aktion.
+- **Zu erledigen** rechts, jeweils mit der passenden Aktion:
+  - Druck mit offenem Ende ([Ende offen](#ende-offen)): **Fertig gedruckt** bucht mit einem Klick, wenn alle Spulen
+    des Drucks bekannt sind, sonst **Ansehen**.
+  - Nicht gebuchte Drucke, auch solche, deren Druckdatei nicht zu bekommen war.
+  - Slots, die nicht zur Meldung des Druckers passen ([Abgleich mit dem Drucker](#abgleich-mit-dem-drucker)).
+  - Fällige [Wartung](#wartung) mit **Erledigt**.
+  - Spulen im Drucker, die zu lange offen sind ([Feuchte](#feuchte)), mit **Getrocknet**.
+  - Spulen im Drucker ohne Preis mit **Preis eintragen** – erst, sobald irgendeine Spule einen Preis hat.
+  - Bambu-Spulen, deren Rest laut RFID um 15 Prozentpunkte oder mehr vom berechneten abweicht: **Wiegen** oder
+    **Ignorieren**. In den letzten 7 Tagen gewogene Spulen bleiben außen vor.
+  - Fast leere Spulen; **Anzeigen** öffnet sie in der Spulenliste.
 
 ## 5. Spulen
 
 ![Spulen](bilder/05-spulen.png)
 
 Filter nach Zustand (Voll, Angebrochen, Fast leer, Leer, Archiv), Material, Hersteller und Lagerort; Suche,
-Kachel- oder Listenansicht. **Etiketten** druckt Etiketten für alle angezeigten Spulen. **Fehlende Etiketten** steht
-da, sobald neue Spulen noch kein Etikett haben (auch am iPhone angelegte), und druckt genau diese.
+Ansicht als **Raster** oder **Liste**. **Etiketten** druckt Etiketten für alle angezeigten Spulen. **Fehlende
+Etiketten** steht da, sobald neue Spulen noch kein Etikett haben (auch am Handy angelegte), und druckt genau diese.
 
-Die **Sortierung** (Nummer, Füllstand, Name, Hersteller, Material, zuletzt benutzt, neueste zuerst) bleibt gespeichert.
+Die **Sortierung** (Nummer, Füllstand in beide Richtungen, Name, Hersteller, Material, zuletzt benutzt, neueste
+zuerst) bleibt gespeichert. Filter und Suche bleiben, wenn du aus einer Spule zurückkommst.
 
 ### Neue Spule
 
 ![Neue Spule](bilder/04-neue-spule.png)
 
-Hersteller, Material oder Farbe ins Suchfeld tippen, z.B. „sunlu petg weiß“. Der Katalog kennt über 7.000
-Filamente; die Auswahl füllt Farbe, Füllmenge und Leergewicht aus. Dazu optional Preis (brutto oder netto),
-Lagerort und **Anzahl**: Bei 3 entstehen drei Spulen mit eigener Nummer. Steht ein Filament nicht im Katalog:
-**Ohne Katalog** und selbst eintragen.
+Hersteller, Material oder Farbe ins Suchfeld tippen, z.B. „sunlu petg weiß“. Filamente, die du schon hast, stehen
+oben unter **Vorhanden**, darunter der **Katalog** mit über 7.000 Filamenten; die Auswahl füllt Farbe, Füllmenge und
+Leergewicht aus. Dazu optional Preis (brutto oder netto), Lagerort und **Anzahl**: Bei 3 entstehen drei Spulen mit
+eigener Nummer. Steht ein Filament nicht im Katalog: **Ohne Katalog** und selbst eintragen.
 Auch deine eigenen Filamentprofile aus Bambu Studio stehen im Katalog.
+
+Unter **Weitere Angaben**: Füllung, **Rest jetzt** (für eine schon angebrochene Spule; leer heißt voll), leere Spule,
+MwSt, Kaufdatum, Händler, Charge und EAN.
 
 ![Farbe wählen](bilder/04c-farbe.png)
 
@@ -140,15 +155,23 @@ werden – einlegen genügt.
 
 ![Spule](bilder/06-spule.png)
 
-Restbestand, Ort (Slot oder Lagerort), Material, Preis, Feuchte, **Bewertung** und jede Buchung im Verlauf.
-**Mehr** zeigt Charge, Genauigkeit, gelernte Korrektur, Mindestbestand, EAN und Notiz. **Reste aufbrauchen** listet Modelle, die du
+Restbestand, Ort (Slot oder Lagerort; ein Klick ändert ihn), Material, Preis, Feuchte, **Bewertung** und jede
+Buchung im Verlauf. Ist der Rest nur geschätzt, steht **Seit … nicht gewogen.** mit **Wiegen** dabei. **Mehr** zeigt
+Restwert und Preis je kg, Genauigkeit, Charge, wann die Spule angelegt, geöffnet und getrocknet wurde, Bambu-ID, EAN,
+die gelernte **Korrektur** (wirkt ab der zweiten Wiegung), Mindestbestand und Notiz.
+
+Ein Klick auf eine Buchung im Verlauf zeigt Quelle und Genauigkeit. Wiegungen und Korrekturen lassen sich dort mit
+**Rückgängig** zurücknehmen, Drucke im Druck mit **Buchung zurücknehmen**.
+
+Ist die Spule fast leer oder unter 30 %, listet **Reste aufbrauchen** einfarbige Modelle im selben Material, die du
 schon gedruckt hast und für die der Rest noch reicht.
 
 ![Menü einer Spule](bilder/07-spule-mehr.png)
 
-Im Menü **…**: Bearbeiten, Rest korrigieren, Ort ändern, Weitere Spule wie diese, Etikett drucken, Foto hinzufügen,
-Archivieren und Löschen. Ein **Foto** der Spule zeigt die echte Farbe in der Mitte des Rings; ohne Foto steht dort
-die Struktur des Filaments in seiner Farbe – glänzend bei Seide, mit Glitzer bei Galaxy.
+**Wiegen** steht oben. Im Menü **…**: Bearbeiten, Rest korrigieren, Ort ändern, Weitere Spule wie diese, Etikett
+drucken, Foto hinzufügen (bzw. ändern und entfernen), Archivieren (bzw. **Zurückholen**) und Löschen. Ein **Foto**
+gilt für alle Spulen dieses Filaments und zeigt die echte Farbe in der Mitte des Rings; ohne Foto steht dort die
+Struktur des Filaments in seiner Farbe – glänzend bei Seide, mit Glitzer bei Galaxy.
 
 **Löschen** entfernt eine Spule endgültig, etwa eine versehentlich angelegte. Das geht nur, solange kein Druck mit ihr
 gebucht ist; sonst **Archivieren** – das behält Verlauf und Kosten.
@@ -166,15 +189,20 @@ dem neuen Preis rechnen**.
 
 ![Wiegen](bilder/08-wiegen.png)
 
-Spule samt Rolle wiegen und das Gewicht eintragen. FilMaNH zieht das Leergewicht ab und übernimmt den Rest.
+Spule samt Rolle wiegen und das Gewicht eintragen. FilMaNH zieht das Leergewicht ab und übernimmt den Rest. Ohne
+Leergewicht geht das nicht – dann unter **Bearbeiten** bei **Leere Spule** eintragen. Weicht das Ergebnis deutlich
+vom gerechneten Rest ab, sagt FilMaNH das (fehlt ein Druck? stimmt das Leergewicht?).
+
+**Rest korrigieren** setzt den Rest direkt, auf Wunsch mit Grund.
 
 ### Etiketten
 
 ![Etiketten](bilder/09-etiketten.png)
 
 Auf dem Etikett: Nummer, Farbe (davor das Material, wenn es nicht schon in der Bezeichnung steht), Hersteller und
-Bezeichnung, wann die Spule geöffnet wurde, und ein QR-Code mit der Nummer. Bei ungeöffneten Spulen steht
-„Geöffnet“ mit einem Strich zum Eintragen von Hand. Unter **Auf dem Etikett** kommen auf Wunsch **Drucktemperatur**
+Bezeichnung, wann die Spule geöffnet wurde, und ein QR-Code mit der Nummer (abschaltbar: **QR-Code mit der
+Spulennummer**). Bei ungeöffneten Spulen steht „Geöffnet“ mit einem Strich zum Eintragen von Hand. Unter **Auf dem
+Etikett** kommen auf Wunsch **Drucktemperatur**
 (laut Filamentkatalog, wo bekannt), **Lagerort**, **Kaufdatum**, **Preis** und **Füllmenge** in eine Zusatzzeile; das
 Etikett rückt dafür etwas zusammen, eine zu lange Zeile wird gekürzt. FilMaNH merkt sich die Auswahl.
 
@@ -203,12 +231,15 @@ auf 100 % lassen. FilMaNH merkt sich, welche Spulen ein Etikett haben.
 
 ### Feuchte
 
-PETG, PCTG und PET zeigen nach 30 Tagen offen einen Hinweis, TPU nach 14 Tagen, PA, PC, PVA und BVOH nach 7 Tagen.
-**Getrocknet** setzt die Zeit zurück.
+PETG, PCTG und PET zeigen nach 30 Tagen offen einen Hinweis, TPU und TPE nach 14 Tagen, PA, PPA, PC, PVA und BVOH
+nach 7 Tagen. Gezählt wird ab dem Öffnen bzw. der letzten Trocknung. Steckt die Spule in einem AMS mit unter 20 %
+Feuchte, gibt es keinen Hinweis. **Getrocknet** (am Hinweis oder in der Spule) setzt die Zeit zurück.
 
 ## 6. Drucker
 
 ![Drucker](bilder/10-drucker.png)
+
+In der Seitenleiste stehen alle Drucker, beim Drucken mit Fortschritt; ein Klick öffnet die Seite des Druckers.
 
 Der laufende Druck in 3D in den Farben der zugeordneten Spulen – der schon gedruckte Teil voll, der Rest
 durchscheinend –, dazu Fortschritt, Schicht, Restzeit und Uhrzeit des Endes. Darunter die Filamente des Drucks mit der
@@ -226,14 +257,24 @@ Beim Druckstart prüft FilMaNH:
 
 ![AMS](bilder/11-drucker-ams.png)
 
-Weiter unten: Drucker und AMS als Bild, je Slot die Spule in ihrer Farbe (Höhe = Füllstand), darunter Nummer, Name
-und Rest. Feuchte und Temperatur stehen auf dem AMS, beim AMS HT in seiner Anzeige; eine laufende Trocknung mit
-Restzeit darüber. Danach der Feuchteverlauf der letzten 7 Tage und die externe Spule. H2D und H2C haben zwei externe Halter (links und rechts); ein leerer, nicht zugeordneter wird nicht gezeigt. Eine Spule aus **Spulen im Regal** auf einen Slot ziehen ordnet sie zu. Darunter stehen alle Drucke dieses
-Druckers. **Einrichtung** oben rechts führt zu den Druckereinstellungen.
+Weiter unten: Drucker und AMS als Bild. Jede Spule steht in ihrer Farbe im Fenster, auf der Zuführung das Material;
+der geladene Slot ist markiert, ein Slot mit Filament, aber ohne zugeordnete Spule gestrichelt. Darunter Nummer,
+Name und Rest; ein Klick auf einen Slot öffnet die [Zuordnung](#spule-zuordnen). Feuchte und Temperatur stehen auf
+dem AMS, beim AMS HT in seiner Anzeige; eine laufende Trocknung mit Restzeit darüber. Ohne Verbindung zeigt FilMaNH
+die gespeicherten Zuordnungen. Danach der Feuchteverlauf der letzten 7 Tage mit der letzten Trocknung und die externe
+Spule. H2D und H2C haben zwei externe Halter (links und rechts); ein leerer, nicht zugeordneter wird nicht gezeigt.
+Eine Spule aus **Spulen im Regal** auf einen Slot ziehen ordnet sie zu. Dazu die [Wartung](#wartung), die letzten
+Drucke dieses Druckers und ganz unten Modell, Firmware und IP-Adresse. **Einrichtung** oben rechts führt zu den
+Druckereinstellungen.
 
-**Live** oben rechts zeigt das Kamerabild, solange die Seite offen ist; in der Übersicht öffnet **Live** an der
-Druckerkarte die Seite gleich mit Bild. X1, H2D, H2S, H2C und P2S liefern Video, A1, A1 mini und P1S Einzelbilder. Für
-Video muss am Drucker **LAN Mode Liveview** eingeschaltet sein (Einstellungen am Drucker, oft ab Werk aus) – sonst sagt FilMaNH das. FilMaNH sieht nur zu und ändert am Drucker nichts.
+![Live](bilder/10c-live.png)
+
+**Live** oben rechts zeigt das Kamerabild, solange die Seite offen ist; links oben im Bild steht, wie alt es ist. In
+der Übersicht öffnet **Live** an der Druckerkarte die Seite gleich mit Bild. X1, H2D, H2S, H2C und P2S
+liefern Video, A1, A1 mini, P1P und P1S Einzelbilder. Für Video muss am Drucker **LAN Mode Liveview** eingeschaltet
+sein (Einstellungen am Drucker, oft ab Werk aus). Ist es aus, steht das auf der Druckerseite, und die Übersicht zeigt
+kein **Live**. Bricht das Bild ab, verbindet **Erneut versuchen** neu. FilMaNH sieht nur zu und ändert am Drucker
+nichts.
 
 ### Spule zuordnen
 
@@ -241,6 +282,7 @@ Video muss am Drucker **LAN Mode Liveview** eingeschaltet sein (Einstellungen am
 
 Steckt eine Spule ohne RFID im Slot, fragt FilMaNH, welche es ist: oben die passenden, darunter alle weiteren, jeweils
 mit Nummer und Lagerort. Ein Klick auf den Slot öffnet die Auswahl jederzeit wieder, z.B. nach einem Spulenwechsel.
+Ist schon eine Spule zugeordnet, steht sie oben; **Entnehmen** löst die Zuordnung.
 
 Fehlt die Spule noch im Bestand, legt **Neue Spule …** sie an und ordnet sie gleich diesem Slot zu – bei laufendem
 Druck gilt sie für ihn. Die Suche beginnt mit Material und Farbe aus der Druckdatei bzw. vom Drucker, die nächste
@@ -298,7 +340,8 @@ Messing, steht eine Warnung dabei. **Verkaufspreis** (aufklappen) rechnet aus de
 ![Verlauf](bilder/14-verlauf.png)
 
 Jeder Druck mit Bild, Drucker, Uhrzeit, Dauer, Verbrauch und Kosten; gibt es ein Foto vom fertigen Teil, steht es
-statt der Vorschau. Filter nach Zeitraum, Ergebnis und Drucker, Suche, Brutto oder Netto. **CSV** exportiert die
+statt der Vorschau. Ein Klick auf das Bild zeigt den Druck in 3D. Filter nach Zeitraum, Ergebnis (Fertig,
+Abgebrochen, Läuft oder offen, Nicht gebucht), Drucker und Material, Suche, Brutto oder Netto. **CSV** exportiert die
 Liste. Unten blättern, wahlweise **10**, **25** oder **50 je Seite**.
 
 **Löschen:** Drucke anhaken (das Kästchen über der Liste wählt alle der Seite), dann **Löschen** und **Wirklich
@@ -317,29 +360,43 @@ Laufende Drucke lassen sich nicht löschen.
   schließt, **Löschen** entfernt das Foto.
 - **Zeitraffer** abspielen. Mit **Zeitraffer herunterladen** (Einstellungen › Erfassung) liegt er nach dem Druck auf
   dem Rechner, sonst kommt er beim Abspielen vom Drucker. **Speichern …** sichert ihn; auf dem Mac wird ein AVI dabei
-  zu einer `.mov`, die QuickTime abspielt. War der Zeitraffer beim Drucken aus, steht das hier.
-- **Filament** je Spule mit Menge und Kosten; **Kosten** aufgeschlüsselt nach Material, Strom und Maschine, netto
-  und brutto. Hat eine Spule keinen Preis, steht **Preis fehlt** bzw. „+ ?“ hinter dem bekannten Betrag (auch im
-  Verlauf), darunter die Spule mit Link.
-- **In Bambu Studio öffnen** öffnet die aufbewahrte Druckdatei. Stammt das Modell von MakerWorld, führt ein Link
-  dorthin.
-- **Projekt:** den Druck einem [Projekt](#9-projekte) zuordnen oder mit **Neues Projekt …** eines anlegen.
-  **Verkaufspreis** (aufklappen) rechnet den Preis für diesen Druck.
-- Menü **…**: **Als Ausschuss markieren** (Teil unbrauchbar – zählt in der Auswertung als Fehldruck),
-  Buchung zurücknehmen und, solange nicht gebucht ist, **Druckdatei neu suchen**.
+  zu einer `.mov`, die QuickTime abspielt. War der Zeitraffer beim Drucken aus, steht das hier. Sonst holt
+  **Zeitraffer suchen** ihn (oder das letzte Bild der Kameraaufzeichnung) nachträglich vom Drucker.
+- **Filament** je Spule mit Menge (davon Spülen) und Kosten; **Kosten** aufgeschlüsselt nach Material, Strom und
+  Maschine, netto und brutto. Während des Drucks stehen die aus der Druckdatei geschätzten Kosten da. Hat eine Spule
+  keinen Preis, steht **Preis fehlt** bzw. „+ ?“ hinter dem bekannten Betrag (auch im Verlauf), darunter die Spule
+  mit Link.
+- **Spule im Druck gewechselt** (z.B. auf die Ersatzspule im AMS): Das Filament steht mit seinen Abschnitten je Spule
+  und Schicht da; gebucht wird je Abschnitt.
+- **In Bambu Studio öffnen** öffnet die aufbewahrte Druckdatei. Stammt das Modell von MakerWorld, führt
+  **MakerWorld** dorthin.
+- **Projekt:** den Druck einem [Projekt](#9-projekte) zuordnen oder mit **Neues Projekt …** eines anlegen;
+  abgeschlossene Projekte stehen nicht zur Auswahl. **Verkaufspreis** (aufklappen) rechnet den Preis für diesen
+  Druck. Darunter eine **Notiz**.
+- Menü **…**: **Als Ausschuss markieren** (Teil unbrauchbar – zählt in der Auswertung als Fehldruck; **Kein
+  Ausschuss** hebt das auf), **Buchung zurücknehmen** (danach bucht FilMaNH erst wieder auf **Buchen**) und, solange
+  nicht gebucht ist, **Druckdatei neu suchen**.
 - Jede Druckdatei prüft FilMaNH am Inhalt: Schichtzahl und die Filamente, die der Drucker tatsächlich nutzt. Eine
   ältere Datei gleichen Namens wird so nicht verwendet.
 - **Nicht gebucht – Spule wählen.** erscheint, wenn der Drucker für ein Filament keinen Slot gemeldet hat oder die
-  Spule erst nach dem Druck in den Slot kam (sie könnte schon für den nächsten Druck sein). Die Spule wählst du selbst;
-  FilMaNH rät sie nicht. Nennt die Druckdatei keine Filamente, trägst du den Verbrauch wie ohne Druckdatei ein.
-- Bei Abbrüchen steht die Meldung des Druckers dabei.
+  Spule erst nach dem Druck in den Slot kam (sie könnte schon für den nächsten Druck sein). Die Spule wählst du selbst
+  und klickst **Buchen**; FilMaNH rät sie nicht.
+- **Druckdatei nicht verfügbar** oder ohne Filamentangaben: **Verbrauch eintragen …** – je Zeile Spule und Gramm,
+  **Weitere Spule** für mehrere, dann **Buchen**. Bei Bambu-Spulen schlägt FilMaNH die Menge aus der RFID-Anzeige vor
+  („laut RFID, grob“).
+- **… lief leer.** Meldet der Drucker, dass eine Spule leer gelaufen ist, setzt **Rest auf 0 setzen** ihren Rest auf 0.
+- Hat der Drucker Objekte übersprungen, ist trotzdem die volle Menge der Druckdatei gebucht; Wiegen macht den Bestand
+  wieder genau.
+- Bei Abbrüchen steht der Grund oben. Alle Fehlermeldungen des Druckers während des Drucks stehen unter **Meldungen
+  des Druckers**.
 
 ### Ende offen
 
 ![Ende offen](bilder/16-druck-offen.png)
 
 Konnte FilMaNH das Ende eines Drucks nicht beobachten und auch später nicht sicher klären: **Fertig gedruckt**
-oder **Abgebrochen …** mit der Schicht wählen. Danach wird gebucht.
+oder **Abgebrochen …** mit der Schicht wählen, wo nötig auch die Spule. Danach wird gebucht. Hat FilMaNH den Druck
+nur als Datei auf der Speicherkarte gefunden (der Rechner war aus), gibt es zusätzlich **Nicht gedruckt**.
 
 ## 9. Projekte
 
@@ -367,34 +424,48 @@ Ein Projekt fasst Drucke für einen Auftrag oder Kunden zusammen, mit Summen fü
 
 ![Modelle](bilder/17-modelle.png)
 
-Alle Drucke nach Modell zusammengefasst, mit Anzahl, Kosten und Abbrüchen.
+Alle Drucke nach Modell zusammengefasst, mit Anzahl, Kosten und Abbrüchen; Suche nach dem Namen.
 
 ![Modell](bilder/18-modell.png)
 
-Kosten je Druck, Material, Erfolgsquote und alle Drucke des Modells. Unter **Quelldateien** lässt sich die
-Projektdatei (`.3mf`) anhängen; FilMaNH schlägt dafür die zuletzt in Bambu Studio geöffneten Dateien vor.
+Kosten, Material, Erfolgsquote und alle Drucke des Modells.
+
+- **Quelldateien:** **Datei anhängen …** (oder Dateien ins Fenster ziehen) nimmt Projekt-3MF, STL, STEP und OBJ auf;
+  FilMaNH legt eine Kopie im Datenordner ab und schlägt die zuletzt in Bambu Studio geöffneten Dateien zum
+  **Anhängen** vor. **3D** zeigt bei STL und 3MF das echte Modell, **Öffnen** öffnet die Datei mit dem Programm, das
+  das System dafür nimmt.
+- Menü **…**: **Umbenennen** und **Mit anderem Modell zusammenführen** (z.B. für zwei Versionen desselben Modells).
+  **Abtrennen** an einem Druck löst ihn aus diesem Modell.
 
 ## 11. Auswertung
 
 ![Auswertung](bilder/19-auswertung.png)
 
-Filter nach Drucker und Zeitraum, Brutto oder Netto. Ausschuss sind nach der ersten Schicht abgebrochene und als
-Ausschuss markierte Drucke.
+Filter nach Drucker (bei mehreren) und Zeitraum (**30 Tage**, das laufende Jahr, **Alles**), Brutto oder Netto.
+Ausschuss sind nach der ersten Schicht abgebrochene und als Ausschuss markierte Drucke. Von der Speicherkarte
+übernommene frühere Drucke zählen nicht.
 
 - **Kennzahlen:** Drucke, Filament, Kosten mit der Änderung zum Vorzeitraum (die 30 Tage davor, dieselbe Zeit im
   Vorjahr bzw. der Vormonat), Ausschuss und **Spülabfall**: beim Farbwechsel gespültes Filament (auch im Spülturm),
-  seine Kosten und sein Anteil am Filament.
+  seine Kosten und sein Anteil am Filament. Sind nicht alle Drucke gebucht oder fehlen Preise, steht das unter den
+  Kosten.
 - **Kosten je Monat:** die letzten 12 Monate. Ein Klick auf einen Monat zeigt seine Tage, und die ganze Seite gilt
   dann für diesen Monat; **Zurück** führt zum vorigen Zeitraum.
 - **Wofür das Geld geht:** Material, Spülabfall, Strom und Maschine (Anschaffung der Drucker) als Anteile der Kosten.
 - **Je Material**, **Je Drucker**, die teuersten **Modelle** und **Spülabfall je Modell**.
+
+![Farben und Druckzeiten](bilder/19b-auswertung-zeiten.png)
+
 - **Farben:** die meistgedruckten Farben, je mehr Gramm, desto breiter; beim Darüberfahren Filament und Menge.
 - **Wann gedruckt wird:** Druckstunden nach Wochentag und Uhrzeit (je kräftiger, desto mehr) und die **Auslastung**
   je Drucker: Druckstunden im Verhältnis zu den Stunden des Zeitraums.
 - **Abbruchgründe:** die häufigsten Meldungen abgebrochener Drucke.
+
+![Feuchte und Schätzung](bilder/19c-auswertung-feuchte.png)
+
 - **Feuchte und Fehldrucke:** Anteil der Fehldrucke nach der Feuchte im AMS beim Druckstart und danach, ob alle
   Spulen des Drucks in den 7 Tagen davor getrocknet wurden. Erst ab 20 Drucken mit Messwert, jede Zeile ab 5 Drucken.
-  Drucke von der externen Spule haben keinen Messwert.
+  Drucke von der externen Spule haben keinen Messwert. Abschaltbar unter Einstellungen › Erfassung.
 - **Schätzung und Wirklichkeit:** wie viel länger oder kürzer normal beendete Drucke dauerten als vom Slicer
   vorhergesagt (Median, ab 3 Drucken je Drucker), und um wie viel gewogene Spulen vom Gewicht laut Slicer abweichen
   (je Filament, aus allen Wiegungen).
@@ -406,22 +477,29 @@ Ausschuss markierte Drucke.
 
 ![Einkauf](bilder/20-einkauf.png)
 
-Für ein Filament einen **Mindestbestand** festlegen (hier oder unter Spule › Bearbeiten). Fällt der Bestand
-darunter, steht es unter **Nachkaufen**, mit Händler und letztem Preis. **Gekauft** legt die neue Spule mit den
-Daten des letzten Kaufs an. **Liste kopieren** kopiert die Einkaufsliste. Sterne zeigen deine Bewertung des
-Filaments.
+Für ein Filament einen **Mindestbestand** in Spulen festlegen (unter Spule › Bearbeiten oder hier unter **Fast leer,
+ohne Mindestbestand**). Fällt der Bestand darunter, steht es unter **Nachkaufen**, mit Händler und letztem Preis;
+fast leere Spulen zählen dabei nicht mit. **Gekauft** legt die neue Spule mit den Daten des letzten Kaufs an.
+**Liste kopieren** kopiert die Einkaufsliste. Sterne zeigen deine Bewertung des Filaments.
 
 **Bald leer** zeigt Filamente, die nach dem Verbrauch der letzten 90 Tage in weniger als 4 Wochen aufgebraucht sind,
 auch ohne Mindestbestand. Bei jedem Filament steht, wie lange der Bestand noch ungefähr reicht.
 
+**Fast leer, ohne Mindestbestand** listet fast leere Spulen, deren Filament keinen Mindestbestand hat; dort lässt er
+sich gleich eintragen.
+
 ## 13. Einstellungen
 
-**Allgemein:** Darstellung (hell, dunkel, wie das System), **Hintergrundbild**, **Sprache** (wie das System, Deutsch,
-English, Español, Français, Italiano, Nederlands, Polski; spricht das System keine davon, Englisch), Weiterlaufen beim Schließen,
-Start mit dem Rechner (empfohlen), Mitteilungen (Druck fertig, Spule reicht nicht, neue Spule erkannt).
+**Allgemein:** **Darstellung** (System, Hell, Dunkel), **Hintergrundbild**, **Sprache** (wie das System, Deutsch,
+English, Español, Français, Italiano, Nederlands, Polski; spricht das System keine davon, Englisch), **Beim Schließen
+weiterlaufen**, **Mit dem Rechner starten** (empfohlen), **Mitteilungen** (Druck fertig, Spule reicht nicht, neue
+Spule erkannt).
 
-**Drucker:** verbundene Drucker; weitere Drucker suchen oder per IP-Adresse hinzufügen, auf Wunsch gleich mit
-**Kaufpreis**.
+**Drucker:** verbundene Drucker mit Modell, Adresse und Zustand; **Entfernen** nimmt einen heraus. **Im Netzwerk
+suchen** findet weitere Drucker, auf Wunsch auch in einem anderen Netz (**auch in Netz**); einen schon eingerichteten
+Drucker unter neuer Adresse übernimmt **Neue Adresse übernehmen**. Oder per IP-Adresse mit Name, Zugangscode und auf
+Wunsch gleich mit **Kaufpreis** hinzufügen. Ist der Drucker schon eingerichtet, heißt der Knopf **Aktualisieren**: Er
+übernimmt neue Adresse und neuen Zugangscode, die Zuordnungen bleiben.
 **Druckstunden bisher:** je Drucker der Wert vom Display. Die Druckstunden gesamt (Übersicht, Seite des
 Druckers) sind dieser Wert plus die danach erfassten Drucke; ohne Wert nur die von FilMaNH erfassten.
 
@@ -430,7 +508,8 @@ Druckers) sind dieser Wert plus die danach erfassten Drucke; ohne Wert nur die v
 **Kosten:** Währung, Mehrwertsteuer und ob Preise **Brutto** oder **Netto** angezeigt werden. Alle Beträge auf dieser
 Seite werden so angezeigt und eingegeben; intern rechnet FilMaNH netto. Die Mehrwertsteuer gilt für Strom,
 Anschaffung, Verkaufspreis und neue Spulen; jede Spule behält ihren Satz. Bei einer neuen Installation sind Währung
-und Mehrwertsteuer nach dem Land des Systems vorbelegt.
+und Mehrwertsteuer nach dem Land des Systems vorbelegt (USA und Kanada 0 %, weil die Umsatzsteuer dort je nach Staat
+bzw. Provinz verschieden ist; ohne erkanntes Land Euro und 19 %).
 
 - **Strom:** **Strompreis** je kWh und die Leistung jedes Druckers. Ohne eigene Leistung nimmt FilMaNH Bambus
   gemessenen Durchschnitt für das Modell und das Material des Drucks (z.B. A1 mini mit PLA 80 W, P2S 200 W) – nicht
@@ -462,7 +541,8 @@ und Zeitraffer höchstens belegen.
 **QR-Code zeigen** öffnet das Koppeln: In der App **Mit Rechner koppeln** antippen und den Code scannen. Es lassen sich
 beliebig viele Handys koppeln; jedes steht unter **Gekoppelte Geräte** und lässt sich dort wieder **Entfernen**. Die
 Verbindung bleibt im Heimnetz und ist verschlüsselt. Beim ersten Koppeln fragen macOS bzw. Windows, ob FilMaNH
-Verbindungen annehmen darf: **Erlauben** (unter Windows für private Netzwerke).
+Verbindungen annehmen darf: **Erlauben** (unter Windows für private Netzwerke). Unter Windows zeigt die Zeile
+**Windows-Firewall**, ob die Handy-App durchkommt; sonst richtet **Freigeben** das ein.
 
 Solange kein Handy gekoppelt ist, steht unten in der Seitenleiste **Handy-App**: Ein Klick zeigt, was die Apps können,
 mit QR-Code zum Laden der Android-App. **Ausblenden** entfernt den Hinweis.
@@ -473,28 +553,40 @@ mit QR-Code zum Laden der Android-App. **Ausblenden** entfernt den Hinweis.
 
 Was die Apps können, steht in den Handbüchern für [iPhone](iphone.md) und [Android](android.md).
 
-**Daten:** tägliche Sicherung (die letzten 14 Stände), Export und Import aller Daten, Druckverlauf als CSV, Datenordner. Sicherung und Export enthalten die Datenbank: Spulen, Buchungen,
-Drucke und Einstellungen – nicht Fotos, Druckdateien, 3D-Ansichten, Zeitraffer und Quelldateien. Die liegen im
-Datenordner (`drucke`, `fotos`, `modelle`); wer umzieht, kopiert ihn mit. **Aus Spoolman übernehmen** liest Spulen aus einem
-Spoolman-Server oder einer Spoolman-Exportdatei.
+**Daten:**
+
+- **Sicherung:** täglich automatisch, die letzten 14 Stände; **Jetzt sichern** legt sofort eine an, **Ordner öffnen**
+  zeigt sie. **Wiederherstellen …** holt einen Stand zurück, FilMaNH startet dann neu.
+- **Export** aller Daten als JSON; **Import** ersetzt die aktuellen Daten, sie bleiben als Sicherung erhalten.
+- **Druckverlauf** als CSV mit allen Kosten, netto und brutto; **Datenordner** › **Öffnen** zeigt den Ordner der App.
+- Sicherung und Export enthalten die Datenbank: Spulen, Buchungen, Drucke und Einstellungen – nicht Fotos,
+  Druckdateien, 3D-Ansichten, Zeitraffer und Quelldateien. Die liegen im Datenordner (`drucke`, `fotos`, `modelle`);
+  wer umzieht, kopiert ihn mit.
+- **Aus Spoolman übernehmen** liest Spulen aus einem Spoolman-Server (Adresse eingeben, **Prüfen**) oder einer
+  Spoolman-Exportdatei (**Datei …**). Erst steht da, was gefunden wurde, dann übernimmt ein zweiter Klick die neuen
+  Spulen. Archivierte und Spulen mit anderem Durchmesser als 1,75 mm bleiben außen vor; ein erneuter Import legt
+  nichts doppelt an.
 
 ![Daten](bilder/25-einst-daten.png)
 
-**Über FilMaNH:** Version, Filament-Katalog aktualisieren, Updates, **Diagnose › Kopieren** (für die Hilfe, ohne
-Seriennummern, Adressen und Codes), Lizenzen. Die installierte Version steht auch oben in der Seitenleiste; ist
-ein Update da, wird sie rot.
+**Über FilMaNH:** Version, Filament-Katalog mit Stand (**Aktualisieren** lädt den neuesten), Updates, **Diagnose ›
+Kopieren** (für die Hilfe, ohne Seriennummern, Adressen und Codes), Lizenzen. Die installierte Version steht auch
+oben in der Seitenleiste; ist ein Update da, wird sie rot.
 
 ![Über FilMaNH](bilder/26-einst-ueber.png)
 
-**Updates:** FilMaNH sucht stündlich nach einer neuen Version. Gibt es eine, steht **Update …** in der Seitenleiste;
-ein Klick auf **Version … installieren** lädt, prüft, installiert und startet neu. Ohne Klick wird nichts
-installiert.
+**Updates:** Mit **Automatisch nach Updates suchen** (ab Werk an) sucht FilMaNH stündlich nach einer neuen Version;
+**Nach Updates suchen** sucht sofort. Gibt es eine, steht **Update …** in der Seitenleiste und unter **Neu in …**,
+was sich ändert; ein Klick auf **Version … installieren** lädt, prüft, installiert und startet neu. Ohne Klick wird
+nichts installiert.
 
-**Hilfe:** dieses Handbuch in der Sprache der App, mit Suche über alle Kapitel. **F1** öffnet es von überall.
+**Hilfe:** dieses Handbuch in der Sprache der App, dazu die Handbücher der Handy-Apps, mit Suche über alle Kapitel.
+**F1** öffnet es von überall.
 
 ## 14. Im Hintergrund
 
-Das Fenster zu schließen beendet FilMaNH nicht – Drucke werden weiter verfolgt.
+Das Fenster zu schließen beendet FilMaNH nicht – Drucke werden weiter verfolgt (Einstellungen › Allgemein ›
+**Beim Schließen weiterlaufen**, ab Werk an).
 
 - **macOS:** Symbol oben rechts in der Menüleiste. Während eines Drucks zeigt es eine Spule in der Farbe des
   Filaments, das gerade gedruckt wird, daneben den Fortschritt; drucken mehrere Drucker, steht je Drucker eine Spule
@@ -509,11 +601,12 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
 
 ![Befehle](bilder/27-befehle.png)
 
-- **⌘K** (Mac) bzw. **Strg+K** (Windows): Suche nach Spulen, Drucken, Modellen und Befehlen.
+- **⌘K** (Mac) bzw. **Strg+K** (Windows): Suche nach Spulen, Druckern, Drucken, Modellen und Befehlen.
 - **F1**: [Hilfe](#13-einstellungen).
 - **⌘[** oder **⌘←** (Mac) bzw. **Alt+←** (Windows), die Zurück-Taste der Maus oder der Pfeil vor dem Titel: einen
-  Schritt zurück auf dem Weg, den man gekommen ist; **⌘]** bzw. **Alt+→** wieder vor.
-- Eine `.gcode.3mf` auf das Fenster ziehen: Druckdatei prüfen.
+  Schritt zurück auf dem Weg, den man gekommen ist; **⌘]** bzw. **Alt+→** oder die Vor-Taste der Maus wieder vor.
+- Eine `.gcode.3mf` auf das Fenster ziehen: Druckdatei prüfen. Bilder auf einen Druck oder ein Projekt ziehen: als
+  Fotos hinzufügen. Dateien auf ein Modell ziehen: als Quelldateien anhängen.
 - Ein Barcodescanner, der den QR-Code eines FilMaNH-Etiketts liest, öffnet direkt die Spule.
 - Scannt er die EAN einer Spule oder ihres Kartons, öffnet sich **Neue Spule** – bei einer bekannten EAN mit dem
   Filament schon gewählt.
@@ -526,6 +619,7 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
   auf diesem Rechner ablegt – nichts sonst.
 - Kein Konto, keine Cloud. FilMaNH liest die Drucker nur aus und steuert sie nicht. Zugangscodes liegen im
   Schlüsselbund des Systems.
+- Das Kamerabild (**Live**) kommt nur auf Klick direkt vom Drucker ins Fenster und wird nicht gespeichert.
 - Solange ein Handy gekoppelt ist oder der QR-Code zum Koppeln offen ist, nimmt FilMaNH im lokalen Netzwerk
   verschlüsselte Verbindungen an (Port 47474, ist er belegt, einer der nächsten neun); Daten bekommen nur gekoppelte
   Handys. Ist kein Handy mehr gekoppelt, geht der Dienst nach wenigen Minuten aus. Ins Internet geht dabei nichts.
@@ -552,12 +646,24 @@ gestört. Bleibt es dabei, ein anderes verbundenes Programm schließen oder die 
 FilMaNH neu starten. Ist es schon an, einmal aus- und wieder einschalten.
 
 **Der Drucker hat eine neue IP-Adresse bekommen.** Ist ein Drucker einige Minuten nicht erreichbar, sucht FilMaNH ihn
-selbst im Netz und verbindet sich unter der neuen Adresse. Klappt das nicht, den Drucker unter Einstellungen › Drucker
-noch einmal hinzufügen – Name, Zuordnungen und Verlauf bleiben erhalten.
+selbst im Netz und verbindet sich unter der neuen Adresse. Klappt das nicht: unter Einstellungen › Drucker **Im
+Netzwerk suchen** und **Neue Adresse übernehmen** oder die neue IP-Adresse eingeben und **Aktualisieren** – Name,
+Zuordnungen und Verlauf bleiben erhalten.
 
-**Muss ich am Drucker den LAN-Modus oder Entwicklermodus einschalten?** Nein.
+**„Zugangscode falsch“.** Der Code am Drucker hat sich geändert (z.B. nach einem Zurücksetzen). Unter Einstellungen ›
+Drucker die IP-Adresse und den neuen Code eingeben und **Aktualisieren** – Zuordnungen und Verlauf bleiben.
+
+**Muss ich am Drucker den LAN-Modus oder Entwicklermodus einschalten?** Nein. Nur für das Video unter **Live** muss
+**LAN Mode Liveview** an sein (siehe [Drucker](#6-drucker)).
+
+**Live zeigt kein Bild.** „Video über LAN ist am Drucker aus“: am Drucker **LAN Mode Liveview** einschalten.
+„Kamera belegt“: andere Live-Ansichten schließen, etwa in Bambu Studio. Liegt eine Firewall zwischen Rechner und
+Drucker, müssen die Ports 322 bzw. 6000 offen sein.
 
 **Der Bestand stimmt nicht.** Spule wiegen. Mit der Zeit lernt FilMaNH aus den Wiegungen und rechnet genauer.
+
+**Bei den Kosten steht „Preis fehlt“.** Eine Spule des Drucks hat keinen Preis. Unter Spule › Bearbeiten eintragen;
+die Kosten schon gebuchter Drucke rechnet FilMaNH dann nach.
 
 **Der Rechner war während eines Drucks aus oder hat geschlafen.** FilMaNH holt den Druck beim Aufwachen bzw. nächsten
 Start nach und bucht ihn – auch wenn der Drucker inzwischen aus ist.
