@@ -59,9 +59,10 @@ A slot opens the picker: **In slot** shows the spool, **Empty slot** takes it ou
 spools come first (same material as the printer reports for the slot, then spools not loaded anywhere), with a search
 – or **Scan label** and pick the spool by its QR code (an EAN works too if it belongs to exactly one spool).
 
-If a slot doesn’t match what the printer reports, a notice appears on the printer’s card while it is connected – as
-on the computer (see [Matching with the printer](README.md#matching-with-the-printer)): **Yes**, **Other …**,
-**Assign**, **Assign #…**, **Other spool …**, **That’s right**, **Yes, removed** or **Still there**.
+If a slot doesn’t match what the printer reports, a notice appears on the printer’s card while it is connected – as on
+the computer (see [Matching with the printer](README.md#matching-with-the-printer)): it asks **Which spool is in
+there?** and shows what is assigned in FilMaNH and what the printer reports. The buttons are the answers: **#… is in
+there**, **Other spool …**, **Choose spool …**, **Yes, taken out** or **Still in there**.
 
 ## 4. Spools
 

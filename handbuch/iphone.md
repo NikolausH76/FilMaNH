@@ -58,8 +58,9 @@ Suche – oder **Etikett scannen** und die Spule über ihren QR-Code wählen (au
 gehört).
 
 Passt ein Slot nicht zur Meldung des Druckers, steht ein Hinweis auf der Karte des Druckers, solange er verbunden ist
-– wie am Rechner (siehe [Abgleich mit dem Drucker](README.md#abgleich-mit-dem-drucker)): **Ja**, **Andere …**,
-**Zuordnen**, **#… zuordnen**, **Andere Spule …**, **Stimmt so**, **Ja, entnommen** oder **Steckt noch**.
+– wie am Rechner (siehe [Abgleich mit dem Drucker](README.md#abgleich-mit-dem-drucker)): Er fragt **Welche Spule
+steckt drin?** und zeigt, was FilMaNH zugeordnet hat und was der Drucker meldet. Die Knöpfe sind die Antworten: **#…
+steckt drin**, **Andere Spule …**, **Spule wählen …**, **Ja, herausgenommen** oder **Steckt noch drin**.
 
 ## 4. Spulen
 

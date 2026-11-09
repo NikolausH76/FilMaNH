@@ -271,11 +271,15 @@ shown. Drag a spool from **Spools on the shelf** onto a slot to assign it. Also 
 
 ![Live](images/10c-live.png)
 
-**Live** at the top right shows the camera image while the page is open; its top left corner shows how old it is.
+**Live** at the top right shows the camera image while the page is open; if it stalls, the top left shows how old it is.
 On the Overview, **Live** on the printer card opens the page with the image right away. X1, H2D, H2S, H2C and P2S
 deliver video, A1, A1 mini, P1P and P1S still images. For video, **LAN Mode Liveview** must be on at the printer
 (printer settings; often off by default). If it is off, the printer page says so and the Overview shows no **Live**.
 If the image stops, **Try again** reconnects. FilMaNH only watches and changes nothing on the printer.
+
+Clicking the running image pops it out: it then runs only in its own window without a title bar. Drag to move the
+window, drag its edges to resize; a click on the image opens the menu with **Always on top** and **Close**. **Back
+into the app** on the printer page brings it back.
 
 **Storage** shows, after **Show**, what is on the printer's SD card or internal storage: camera recordings,
 timelapses and print files, each with count and size. **Delete …** removes a whole category; expanded, you can select
@@ -292,13 +296,13 @@ a chamber light. The chamber light is the only thing FilMaNH switches on the pri
 
 ![Assign spool](images/12-zuordnen.png)
 
-When a spool without RFID is loaded, FilMaNH asks which one it is: matching spools first, all others below, each with
-its number and location. Clicking the slot opens the selection again at any time, e.g. after changing spools.
-If a spool is already assigned, it is shown at the top; **Unload** clears the assignment.
+Clicking a slot asks **Which spool is in this slot?** Above the list it shows what is assigned in FilMaNH and what the
+printer reports. The list shows matching spools first, then those not in any printer, then those in other slots – each
+with its number, location or slot, and what is left. A spool from another slot moves here. **Slot is empty** clears
+the assignment.
 
 If the spool is not in stock yet, **New spool …** creates it and assigns it to this slot right away – during a print
-it counts for that print. The search starts with the material and colour from the print file or the printer, nearest
-colour first. If no existing spool matches, the button is at the top.
+it counts for that print. The search starts with the material and colour from the printer or the print file.
 
 ### Matching with the printer
 
@@ -307,17 +311,19 @@ colour first. If no existing spool matches, the button is at the top.
 Every Bambu printer reports for each slot what is set (material, colour, the RFID chip for Bambu spools) and whether
 filament is loaded. FilMaNH compares this with the assigned spool, even when nothing is printing:
 
-- **Is this …?** No spool assigned, but exactly one in stock matches. **Yes** assigns it, **Other …** opens the
-  picker.
-- **… but no spool is assigned.** Several match, or none. **Assign** opens the picker.
-- **Different spool loaded?** The printer reports a different material, a clearly different colour or a different
-  RFID chip. If exactly one spool matches, **Assign #…** assigns it, otherwise **Other spool …**. **That’s right**
-  keeps the assignment.
-- **… removed?** The printer reports the slot as empty. **Yes, removed** clears the assignment, **Still there** keeps
-  it (e.g. when only the filament was unloaded).
+- **Which spool is in there?** The printer reports a different material, a clearly different colour or a different
+  RFID chip than the assigned spool – or none is assigned yet. Below it shows what is **In FilMaNH** and what the
+  **Printer reports**. The buttons are the answers: **#… is in there** for the current spool or the one that matches
+  the report; **Other spool …** or **Choose spool …** opens the picker.
+- **… is empty. … taken out?** The printer reports the slot as empty. **Yes, taken out** clears the assignment,
+  **Still in there** keeps it (e.g. when only the filament was unloaded).
 
-**That’s right** and **Still there** apply until the printer reports something else; so does assigning by hand.
-Nothing is assigned without a click – automatically only Bambu spools with RFID, as only their ID is unique.
+Without a Bambu chip the printer cannot see the colour: it reports what is set for the slot on the printer or in Bambu
+Studio (**as set on the printer**). That can differ from the spool that is loaded – the printer still prints whatever
+is in the slot.
+
+An answer applies until the printer reports something else; so does assigning by hand. Nothing is assigned without a
+click – automatically only Bambu spools with RFID, as only their ID is unique.
 
 ### Maintenance
 
@@ -583,6 +589,7 @@ What the apps can do is described in the handbooks for [iPhone](iphone.md) and [
 **About FilMaNH:** version, filament catalog with its date (**Update** loads the latest), updates, **Diagnostics ›
 Copy** (for support, without serial numbers, addresses and codes), licenses. The installed version is also shown at
 the top of the sidebar; it turns red when an update is available.
+**GitHub › Open** takes you to the project page; **Recommend › Copy link** puts its link on the clipboard – to share wherever you like.
 
 ![About FilMaNH](images/26-einst-ueber.png)
 

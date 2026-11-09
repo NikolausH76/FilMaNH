@@ -270,12 +270,16 @@ Druckereinstellungen.
 
 ![Live](bilder/10c-live.png)
 
-**Live** oben rechts zeigt das Kamerabild, solange die Seite offen ist; links oben im Bild steht, wie alt es ist. In
+**Live** oben rechts zeigt das Kamerabild, solange die Seite offen ist; hängt es, steht links oben, wie alt es ist. In
 der Übersicht öffnet **Live** an der Druckerkarte die Seite gleich mit Bild. X1, H2D, H2S, H2C und P2S
 liefern Video, A1, A1 mini, P1P und P1S Einzelbilder. Für Video muss am Drucker **LAN Mode Liveview** eingeschaltet
 sein (Einstellungen am Drucker, oft ab Werk aus). Ist es aus, steht das auf der Druckerseite, und die Übersicht zeigt
 kein **Live**. Bricht das Bild ab, verbindet **Erneut versuchen** neu. FilMaNH sieht nur zu und ändert am Drucker
 nichts.
+
+Ein Klick aufs laufende Bild koppelt es aus: Es läuft dann nur noch in einem eigenen Fenster ohne Titelleiste. Ziehen
+verschiebt das Fenster, an den Rändern ändert sich die Größe; ein Klick ins Bild öffnet das Menü mit **Immer im
+Vordergrund** und **Schließen**. **Zurück ins Programm** auf der Druckerseite holt es wieder herein.
 
 **Speicher** zeigt nach **Anzeigen**, was auf der Speicherkarte bzw. im internen Speicher des Druckers liegt:
 Kameraaufzeichnungen, Zeitraffer und Druckdateien, je mit Zahl und Größe. **Löschen …** entfernt einen ganzen Bereich;
@@ -292,13 +296,13 @@ Innenlicht ist das Einzige, was FilMaNH am Drucker schaltet.
 
 ![Spule zuordnen](bilder/12-zuordnen.png)
 
-Steckt eine Spule ohne RFID im Slot, fragt FilMaNH, welche es ist: oben die passenden, darunter alle weiteren, jeweils
-mit Nummer und Lagerort. Ein Klick auf den Slot öffnet die Auswahl jederzeit wieder, z.B. nach einem Spulenwechsel.
-Ist schon eine Spule zugeordnet, steht sie oben; **Entnehmen** löst die Zuordnung.
+Ein Klick auf einen Slot fragt **Welche Spule steckt in diesem Slot?** Darüber steht, was FilMaNH zugeordnet hat und
+was der Drucker meldet. Die Liste zeigt zuerst die Spulen, die dazu passen, dann die, die in keinem Drucker stecken,
+zuletzt die aus anderen Slots – jeweils mit Nummer, Lagerort bzw. Slot und Rest. Eine Spule aus einem anderen Slot
+wechselt hierher. **Slot ist leer** löst die Zuordnung.
 
 Fehlt die Spule noch im Bestand, legt **Neue Spule …** sie an und ordnet sie gleich diesem Slot zu – bei laufendem
-Druck gilt sie für ihn. Die Suche beginnt mit Material und Farbe aus der Druckdatei bzw. vom Drucker, die nächste
-Farbe zuerst. Passt keine vorhandene Spule, steht die Schaltfläche oben.
+Druck gilt sie für ihn. Die Suche beginnt mit Material und Farbe vom Drucker bzw. aus der Druckdatei.
 
 ### Abgleich mit dem Drucker
 
@@ -307,17 +311,19 @@ Farbe zuerst. Passt keine vorhandene Spule, steht die Schaltfläche oben.
 Jeder Bambu-Drucker meldet je Slot, was eingestellt ist (Material, Farbe, bei Bambu-Spulen der RFID-Chip) und ob
 Filament steckt. FilMaNH vergleicht das mit der zugeordneten Spule, auch ohne laufenden Druck:
 
-- **Ist das …?** Keine Spule zugeordnet, aber genau eine im Bestand passt. **Ja** ordnet sie zu, **Andere …** öffnet
-  die Auswahl.
-- **… aber keine Spule ist zugeordnet.** Es passen mehrere oder keine. **Zuordnen** öffnet die Auswahl.
-- **Andere Spule eingelegt?** Der Drucker meldet anderes Material, eine deutlich andere Farbe oder einen anderen
-  RFID-Chip. Passt genau eine Spule, ordnet **#… zuordnen** sie zu, sonst **Andere Spule …**. **Stimmt so** behält
-  die Zuordnung.
-- **… entnommen?** Der Slot ist laut Drucker leer. **Ja, entnommen** löst die Zuordnung, **Steckt noch** behält sie
-  (z.B. wenn nur das Filament ausgefahren ist).
+- **Welche Spule steckt drin?** Der Drucker meldet anderes Material, eine deutlich andere Farbe oder einen anderen
+  RFID-Chip als die zugeordnete Spule – oder es ist noch keine zugeordnet. Darunter steht, was **In FilMaNH**
+  zugeordnet ist und was der **Drucker meldet**. Die Knöpfe sind die Antworten: **#… steckt drin** für die bisherige
+  Spule oder die eine, die zur Meldung passt; **Andere Spule …** bzw. **Spule wählen …** öffnet die Auswahl.
+- **… ist leer. … herausgenommen?** Der Slot ist laut Drucker leer. **Ja, herausgenommen** löst die Zuordnung,
+  **Steckt noch drin** behält sie (z.B. wenn nur das Filament ausgefahren ist).
 
-**Stimmt so** und **Steckt noch** gelten, bis der Drucker etwas anderes meldet; ebenso eine Zuordnung von Hand.
-Zugeordnet wird nur auf Klick – automatisch nur Bambu-Spulen mit RFID, denn nur deren Kennung ist eindeutig.
+Ohne Bambu-Chip sieht der Drucker die Farbe nicht: Er meldet, was für den Slot am Drucker oder in Bambu Studio
+eingestellt ist (**am Drucker eingestellt**). Das kann von der eingelegten Spule abweichen – gedruckt wird trotzdem,
+was im Slot steckt.
+
+Eine Antwort gilt, bis der Drucker etwas anderes meldet; ebenso eine Zuordnung von Hand. Zugeordnet wird nur auf Klick
+– automatisch nur Bambu-Spulen mit RFID, denn nur deren Kennung ist eindeutig.
 
 ### Wartung
 
@@ -589,6 +595,7 @@ Was die Apps können, steht in den Handbüchern für [iPhone](iphone.md) und [An
 **Über FilMaNH:** Version, Filament-Katalog mit Stand (**Aktualisieren** lädt den neuesten), Updates, **Diagnose ›
 Kopieren** (für die Hilfe, ohne Seriennummern, Adressen und Codes), Lizenzen. Die installierte Version steht auch
 oben in der Seitenleiste; ist ein Update da, wird sie rot.
+**GitHub › Öffnen** führt zur Projektseite, **Weiterempfehlen › Link kopieren** legt ihren Link in die Zwischenablage – zum Teilen, wo du willst.
 
 ![Über FilMaNH](bilder/26-einst-ueber.png)
 
