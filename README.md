@@ -81,6 +81,7 @@ jedem Druck etwas eintragen musst.
 - Drucker im Netz finden, Zugangscode aus Bambu Studio übernehmen
 - AMS, AMS 2 Pro und AMS HT als Bild: Spulen in echter Farbe, Material, Feuchte, Temperatur, Trocknung mit Restzeit
 - Live-Bild: Video bei H2, X1 und P2S, laufende Einzelbilder bei P1 und A1
+- Live-Bild auskoppeln: eigenes Fenster ohne Titelleiste, frei in der Größe, auf Wunsch immer im Vordergrund
 - Feuchteverlauf der letzten 7 Tage, Druckstunden gesamt je Drucker
 - H2C und H2D mit zwei Düsen: AMS und externe Spulen je Düse
 - Beim Druckstart: falsches Material, andere Farbe, Spule reicht nicht, abrasives Filament auf weicher Düse

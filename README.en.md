@@ -81,6 +81,7 @@ anything after each print.
 - AMS, AMS 2 Pro and AMS HT as a picture: spools in their real colour, material, humidity, temperature, drying with time
   left
 - Live view: video on H2, X1 and P2S, continuous still images on P1 and A1
+- Pop out the live view: its own window without a title bar, freely resizable, optionally always on top
 - Humidity history of the last 7 days, total print hours per printer
 - H2C and H2D with two nozzles: AMS and external spools per nozzle
 - At print start: wrong material, different colour, spool won't last, abrasive filament on a soft nozzle
