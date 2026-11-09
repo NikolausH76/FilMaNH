@@ -91,6 +91,7 @@ Die Einrichtung lässt sich mit **Später einrichten** überspringen und unter E
   Kosten; Hinweise zu diesem Druck (falsches Material, Spule reicht nicht) direkt darunter. Die Slots zeigen je Spule
   Nummer, Farbe und Rest: je AMS die Slots 1–4 (bei mehreren AMS mit Überschrift), abgesetzt die externe Spule. Ein
   Klick auf den Drucker öffnet ihn.
+  Rechts im Kopf der Karte: die Druckstunden gesamt.
 - **Zuletzt gedruckt** mit Menge und Kosten.
 - **Zu erledigen** rechts: alles, was Aufmerksamkeit braucht – Druck mit offenem Ende, Slots, die nicht zur Meldung des
   Druckers passen ([Abgleich mit dem Drucker](#abgleich-mit-dem-drucker)), fällige [Wartung](#wartung), Feuchte,
@@ -226,6 +227,10 @@ Beim Druckstart prüft FilMaNH:
 Weiter unten: das AMS mit Slots, Feuchte und Temperatur, der Feuchteverlauf der letzten 7 Tage und die externe
 Spule. H2D und H2C haben zwei externe Halter (links und rechts); ein leerer, nicht zugeordneter wird nicht gezeigt. Eine Spule aus **Spulen im Regal** auf einen Slot ziehen ordnet sie zu. Darunter stehen alle Drucke dieses
 Druckers. **Einrichtung** oben rechts führt zu den Druckereinstellungen.
+
+**Live** oben rechts zeigt das Kamerabild, solange die Seite offen ist; in der Übersicht öffnet **Live** an der
+Druckerkarte die Seite gleich mit Bild. X1, H2D, H2S, H2C und P2S liefern Video, A1, A1 mini und P1S Einzelbilder. Für
+Video muss am Drucker **LAN Mode Liveview** eingeschaltet sein (Einstellungen am Drucker, oft ab Werk aus) – sonst sagt FilMaNH das. FilMaNH sieht nur zu und ändert am Drucker nichts.
 
 ### Spule zuordnen
 
@@ -413,6 +418,8 @@ Start mit dem Rechner (empfohlen), Mitteilungen (Druck fertig, Spule reicht nich
 
 **Drucker:** verbundene Drucker; weitere Drucker suchen oder per IP-Adresse hinzufügen, auf Wunsch gleich mit
 **Kaufpreis**.
+**Druckstunden bisher:** je Drucker der Wert vom Display. Die Druckstunden gesamt (Übersicht, Seite des
+Druckers) sind dieser Wert plus die danach erfassten Drucke; ohne Wert nur die von FilMaNH erfassten.
 
 ![Drucker-Einstellungen](bilder/22-einst-drucker.png)
 

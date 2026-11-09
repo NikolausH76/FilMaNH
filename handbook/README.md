@@ -90,6 +90,7 @@ Finally, FilMaNH asks for the **electricity price** per kWh (for the electricity
   estimated cost; notices about this print (wrong material, spool won’t last) right below. The slots show number,
   colour and remaining amount of each spool: slots 1–4 per AMS (with a heading when there are several), the external
   spool set apart. Click a printer to open it.
+  Top right of the card: total print hours.
 - **Recently printed** with amount and cost.
 - **To do** on the right: everything that needs your attention – a print whose end is unknown, slots that don’t match
   what the printer reports ([Matching with the printer](#matching-with-the-printer)), [maintenance](#maintenance) that
@@ -226,6 +227,10 @@ When a print starts, FilMaNH checks:
 Further down: the AMS with its slots, humidity and temperature, the humidity of the last 7 days and the external
 spool. H2D and H2C have two external holders (left and right); an empty one without an assigned spool is not shown. Drag a spool from **Spools on the shelf** onto a slot to assign it. Below are all prints of this printer.
 **Setup** at the top right opens the printer settings.
+
+**Live** at the top right shows the camera image while the page is open; on the Overview, **Live** on the printer
+card opens the page with the image right away. X1, H2D, H2S, H2C and P2S deliver video, A1, A1 mini and P1S still
+images. For video, **LAN Mode Liveview** must be on at the printer (printer settings; often off by default) – otherwise FilMaNH tells you. FilMaNH only watches and changes nothing on the printer.
 
 ### Assign a spool
 
@@ -411,6 +416,8 @@ login (recommended), Notifications (print finished, spool will run out, new spoo
 
 **Printers:** connected printers; search for more printers or add one by IP address, optionally with its **purchase
 price**.
+**Print hours so far:** per printer, the value from its display. Total print hours (overview, printer page) are
+this value plus the prints recorded since; without a value, only those recorded by FilMaNH.
 
 ![Printer settings](images/22-einst-drucker.png)
 
