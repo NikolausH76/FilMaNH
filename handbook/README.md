@@ -104,6 +104,8 @@ Filter by state (Full, Opened, Almost empty, Empty, Archive), material, brand an
 view. **Labels** prints labels for all spools shown. **Missing labels** appears as soon as new spools have no label
 yet (including spools created on the iPhone) and prints exactly those.
 
+The **sort order** (number, fill level, name, brand, material, last used, newest first) is remembered.
+
 ### New spool
 
 ![New spool](images/04-neue-spule.png)
@@ -349,7 +351,7 @@ one. Prints are added with **Add prints** or in the print under **Project**.
 ![Project](images/17b-projekt.png)
 
 - **Name**, **Customer** and **Note**.
-- **Prints** with date, printer, amount and cost; **×** takes a print out again.
+- **Prints** with date, printer, amount and cost; cancelled prints and waste are marked. **×** takes a print out again.
 - **Selling price:** the print costs (material, electricity, machine) plus **Labour** at the hourly rate from
   Settings › Costs, on top of that the **Failed-print surcharge** and then the **Markup** – net, gross and per
   **piece**. The markup applies per project; left empty, the default from the settings applies.
@@ -379,8 +381,8 @@ Filter by printer and period, gross or net. Waste means prints cancelled after t
 waste.
 
 - **Key figures:** prints, filament, costs with the change from the previous period (the 30 days before, the same
-  time last year or the previous month), waste and **purge waste**: filament flushed during color changes, its cost and
-  its share of the filament.
+  time last year or the previous month), waste and **purge waste**: filament flushed during color changes (including the
+  prime tower), its cost and its share of the filament.
 - **Costs per month:** the last 12 months. Click a month to see its days; the whole page then shows that month.
   **Back** returns to the previous period.
 - **Where the money goes:** material, purge waste, electricity and machine (printer purchase) as shares of the costs.

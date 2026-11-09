@@ -105,6 +105,8 @@ Filter nach Zustand (Voll, Angebrochen, Fast leer, Leer, Archiv), Material, Hers
 Kachel- oder Listenansicht. **Etiketten** druckt Etiketten für alle angezeigten Spulen. **Fehlende Etiketten** steht
 da, sobald neue Spulen noch kein Etikett haben (auch am iPhone angelegte), und druckt genau diese.
 
+Die **Sortierung** (Nummer, Füllstand, Name, Hersteller, Material, zuletzt benutzt, neueste zuerst) bleibt gespeichert.
+
 ### Neue Spule
 
 ![Neue Spule](bilder/04-neue-spule.png)
@@ -349,7 +351,8 @@ Ein Projekt fasst Drucke für einen Auftrag oder Kunden zusammen, mit Summen fü
 ![Projekt](bilder/17b-projekt.png)
 
 - **Name**, **Kunde** und **Notiz**.
-- **Drucke** mit Datum, Drucker, Menge und Kosten; **×** nimmt einen Druck wieder heraus.
+- **Drucke** mit Datum, Drucker, Menge und Kosten; abgebrochene und Ausschuss sind markiert. **×** nimmt einen Druck
+  wieder heraus.
 - **Verkaufspreis:** die Druckkosten (Material, Strom, Maschine) plus **Arbeitszeit** zum Stundensatz aus
   Einstellungen › Kosten, darauf der **Zuschlag für Fehldrucke** und darauf der **Aufschlag** – netto, brutto und je
   **Stück**. Der Aufschlag gilt je Projekt; leer bleibt die Vorgabe aus den Einstellungen.
@@ -379,8 +382,8 @@ Filter nach Drucker und Zeitraum, Brutto oder Netto. Ausschuss sind nach der ers
 Ausschuss markierte Drucke.
 
 - **Kennzahlen:** Drucke, Filament, Kosten mit der Änderung zum Vorzeitraum (die 30 Tage davor, dieselbe Zeit im
-  Vorjahr bzw. der Vormonat), Ausschuss und **Spülabfall**: beim Farbwechsel gespültes Filament, seine Kosten und sein
-  Anteil am Filament.
+  Vorjahr bzw. der Vormonat), Ausschuss und **Spülabfall**: beim Farbwechsel gespültes Filament (auch im Spülturm),
+  seine Kosten und sein Anteil am Filament.
 - **Kosten je Monat:** die letzten 12 Monate. Ein Klick auf einen Monat zeigt seine Tage, und die ganze Seite gilt
   dann für diesen Monat; **Zurück** führt zum vorigen Zeitraum.
 - **Wofür das Geld geht:** Material, Spülabfall, Strom und Maschine (Anschaffung der Drucker) als Anteile der Kosten.
