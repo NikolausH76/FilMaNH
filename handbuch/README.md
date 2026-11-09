@@ -88,8 +88,8 @@ Die Einrichtung lässt sich mit **Später einrichten** überspringen und unter E
 ![Übersicht](bilder/01-uebersicht.png)
 
 - **Drucker** links, druckende zuerst: beim laufenden Druck Fortschritt mit Schicht, Restzeit, Ende und geschätzte
-  Kosten; Hinweise zu diesem Druck (falsches Material, Spule reicht nicht) direkt darunter. Die Slots zeigen je Spule
-  Nummer, Farbe und Rest: je AMS die Slots 1–4 (bei mehreren AMS mit Überschrift), abgesetzt die externe Spule. Ein
+  Kosten; Hinweise zu diesem Druck (falsches Material, Spule reicht nicht) direkt darunter. Dann Drucker und AMS als Bild: jede Spule in ihrer Farbe, die Höhe zeigt den Füllstand, der geladene Slot ist
+  markiert; daneben je Slot Nummer, Farbe und Rest, dazu Feuchte und Temperatur des AMS. Abgesetzt die externe Spule. Ein
   Klick auf den Drucker öffnet ihn.
   Rechts im Kopf der Karte: die Druckstunden gesamt.
 - **Zuletzt gedruckt** mit Menge und Kosten.
@@ -224,8 +224,9 @@ Beim Druckstart prüft FilMaNH:
 
 ![AMS](bilder/11-drucker-ams.png)
 
-Weiter unten: das AMS mit Slots, Feuchte und Temperatur, der Feuchteverlauf der letzten 7 Tage und die externe
-Spule. H2D und H2C haben zwei externe Halter (links und rechts); ein leerer, nicht zugeordneter wird nicht gezeigt. Eine Spule aus **Spulen im Regal** auf einen Slot ziehen ordnet sie zu. Darunter stehen alle Drucke dieses
+Weiter unten: Drucker und AMS als Bild, je Slot die Spule in ihrer Farbe (Höhe = Füllstand), darunter Nummer, Name
+und Rest. Feuchte und Temperatur stehen auf dem AMS, beim AMS HT in seiner Anzeige; eine laufende Trocknung mit
+Restzeit darüber. Danach der Feuchteverlauf der letzten 7 Tage und die externe Spule. H2D und H2C haben zwei externe Halter (links und rechts); ein leerer, nicht zugeordneter wird nicht gezeigt. Eine Spule aus **Spulen im Regal** auf einen Slot ziehen ordnet sie zu. Darunter stehen alle Drucke dieses
 Druckers. **Einrichtung** oben rechts führt zu den Druckereinstellungen.
 
 **Live** oben rechts zeigt das Kamerabild, solange die Seite offen ist; in der Übersicht öffnet **Live** an der

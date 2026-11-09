@@ -87,9 +87,9 @@ Finally, FilMaNH asks for the **electricity price** per kWh (for the electricity
 ![Overview](images/01-uebersicht.png)
 
 - **Printers** on the left, printing ones first: for the current print the progress with layer, time left, end and
-  estimated cost; notices about this print (wrong material, spool won’t last) right below. The slots show number,
-  colour and remaining amount of each spool: slots 1–4 per AMS (with a heading when there are several), the external
-  spool set apart. Click a printer to open it.
+  estimated cost; notices about this print (wrong material, spool won’t last) right below. Then the printer and each AMS as a picture: every spool in its colour, the height shows how full it is, the loaded
+  slot is marked; beside it number, colour and remaining amount per slot, plus the AMS humidity and temperature. The
+  external spool set apart. Click a printer to open it.
   Top right of the card: total print hours.
 - **Recently printed** with amount and cost.
 - **To do** on the right: everything that needs your attention – a print whose end is unknown, slots that don’t match
@@ -224,7 +224,9 @@ When a print starts, FilMaNH checks:
 
 ![AMS](images/11-drucker-ams.png)
 
-Further down: the AMS with its slots, humidity and temperature, the humidity of the last 7 days and the external
+Further down: the printer and each AMS as a picture, every slot with its spool in its colour (height = fill level),
+below it number, name and remaining amount. Humidity and temperature are shown on the AMS, on the AMS HT in its
+display; a running drying cycle with its time left above. Then the humidity of the last 7 days and the external
 spool. H2D and H2C have two external holders (left and right); an empty one without an assigned spool is not shown. Drag a spool from **Spools on the shelf** onto a slot to assign it. Below are all prints of this printer.
 **Setup** at the top right opens the printer settings.
 
