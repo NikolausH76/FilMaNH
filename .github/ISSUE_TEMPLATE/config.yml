@@ -1,4 +1,4 @@
-blank_issues_enabled: true
+blank_issues_enabled: false
 contact_links:
   - name: Handbuch (Deutsch)
     url: https://github.com/NikolausH76/FilMaNH/blob/main/handbuch/README.md
