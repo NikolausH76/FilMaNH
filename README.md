@@ -11,6 +11,11 @@
 </p>
 
 <p align="center">
+  🌐 <b>Deutsch · English · Español · Français · Italiano · Nederlands · Polski</b><br>
+  <sub>Programm, Handy-Apps und eingebaute Hilfe in 7 Sprachen</sub>
+</p>
+
+<p align="center">
   <a href="https://github.com/NikolausH76/FilMaNH/releases/latest"><img src="https://img.shields.io/github/v/release/NikolausH76/FilMaNH?label=Version&color=2A59D6" alt="Neueste Version"></a>
 </p>
 
@@ -42,8 +47,8 @@ jedem Druck etwas eintragen musst.
    fragt FilMaNH einmal, welche Spule das ist.
 3. **Drucken** – am Ende jedes Drucks bucht FilMaNH den Verbrauch je Spule ab. War der Rechner aus, holt es das beim
    nächsten Start nach.
-4. **Überblick behalten** – Restmengen, Kosten je Druck, Hinweise bei falschem Material oder zu lange offenem
-   Filament, und eine Einkaufsliste.
+4. **Überblick behalten** – Drucker und AMS wie in echt mit Live-Bild, Restmengen, Kosten je Druck, Hinweise bei
+   falschem Material oder zu lange offenem Filament, Auswertung und eine Einkaufsliste.
 
 > [!NOTE]
 > FilMaNH liest die Drucker nur aus. Es schickt ihnen keine Befehle und braucht weder LAN-Modus noch Entwicklermodus.
@@ -58,9 +63,10 @@ jedem Druck etwas eintragen musst.
 
 ### Übersicht und Hinweise
 
-- Alle Drucker mit laufendem Druck, Restzeit und Slots samt Restmenge
-- Hinweise mit passender Aktion: falsches Material im Slot, Spule ohne Zuordnung, Filament zu lange offen, fast leere
-  Spulen, fällige Wartung
+- Alle Drucker mit laufendem Druck, Restzeit und Druckstunden – mit ihren AMS als Bild, die Spulen in ihrer Farbe
+- **Live-Bild** der Druckerkamera auf Klick
+- Hinweise mit passender Aktion: falsches Material oder andere Farbe im Slot (direkt zuordnen oder neue Spule
+  anlegen), Spule ohne Zuordnung, Filament zu lange offen, fast leere Spulen, fällige Wartung
 - Zuletzt gedruckt, mit Kosten
 
 </td>
@@ -71,7 +77,9 @@ jedem Druck etwas eintragen musst.
 ### Drucker und AMS
 
 - Drucker im Netz finden, Zugangscode aus Bambu Studio übernehmen
-- AMS live mit Feuchte, Temperatur und Feuchteverlauf der letzten 7 Tage
+- AMS, AMS 2 Pro und AMS HT als Bild: Spulen in echter Farbe, Material, Feuchte, Temperatur, Trocknung mit Restzeit
+- Live-Bild: Video bei H2, X1 und P2S, laufende Einzelbilder bei P1 und A1
+- Feuchteverlauf der letzten 7 Tage, Druckstunden gesamt je Drucker
 - H2C und H2D mit zwei Düsen: AMS und externe Spulen je Düse
 - Beim Druckstart: falsches Material, andere Farbe, Spule reicht nicht, abrasives Filament auf weicher Düse
 - Wartungsplan je Drucker nach Druckstunden oder Zeit
@@ -88,7 +96,8 @@ jedem Druck etwas eintragen musst.
 - Rest, Preis, Händler, Lagerort, Bewertung und Verlauf je Spule
 - Wiegen macht den Bestand genau – FilMaNH lernt daraus die Abweichung je Filament
 - Hinweis, wenn Filament zu lange offen liegt (PETG nach 30 Tagen, TPU nach 14, PA und PC nach 7)
-- Filter nach Zustand, Material, Hersteller und Lagerort
+- Filter nach Zustand, Material, Hersteller und Lagerort; sortieren nach Füllstand, Name, Hersteller und mehr
+- Katalog mit den neuesten Bambu-Studio-Profilen und deinen eigenen Filamentprofilen aus Bambu Studio
 - Über 80 Filamentfarben zur Wahl, auch mehrfarbig und mit Verlauf
 
 </td>
@@ -98,11 +107,13 @@ jedem Druck etwas eintragen musst.
 
 ### Drucke und Kosten
 
-- Verbrauch je Slot aus der Druckdatei, bei einem Abbruch nur bis zur erreichten Schicht
-- Kosten je Druck, netto und brutto: Material, Strom und Maschinenzeit (aus Kaufpreis und Nutzungsdauer)
+- Verbrauch je Slot aus der Druckdatei, mit Spülabfall (auch im Spülturm), bei einem Abbruch nur bis zur erreichten
+  Schicht
+- Kosten je Druck, netto und brutto: Material, Strom und Maschinenzeit (aus Kaufpreis und Nutzungsdauer);
+  12 Währungen, Mehrwertsteuer je Land vorbelegt
 - Projekte: Drucke je Auftrag bündeln, mit Verkaufspreis aus Kosten, Arbeitszeit und Aufschlag
-- Verlauf mit Bild, 3D-Ansicht und Zeitraffer
-- Modelle: alle Drucke eines Modells mit Kosten und Erfolgsquote
+- Verlauf mit Bild, 3D-Ansicht, Zeitraffer und eigenen Fotos – auch je Projekt
+- Druckdatei aufbewahren und in Bambu Studio öffnen; Modelle mit allen Drucken, Kosten und Erfolgsquote
 
 </td>
 </tr>
@@ -124,7 +135,9 @@ jedem Druck etwas eintragen musst.
 
 ### Auswertung und Einkauf
 
-- Kosten je Monat, Material und Drucker, Ausschuss und Abbruchgründe
+- Kosten je Monat (ein Klick zeigt die Tage), wofür das Geld geht, Vergleich zum Vorzeitraum
+- Spülabfall, Farben, wann gedruckt wird, Auslastung je Drucker, Ausschuss und Abbruchgründe
+- Feuchte und Fehldrucke, Schätzung des Slicers gegen Wirklichkeit, Lagerwert und Ladenhüter
 - **Druckdatei prüfen:** Reicht das Filament, was kostet der Druck?
 - Mindestbestand je Filament: Einkaufsliste mit Händler und letztem Preis
 - Reichweite nach dem Verbrauch: was in den nächsten Wochen leer wird
@@ -141,8 +154,8 @@ jedem Druck etwas eintragen musst.
   <img src="handbuch/bilder/android-bearbeiten.png" width="220" alt="Handy: Spule bearbeiten">
 </p>
 
-Spulen scannen, in Slots legen, wiegen, fotografieren und bearbeiten – zusammen mit FilMaNH auf deinem Rechner, im
-Heimnetz und verschlüsselt, dazu ein Widget mit den laufenden Drucken. Die App für **Android** gibt es unten zum Download, die für das **iPhone** erscheint
+Spulen scannen, in Slots legen, wiegen, fotografieren und bearbeiten, Drucker und AMS als Bild – zusammen mit
+FilMaNH auf deinem Rechner, im Heimnetz und verschlüsselt, dazu ein Widget mit den laufenden Drucken. Die App für **Android** gibt es unten zum Download, die für das **iPhone** erscheint
 demnächst im App Store. Anleitungen: [Android](handbuch/android.md) · [iPhone](handbuch/iphone.md)
 
 ## Download
@@ -166,14 +179,15 @@ Zugangscode übernimmt FilMaNH aus Bambu Studio, sonst steht er am Drucker unter
 
 ## Handbuch
 
-**[Benutzerhandbuch mit Screenshots](handbuch/README.md)** – Installation, Einrichtung und alle Funktionen.
+**[Benutzerhandbuch mit Screenshots](handbuch/README.md)** – Installation, Einrichtung und alle Funktionen. Auch
+direkt im Programm unter **Einstellungen › Hilfe** (F1), in allen 7 Sprachen.
 Für die Handys: [Android](handbuch/android.md) · [iPhone](handbuch/iphone.md)
 
 ## Datenschutz
 
 Alle Daten bleiben auf deinem Rechner – kein Konto, keine Werbung, keine Analyse. Ins Internet geht FilMaNH nur für
-Updates und den Filament-Katalog (beides auf GitHub), für einen eingefügten Shop-Link und für die Übernahme aus
-Spoolman. Mehr dazu: [Datenschutzerklärung](DATENSCHUTZ.md)
+Updates und den Filament-Katalog (beides auf GitHub), für einen eingefügten oder mit dem Handy gescannten Shop-Link
+und für die Übernahme aus Spoolman. Mehr dazu: [Datenschutzerklärung](DATENSCHUTZ.md)
 
 ## Eingebaut, aber noch nicht getestet
 
@@ -182,6 +196,7 @@ das passende Gerät oder die Situation kam noch nicht vor. Wer sie nutzt: Eine k
 [Rückmeldung](https://github.com/NikolausH76/FilMaNH/issues) hilft.
 
 - **AMS HT** als eigene Einheit
+- **Live-Bild bei X1, P1 und P2S** (geprüft mit H2C und A1 mini)
 - **Etiketten unter Windows** direkt auf einen Drucker des Systems
 - **Widget der Android-App** auf einem echten Handy (im Emulator geprüft)
 - **Spule leer gelaufen:** Läuft eine Spule im Druck leer, setzt ein Klick ihren Rest auf 0

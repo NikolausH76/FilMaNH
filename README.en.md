@@ -11,6 +11,11 @@
 </p>
 
 <p align="center">
+  🌐 <b>English · Deutsch · Español · Français · Italiano · Nederlands · Polski</b><br>
+  <sub>App, phone apps and built-in help in 7 languages</sub>
+</p>
+
+<p align="center">
   <a href="https://github.com/NikolausH76/FilMaNH/releases/latest"><img src="https://img.shields.io/github/v/release/NikolausH76/FilMaNH?label=Version&color=2A59D6" alt="Latest version"></a>
 </p>
 
@@ -42,8 +47,8 @@ anything after each print.
    FilMaNH asks once which spool it is.
 3. **Print** – at the end of every print, FilMaNH books the usage per spool. If the computer was off, it catches up on
    the next start.
-4. **Keep track** – remaining amounts, cost per print, notices for the wrong material or filament left open too long,
-   and a shopping list.
+4. **Keep track** – printers and AMS as they look, with live view, remaining amounts, cost per print, notices for the
+   wrong material or filament left open too long, statistics and a shopping list.
 
 > [!NOTE]
 > FilMaNH only reads from the printers. It never sends them commands and needs neither LAN-only mode nor developer mode.
@@ -58,9 +63,10 @@ anything after each print.
 
 ### Overview and notices
 
-- All printers with the current print, time left and slots with remaining amount
-- Notices with the matching action: wrong material in a slot, unassigned spool, filament open too long, spools almost
-  empty, maintenance due
+- All printers with the current print, time left and print hours – with their AMS as a picture, spools in their colour
+- **Live view** of the printer camera on click
+- Notices with the matching action: wrong material or different colour in a slot (assign right away or add a new
+  spool), unassigned spool, filament open too long, spools almost empty, maintenance due
 - Recent prints, with cost
 
 </td>
@@ -71,7 +77,10 @@ anything after each print.
 ### Printers and AMS
 
 - Find printers on the network, take the access code from Bambu Studio
-- Live AMS with humidity, temperature and the humidity history of the last 7 days
+- AMS, AMS 2 Pro and AMS HT as a picture: spools in their real colour, material, humidity, temperature, drying with time
+  left
+- Live view: video on H2, X1 and P2S, continuous still images on P1 and A1
+- Humidity history of the last 7 days, total print hours per printer
 - H2C and H2D with two nozzles: AMS and external spools per nozzle
 - At print start: wrong material, different colour, spool won't last, abrasive filament on a soft nozzle
 - Maintenance plan per printer by print hours or time
@@ -88,7 +97,8 @@ anything after each print.
 - Remaining amount, price, shop, location, rating and history for every spool
 - Weighing makes the stock exact – FilMaNH learns the deviation per filament from it
 - Notice when filament has been open too long (PETG after 30 days, TPU after 14, PA and PC after 7)
-- Filter by state, material, brand and location
+- Filter by state, material, brand and location; sort by fill level, name, brand and more
+- Catalog with the newest Bambu Studio profiles and your own filament presets from Bambu Studio
 - More than 80 filament colours to choose from, also multicolour and gradient
 
 </td>
@@ -98,11 +108,13 @@ anything after each print.
 
 ### Prints and cost
 
-- Usage per slot from the print file; for a cancelled print only up to the layer reached
-- Cost per print, net and gross: material, electricity and machine time (from purchase price and service life)
+- Usage per slot from the print file, with purge waste (prime tower included); for a cancelled print only up to the
+  layer reached
+- Cost per print, net and gross: material, electricity and machine time (from purchase price and service life);
+  12 currencies, VAT preset per country
 - Projects: group prints per job, with a selling price from costs, labour and markup
-- History with image, 3D view and timelapse
-- Models: all prints of a model with cost and success rate
+- History with image, 3D view, timelapse and your own photos – also per project
+- Keep the print file and open it in Bambu Studio; models with all prints, cost and success rate
 
 </td>
 </tr>
@@ -124,7 +136,9 @@ anything after each print.
 
 ### Statistics and shopping
 
-- Cost per month, material and printer, waste and cancellation reasons
+- Cost per month (a click shows the days), where the money goes, comparison with the previous period
+- Purge waste, colours, when you print, utilisation per printer, waste and cancellation reasons
+- Humidity and failed prints, slicer estimate vs. reality, stock value and shelf warmers
 - **Check print file:** Is there enough filament, what will the print cost?
 - Minimum stock per filament: shopping list with shop and last price
 - Reach based on usage: what will run out in the coming weeks
@@ -141,8 +155,8 @@ anything after each print.
   <img src="handbook/images/android-bearbeiten.png" width="220" alt="Phone: edit spool">
 </p>
 
-Scan spools, put them in slots, weigh, photograph and edit them – together with FilMaNH on your computer, on your home
-network and encrypted, plus a widget with the running prints. The **Android** app is available for download below; the **iPhone** app is coming soon to the
+Scan spools, put them in slots, weigh, photograph and edit them, printers and AMS as pictures – together with FilMaNH
+on your computer, on your home network and encrypted, plus a widget with the running prints. The **Android** app is available for download below; the **iPhone** app is coming soon to the
 App Store. Guides: [Android](handbook/android.md) · [iPhone](handbook/iphone.md)
 
 ## Download
@@ -166,13 +180,14 @@ takes the access code from Bambu Studio; otherwise you find it on the printer un
 
 ## User guide
 
-**[User guide with screenshots](handbook/README.md)** – installation, setup and all features.
+**[User guide with screenshots](handbook/README.md)** – installation, setup and all features. Also right inside the
+app under **Settings › Help** (F1), in all 7 languages.
 For the phones: [Android](handbook/android.md) · [iPhone](handbook/iphone.md)
 
 ## Privacy
 
 All data stays on your computer – no account, no ads, no analytics. FilMaNH only goes online for updates and the
-filament catalog (both on GitHub), for a shop link you paste and for importing from Spoolman. More:
+filament catalog (both on GitHub), for a shop link you paste or scan with your phone and for importing from Spoolman. More:
 [privacy statement](DATENSCHUTZ.md)
 
 ## Built in, but not yet tested
@@ -182,6 +197,7 @@ missing or the situation hasn't come up. If you use them, a short [report](https
 helps.
 
 - **AMS HT** as a unit of its own
+- **Live view on X1, P1 and P2S** (tested with H2C and A1 mini)
 - **Labels on Windows** printed directly to a system printer
 - **Android app widget** on a real phone (checked in the emulator)
 - **Spool ran out:** if a spool runs out during a print, one click sets its remaining amount to 0
