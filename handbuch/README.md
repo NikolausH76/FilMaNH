@@ -532,7 +532,7 @@ Drucks ein. Beides nur, solange FilMaNH läuft und mit dem Drucker verbunden ist
 Seite werden so angezeigt und eingegeben; intern rechnet FilMaNH netto. Die Mehrwertsteuer gilt für Strom,
 Anschaffung, Verkaufspreis und neue Spulen; jede Spule behält ihren Satz. Bei einer neuen Installation sind Währung
 und Mehrwertsteuer nach dem Land des Systems vorbelegt (USA und Kanada 0 %, weil die Umsatzsteuer dort je nach Staat
-bzw. Provinz verschieden ist; ohne erkanntes Land Euro und 19 %).
+bzw. Provinz verschieden ist; für ein Land, das FilMaNH nicht kennt, Euro und 0 %; ganz ohne Land Euro und 19 %).
 
 - **Strom:** **Strompreis** je kWh und die Leistung jedes Druckers. Ohne eigene Leistung nimmt FilMaNH Bambus
   gemessenen Durchschnitt für das Modell und das Material des Drucks (z.B. A1 mini mit PLA 80 W, P2S 200 W) – nicht
@@ -585,6 +585,11 @@ Was die Apps können, steht in den Handbüchern für [iPhone](iphone.md) und [An
 - Sicherung und Export enthalten die Datenbank: Spulen, Buchungen, Drucke und Einstellungen – nicht Fotos,
   Druckdateien, 3D-Ansichten, Zeitraffer und Quelldateien. Die liegen im Datenordner (`drucke`, `fotos`, `modelle`);
   wer umzieht, kopiert ihn mit.
+- Die Sicherungen liegen ebenfalls im Datenordner, also auf derselben Platte. **Zweiter Ordner** › **Ordner wählen
+  …** kopiert jede Sicherung zusätzlich an einen zweiten Ort – eine andere Platte, einen Stick oder einen
+  Cloud-Ordner; auch dort bleiben die letzten 14 Stände. Ist der Ordner gerade nicht erreichbar, meldet FilMaNH das
+  und holt die Kopien später nach. Stände, die es nur dort gibt, stehen mit in der Liste und lassen sich
+  wiederherstellen – etwa nach einer Neuinstallation.
 - **Aus Spoolman übernehmen** liest Spulen aus einem Spoolman-Server (Adresse eingeben, **Prüfen**) oder einer
   Spoolman-Exportdatei (**Datei …**). Erst steht da, was gefunden wurde, dann übernimmt ein zweiter Klick die neuen
   Spulen. Archivierte und Spulen mit anderem Durchmesser als 1,75 mm bleiben außen vor; ein erneuter Import legt

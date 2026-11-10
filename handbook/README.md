@@ -524,10 +524,10 @@ begins. Both only while FilMaNH is running and connected to the printer.
 ![Printer settings](images/22-einst-drucker.png)
 
 **Costs:** currency, VAT and whether prices are shown **Gross** or **Net**. All amounts on this page are shown and
-entered that way; internally FilMaNH calculates net. The VAT applies to electricity, printer purchase,
-selling price and new spools; each spool keeps its own rate. On a new installation, currency and VAT are preset for
-the system’s country (USA and Canada 0 %, since sales tax there varies by state or province; without a recognised
-country euro and 19 %).
+entered that way; internally FilMaNH calculates net. The VAT applies to electricity, printer purchase, selling
+price and new spools; each spool keeps its own rate. On a new installation, currency and VAT are preset for the
+system’s country (USA and Canada 0 %, since sales tax there varies by state or province; for a country FilMaNH
+doesn’t know, euro and 0 %; with no country at all, euro and 19 %).
 
 - **Electricity:** **Electricity price** per kWh and the power of each printer. Without your own value FilMaNH uses
   Bambu’s measured average for the model and the print’s material (e.g. A1 mini with PLA 80 W, P2S 200 W) – not the
@@ -580,6 +580,10 @@ What the apps can do is described in the handbooks for [iPhone](iphone.md) and [
 - Backup and export contain the database: spools, bookings, prints and settings – not photos, print files, 3D views,
   timelapses and source files. Those are in the data folder (`drucke`, `fotos`, `modelle`); copy it along when moving
   to another computer.
+- The backups are in the data folder as well, on the same disk. **Second folder** › **Choose folder …** also copies
+  every backup to a second place – another drive, a USB stick or a cloud folder; the last 14 versions are kept there
+  too. If the folder can’t be reached, FilMaNH tells you and copies the missing backups later. Versions that exist
+  only there appear in the list as well and can be restored – after a reinstall, for example.
 - **Import from Spoolman** reads spools from a Spoolman server (enter the address, **Check**) or a Spoolman export
   file (**File …**). First it shows what was found, then a second click imports the new spools. Archived spools and
   spools with a diameter other than 1.75 mm are left out; importing again creates no duplicates.
