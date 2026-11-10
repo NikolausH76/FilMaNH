@@ -281,6 +281,10 @@ Clicking the running image pops it out: it then runs only in its own window with
 window, drag its edges to resize; a click on the image opens the menu with **Always on top** and **Close**. **Back
 into the app** on the printer page brings it back.
 
+During a print, the bottom of the window shows the time left, the layer and – for multicolor prints – the time until
+the next color change, with a dot in the color that comes next. **Time left**, **Layer** and **Next color change** in
+the menu show or hide each of them.
+
 **Storage** shows, after **Show**, what is on the printer's SD card or internal storage: camera recordings,
 timelapses and print files, each with count and size. **Delete …** removes a whole category; expanded, you can select
 single files. FilMaNH asks first and only deletes while the printer is connected and not printing – never the

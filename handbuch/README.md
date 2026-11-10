@@ -281,6 +281,10 @@ Ein Klick aufs laufende Bild koppelt es aus: Es läuft dann nur noch in einem ei
 verschiebt das Fenster, an den Rändern ändert sich die Größe; ein Klick ins Bild öffnet das Menü mit **Immer im
 Vordergrund** und **Schließen**. **Zurück ins Programm** auf der Druckerseite holt es wieder herein.
 
+Während eines Drucks stehen unten im Fenster Restzeit, Schicht und – bei mehrfarbigen Drucken – die Zeit bis zum
+nächsten Farbwechsel, mit einem Punkt in der Farbe, die dann kommt. **Restzeit**, **Schicht** und **Nächster
+Farbwechsel** im Menü blenden die Angaben einzeln ein und aus.
+
 **Speicher** zeigt nach **Anzeigen**, was auf der Speicherkarte bzw. im internen Speicher des Druckers liegt:
 Kameraaufzeichnungen, Zeitraffer und Druckdateien, je mit Zahl und Größe. **Löschen …** entfernt einen ganzen Bereich;
 aufgeklappt lassen sich einzelne Dateien auswählen. FilMaNH fragt vorher nach und löscht nur, wenn der Drucker
