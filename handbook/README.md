@@ -668,8 +668,8 @@ FilMaNH keeps trying by itself and catches up on the print once it is connected 
 affected. If it stays that way, close another connected program or update the printer’s firmware.
 
 **“macOS denies FilMaNH access to the local network”.** System Settings › Privacy & Security › **Local Network**: turn
-on FilMaNH (the **Open System Settings** button on the overview takes you there), then restart FilMaNH. If it is
-already on, switch it off and on once.
+on FilMaNH (the **Open System Settings** button on the overview and when adding a printer takes you there), then
+restart FilMaNH. If it is already on, switch it off and on once.
 
 **The printer got a new IP address.** If a printer is unreachable for a few minutes, FilMaNH looks for it on the
 network itself and connects to the new address. If that doesn’t work: under Settings › Printers **Search network** and

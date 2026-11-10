@@ -676,8 +676,8 @@ versucht es selbst weiter und holt den Druck nach, sobald es wieder verbunden is
 gestört. Bleibt es dabei, ein anderes verbundenes Programm schließen oder die Firmware des Druckers aktualisieren.
 
 **„macOS verweigert FilMaNH den Zugriff aufs lokale Netzwerk“.** Systemeinstellungen › Datenschutz & Sicherheit ›
-**Lokales Netzwerk**: FilMaNH einschalten (der Knopf **Systemeinstellungen öffnen** in der Übersicht führt hin), dann
-FilMaNH neu starten. Ist es schon an, einmal aus- und wieder einschalten.
+**Lokales Netzwerk**: FilMaNH einschalten (der Knopf **Systemeinstellungen öffnen** in der Übersicht und beim
+Hinzufügen eines Druckers führt hin), dann FilMaNH neu starten. Ist es schon an, einmal aus- und wieder einschalten.
 
 **Der Drucker hat eine neue IP-Adresse bekommen.** Ist ein Drucker einige Minuten nicht erreichbar, sucht FilMaNH ihn
 selbst im Netz und verbindet sich unter der neuen Adresse. Klappt das nicht: unter Einstellungen › Drucker **Im
