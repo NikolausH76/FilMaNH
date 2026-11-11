@@ -420,6 +420,10 @@ Konnte FilMaNH das Ende eines Drucks nicht beobachten und auch später nicht sic
 oder **Abgebrochen …** mit der Schicht wählen, wo nötig auch die Spule. Danach wird gebucht. Hat FilMaNH den Druck
 nur als Datei auf der Speicherkarte gefunden (der Rechner war aus), gibt es zusätzlich **Nicht gedruckt**.
 
+Drucke, die ganz liefen, während FilMaNH aus war, findet es nur über ihre Datei auf der Speicherkarte bzw. dem
+USB-Stick des Druckers. Steckt keins von beiden im Drucker, sagt das die Druckerseite; **Im Hintergrund weiterlaufen**
+schaltet dort **Mit dem Rechner starten** und **Beim Schließen weiterlaufen** ein.
+
 ## 9. Projekte
 
 ![Projekte](bilder/17a-projekte.png)

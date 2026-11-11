@@ -417,6 +417,10 @@ If FilMaNH could not see a print end and could not settle it later either: choos
 with the layer, and the spool where needed. The deduction follows. If FilMaNH only found the print as a file on the
 SD card (the computer was off), there is also **Not printed**.
 
+Prints that ran entirely while FilMaNH was off can only be found through their file on the printer's SD card or USB
+drive. If neither is in the printer, the printer page says so; **Keep running in background** there turns on **Launch
+at login** and **Keep running when closed**.
+
 ## 9. Projects
 
 ![Projects](images/17a-projekte.png)
