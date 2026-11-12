@@ -400,9 +400,12 @@ Laufende Drucke lassen sich nicht löschen.
   nicht gebucht ist, **Druckdatei neu suchen**.
 - Jede Druckdatei prüft FilMaNH am Inhalt: Schichtzahl und die Filamente, die der Drucker tatsächlich nutzt. Eine
   ältere Datei gleichen Namens wird so nicht verwendet.
-- **Nicht gebucht – Spule wählen.** erscheint, wenn der Drucker für ein Filament keinen Slot gemeldet hat oder die
-  Spule erst nach dem Druck in den Slot kam (sie könnte schon für den nächsten Druck sein). Die Spule wählst du selbst
-  und klickst **Buchen**; FilMaNH rät sie nicht.
+- **Nicht gebucht – Spule wählen.** erscheint, wenn für ein Filament keine eingetragene Spule in Frage kommt (im Slot,
+  aus dem gedruckt wurde, ist keine) oder die Spule erst nach dem Druck in den Slot kam (sie könnte schon für den
+  nächsten Druck sein). Die Spule wählst du selbst und klickst **Buchen**.
+- Ältere Drucker wie P1S und A1 mini melden nur beim Druckstart, aus welchem Slot gedruckt wird. Lief FilMaNH da
+  nicht, bucht es auf die eingetragene Spule mit gleichem Material und gleicher Farbe. Stimmt sie nicht: im Menü **…**
+  **Buchung zurücknehmen**, die richtige Spule wählen und **Buchen**.
 - **Druckdatei nicht verfügbar** oder ohne Filamentangaben: **Verbrauch eintragen …** – je Zeile Spule und Gramm,
   **Weitere Spule** für mehrere, dann **Buchen**. Bei Bambu-Spulen schlägt FilMaNH die Menge aus der RFID-Anzeige vor
   („laut RFID, grob“).

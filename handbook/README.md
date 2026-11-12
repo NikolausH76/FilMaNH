@@ -398,9 +398,12 @@ deleted.
   **Find print file again**.
 - FilMaNH checks every print file against the print: layer count and the filaments the printer actually uses. An
   older file with the same name is not used.
-- **Not deducted – choose a spool.** appears when the printer reported no slot for a filament or the spool was only
-  put into the slot after the print (it may already be meant for the next print). You choose the spool yourself and
-  click **Deduct**; FilMaNH does not guess.
+- **Not deducted – choose a spool.** appears when no registered spool fits a filament (the slot it printed from has
+  none) or the spool was only put into the slot after the print (it may already be meant for the next print). You
+  choose the spool yourself and click **Deduct**.
+- Older printers such as the P1S and A1 mini only report which slot they print from when the print starts. If FilMaNH
+  wasn't running then, it deducts from the registered spool with the same material and color. If that's wrong: in the
+  **…** menu, **Undo deduction**, choose the right spool and click **Deduct**.
 - **Print file not available** or without filament data: **Enter usage …** – spool and grams per row, **Another spool**
   for more, then **Deduct**. For Bambu spools FilMaNH suggests the amount from the RFID reading (“from RFID, rough”).
 - **… ran out.** If the printer reports that a spool ran out, **Set remaining to 0** sets its remaining amount to 0.
