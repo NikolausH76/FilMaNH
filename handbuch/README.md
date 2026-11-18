@@ -113,9 +113,10 @@ Die Einrichtung lässt sich mit **Später einrichten** überspringen und unter E
 
 ![Spulen](bilder/05-spulen.png)
 
-Filter nach Zustand (Voll, Angebrochen, Fast leer, Leer, Archiv), Material, Hersteller und Lagerort; Suche,
-Ansicht als **Raster** oder **Liste**. **Etiketten** druckt Etiketten für alle angezeigten Spulen. **Fehlende
-Etiketten** steht da, sobald neue Spulen noch kein Etikett haben (auch am Handy angelegte), und druckt genau diese.
+Filter nach Zustand (Voll, Angebrochen, Fast leer, Leer, Archiv), Material, Hersteller und Lagerort; Suche, Ansicht
+als **Raster** oder **Liste**. Voll heißt: Von der Spule wurde noch nichts gedruckt. **Etiketten** druckt Etiketten
+für alle angezeigten Spulen. **Fehlende Etiketten** steht da, sobald neue Spulen noch kein Etikett haben (auch am
+Handy angelegte), und druckt genau diese.
 
 Die **Sortierung** (Nummer, Füllstand in beide Richtungen, Name, Hersteller, Material, zuletzt benutzt, neueste
 zuerst) bleibt gespeichert. Filter und Suche bleiben, wenn du aus einer Spule zurückkommst.
@@ -174,8 +175,9 @@ drucken, Foto hinzufügen (bzw. ändern und entfernen), Archivieren (bzw. **Zur�
 gilt für alle Spulen dieses Filaments und zeigt die echte Farbe in der Mitte des Rings; ohne Foto steht dort die
 Struktur des Filaments in seiner Farbe – glänzend bei Seide, mit Glitzer bei Galaxy.
 
-**Löschen** entfernt eine Spule endgültig, etwa eine versehentlich angelegte. Das geht nur, solange kein Druck mit ihr
-gebucht ist; sonst **Archivieren** – das behält Verlauf und Kosten.
+**Löschen** entfernt eine Spule endgültig, etwa eine versehentlich angelegte oder eine leere, die nicht mehr gebraucht
+wird. Das geht nur, solange kein Druck im **Verlauf** auf sie gebucht ist; sind diese Drucke dort gelöscht, lässt sich
+auch die Spule löschen. Sonst **Archivieren** – das behält Verlauf und Kosten.
 
 Die **Bewertung** (1–5 Sterne) gilt für das Filament, also für alle Spulen dieser Sorte; derselbe Stern noch einmal
 löscht sie. Unter **Bearbeiten** lassen sich EANs von Hand eintragen, mehrere durch Komma getrennt (z.B. mit Spule
@@ -409,7 +411,12 @@ Laufende Drucke lassen sich nicht löschen.
 - **Druckdatei nicht verfügbar** oder ohne Filamentangaben: **Verbrauch eintragen …** – je Zeile Spule und Gramm,
   **Weitere Spule** für mehrere, dann **Buchen**. Bei Bambu-Spulen schlägt FilMaNH die Menge aus der RFID-Anzeige vor
   („laut RFID, grob“).
-- **… lief leer.** Meldet der Drucker, dass eine Spule leer gelaufen ist, setzt **Rest auf 0 setzen** ihren Rest auf 0.
+- **Spule leer gelaufen:** Meldet der Drucker im Druck „aufgebraucht“, setzt FilMaNH die Spule auf 0 g und nimmt sie
+  aus dem Slot. Den Rest des Drucks liefert die nächste Spule – die Ersatzspule im AMS oder die, die du dem Slot
+  zuordnest. Ist sie FilMaNH unbekannt (ohne RFID nachgefüllt), fragt es nach ihr und bucht, sobald sie zugeordnet ist
+  (**Spule zuordnen** am Abschnitt). Lief FilMaNH beim Nachfüllen nicht, teilt es beim Buchen: Die alte Spule hat
+  geliefert, was sie zu Druckbeginn noch hatte. Zeigt eine leer gelaufene Spule doch noch Rest, setzt **Rest auf 0
+  setzen** ihn auf 0.
 - Hat der Drucker Objekte übersprungen, ist trotzdem die volle Menge der Druckdatei gebucht; Wiegen macht den Bestand
   wieder genau.
 - Bei Abbrüchen steht der Grund oben. Alle Fehlermeldungen des Druckers während des Drucks stehen unter **Meldungen

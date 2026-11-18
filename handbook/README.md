@@ -113,9 +113,10 @@ Finally, FilMaNH asks for the **electricity price** per kWh (for the electricity
 
 ![Spools](images/05-spulen.png)
 
-Filter by state (Full, Opened, Almost empty, Empty, Archive), material, brand and location; search; view as
-**Grid** or **List**. **Labels** prints labels for all spools shown. **Missing labels** appears as soon as new spools
-have no label yet (including spools created on a phone) and prints exactly those.
+Filter by state (Full, Opened, Almost empty, Empty, Archive), material, brand and location; search; view as **Grid**
+or **List**. Full means nothing has been printed from the spool yet. **Labels** prints labels for all spools shown.
+**Missing labels** appears as soon as new spools have no label yet (including spools created on a phone) and prints
+exactly those.
 
 The **sort order** (number, fill level in either direction, name, brand, material, last used, newest first) is
 remembered. Filters and search stay when you come back from a spool.
@@ -174,8 +175,9 @@ label, Add photo (or change and remove it), Archive (or **Unarchive**) and Delet
 this filament and shows the real colour in the centre of the ring; without a photo, the centre shows the filament’s
 texture in its colour – glossy for silk, sparkling for galaxy.
 
-**Delete** removes a spool for good, e.g. one created by mistake. This only works as long as no print has been
-deducted from it; otherwise **Archive** – that keeps history and costs.
+**Delete** removes a spool for good, e.g. one created by mistake or an empty one that’s no longer needed. This only
+works as long as no print in the **History** is deducted from it; once those prints are deleted there, the spool can
+be deleted too. Otherwise **Archive** – that keeps history and costs.
 
 The **Rating** (1–5 stars) applies to the filament, i.e. to all spools of that kind; clicking the same star again
 clears it. Under **Edit** you can enter EANs by hand, several separated by commas (e.g. with spool and refill). You
@@ -406,7 +408,12 @@ deleted.
   **…** menu, **Undo deduction**, choose the right spool and click **Deduct**.
 - **Print file not available** or without filament data: **Enter usage …** – spool and grams per row, **Another spool**
   for more, then **Deduct**. For Bambu spools FilMaNH suggests the amount from the RFID reading (“from RFID, rough”).
-- **… ran out.** If the printer reports that a spool ran out, **Set remaining to 0** sets its remaining amount to 0.
+- **Spool ran out:** If the printer reports a spool as used up during a print, FilMaNH sets it to 0 g and removes it
+  from the slot. The rest of the print comes from the next spool – the backup spool in the AMS or the one you assign
+  to the slot. If FilMaNH doesn’t know it (refilled without RFID), it asks for it and deducts the usage once it’s
+  assigned (**Assign spool** on the section). If FilMaNH wasn’t running during the refill, it splits when deducting:
+  the old spool supplied what it still had at the start of the print. If a spool that ran out still shows a remaining
+  amount, **Set remaining to 0** sets it to 0.
 - If objects were skipped on the printer, the full amount of the print file is still deducted; weighing makes the
   stock exact again.
 - For cancelled prints the reason is shown at the top. All error messages of the printer during the print are listed
