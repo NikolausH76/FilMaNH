@@ -594,6 +594,17 @@ mit QR-Code zum Laden der Android-App. **Ausblenden** entfernt den Hinweis.
 
 Was die Apps können, steht in den Handbüchern für [iPhone](iphone.md) und [Android](android.md).
 
+**Station:** Koppeln mit der FilMaNH Station, einem Touch-Display mit Waage und Etikettendrucker neben den Druckern
+(erscheint demnächst). **Station erlauben** einschalten, dann an der Station den Rechner wählen. Rechner und Station
+zeigen denselben sechsstelligen Code; stimmt er, im Fenster **Station koppeln** auf **Erlauben** klicken. Gekoppelte
+Stationen stehen unter **Gekoppelte Stationen** und lassen sich dort **Entfernen**. Die Station braucht kein Handy und
+wird unabhängig davon erlaubt. Unter Windows zeigt die Zeile **Windows-Firewall**, ob die Station den Rechner findet;
+sonst richtet **Freigeben** das ein.
+
+![Station](bilder/30-einst-station.png)
+
+![Station koppeln](bilder/31-station-koppeln.png)
+
 **Daten:**
 
 - **Sicherung:** täglich automatisch, die letzten 14 Stände; **Jetzt sichern** legt sofort eine an, **Ordner öffnen**
@@ -671,6 +682,8 @@ Mit **Mit dem Rechner starten** (Einstellungen › Allgemein) läuft FilMaNH nac
 - Solange ein Handy gekoppelt ist oder der QR-Code zum Koppeln offen ist, nimmt FilMaNH im lokalen Netzwerk
   verschlüsselte Verbindungen an (Port 47474, ist er belegt, einer der nächsten neun); Daten bekommen nur gekoppelte
   Handys. Ist kein Handy mehr gekoppelt, geht der Dienst nach wenigen Minuten aus. Ins Internet geht dabei nichts.
+- Ist **Station erlauben** an, läuft dieser Dienst auch für Stationen, und FilMaNH antwortet im lokalen Netzwerk auf
+  die Suche einer Station (UDP, Port 47474). Daten bekommen nur gekoppelte Stationen.
 - Ins Internet geht FilMaNH nur für die Update-Suche, die Katalog-Aktualisierung (auf Klick), einen
   Spoolman-Import, wenn du einen startest, und für einen Shop-Link, wenn du einen einfügst oder mit dem Handy
   scannst (dann ruft FilMaNH genau diese Seite ab – nie eine Adresse im eigenen Netzwerk).

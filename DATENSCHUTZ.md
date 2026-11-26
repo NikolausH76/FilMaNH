@@ -25,6 +25,8 @@ den Entwickler oder für Dritte. Es gibt kein Konto, keine Werbung, keine Analys
   gespeichert.
 - Solange ein Handy gekoppelt ist, nimmt es im Heimnetz verschlüsselte Verbindungen an; Daten bekommen nur gekoppelte
   Handys.
+- Ist unter Einstellungen › Station **Station erlauben** an, nimmt es außerdem Verbindungen einer FilMaNH Station an
+  und antwortet im Heimnetz auf deren Suche; Daten bekommen nur gekoppelte Stationen.
 - Es liest auf deinem Rechner Zugangscodes und Filamentprofile aus Bambu Studio. Sie bleiben auf dem Rechner.
 - Ins Internet verbindet es sich nur
   - zur Suche nach Updates und für den Filament-Katalog (beides auf GitHub),
@@ -66,6 +68,8 @@ or for third parties. There is no account, no advertising, no analytics and no t
 - On click it shows the live image of the printer camera. The image only goes from the printer to your computer and is
   not stored.
 - While a phone is paired, it accepts encrypted connections on your home network; only paired phones get data.
+- While **Allow station** (Settings › Station) is on, it also accepts connections from a FilMaNH Station and answers
+  its search on your home network; only paired stations get data.
 - It reads access codes and filament profiles from Bambu Studio on your computer. They stay on your computer.
 - It only connects to the internet
   - to check for updates and for the filament catalog (both on GitHub),

@@ -589,6 +589,17 @@ with a QR code to download the Android app. **Hide** removes the hint.
 
 What the apps can do is described in the handbooks for [iPhone](iphone.md) and [Android](android.md).
 
+**Station:** pairing with the FilMaNH Station, a touch display with scale and label printer next to the printers
+(coming soon). Turn on **Allow station**, then choose the computer on the station. Computer and station show the same
+six-digit code; if it matches, click **Allow** in the **Pair station** window. Paired stations are listed under
+**Paired stations** and can be removed there with **Remove**. The station needs no phone and is allowed independently
+of it. On Windows, the **Windows Firewall** row shows whether the station can find the computer; otherwise **Allow**
+sets that up.
+
+![Station](images/30-einst-station.png)
+
+![Pair station](images/31-station-koppeln.png)
+
 **Data:**
 
 - **Backup:** daily and automatic, the last 14; **Back up now** creates one right away, **Open folder** shows them.
@@ -663,6 +674,8 @@ With **Launch at login** (Settings › General) FilMaNH starts in the background
 - As long as a phone is paired or the pairing QR code is open, FilMaNH accepts encrypted connections on your local
   network (port 47474, or one of the next nine if it is in use); only paired phones get any data. Once no phone is
   paired any more, the service stops after a few minutes. Nothing goes to the internet.
+- While **Allow station** is on, this service also runs for stations, and FilMaNH answers a station’s search on your
+  local network (UDP, port 47474). Only paired stations get any data.
 - FilMaNH only goes online to check for updates, to update the catalog (when you click), for a Spoolman import if
   you start one, and for a shop link when you paste one or scan it with your phone (then FilMaNH fetches exactly that
   page – never an address on your own network).
