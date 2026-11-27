@@ -5,7 +5,7 @@
 <h1 align="center">FilMaNH</h1>
 
 <p align="center">
-  <b>Filament- und Spulenverwaltung für Bambu-Lab-Drucker</b><br>
+  <b>Filament- und Spulenverwaltung für Bambu-Lab-Drucker und den Snapmaker U1</b><br>
   Was steckt im AMS, wie viel ist noch auf der Spule, was hat der Druck gekostet?<br>
   Lokal auf deinem Rechner, ohne Cloud und ohne Einstellungen am Drucker.
 </p>
@@ -42,7 +42,7 @@ jedem Druck etwas eintragen musst.
 ## So funktioniert's
 
 1. **Spulen anlegen** – aus dem Katalog mit über 7.000 Filamenten, per EAN-Scan oder mit dem Link zur Produktseite.
-   Bambu-Spulen mit RFID erkennt FilMaNH beim Einlegen von selbst.
+   Bambu-Spulen mit RFID und Snapmaker-Spulen mit Chip erkennt FilMaNH beim Einlegen von selbst.
 2. **Etikett drucken und einlegen** – jede Spule bekommt eine Nummer und ein Etikett mit QR-Code. Steckt sie im AMS,
    fragt FilMaNH einmal, welche Spule das ist.
 3. **Drucken** – am Ende jedes Drucks bucht FilMaNH den Verbrauch je Spule ab. War der Rechner aus, holt es das beim
@@ -52,8 +52,8 @@ jedem Druck etwas eintragen musst.
 
 > [!NOTE]
 > FilMaNH liest die Drucker aus und braucht weder LAN-Modus noch Entwicklermodus. Am Drucker schaltet es nur das
-> Innenlicht, auf Klick oder nach deiner Einstellung. Dateien auf dem Druckerspeicher löscht es nur, wenn du es
-> bestätigst.
+> Innenlicht, auf Klick oder nach deiner Einstellung, beim Snapmaker U1 dazu die Kamera, solange das Live-Bild offen
+> ist. Dateien auf dem Druckerspeicher löscht es nur, wenn du es bestätigst.
 
 ## Funktionen
 
@@ -79,8 +79,10 @@ jedem Druck etwas eintragen musst.
 ### Drucker und AMS
 
 - Drucker im Netz finden, Zugangscode aus Bambu Studio übernehmen
+- **Snapmaker U1:** die vier Köpfe mit ihren Spulen, ohne Zugangscode; wechselt der U1 bei leerer Spule von
+  selbst auf einen anderen Kopf, wird der Verbrauch auf beide Spulen gebucht
 - AMS, AMS 2 Pro und AMS HT als Bild: Spulen in echter Farbe, Material, Feuchte, Temperatur, Trocknung mit Restzeit
-- Live-Bild: Video bei H2, X1 und P2S, laufende Einzelbilder bei P1 und A1
+- Live-Bild: Video bei H2, X1 und P2S, laufende Einzelbilder bei P1, A1 und dem Snapmaker U1
 - Live-Bild auskoppeln: eigenes Fenster ohne Titelleiste, frei in der Größe, auf Wunsch immer im Vordergrund
 - Feuchteverlauf der letzten 7 Tage, Druckstunden gesamt je Drucker
 - H2C und H2D mit zwei Düsen: AMS und externe Spulen je Düse
@@ -179,8 +181,9 @@ Neue Versionen meldet das Programm auf dem Rechner selbst und installiert sie au
 
 **Sprachen:** Deutsch, English, Español, Français, Italiano, Nederlands, Polski – am Rechner und am Handy.
 
-**Voraussetzungen:** Bambu-Lab-Drucker im selben Netzwerk wie der Rechner (geprüft mit A1 mini, P2S und H2C). Den
-Zugangscode übernimmt FilMaNH aus Bambu Studio, sonst steht er am Drucker unter **Einstellungen › WLAN**.
+**Voraussetzungen:** Bambu-Lab-Drucker oder Snapmaker U1 im selben Netzwerk wie der Rechner (geprüft mit A1 mini, P2S
+und H2C). Den Zugangscode übernimmt FilMaNH aus Bambu Studio, sonst steht er am Drucker unter
+**Einstellungen › WLAN**; der Snapmaker U1 braucht keinen.
 
 ## Handbuch
 
@@ -210,6 +213,9 @@ das passende Gerät oder die Situation kam noch nicht vor. Wer sie nutzt: Eine k
 - **Spulenwechsel im Druck:** Ersatzspule im AMS oder von Hand getauscht – der Verbrauch wird an dieser Schicht auf
   beide Spulen aufgeteilt
 - **Druck ohne Druckdatei** (z.B. H2 ohne USB-Stick): Verbrauch je Spule eintragen, mit Vorschlag aus der RFID-Anzeige
+- **Snapmaker U1:** Drucke erfassen und buchen, auch beim Wechsel auf einen anderen Kopf bei leerer Spule
+  (Auto-Refill), Nachholen aus dem Druckverlauf und die Extended Firmware mit Anmeldung – im Simulator geprüft, am
+  Gerät bisher Verbindung, Köpfe, Kamera und Licht
 
 ## Fragen und Fehler
 
@@ -220,6 +226,6 @@ Bitte als [Issue](https://github.com/NikolausH76/FilMaNH/issues) melden.
 © 2026 N. Hass. Kostenlos nutzbar, alle Rechte vorbehalten; der Quellcode ist nicht öffentlich.
 *Free to use, all rights reserved; the source code is not public.* ([Lizenz / License](LICENSE.txt))
 
-FilMaNH ist ein unabhängiges Projekt und nicht mit Bambu Lab verbunden. Es nutzt das inoffizielle lokale Protokoll
-der Drucker. *FilMaNH is an independent project and not affiliated with Bambu Lab. It uses the printers’ unofficial
-local protocol.*
+FilMaNH ist ein unabhängiges Projekt und nicht mit Bambu Lab oder Snapmaker verbunden. Es nutzt das inoffizielle
+lokale Protokoll der Drucker. *FilMaNH is an independent project and not affiliated with Bambu Lab or Snapmaker. It
+uses the printers’ unofficial local protocol.*
