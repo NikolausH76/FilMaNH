@@ -56,6 +56,7 @@ Alle Drucker mit Bild, Verbindung und laufendem Druck mit Schicht und Restzeit. 
 Spule in ihrer Farbe im Fenster, der geladene Slot markiert, ein Slot mit Filament, aber ohne zugeordnete Spule
 gestrichelt; unter jedem Fenster die Nummer der Spule bzw. das gemeldete Material. Dazu Feuchte und Temperatur (beim
 Trocknen die Restzeit), dann die externe Spule (bei zwei Düsen wie an H2D und H2C mit links/rechts).
+Beim Snapmaker U1 stehen statt eines AMS die vier **Köpfe** als Kacheln **T1** bis **T4**, jeder mit seiner Spule.
 
 Ein Slot öffnet die Auswahl: **Im Slot** zeigt die Spule, **Slot leeren** nimmt sie heraus. Unter **Spule
 einlegen** stehen passende Spulen oben (gleiches Material wie im Slot gemeldet, dann noch nirgends eingelegte), mit

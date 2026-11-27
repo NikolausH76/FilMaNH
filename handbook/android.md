@@ -54,6 +54,7 @@ All printers with picture, connection and the current print with layer and time 
 picture: every spool in its color in its window, the loaded slot marked, a slot with filament but no assigned spool
 dashed; under each window the spool number or the reported material. Plus humidity and temperature (while drying, the
 time left), then the external spool (left/right with two nozzles, as on H2D and H2C).
+On the Snapmaker U1 the four **Heads** appear as tiles **T1** to **T4** instead of an AMS, each with its spool.
 
 A slot opens the picker: **In slot** shows the spool, **Empty slot** takes it out. Under **Load spool** matching
 spools come first (same material as the printer reports for the slot, then spools not loaded anywhere), with a search
