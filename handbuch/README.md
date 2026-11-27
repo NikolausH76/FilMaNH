@@ -3,7 +3,7 @@
 *Deutsch · [English](../handbook/README.md) · [iPhone-App](iphone.md) · [Android-App](android.md)*
 
 FilMaNH verwaltet deine Filamentspulen und bucht den Verbrauch jedes Drucks automatisch ab. Das Programm läuft
-lokal auf deinem Rechner und liest die Bambu-Lab-Drucker im Netzwerk aus; auf einem Drucker löscht es nur Dateien,
+lokal auf deinem Rechner und liest die Drucker im Netzwerk aus (Bambu Lab, Snapmaker U1); auf einem Drucker löscht es nur Dateien,
 wenn du es bestätigst.
 
 1. [Installation](#1-installation)
@@ -297,6 +297,25 @@ reicht. **in FilMaNH gesichert** heißt: Die Datei liegt schon auf dem Rechner.
 **Licht** oben rechts schaltet das Innenlicht des Druckers an oder aus (beim H2C beide Innenlichter), in der Übersicht
 das Lampensymbol an der Druckerkarte. Es erscheint nur, wenn der Drucker verbunden ist und ein Innenlicht meldet. Das
 Innenlicht ist das Einzige, was FilMaNH am Drucker schaltet.
+
+### Snapmaker U1
+
+![Snapmaker U1](bilder/10d-u1.png)
+
+FilMaNH liest auch den Snapmaker U1, mit Original- und mit Extended Firmware. Die Suche findet ihn über mDNS, auch in
+einem anderen Netz, wenn der Router mDNS weiterreicht; sonst die IP-Adresse eingeben. Einen Zugangscode braucht er
+nicht. Nur wenn der Drucker eine Anmeldung verlangt (Extended Firmware mit „Require Login“), fragt FilMaNH nach dem
+**API-Schlüssel**. Verbunden wird über Port 80 bzw. 7125.
+
+Die vier Köpfe stehen unter **Köpfe** als **T1** bis **T4**, jeder mit seiner Spule. Snapmaker-Spulen mit Chip legt
+FilMaNH beim Einlegen selbst an, mit Sorte, Farbe und Füllmenge vom Chip. Jedes Filament eines Drucks wird von der
+Spule in dem Kopf gebucht, auf dem es lief. Läuft eine Spule leer und der U1 macht mit einem Kopf mit gleicher Spule
+weiter (Auto-Refill), teilt FilMaNH den Verbrauch auf beide auf. Was lief, während FilMaNH aus war, holt es aus dem
+Druckverlauf des U1 nach: Fertige Drucke werden gebucht, abgebrochene stehen unter **Ende offen**.
+
+**Live** zeigt etwa ein Bild pro Sekunde; dafür fordert FilMaNH die Kamera an, solange das Bild offen ist. **Licht**
+schaltet die Kammerbeleuchtung, **Speicher** zeigt die Druckdateien auf dem U1 und löscht sie auf Wunsch. Zeitraffer
+holt FilMaNH vom U1 nicht.
 
 ### Spule zuordnen
 

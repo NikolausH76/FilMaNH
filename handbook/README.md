@@ -3,7 +3,7 @@
 *[Deutsch](../handbuch/README.md) · English · [iPhone app](iphone.md) · [Android app](android.md)*
 
 FilMaNH keeps track of your filament spools and deducts what every print uses, automatically. It runs locally on
-your computer and reads from the Bambu Lab printers on your network; on a printer it only deletes files you
+your computer and reads from the printers on your network (Bambu Lab, Snapmaker U1); on a printer it only deletes files you
 confirm.
 
 1. [Installation](#1-installation)
@@ -297,6 +297,25 @@ computer.
 **Light** at the top right turns the printer’s chamber light on or off (on the H2C both chamber lights); in the
 Overview, the bulb icon on the printer card does the same. It only appears while the printer is connected and reports
 a chamber light. The chamber light is the only thing FilMaNH switches on the printer.
+
+### Snapmaker U1
+
+![Snapmaker U1](images/10d-u1.png)
+
+FilMaNH also reads the Snapmaker U1, with the original and with the Extended firmware. The search finds it via mDNS,
+also on another network if the router forwards mDNS; otherwise enter its IP address. It needs no access code. Only if
+the printer requires a login (Extended firmware with “Require Login”) does FilMaNH ask for the **API key**. It
+connects on port 80 or 7125.
+
+The four toolheads are listed under **Heads** as **T1** to **T4**, each with its spool. Snapmaker spools with a chip
+are created automatically when loaded, with type, colour and net weight from the chip. Every filament of a print is
+deducted from the spool in the head it ran on. If a spool runs out and the U1 continues with a head holding the same
+spool (auto refill), FilMaNH splits the usage between both. Prints that ran while FilMaNH was off are caught up from
+the U1's print history: finished prints are deducted, cancelled ones appear as **End unknown**.
+
+**Live** shows about one frame per second; FilMaNH requests the camera only while the image is open. **Light**
+switches the chamber light, **Storage** lists the print files on the U1 and deletes them on request. FilMaNH does not
+fetch timelapses from the U1.
 
 ### Assign a spool
 
