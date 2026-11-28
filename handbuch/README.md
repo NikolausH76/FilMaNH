@@ -134,6 +134,9 @@ Auch deine eigenen Filamentprofile aus Bambu Studio stehen im Katalog.
 Unter **Weitere Angaben**: Füllung, **Rest jetzt** (für eine schon angebrochene Spule; leer heißt voll), leere Spule,
 MwSt, Kaufdatum, Händler, Charge und EAN.
 
+Mit angeschlossener Waage übernimmt der Waagen-Knopf neben **Rest jetzt** und **Leere Spule** das Gewicht; bei **Rest
+jetzt** zieht FilMaNH das Leergewicht ab.
+
 ![Farbe wählen](bilder/04c-farbe.png)
 
 Die **Farbe** kommt dann aus über 80 Filamentfarben, sortiert nach **Standard**, **Matt**, **Seide**, **Galaxy**,
@@ -195,6 +198,12 @@ dem neuen Preis rechnen**.
 Spule samt Rolle wiegen und das Gewicht eintragen. FilMaNH zieht das Leergewicht ab und übernimmt den Rest. Ohne
 Leergewicht geht das nicht – dann unter **Bearbeiten** bei **Leere Spule** eintragen. Weicht das Ergebnis deutlich
 vom gerechneten Rest ab, sagt FilMaNH das (fehlt ein Druck? stimmt das Leergewicht?).
+
+**Mit USB-Waage:** Steckt eine Waage am Rechner (z. B. Dymo M5), trägt FilMaNH ihr Gewicht selbst ein. Darunter steht
+**Waage · steht** oder **Waage · schwankt**; **Übernehmen** geht erst, wenn der Wert steht. Selbst Getipptes hat
+Vorrang, **Wert der Waage übernehmen** schaltet zurück. Die Dymo-Waagen schalten sich nach 3 Minuten ab, dann steht
+dort **Waage aus – Taste an der Waage drücken**. Einzurichten ist nichts; FilMaNH rechnet immer in Gramm, auch wenn
+die Waage Unzen zeigt. Unter Windows ist das noch nicht mit einer echten Waage geprüft.
 
 **Rest korrigieren** setzt den Rest direkt, auf Wunsch mit Grund.
 

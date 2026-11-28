@@ -134,6 +134,9 @@ Your own filament presets from Bambu Studio are in the catalog too.
 Under **More details**: net weight, **Remaining now** (for a spool that is already in use; empty means full), empty
 spool, VAT, purchase date, shop, batch and EAN.
 
+With a scale connected, the scale button next to **Remaining now** and **Empty spool** takes the weight; for
+**Remaining now** FilMaNH subtracts the empty spool weight.
+
 ![Choose a colour](images/04c-farbe.png)
 
 The **Color** then comes from more than 80 filament colours, sorted by **Standard**, **Matte**, **Silk**, **Galaxy**,
@@ -196,6 +199,12 @@ Weigh the spool including the reel and enter the weight. FilMaNH subtracts the e
 the rest. This needs the empty spool weight – if it is missing, enter it under **Edit** at **Empty spool**. If the
 result differs clearly from the calculated amount, FilMaNH tells you (is a print missing? is the empty spool weight
 right?).
+
+**With a USB scale:** If a scale is connected to the computer (e.g. Dymo M5), FilMaNH fills in its weight itself.
+Below it you see **Scale · stable** or **Scale · settling**; **Apply** only works once the value is stable. Typing
+yourself takes precedence, **Use the scale reading** switches back. Dymo scales turn themselves off after 3 minutes;
+then it says **Scale off – press the button on the scale**. There is nothing to set up; FilMaNH always works in grams,
+even if the scale shows ounces. On Windows this has not been tested with a real scale yet.
 
 **Correct remaining** sets the remaining amount directly, optionally with a reason.
 
